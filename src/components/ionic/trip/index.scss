@@ -1,0 +1,42 @@
+.components_ionic_trip {
+  ion-card-header {
+    --background: #232b38;
+
+    --color: var(--ion-color-dark-contrast);
+  }
+  ion-card-subtitle {
+    margin-top: 8px;
+    --color: var(--ion-color-dark-contrast);
+  }
+
+  .title-expense {
+    color: var(--ion-color-dark-contrast);
+  }
+
+  .ion-skeleton-text {
+    margin: 0;
+  }
+
+  .plane-icon {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ion-col {
+    padding: 0px;
+    display: flex;
+  }
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+
+}

@@ -1,0 +1,219 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+.action-sheet-button.sc-ion-action-sheet-md {
+  color: var(--ion-color-light);
+
+  &.action-sheet-cancel {
+    color: var(--ion-color-danger);
+  }
+}
+
+.centered {
+  height: 130px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#root {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+// @import '../../index.scss';
+@import '~@ionic/react/css/core.css';
+/* Basic CSS for apps built with Ionic */
+@import '~@ionic/react/css/normalize.css';
+// @import '~@ionic/react/css/structure.css';
+@import '~@ionic/react/css/typography.css';
+
+/* Optional CSS utils that can be commented out */
+@import '~@ionic/react/css/padding.css';
+@import '~@ionic/react/css/float-elements.css';
+@import '~@ionic/react/css/text-alignment.css';
+@import '~@ionic/react/css/text-transformation.css';
+@import '~@ionic/react/css/flex-utils.css';
+@import '~@ionic/react/css/display.css';
+
+// credit card font
+@font-face {
+  font-family: 'kredit';
+  src: local('kredit'), url(../../assets/fonts/kredit.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url('../../assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('../../assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto Light'), local('Roboto-Light'), url('../../assets/fonts/Roboto-Light.ttf');
+}
+
+:root {
+  --ion-color-primary: #00D1FB;
+  --ion-color-primary-rgb: 0,209,251;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0,0,0;
+  --ion-color-primary-shade: #00b8dd;
+  --ion-color-primary-tint: #1ad6fb;
+
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-rgb: 61,194,255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255,255,255;
+  --ion-color-secondary-shade: #36abe0;
+  --ion-color-secondary-tint: #50c8ff;
+
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82,96,255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255,255,255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45,211,111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255,255,255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255,196,9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0,0,0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235,68,90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  --ion-color-dark: #282B3A;
+  --ion-color-dark-rgb: 40,43,58;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-shade: #232633;
+  --ion-color-dark-tint: #3e404e;
+
+  --ion-color-medium: #4a505a;
+  --ion-color-medium-rgb: 74,80,90;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #41464f;
+  --ion-color-medium-tint: #5c626b;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244,245,248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+  
+  
+  --ion-font-family: "Roboto", sans-serif;
+  --ion-safe-area-left: 0px;
+  --ion-safe-area-right: 0px;
+
+  --dark-grey: #313D4D;
+  --dark-blue: #262E40;
+  --light-grey: #91969E;
+
+}
+
+body {
+  --ion-background-color: var(--ion-color-dark);
+  --ion-background-color-rgb: var(--ion-color-dark-rgb);
+
+  --ion-text-color: var(--ion-color-dark-contrast);
+  --ion-text-color-rgb: var(--ion-color-dark-contrast-rgb);
+
+  & .darkBar {
+    --ion-toolbar-background: var(--ion-color-dark);
+  }
+
+  & .lightBar {
+    // Add to ion-color-medium? Got value from Quinn's figma
+    --ion-toolbar-background: #313D4D;
+  }
+  --ion-item-background: rgba(var(--ion-color-dark-rgb), 0);
+  --ion-card-background: rgba(var(--ion-color-dark-rgb), 0.33);
+  --ion-card-color: var(--ion-color-dark-contrast);
+  --color: var(--ion-color-dark-contrast);
+
+}
+
+// ion-button {
+  // --border-color: var(--ion-color-light);
+  // --border-width: 1px;
+  // --border-style: solid;
+  // --border-radius: 5px;
+  // --background: var(--ion-color-medium);
+// }
+
+ion-card-title {
+  --color: var(--ion-color-dark-contrast);
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+ion-item {
+  --border-color: var(--light-grey);
+}
+
+.create-new-modal .modal-wrapper {
+  position: absolute;
+  bottom: 0px;
+  --height: 200px;
+  --background: var(--dark-blue);
+}
+
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.align-items-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-icon {
+  width: 12px;
+  height: 18px;
+  position: relative;
+  opacity: 0.33;
+}
+
+.light {
+  background: var(--ion-color-light) !important;
+  --button-background-selected: var(--ion-color-light);
+}

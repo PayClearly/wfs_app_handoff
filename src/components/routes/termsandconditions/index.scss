@@ -1,0 +1,22 @@
+.components_routes_termsandconditions {
+  margin: auto;
+  overflow-y: scroll;
+  .container {
+    .header {
+      padding: 1rem;
+      border-bottom: 1px solid #e9ecef;
+      border-top-left-radius: 0.3rem;
+      border-top-right-radius: 0.3rem;
+      .title {
+        margin-bottom: 0;
+        line-height: 1.5;
+      }
+    }
+    .body {
+      padding: 1rem;
+    }
+  }
+  .text {
+    color: #54667a;
+  }
+}

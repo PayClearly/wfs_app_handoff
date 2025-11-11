@@ -1,0 +1,11 @@
+.components_tables_components_exportWrapper {
+  &:not(.no-pagination) {
+    position: initial;
+    
+    @media (min-width: 768px) {
+      position: absolute;
+      bottom: 0px;
+      left: 5px;
+    }
+  }
+}

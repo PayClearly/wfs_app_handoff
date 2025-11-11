@@ -1,0 +1,15 @@
+.components_ionic_filters_components_header {
+  --border-radius: 20px;
+  border-radius: 20px;
+  background-color: var(--ion-color-dark);
+  .filterHeaderToolbar {
+    padding-block-start: 0px;
+    padding-top: 0px;
+  }
+  .filterHeaderTitle {
+    text-align: left;
+    position: static;
+    padding-inline-start: 20px;
+    font-size: 20px;
+  }
+}

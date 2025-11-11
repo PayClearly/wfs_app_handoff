@@ -1,0 +1,14 @@
+.components_tables_components_multiFilterWidget {
+  margin-top: 8px;
+
+  &.has-conditions {
+    position: relative;
+  }
+
+  & .components_forms_multiFilterCondition {
+    position: absolute;
+    top: -13px;
+    right: 0px;
+    z-index: 2;
+  }
+}

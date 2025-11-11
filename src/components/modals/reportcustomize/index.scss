@@ -1,0 +1,14 @@
+.components_modals_reportcustomize {
+  max-height: 90vh;
+  h2 {
+    font-weight: 100;
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  button.up, button.down {
+    padding: 0;
+  }
+}

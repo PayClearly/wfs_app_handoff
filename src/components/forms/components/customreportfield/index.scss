@@ -1,0 +1,24 @@
+.components_forms_components_customreportfield {
+  .bar {
+    margin-bottom: 4px;
+  }
+  input {
+    background: transparent;
+  }
+  .floating-labels .form-control {
+    padding: 0px;
+  }
+  .input-sm.form-control {
+    background: none;
+  }
+  .form-control {
+    border-top: none;
+    display: block;
+  }
+  .mdi.mdi-drag {
+    font-size: 35px;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+}

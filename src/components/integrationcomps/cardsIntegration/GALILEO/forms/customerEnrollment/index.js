@@ -1,0 +1,300 @@
+import { connect, Component, bindActionCreators, Fragment } from 'component';
+import Utils from 'utils';
+import Store from 'store';
+// import Selectors from 'selectors';
+import Components from 'components';
+
+import './index.scss';
+
+const mapStateToProps = (state, props) => {
+  return ({
+    forms: state.forms,
+    types: state.validations.data.item,
+    organization: _try(() => state.organization, {}),
+    account: _try(() => state.account, {}),
+  });
+};
+
+// const mapDispatchToProps = { ...Store.forms };
+
+const mapDispatchToProps = (dispatch, props) => {
+  return ({
+    destroy: (name, key) => {
+      dispatch(Store.forms.destroy(name, key));
+    },
+    resetForm: (name, key, fields) => {
+      dispatch(Store.forms.reset(name, key, fields));
+    },
+    validate: (name, key, validate) => {
+      dispatch(Store.forms.validate(name, key, validate));
+    },
+    initialize: (name, key, fields) => {
+      dispatch(Store.forms.initialize(name, key, fields));
+    },
+    focus: (name, key, fieldName) => {
+      dispatch(Store.forms.focus(name, key, fieldName));
+    },
+    blur: (name, key, fieldData) => {
+      dispatch(Store.forms.blur(name, key, fieldData));
+    },
+    change: (name, key, fieldData, newValue) => {
+      dispatch(Store.forms.change(name, key, fieldData, newValue));
+    },
+    clearStatusErrors: () => {
+      return dispatch(Store.account.clearErrorsIntegration('cardsIntegration'));
+    },
+  });
+};
+
+class components_integrationcomps_cardsIntegration_GALILEO_forms_customerEnrollment extends Component {
+
+  state = {
+    name: 'Components.integrationcomps.cardsIntegration.GALILEO.forms.customerEnrollment',
+    fetching: true,
+  };
+
+  componentDidMount() {
+    const { initialize, validate } = this.props;
+    const formKey = this.props.formKey || 'default';
+    const data = { firstName: '', lastName: '', dateOfBirth: '', address1: '', address2: '', city: '', state: '', postalCode: '', countryCode: '840', email: '', ssn: '' };
+    this.setState({ fetching: false });
+    initialize(this.state.name, formKey, data);
+    validate(this.state.name, formKey, this.validate);
+    this.setState({ key: formKey });
+  }
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.blurAll && nextProps.blurAll === true) {
+      this.props.blur(this.state.name, this.state.key, this.props.forms[this.state.name][this.state.key]._values);
+    }
+
+    this.setState({
+      form: nextProps.forms[this.state.name] && nextProps.forms[this.state.name][nextProps.formKey || 'default'],
+      key: nextProps.formKey || 'default',
+    });
+  }
+  componentWillUnmount() {
+    this.props.destroy(this.state.name, this.state.key);
+  }
+
+  checkType = (type, against) => {
+    const a = Utils.typesvalidator.validateType(this.props.types, type, against).valid;
+    return a;
+  };
+
+  validate = (fields) => {
+    const errors = {};
+
+    if (fields.firstName) {
+      if (fields.firstName.length < 1 || fields.firstName.length > 40) errors.firstName = 'Must be between 1 and 40 characters';
+      if (_includesSpecialCharacters(fields.firstName)) errors.firstName = 'Must not include special characters (.,?@&!#~*;+)';
+    }
+    if (fields.lastName) {
+      if (fields.lastName.length < 2 || fields.lastName.length > 40) errors.lastName = 'Must be between 2 and 40 characters';
+      if (_includesSpecialCharacters(fields.lastName)) errors.lastName = 'Must not include special characters (.,?@&!#~*;+)';
+    }
+    if (fields.address1) {
+      // TODO : CHECK ADDRESS VALIDATION DOESN'T FLAG INCORRECTLY
+
+      // Maximum length -- 40 characters. Cannot be a P.O. Box.
+      // For legal reasons, the address1 parameter cannot contain a post office box. The system checks for the following and returns an error when detected:
+      // Any string that starts with APO, PO, APOB, POB, post office, call box, or gpobox and is followed by numbers or box. Street names that start with apo or po are not detected, e.g., Apollo street, Polar street.
+      // These elements do not affect the result:
+        // Leading, trailing, or in-between white-space characters such as space, tab, or enter
+        // A dot . between the letters A, P, and O, e.g., A.P.O or P.O.
+        // The case — Validation is case-insensitive.
+      const text = fields.address1.replace((/(\.)?(\s)?/gi), '');
+      if ((/^(A*)PO(B*)([0-9]|box)/i).test(text) || (/^postoffice([0-9]|box)/i).test(text) || (/^callbox([0-9]|box)/i).test(text) || (/^gpobox([0-9]|box)/i).test(text)) errors.address1 = 'Address cannot be a PO Box';
+    }
+    if (fields.address2 && fields.address2.length > 30) errors.address2 = 'Must not exceed 30 characters';
+    if (fields.city && (_includesNumbers(fields.city) || _includesSpecialCharacters(fields.city))) errors.city = 'Must not include numbers or special characters (.,?@&!#~*;+)';
+    if (fields.state && fields.state.length !== 2) errors.state = 'Must be 2 character state abbreviation';
+    if (fields.countryCode && fields.countryCode.length !== 3) errors.countryCode = 'Must be 3 digit ISO numeric UN M49 country code; Example USA=840, Canada=124.';
+    if (fields.postalCode && !(/^([0-9]{5})-([0-9]{4})$/.test(fields.postalCode) || /^[0-9]{5}$/.test(fields.postalCode))) {
+      errors.postalCode = 'Must be of format XXXXX or XXXXX-XXXX';
+    }
+    if (fields.dateOfBirth && !/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.test(fields.dateOfBirth)) {
+      errors.dateOfBirth = 'Must be of format YYYY-MM-DD';
+    }
+    if (fields.email && !this.checkType('EmailAddress', fields.email)) {
+      errors.email = Utils.typesvalidator.validationErrorMsgs.email;
+    }
+    if (fields.ssn && !/^[0-9]{9}$/.test(fields.ssn)) {
+      errors.ssn = 'Must be of format XXXXXXXXX';
+    }
+
+    if (!fields.firstName) errors.firstName = 'This field is required';
+    if (!fields.lastName) errors.lastName = 'This field is required';
+    if (!fields.dateOfBirth) errors.dateOfBirth = 'This field is required';
+    if (!fields.address1) errors.address1 = 'This field is required';
+    if (!fields.city) errors.city = 'This field is required';
+    if (!fields.state) errors.state = 'This field is required';
+    if (!fields.postalCode) errors.postalCode = 'This field is required';
+    if (!fields.countryCode) errors.countryCode = 'This field is required';
+    if (!fields.email) errors.email = 'This field is required';
+    if (!fields.ssn) errors.ssn = 'This field is required';
+    return errors;
+  };
+
+  standardFormAction = (action, field, value) => {
+    if (action === 'change') {
+      this.props[action](this.state.name, this.state.key, field, value);
+      this.props.validate(this.state.name, this.state.key, this.validate);
+    } else {
+      this.props[action](this.state.name, this.state.key, field);
+    }
+  };
+
+  render() {
+    const form = this.state.form;
+    if (!form) return null;
+    return (
+      <form className="floating-labels">
+        <div className={'row'}>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="firstName"
+              action={this.standardFormAction}
+              label="First Name"
+              required={this.props.creator}
+              hideError={!form.firstName.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="lastName"
+              action={this.standardFormAction}
+              label="Last Name"
+              required={this.props.creator}
+              hideError={!form.lastName.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+        </div>
+        <div className={'row'}>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="dateOfBirth"
+              action={this.standardFormAction}
+              label="Date of Birth"
+              required={this.props.creator}
+              hideError={!form.dateOfBirth.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="address1"
+              action={this.standardFormAction}
+              label="Address 1"
+              required={this.props.creator}
+              hideError={!form.address1.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+        </div>
+        <div className={'row'}>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="city"
+              action={this.standardFormAction}
+              label="City"
+              required={this.props.creator}
+              hideError={!form.city.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="address2"
+              action={this.standardFormAction}
+              label="Address 2"
+              hideError={!form.address2.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+        </div>
+        <div className={'row'}>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="state"
+              action={this.standardFormAction}
+              label="State"
+              required={this.props.creator}
+              hideError={!form.state.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="postalCode"
+              action={this.standardFormAction}
+              label="Postal Code"
+              required={this.props.creator}
+              hideError={!form.postalCode.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+        </div>
+        <div className={'row'}>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="countryCode"
+              action={this.standardFormAction}
+              label="Country Code"
+              required={this.props.creator}
+              hideError={!form.countryCode.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="email"
+              action={this.standardFormAction}
+              label="Email"
+              required={this.props.creator}
+              hideError={!form.email.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+        </div>
+        <div className={'row'}>
+          <div className={'col-12 col-md-6'}>
+            <Components.forms.components.textinput
+              form={form}
+              field="ssn"
+              action={this.standardFormAction}
+              label="SSN"
+              required={this.props.creator}
+              hideError={!form.ssn.touched}
+              disabled={this.props.updating}
+            />
+          </div>
+        </div>
+      </form>
+    );
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_cardsIntegration_GALILEO_forms_customerEnrollment);
+
+// Internal Helper Functions ...
+
+function _includesSpecialCharacters(string) {
+  return (/([.,?@&!#~*;+])/.test(string));
+}
+function _includesNumbers(string) {
+  return (/([1-9])/.test(string));
+}
+
+// GENERATOR_TYPE='component';

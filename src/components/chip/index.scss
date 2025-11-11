@@ -1,0 +1,12 @@
+.components_chip {
+  span {
+    &:hover {
+      background-color: var(--theme-color);
+      cursor: pointer;
+    }
+  }
+}
+
+.popover.chip-component-popover .popover-body table tr td:first-child {
+  vertical-align: top !important;
+}

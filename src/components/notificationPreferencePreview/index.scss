@@ -1,0 +1,10 @@
+.components_notificationPreferencePreview {
+  display: grid;
+  grid-template-columns: 12.5rem 2rem 2rem;
+  margin-left: 1.45rem;
+  margin-right: 1.45rem;
+  .active {
+    color: var(--theme-color);
+  }
+  // text-align: justify;
+}

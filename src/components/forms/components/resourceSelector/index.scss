@@ -1,0 +1,25 @@
+.components_forms_components_resourceSelector {
+  .actionRow {
+    & td {
+      padding: 0 !important;
+    }
+
+    & .action-button {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+
+      &.first {
+        padding-left: 0.75rem;
+      }
+
+      &.last {
+        padding-right: 0.75rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        // background-color: #f2f7f8;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[class*=creator-wrapper-transitioner] {
+  opacity: 0;
+  z-index: -100;
+}
+
+.creator-wrapper-transitioner-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.creator-wrapper-transitioner-enter-done {
+  opacity: 1;
+}
+
+.creator-wrapper-transitioner-exit {
+  opacity: 1;
+}
+
+.creator-wrapper-transitioner-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}

@@ -1,0 +1,53 @@
+.components_modals_modalWrapper {
+  .modal-content {
+    background-color: var(--theme-body-color);
+
+    .btn:not(.btn-circle):not(.btn-tertiary):not(label) {
+      // Override for boostrap 5's ".row > * {" selector
+      width: initial;
+    }
+  }
+
+  .close {
+    color: var(--theme-text-secondary);
+    background: none;
+
+    border: none;
+    padding: 1rem;
+    margin: -1rem -1rem -1rem auto;
+    cursor: pointer;
+
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+
+    :hover {
+      opacity: 0.75;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .wide-modal {
+      max-width: none !important;
+
+      &.wide-50 {
+        width: 50% !important;
+      }
+      &.wide-60 {
+        width: 60% !important;
+      }
+      &.wide-70 {
+        width: 70% !important;
+      }
+      &.wide-80 {
+        width: 80% !important;
+      }
+      &.wide-90 {
+        width: 90% !important;
+      }
+    }
+  }
+}

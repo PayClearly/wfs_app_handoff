@@ -1,0 +1,29 @@
+.components_toasts_toastWrapper {
+  transform: translate(500px);
+  z-index: 1051;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  [class*=toast-wrapper-transitioner] {
+    transform: translateX(0px);
+  }
+
+  .toast-wrapper-transitioner-enter-active {
+    transform: translateX(-1000px);
+    transition: transform 150ms ease-in-out;
+  }
+
+  .toast-wrapper-transitioner-enter-done {
+    transform: translateX(-1000px);
+  }
+
+  .toast-wrapper-transitioner-exit {
+    transform: translateX(-1000px);
+  }
+
+  .toast-wrapper-transitioner-exit-active {
+    transform: translateX(0px);
+    transition: transform 150ms ease-in-out;
+  }
+}

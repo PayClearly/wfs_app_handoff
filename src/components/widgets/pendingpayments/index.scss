@@ -1,0 +1,11 @@
+.components_widgets_pendingpayments {
+  &:hover {
+    cursor: pointer;
+  }
+  
+  .pending-popover-override {
+    max-width: none !important;
+    // background-color: var(--theme-sidebar-background-color) !important;
+  }
+  
+}

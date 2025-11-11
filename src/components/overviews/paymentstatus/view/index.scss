@@ -1,0 +1,44 @@
+.components_overviews_paymentstatus_view {
+  .card {
+    &.card-with-label {
+      position: relative;
+
+      & .card-label {
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        background-color: var(--theme-body-content-color);
+        margin: 0;
+      }
+    }
+
+    & .small-padding {
+      padding: 0.5rem;
+    }
+  }
+
+  .main-icon-container {
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+  }
+
+  & .module-header {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--theme-color);
+
+      & > i {
+        color: initial;
+      }
+    }
+
+  }
+}

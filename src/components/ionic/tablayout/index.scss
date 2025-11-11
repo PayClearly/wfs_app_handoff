@@ -1,0 +1,12 @@
+.components_ionic_tablayout {
+  ion-content {
+    --background: none;
+    background-image: url('../../../assets/background.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  ion-refresher {
+    z-index: 9999;
+  }
+}

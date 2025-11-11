@@ -1,0 +1,16 @@
+.components_ionic_filters_components_buttons {
+  margin-bottom: 15px;
+  .buttonsLabel {
+    font-size: 14px;
+  }
+  .filterButtons {
+    &.active {
+      --color: var(--ion-color-primary);
+    }
+    margin: 0px;
+    --background: inherit;
+    --color: white;
+    --background-activated: inherit;
+    --background-focused: inherit;
+  }
+}

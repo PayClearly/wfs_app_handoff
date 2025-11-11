@@ -1,0 +1,40 @@
+.components_boxaccordion {
+  padding: .5rem .75rem;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 4px;
+
+  a.accordion-link {
+    color: var(--theme-text-primary);
+    cursor: pointer;
+    h6 {
+      margin-top: .35rem;
+    }
+    .accordion-header {
+      display: flex;
+    }
+    .accordion-header:hover {
+      color: var(--theme-color);
+      h6 {
+        color: var(--theme-color);
+      }
+    }
+  }
+
+  .accordion-row {
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .accordion-row.left-aligned {
+    text-align: left !important;
+  }
+
+  .accordion-row.active {
+    color: var(--theme-color);
+    h6 {
+      color: var(--theme-color);
+    }
+    background-color: transparent;
+  }
+
+}

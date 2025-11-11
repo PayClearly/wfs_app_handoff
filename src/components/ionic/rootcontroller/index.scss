@@ -1,0 +1,40 @@
+.components_ionic_rootcontroller {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+
+  .transitioner {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.invalidpermissions-alert {
+  --backdrop-opacity: 0.6;
+  --background: var(--ion-color-dark);
+  #alert-1-sub-hdr.alert-sub-title {
+    --color: var(--ion-color-dark-contrast);
+    color: var(--ion-color-dark-contrast);
+  }
+  #alert-1-hdr.alert-title {
+    --color: var(--ion-color-dark-contrast);
+    color: var(--ion-color-dark-contrast);
+  }
+  #alert-1-msg.alert-message {
+    --color: var(--ion-color-dark-contrast);
+    color: var(--ion-color-dark-contrast);
+  }
+}
+button.alert-button.alert-button-logout {
+  color: var(--ion-color-danger);
+}

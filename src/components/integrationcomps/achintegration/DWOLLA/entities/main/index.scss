@@ -1,0 +1,13 @@
+.components_integrationcomps_achintegration_DWOLLA_entities_main {
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & div.clickable {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.components_modals_setupachpayments {
+  max-width: none !important;
+  
+  @media (min-width: 768px) {
+    width: 85% !important;
+  }
+  
+  @media (max-width: 768px) {
+    line-height: 1.5rem;
+  }
+}

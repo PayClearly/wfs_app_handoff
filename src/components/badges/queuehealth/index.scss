@@ -1,0 +1,9 @@
+.components_badges_queuehealth {
+  .mdi-sync {
+    color: var(--theme-color);
+    font-size: 5rem;
+  }
+
+  // Bootstrap 5 overrides
+  padding: 0 !important;
+}

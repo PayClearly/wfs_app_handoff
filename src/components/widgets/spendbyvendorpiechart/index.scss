@@ -1,0 +1,24 @@
+.components_widgets_spendbyvendorpiechart {
+  .vendor-spend-dropdown:hover {
+    cursor: pointer;
+  }
+
+  [class*=spend-by-vendor-pie-chart-transitioner] {
+    opacity: 0;
+    background-color: #fff;
+  }
+
+  .spend-by-vendor-pie-chart-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .spend-by-vendor-pie-chart-transitioner-enter-done {
+    opacity: 1;
+  }
+
+  .spend-by-vendor-pie-chart-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+}

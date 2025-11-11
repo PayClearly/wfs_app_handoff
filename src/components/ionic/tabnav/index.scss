@@ -1,0 +1,51 @@
+.components_ionic_tabnav {
+  // So buttons are all same width
+  ion-col {
+    max-width: calc(100% / 5);
+  }
+
+  .nav-button {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+  }
+
+  .current-tab {
+    color: var(--ion-color-primary);
+  }
+
+  ion-toolbar {
+    --background: #282b3a;
+  }
+
+  ion-grid {
+    --ion-grid-padding: 0px;
+  }
+
+  .tab-nav-icon {
+    font-size: 2em;
+  }
+
+  .tab-nav-name {
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+
+  .icon-parent {
+    position: relative;
+    // padding-bottom: 4px;
+  }
+
+  .notification-icon {
+    position: absolute;
+    text-align: center;
+    top: -6px;
+    right: -8px;
+    font-size: 0.7em;
+    background: var(--ion-color-danger);
+    padding: 2px;
+    border-radius: 0.9em;
+    min-width: 1.15em;
+    color: var(--ion-color-danger-contrast);
+  }
+}

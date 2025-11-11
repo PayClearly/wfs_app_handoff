@@ -1,0 +1,25 @@
+.components_tables_components_multiFilterChip {
+  position: relative;
+
+  & .set-filter-label {
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & .set-filter-chip {
+    margin-top: 9.5px;
+    padding: 0.15em;
+
+    & span.multi-filter {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }  
+  }
+}

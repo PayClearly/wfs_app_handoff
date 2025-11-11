@@ -1,0 +1,256 @@
+
+/*==============================================================
+Form Material 
+ ============================================================== */
+/*Material inputs*/
+.form-control,
+.DayPickerInput {
+  background-color: transparent !important;
+  color: var(--theme-text-primary);
+}
+.DayPickerInput:focus,
+.form-control:focus {
+  background-color: transparent;
+  color: var(--theme-text-primary);
+}
+.form-group{
+  margin-bottom: 30px;
+}
+.form-group-noBottomMargin .form-group{
+  margin-bottom: 0;
+}
+.form-material .form-group{ overflow:hidden;}
+.form-material .form-control {
+  background-color: transparent;
+  background-position: center bottom, center calc(100% - 1px);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  padding: 0;
+  transition: background 0s ease-out 0s;
+}
+.form-material .form-control, .form-material .form-control.focus, .form-material .form-control:focus {
+  background-image: linear-gradient($themecolor, $themecolor), linear-gradient($form-brd, $form-brd);
+  border-radius: 0;
+  box-shadow: none;
+  float: none;
+}
+.form-material .form-control.focus, .form-material .form-control:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: 0 none;
+  transition-duration: 0.3s;
+}
+
+.form-control-line .form-group{ overflow:hidden;}
+.form-control-line .form-control {
+  border:0px;
+  border-radius:0px;
+  padding-left: 0px;
+  border-bottom: 1px solid $form-brd;
+  &:focus{
+    border-bottom: 1px solid var(--theme-color);
+  }
+}
+/*******************/
+/*Floating Label*/
+/*******************/
+
+.floating-labels .form-group {
+  position: relative;
+  label.required:after {
+    content: ' *';
+    display:inline;
+    position: relative;
+    bottom: 3px;
+    right: 1px;
+  }
+
+}
+
+.floating-labels .form-control {
+  padding: 12px 0px 0px 0;
+  top: 10px;
+  display: block;
+  border: none;
+  font-family: $bodyfont;
+  border-radius: 0px;
+  border-bottom: 1px solid $form-brd;
+  color: var(--theme-text-primary);
+}
+
+.floating-labels select.form-control>option {
+  font-size: 14px;
+}
+
+.components_forms_components_daypicker .has-error .bar:before,
+.rbt.has-error .bar:before,
+.floating-labels .has-error .form-control {
+  border-bottom: 1px solid $danger;
+}
+
+.floating-labels .has-warning .form-control {
+  border-bottom: 1px solid $warning;
+}
+
+.floating-labels .has-success .form-control {
+  border-bottom: 1px solid $success;
+}
+
+.floating-labels .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.floating-labels label {
+  color: var(--theme-text-primary);
+
+  position: absolute;
+  cursor: auto;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.floating-labels select {
+  cursor: pointer;
+}
+
+.components_forms_components_daypicker label,
+.components_forms_components_typeahead label.typeaheadFloat,
+.rbt.expanded~label,
+.rbt.has-error~label,
+.floating-labels select~label.isFloating,
+.floating-labels label.isFloating,
+.floating-labels .form-control:focus~label,
+.floating-labels .form-control:disabled~label.isFloating,
+.floating-labels .form-control[type="email"]~label.isFloating,
+.floating-labels .form-control:not(select):valid~label {
+  top: -10px !important;
+  font-size: 12px !important;
+}
+
+.components_forms_components_daypicker.focused label,
+.rbt.focus~label,
+.floating-labels .form-control:focus~label {
+  color: var(--theme-color);
+}
+
+.floating-labels .bar {
+  position: relative;
+  display: block;
+}
+
+.floating-labels .bar:before,
+.floating-labels .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: var(--theme-color);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.floating-labels .bar:before {
+  left: 50%;
+}
+
+.floating-labels .bar:after {
+  right: 50%;
+}
+
+.components_forms_components_daypicker.focused .bar:before,
+.components_forms_components_daypicker.focused .bar:after,
+.rbt.focus~.bar:before,
+.rbt.focus~.bar:after,
+.floating-labels .form-control:focus~.bar:before,
+.floating-labels .form-control:focus~.bar:after {
+  width: 50%;
+}
+
+.floating-labels .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.floating-labels .input-lg~label,
+.floating-labels .input-lg {
+  font-size: 24px;
+}
+
+.floating-labels .input-sm~label,
+.floating-labels .input-sm {
+  font-size: 16px;
+}
+
+.has-warning .bar:before,
+.has-warning .bar:after {
+  background: $warning;
+}
+
+.has-success .bar:before,
+.has-success .bar:after {
+  background: $success;
+}
+
+.components_forms_components_daypicker .has-error .bar:before,
+.components_forms_components_daypicker .has-error .bar:after,
+.rbt.has-error .bar:before,
+.rbt.has-error .bar:after,
+.has-error .bar:before,
+.has-error .bar:after {
+  background: $danger;
+}
+
+.has-warning .form-control:focus~label,
+.has-warning .form-control:valid~label {
+  color: $warning;
+}
+
+.has-success .form-control:focus~label,
+.has-success .form-control:valid~label {
+  color: $success;
+}
+
+.components_forms_components_daypicker.has-error label,
+.rbt.has-error~label,
+.has-error .form-control:focus~label,
+.has-error .form-control[type="email"]~label.isFloating,
+.has-error .form-control:valid~label {
+  color: $danger;
+}
+
+.has-feedback label~.t-0 {
+  top: 0;
+}
+.form-group.error input, .form-group.error select, .form-group.error textarea {
+  border: 1px solid $danger;
+}
+.form-group.validate input, .form-group.validate select, .form-group.validate textarea {
+  border:1px solid $success;
+}
+.form-group.error .help-block{
+  ul{
+    padding: 0px;
+    color:$danger;
+    li{
+      list-style:none;
+    }
+  }
+}
+.form-group.issue .help-block{
+  ul{
+    padding: 0px;
+    color:$warning;
+    li{
+      list-style:none;
+    }
+  }
+}

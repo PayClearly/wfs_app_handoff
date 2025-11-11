@@ -1,0 +1,37 @@
+.components_widgets_integrationoverview {
+  margin: 0;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  p.content {
+    text-align: center;
+  }
+  .row-flex {
+    margin-left: 0.35rem;
+    display: flex;
+    &.sb {
+      justify-content: space-between;
+
+      // Bootstrap has many * > * selectors that are too
+      // broad and override our styles
+      & > * {
+        width: initial;
+      }
+    }
+  }
+
+  .row-bottom-spacing {
+    margin-bottom: 0.1rem;
+  }
+
+  .grid {
+    display: grid;
+    &.two-columns {
+      grid-template-columns: 5rem 6.5rem;
+    }
+    &.four-columns {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}

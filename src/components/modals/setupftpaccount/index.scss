@@ -1,0 +1,12 @@
+.components_modals_setupftpaccount {
+  max-width: none !important;
+  
+  @media (min-width: 768px) {
+    width: 50% !important;
+  }
+  
+  @media (max-width: 768px) {
+    line-height: 1.75rem;
+  }
+  
+}

@@ -1,0 +1,28 @@
+.components_widgets_cardsActivity {
+  .daily-spend-dropdown:hover {
+    cursor: pointer;
+  }
+
+  [class*=cards-activity-widget-transitioner] {
+    opacity: 0;
+    background-color: #fff;
+  }
+
+  .cards-activity-widget-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .cards-activity-widget-transitioner-enter-done {
+    opacity: 1;
+  }
+
+  .cards-activity-widget-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+
+  .cards-activity-widget-transitioner-exit-done {
+    opacity: 0;
+  }
+}

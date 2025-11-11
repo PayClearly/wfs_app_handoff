@@ -1,0 +1,44 @@
+.components_cards_csraccountstatuses {
+  max-height: 280px;
+  overflow-y: scroll;
+  background-color: var(--theme-header-border-color) !important;
+  z-index: 15;
+  position: relative;
+
+  &.bar-displayed {
+    padding-bottom: 2rem;
+  }
+
+  &.expanded {
+    max-height: 100% !important;
+  }
+
+  & + .collapse-bar {
+    width: 100%;
+    height: 1.8rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    background-color: var(--theme-sidebar-background-color);
+    opacity: 0.9;
+    border-right: solid 31px transparent;
+    border-left: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+
+    -moz-background-clip: padding; /* Firefox 3.6 */
+    -webkit-background-clip: padding; /* Safari 4? Chrome 6? */
+    background-clip: padding-box;
+
+    & h5 {
+      color: var(--theme-text-primary);
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & h5 {
+        color: var(--theme-color) !important;
+      }
+    }
+  }
+}

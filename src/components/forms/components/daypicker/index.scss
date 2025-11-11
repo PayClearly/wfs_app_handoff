@@ -1,0 +1,43 @@
+.components_forms_components_daypicker {
+  position: relative;
+
+  .day-picker-icon-container {
+    position: absolute;
+    bottom: 22px;
+    right: 9px;
+  }
+
+  .day-picker-icon-container.disabled {
+    opacity: 0.4;
+  }
+
+  .day-picker-icon {
+    font-size: 25px;
+  }
+
+  .DayPickerInput {
+    width: 100%;
+  }
+
+  & .DayPickerInput-Overlay {
+    z-index: 3;
+  }
+
+  .bottom-left {
+    bottom: -20px;
+    left: 0px;
+  }
+
+}
+
+.DayPicker-Weekday {
+  abbr {
+    cursor: default !important;
+  }
+}
+
+.DayPickerInput {
+  .form-control:disabled {
+    opacity: 0.4 !important;
+  }
+}

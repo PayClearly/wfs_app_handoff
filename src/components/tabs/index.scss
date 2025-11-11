@@ -1,0 +1,25 @@
+.components_tabs {
+}
+
+.link-style-tab li a.nav-link {
+  border: 0px;
+  padding: 15px 20px;
+  color: var(--theme-text-primary);
+  &.active {
+    background-color: transparent;;
+    border-bottom: 2px solid var(--theme-color);
+    color: var(--theme-color);
+  }
+  &.badges {
+    position: relative;
+  }
+  &:hover {
+    color: var(--theme-color);
+  }
+  span {
+    display: none;
+    @media (min-width: 991px) {
+      display: inline;
+    }
+  }
+}

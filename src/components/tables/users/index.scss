@@ -1,0 +1,29 @@
+.components_tables_users {
+    .users.table {
+        td, th {
+          vertical-align: middle;
+          padding: 0.3rem;
+          @media (min-width: 991px) {
+            padding: 0.75rem;
+          }
+          &.mdi:before {
+            float: right;
+          }
+        }
+      
+        td.avatar {
+          height: 50px;
+        }
+      
+        svg {
+          display: block;
+          margin: auto;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          border: 5px solid rgba(255,255,255,0.5);
+        }
+      
+      }
+      
+}

@@ -1,0 +1,49 @@
+.components_ionic_forms_components_select {
+
+  &.readonly {
+    ion-label {
+      opacity: 1 !important;
+    }
+
+    ion-datetime {
+      opacity: 1 !important;
+    }
+
+    .native-input:disabled {
+      opacity: 1 !important;
+    }
+
+    ion-button {
+      opacity: 1 !important;
+      ion-icon {
+        visibility: hidden;
+      }
+    }
+  }
+
+  ion-label {
+    padding-bottom: 4px;
+  }
+
+  ion-select {
+    box-sizing: border-box;
+    border: 1px solid var(--ion-color-light);
+    border-radius: 5px;
+    --padding-start: 8px !important;
+  }
+
+  ion-note {
+    padding-top: 4px;
+    font-size: .7em;
+  }
+
+  .modal-select {
+    height: 36px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--ion-color-light);
+    border-radius: 5px;
+    margin: 0px;
+    font-size: 1em;
+  }
+}

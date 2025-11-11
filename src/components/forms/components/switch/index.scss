@@ -1,0 +1,21 @@
+.components_forms_components_switch {
+  & p.disabled {
+    opacity: 0.5;
+  }
+
+  & .custom-switch-input:disabled {
+    & + .custom-switch-btn {
+      opacity: 0.5;
+    }
+  }
+  .icon-switch {
+    margin-bottom: 5px;
+  }
+
+  .custom-switch {
+    padding-left: 0px;
+  }
+  .active {
+    color: var(--theme-color);
+  }
+}

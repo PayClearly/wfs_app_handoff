@@ -1,0 +1,110 @@
+.components_ionic_modals_report {
+  overflow: auto !important;
+
+  ion-card-title {
+    font-size: 1em;
+  }
+
+  .rejection-bar {
+    --background: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.12);
+    height: 36px;
+    padding-top: 8px;
+    width: inherit;
+    overflow: visible;
+    border-radius: 5px;
+    margin: 0px;
+
+    &tool-bar {
+      border-radius: 5px;
+    }
+    ion-title {
+      height: unset;
+    }
+    .rejection-alert{
+      position: absolute;
+      top: 0px;
+      left: 4px;
+      border: 1px solid var(--ion-color-danger);
+      border-radius: 100px;
+      padding: 2px;
+    }
+    .expand-comments{
+      position: absolute;
+      top: 2px;
+      right: 6px;
+    }
+  }
+  
+  .rejection-comment {
+    border-radius: 8px;
+    margin-bottom: 0px;
+
+    .comment-list {
+      margin-top: 4px;
+    }
+
+    .comment-list-content {
+      height: 250px;
+      overflow-y: scroll;
+    }
+
+    .add-comment-footer {
+      height: 40px;
+      margin-top: 10px;
+      & form {
+        display: flex;
+        float: left;
+        height: 30px;
+        width: 75%;
+
+        & div, input {
+          height: 100%;
+          width: 100%;
+          border: 0px;
+          padding: 0px;
+        }
+
+        & input:focus {
+          outline: none;
+        }
+
+        & input {
+          padding-inline-start: 4px;
+          background-color: var(--dark-blue);
+          border: 1px solid white;
+          border-radius: 5px;
+        }
+      }
+
+      .add-comment-button {
+        display: flex;
+        float: right;
+        border: 1px solid var(--ion-color-primary);
+        --background-activated: var(--ion-color-primary);
+        border-radius: 5px;
+        padding: 0px 4px 0px 4px;
+        height: 30px;
+        width: 15%;
+
+        ion-icon, ion-spinner {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .submit-button {
+    --color: var(--ion-color-primary);
+    --border-width: 2px;
+    padding-top: 4px;
+  }
+  .create-button {
+    --color: var(--ion-color-light);
+    --border-width: 2px;
+  }
+  .delete-report {
+    --color: var(--ion-color-danger);
+    --border-width: 2px;
+    padding-bottom: 4px;
+  }
+}

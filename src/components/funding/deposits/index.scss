@@ -1,0 +1,25 @@
+.components_funding_deposits {
+  & .message-container {
+    height: 24px;
+
+    &:hover {
+      & .mdi {
+        color: var(--theme-color-dark) !important;
+      }
+    }
+  }
+
+  & .action-button-container {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+  }
+
+  & .flex-container {
+    display: flex;
+
+    & .right, & .left {
+      flex: 1;
+    }
+  }
+}

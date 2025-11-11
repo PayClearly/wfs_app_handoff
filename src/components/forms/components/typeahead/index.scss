@@ -1,0 +1,53 @@
+.components_forms_components_typeahead {
+  .rbt {
+    input {
+      color: inherit;
+    }
+
+    .rbt-input.form-control {
+      top: 0;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .rbt-input.form-control[disabled] {
+      opacity: 1;
+    }
+  }
+
+  .rbt-input-wrapper div {
+    z-index: 1;
+
+    .close {
+      background: none;
+      border: none;
+    }
+    .rbt-token-remove-button {
+      margin: 0;
+    }
+  }
+
+  .clear-all {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    z-index: 9999;
+    font-size: 18px;
+    i:hover {
+      color: #c7213e !important;
+    }
+    i:active {
+      color: #c56c7b !important;
+    }
+  }
+
+  & label {
+    pointer-events: none;
+  }
+
+  .dropdown-menu {
+    left: 0;
+    margin: 0.125rem 0 0;
+  }
+}

@@ -1,0 +1,5 @@
+.components_forms_approveautodraft {
+  input[type="checkbox"]:disabled + label {
+    opacity: 1 !important;
+  }
+}

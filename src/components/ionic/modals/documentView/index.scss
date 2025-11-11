@@ -1,0 +1,22 @@
+.components_ionic_modals_documentView {
+  .document-descriptors {
+    color: darkgrey;
+    padding-bottom: 2px;
+  }
+
+  .document-values {
+    word-break: break-word;
+  }
+
+  .close-toolbar {
+    padding-top: 4px;
+    .close-button {
+      width: 100%;
+    }
+  }
+
+  .ACTIVE {
+    color: var(--ion-color-primary);
+  }
+}
+

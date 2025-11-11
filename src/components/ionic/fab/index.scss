@@ -1,0 +1,76 @@
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+ion-fab {
+  // Shrink and expand on scroll
+  transform: scale(1);
+  transition: transform 0.3s linear;
+
+  &.small {
+    transform: scale(0.6);
+    transition: transform 0.3s linear;
+  }
+}
+
+ion-fab-button {
+  color: white;
+  --color: white;
+  --background: var(--theme-color-dark);
+  --box-shadow: 0px 0px 5px 1px black;
+  border-radius: 100%;
+  z-index: 13;
+  --background-activated: var(--theme-color-dark);
+  --color-activated: white;
+
+  // This allows the description to be placed relative to the fab button
+  &[data-desc] {
+    position: relative;
+  }
+  // This positions the description text on the fab button
+  &[data-desc]::after {
+    position: absolute;
+    content: attr(data-desc);
+    z-index: 1;
+    right: 55px;
+    bottom: 4px;
+    padding: 9px;
+    border-radius: 15px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 2px black;
+    font-family: "Roboto-Bold";
+    font-size: 16px;
+  }
+}
+
+// This places a backdrop behind the fab
+.fab-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 11;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+// This captures the click event on backdrop and closes the fab and hides the backdrop
+.fab-overlay {
+  background: transparent;
+  position: fixed;
+  z-index: 12;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}

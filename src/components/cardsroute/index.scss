@@ -1,0 +1,35 @@
+.components_cardsroute {
+  padding-bottom: 100px;
+
+  .noxscroll {
+    overflow-x: hidden;
+    min-height: 550px;
+  }
+
+  .yscroll {
+    overflow-y: auto;
+  }
+
+  [class*=cards-route-transitioner] {
+    opacity: 0;
+  }
+
+  .cards-route-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .cards-route-transitioner-enter-done {
+    opacity: 1;
+  }
+
+  .cards-route-transitioner-exit {
+    opacity: 1;
+  }
+
+  .cards-route-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+
+}

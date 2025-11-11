@@ -1,0 +1,9 @@
+.components_widgets_spendSummary {
+  &:hover {
+    cursor: pointer;
+  }
+
+  .popover-override {
+    max-width: none !important;
+  }
+}

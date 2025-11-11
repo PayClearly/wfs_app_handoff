@@ -1,0 +1,25 @@
+.components_ionic_modals_tailSelect {
+  .tail-select-content {
+    --background: var(--dark-blue);
+  }
+  ion-toolbar {
+    --background: #232b38;
+  }
+
+  ion-list-header {
+    --color: var(--ion-color-dark-contrast);
+    --background: var(--ion-color-medium);
+    padding-bottom: 8px;
+  }
+
+  ion-item {
+    --padding-top: 4px;
+    --padding-bottom: 4px;
+  }
+
+  ion-searchbar {
+    --color: var(--ion-color-dark-contrast);
+  }
+
+}
+

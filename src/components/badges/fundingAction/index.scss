@@ -1,0 +1,8 @@
+.components_badges_fundingAction {
+  display: flex;
+  align-items: center;
+
+  & .funding-history-icon {
+    height: 35px !important;
+  }
+}

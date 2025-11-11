@@ -1,0 +1,24 @@
+.components_widgets_dailyspendgraph {
+  .daily-spend-dropdown:hover {
+    cursor: pointer;
+  }
+
+  [class*=daily-spend-graph-transitioner] {
+    opacity: 0;
+    background-color: #fff;
+  }
+
+  .daily-spend-graph-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .daily-spend-graph-transitioner-enter-done {
+    opacity: 1;
+  }
+
+  .daily-spend-graph-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+}

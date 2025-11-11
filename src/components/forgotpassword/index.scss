@@ -1,0 +1,27 @@
+.components_forgotpassword {
+  .forgot-password-transitioner-enter {
+    opacity: 0;
+  }
+
+  .forgot-password-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .forgot-password-transitioner-enter-done {
+    opacity: 1;
+  }
+
+  .forgot-password-transitioner-exit {
+    opacity: 1;
+  }
+
+  .forgot-password-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+
+  .forgot-password-transitioner-exit-done {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "appId": "com.wfscorp.mywallet",
+  "appName": "myWallet",
+  "bundledWebRuntime": true,
+  "loggingBehavior": "none",
+  "npmClient": "npm",
+  "webDir": "../../../build/wfsapp/localDev",
+  "backgroundColor": "#0F151E",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "server": {
+    "hostname": "wfs"
+  }
+}

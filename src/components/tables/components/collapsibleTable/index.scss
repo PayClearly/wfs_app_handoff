@@ -1,0 +1,129 @@
+.components_tables_components_collapsibleTable {
+  position: relative;
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .responsive.table {
+    margin-bottom: 0;
+    th span {
+      font-weight: bold;
+    }
+
+    td {
+      white-space: normal;
+    }
+
+    th {
+      white-space: nowrap;
+    }
+
+    & > tr > th {
+      border-top: 1px solid #dee2e6;
+    }
+
+    td,
+    th {
+      vertical-align: middle;
+      padding: 0.3rem;
+      @media (min-width: 991px) {
+        padding: 0.75rem;
+      }
+      .mdi-chevron:before {
+        content: "\00a0\00a0\00a0\00a0";
+      }
+      .mdi-chevron-right {
+        background: none;
+        padding: 0;
+      }
+
+      .badge {
+        padding: 0.35em 0.6em;
+      }
+    }
+    .small {
+      font-size: 85%;
+      @media (min-width: 991px) {
+        font-size: 100%;
+      }
+    }
+    .collapsibleRow > td {
+      padding: 0;
+      border: 0;
+      // overflow: hidden;
+      overflow: visible;
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        padding-left: 0;
+      }
+    }
+  }
+
+  & .table-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+
+    &.nested-table {
+      overflow-x: hidden !important;
+    }
+
+    svg {
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    img {
+      vertical-align: middle;
+      overflow: hidden;
+    }
+  }
+
+  // action content popover styling
+  .popover-cell {
+    &.disabled {
+      opacity: 0.5;
+    }
+    &:not(.disabled):hover {
+      cursor: pointer;
+      background-color: var(--theme-sidebar-background-color);
+      background-clip: content-box;
+    }
+    &:not(.disabled):active {
+      cursor: pointer;
+      background-color: $light;
+      background-clip: content-box;
+    }
+  }
+
+  &.action-popover {
+    .action-item {
+      &:hover {
+        cursor: pointer;
+        background-color: var(--theme-sidebar-background-color);
+      }
+
+      &:active {
+        cursor: pointer;
+        background-color: var(--theme-background-color);
+      }
+
+      &.disabled {
+        opacity: 0.65;
+        color: var(--theme-text-primary);
+
+        &:hover {
+          opacity: 0.8;
+          background-color: unset;
+        }
+        &:active {
+          background-color: var(--theme-sidebar-background-color);
+        }
+      }
+    }
+  }
+}

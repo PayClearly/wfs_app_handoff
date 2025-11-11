@@ -1,0 +1,57 @@
+.components_ionic_modals_legDetail {
+  overflow: auto !important;
+
+  .plane-icon {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .icao {
+    font-size: 1.5em;
+  }
+  .leg-details {
+    border-bottom: 1px solid var(--light-grey);
+  }
+
+  ion-item {
+    --padding-start: 0px;
+    --padding-end: 0px;
+  }
+
+  .small-text {
+    font-size: 1em;
+    margin-bottom: 16px;
+  }
+
+  .service-icon {
+    background: white;
+    border-radius: 100%;
+    color: var(--ion-color-dark);
+    padding: 5px;
+    margin-right: 20px;
+  }
+
+
+  [class*=leg-details-transitioner] {
+    opacity: 0;
+  }
+
+  .leg-details-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in;
+  }
+
+  .leg-details-transitioner-enter-done {
+    opacity: 1;
+  }
+
+  .leg-details-transitioner-exit {
+    opacity: 1;
+  }
+
+  .leg-details-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 100ms ease-out;
+  }
+}
+

@@ -1,0 +1,79 @@
+.components_containers_pdf {
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  &.filled-to-height {
+    height: 100%;
+
+    & div:first-child {
+      height: 90%;
+      justify-content: center;
+    }
+  }
+  .paginate_page {
+    display: inline;
+  }
+
+  .paginate_button {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    margin-left: 1.5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #54667a;
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    &:hover {
+      color: white;
+      border: 1px solid $muted;
+      background-color: $muted;
+    }
+
+    &:active {
+      outline: none;
+      color: white;
+      background-color: $muted;
+    }
+
+    &:focus {
+      outline: none;
+      color: white;
+      background-color: $muted;
+    }
+
+  }
+
+  .paginate_page.current {
+    .paginate_button {
+      &, &:hover {
+        color: #ffffff;
+        border: 1px solid $primary;
+        background-color: $primary;
+      }
+    }
+  }
+
+  .paginate_page.disabled {
+    .paginate_button {
+      &, &:hover, &:active {
+        cursor: default;
+        color: #54667a;
+        border: 1px solid transparent;
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .ellipsis {
+    padding: 0;
+    margin-left: 1px;
+  }
+}

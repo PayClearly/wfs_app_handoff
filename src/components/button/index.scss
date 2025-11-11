@@ -1,0 +1,20 @@
+.components_button {
+  & .content-container {
+    position: relative;
+  }
+
+  & span.updating {
+    visibility: hidden;
+    position: relative;
+    z-index: 10;
+  }
+
+  & img {
+    position: absolute;
+    z-index: 12;
+  }
+
+  &.border-radius-0 {
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,25 @@
+.components_ionic_filters_documentsFilter {
+  &.rounded-corners {
+    --border-radius: 20px 20px 0px 0px;
+  }
+  .modalBody {
+    --background: #313D4D;
+  }
+  .modal-wrapper,
+  .modal-shadow {
+    position: absolute;
+    bottom: 0px;
+  }
+  &.sm  .modal-wrapper,
+  &.sm .modal-shadow {
+    height: 25%;
+  }
+  &.md .modal-wrapper,
+  &.md .modal-shadow {
+    height: 35%;
+  }
+  &.lg .modal-wrapper,
+  &.lg .modal-shadow {
+    height: 45%;
+  }
+}

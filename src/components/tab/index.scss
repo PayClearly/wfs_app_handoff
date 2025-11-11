@@ -1,0 +1,5 @@
+.components_tab {
+  &.persistedTab:not(.activeTab) {
+    display: none;
+  }
+}

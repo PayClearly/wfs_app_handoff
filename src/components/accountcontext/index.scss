@@ -1,0 +1,15 @@
+.components_accountcontext {
+  color: var(--theme-text-primary);
+
+  .overlayedSelect {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+  }
+}

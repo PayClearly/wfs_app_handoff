@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2017", "DOM"],
+    "outDir": "./dist/",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "module": "es6",
+    "target": "es5",
+    "strict": true,
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*",
+        "src/apps/*",
+        "*"
+      ],
+      "component": [
+        "src/component.js"
+      ]
+    },
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

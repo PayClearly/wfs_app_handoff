@@ -1,0 +1,17 @@
+.react-bootstrap-table-page-btns-ul {
+  float: right;
+}
+button {
+  cursor: pointer;
+}
+.react-bootstrap-table {
+  overflow-x: scroll;
+  table {
+    th {
+      white-space: nowrap;
+    }
+    td {
+      white-space: nowrap;
+    }
+  }
+}

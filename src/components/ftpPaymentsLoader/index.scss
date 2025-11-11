@@ -1,0 +1,20 @@
+.components_ftpPaymentsLoader {
+  .row-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr 4fr;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: 4px;
+  }
+  .rows-container {
+    padding: 5px;
+  }
+  .column-headers {
+    display: grid;
+    grid-template-columns: 3fr 1fr 4fr;
+    align-items: center;
+    white-space: pre;
+  }
+}

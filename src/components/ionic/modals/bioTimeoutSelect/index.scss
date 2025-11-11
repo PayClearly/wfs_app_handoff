@@ -1,0 +1,21 @@
+.components_ionic_modals_bioTimeoutSelect {
+  ion-toolbar {
+    --background: #232b38;
+  }
+
+  ion-item {
+    --padding-top: 4px;
+    --padding-bottom: 4px;
+    --padding-end: 20px;
+  }
+
+  ion-content {
+    height: 100vh;
+  }
+
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
+
+}
+

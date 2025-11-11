@@ -1,0 +1,109 @@
+// variables
+/*bootstrap Overrides*/
+$muted: #90a4ae !default;
+$dark: #263238 !default;
+$light: #f2f7f8 !default;
+$breadcrumb-bg: "transparent" !default;
+$link-color: #337ab7 !default;
+
+/* Main Components */
+$left-nav-background: $light !default;
+$left-nav-width: 240px !default;
+
+/*Theme Colors*/
+$topbar: #fff !default;
+$mainheader-border: #e9f1f3 !default;
+// $sidebar: #f2f7f8 !default;
+// $sidebar-color: #f2f7f8 !default;
+$sidebar: #fafafa !default;
+$sidebar-color: #fafafa !default;
+$sidebar-alt: #e8eff0 !default;
+$bodycolor: #fff !default;
+$headingtext: #2c2b2e !default;
+$bodytext: #54667a !default;
+$sidebar-text: #54667a !default;
+$sidebar-icons: #a6b7bf !default;
+
+$light-text: #a6b7bf !default;
+// $themecolor: #009efb !default;
+$themecolor: #05aedd !default;
+$themecolor-dark: #037d9e !default;
+$themecolor-light: #c7ebf7 !default;
+
+/* colory yiq */
+$yiq-contrasted-threshold: 300 !default;
+
+/*bootstrap Color*/
+$primary: $themecolor !default;
+$secondary: #6c757d !default;
+$danger: #f62d51 !default;
+$success: #55ce63 !default;
+$warning: #ffbc34 !default;
+$info: #7460ee !default;
+$inverse: #2f3d4a !default;
+$muted: #90a4ae !default;
+$dark: #263238 !default;
+$light: #d4dbdd !default;
+$extra-light: #ebf3f5 !default;
+
+/*Light colors*/
+$light-danger: #f9e7eb !default;
+$light-success: #e8fdeb !default;
+$light-warning: #fff8ec !default;
+$light-primary: $themecolor-light !default;
+$light-info: #e4e0fd !default;
+$light-inverse: #f6f6f6 !default;
+$light-megna: #e0f2f4 !default;
+
+$danger-dark: #e6294b !default;
+$success-dark: #4ab657 !default;
+$warning-dark: #e9ab2e !default;
+$primary-dark: $themecolor-dark !default;
+$info-dark: #5c4dbe !default;
+$red-dark: #d61f1f !default;
+$inverse-dark: #232a37 !default;
+$dark-transparent: rgba(0, 0, 0, 0.05) !default;
+
+// #05AEDD
+/*Normal Color*/
+$white: #ffffff !default;
+$red: #fb3a3a !default;
+$yellow: #a0aec4 !default;
+$purple: #7460ee !default;
+$blue: #02bec9 !default;
+$megna: #01c0c8 !default;
+
+/*Extra Variable*/
+$rgt: right !default;
+$lft: left !default;
+$border: rgba(120, 130, 140, 0.13) !default;
+$table-border: #f3f1f1 !default;
+$dark-text: #848a96 !default;
+$radius: 4px !default;
+$form-brd: #d9d9d9 !default;
+
+$bodyfont: "Rubik", sans-serif !default;
+$headingfont: "Rubik", sans-serif !default;
+
+/* Switch */
+$switch-unit: px !default;
+$switch-width: 64 !default;
+$switch-width-status: 88 !default;
+$switch-height: 30 !default; // The default Bootstrap btn height in px
+$switch-font-size: 14 !default;
+$switch-font-family: $bodyfont !default;
+$switch-duration: 300ms !default;
+
+$switch-checked-color: $white !default;
+$switch-checked-bg: $themecolor !default;
+$switch-checked-text-io: "I" !default;
+$switch-checked-text-onoff: "On" !default;
+$switch-checked-text-yesno: "Yes" !default;
+$switch-checked-text-status: "Enabled" !default;
+
+$switch-unchecked-color: $white !default;
+$switch-unchecked-bg: $muted !default;
+$switch-unchecked-text-io: "O" !default;
+$switch-unchecked-text-onoff: "Off" !default;
+$switch-unchecked-text-yesno: "No" !default;
+$switch-unchecked-text-status: "Disabled" !default;

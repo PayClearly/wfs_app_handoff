@@ -1,0 +1,29 @@
+.components_forms_components_radioButtonGroup {
+  & label {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    background-color: transparent;
+    border-color: var(--theme-color);
+    color: var(--theme-color);
+    padding: 1px;
+
+    &.active,
+    &:hover {
+      background-color: var(--theme-color) !important;
+      color: white !important;
+      border-color: var(--theme-color);
+
+      & i {
+        color: white;
+      }
+    }
+
+    & i {
+      position: absolute;
+      top: -1.5px;
+      left: 1.5px;
+      color: var(--theme-color);
+    }
+  }
+}

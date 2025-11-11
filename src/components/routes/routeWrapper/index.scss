@@ -1,0 +1,24 @@
+[class*=route-wrapper-transitioner] {
+  opacity: 0;
+  z-index: 100;
+}
+
+.route-wrapper-transitioner-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.route-wrapper-transitioner-enter-done {
+  opacity: 1;
+  z-index: -100;
+}
+
+.route-wrapper-transitioner-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.route-wrapper-transitioner-exit-done {
+  opacity: 0;
+  z-index: -100;
+}

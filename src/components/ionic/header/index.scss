@@ -1,0 +1,64 @@
+.components_ionic_header {
+  h1 {
+    color: var(--ion-color-dark-contrast);
+    font-weight: 100;
+    font-size: 2em;
+    display: inline;
+  }
+
+  ion-toolbar {
+    --background: #232b38;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-top: var(--ion-safe-area-top, 16) !important;
+  }
+
+  ion-button .tail-select-button {
+    --color: var(--ion-color-dark-contrast);
+    ion-icon {
+      padding-right: 8px;
+    }
+  }
+
+  .rewards-banner {
+    background: #0F151E;
+    font-size: .8em;
+    display: flex;
+    color: var(--ion-color-dark-contrast);
+    overflow: hidden;
+    transition: height 1s, margin 1s;
+
+    .manage-profile {
+      font-size: .7em;
+      color: var(--ion-color-primary);
+    }
+
+    .rewards-image {
+      height: 45px;
+    }
+
+    &.shown {
+      margin: 0px 0px;
+      height: 45px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    &.hidden {
+      margin: 0px;
+      height: 0px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+  }
+
+
+  .world-fuel-rewards {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 15px;
+    text-align: justify;
+    color: var(--ion-color-dark-contrast);
+  }
+}

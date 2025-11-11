@@ -1,0 +1,12 @@
+.components_ionic_expandedCard {
+  .default {
+    transform: translate(0, 0),
+  }
+  .displayed-virtualcard {
+    transform: scale(1.95) rotate(90deg);
+    z-index: 1000;
+    max-height: 100vw;
+    margin: 0 auto;
+    margin-top: 37vh;
+  }
+}

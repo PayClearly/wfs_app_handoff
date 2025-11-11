@@ -1,0 +1,38 @@
+.components_forms_components_accordion {
+  padding: 10px 0;
+
+  a.accordion-link {
+    cursor: pointer;
+    &.active {
+      border-bottom: 2px solid var(--theme-color);
+      color: var(--theme-color);
+    }
+    &:hover {
+      color: var(--theme-color);
+    }
+    span {
+      display: inline;
+    }
+  }
+
+  .accordion-row {
+    background-color: transparent;
+    text-align: center;
+    color: var(--theme-color);
+  }
+  
+  .accordion-row.left-aligned {
+    text-align: left !important;
+  }
+
+  .accordion-row.active {
+    background-color: transparent;
+  }
+
+  .accordion-row.active a.accordion-link {
+    color: var(--theme-color);
+    &:hover {
+      color: var(--theme-color);
+    }
+  }
+}

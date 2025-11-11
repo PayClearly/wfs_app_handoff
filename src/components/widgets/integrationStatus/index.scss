@@ -1,0 +1,9 @@
+.components_widgets_integrationStatus {
+  max-height: 132px;
+  &:hover {
+    cursor: pointer;
+  }
+  .data-container {
+    justify-content: space-evenly;
+  }
+}

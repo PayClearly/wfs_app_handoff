@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{{favicon}}}">
+    <link rel="stylesheet" type="text/css" href="/index.css{{#if buildKeyQuery}}{{{buildKeyQuery}}}{{/if}}">
+    <script type="application/javascript">window.GLOBALCERT = {{{ toJSON appCert }}};</script>
+    <script src="/index.js{{#if buildKeyQuery}}{{{buildKeyQuery}}}{{/if}}"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <img src="{{{logo}}}" style="z-index: -100; max-height: 150px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" />
+    <script>window.APPLICATIONSTART()</script>
+  </body>
+</html>

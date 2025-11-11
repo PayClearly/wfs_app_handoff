@@ -1,0 +1,27 @@
+.components_routes_confirmemail {
+  color: var(--theme-text-primary);
+
+  [class*=confirm-email-transitioner] {
+    opacity: 0;
+  }
+
+  .confirm-email-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .confirm-email-transitioner-enter-done {
+    opacity: 1;
+    z-index: -100;
+    background-color: var(--theme-body-color);
+  }
+
+  .confirm-email-transitioner-exit {
+    opacity: 1;
+  }
+
+  .confirm-email-route-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+}

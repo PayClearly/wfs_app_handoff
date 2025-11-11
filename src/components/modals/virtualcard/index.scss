@@ -1,0 +1,23 @@
+.components_modals_virtualcard {
+  .cc-area {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    font-weight: 300;
+    cursor: pointer;
+  
+    &:hover {
+      color: var(--theme-color-dark)!important;
+    }
+  }
+  
+  .copied-alert {
+    animation: fadeIn 0.2s both ease-in; 
+  }
+  
+  @keyframes fadeIn {
+    from    { opacity: 0; }
+    to      { opacity: 1; }
+  }
+}

@@ -1,0 +1,517 @@
+import {
+  connect, Component, bindActionCreators, Fragment,
+} from 'component';
+
+// Third Party Imports ...
+
+import Utils from 'utils';
+import Store from 'store';
+import Selectors from 'selectors';
+import Components from 'components';
+
+import './index.scss';
+
+const mapStateToProps = (state, props) => ({
+  orgId: state.organization.data.id,
+  accountId: state.account.data.id,
+  organizations: state.organizations.data.items,
+  accounts: state.accounts.data.items,
+  pendingRefunds: state.account.accountBalances.data.item.pendingRefunds,
+  creditLimitSync: state.account.accountBalances.data.item.creditLimitSync,
+  paymentStatuses: state.account.paymentStatuses,
+  batchPayments: state.account.batchPayments,
+  fundingDetails: Selectors.funding(state),
+  canUpdateWithdrawals: Selectors.entity('achTransfers_*_*')(state).canUpdate,
+  achIntegrationDetails: state.account.achIntegration.data.details,
+  checksIntegrationDetails: state.account.checksIntegration.data.details,
+});
+
+const mapDispatchToProps = (dispatch, props) => ({
+  openSubmitQueuedResolvedIssues: (data) => { dispatch(Store.router.openModal('Components.modals.submitQueuedResolvedIssues', data)); },
+  openPaymentPresendModal: (id) => { dispatch(Store.router.openModal('Components.modals.paymentsend.modal', { id })); },
+  markBatchAsCancelled: (ids, params) => { dispatch(Store.account.updatePaymentPipelines(ids, 'cancelPayments', params)); },
+  openSchedulerModal: (ids, payAt) => dispatch(Store.router.openModal('Components.modals.scheduler', { ids, payAt })),
+  openAreYouSureModal: (data) => { dispatch(Store.router.openModal('Components.modals.areyousure', data)); },
+});
+
+class components_cards_csraccountdetails extends Component {
+  state = {
+    tableKey: 'csraccountdetails',
+  };
+
+  componentDidMount() { }
+
+  componentWillUnmount() { }
+
+  onActionClick(title, id) {
+    this.props.openPaymentPresendModal(id);
+  }
+
+  cancelBatch = (paymentsForBatch) => {
+    const paymentsThatCanBeCancelled = paymentsForBatch.filter((id) => Utils.paymentCanBeCancelled(this.props.paymentStatuses.data.items[id], {
+      achIntegrationProvider: this.props.achIntegrationDetails.provider,
+      checksIntegrationProvider: this.props.checksIntegrationDetails.provider,
+    }));
+
+    this.props.openAreYouSureModal({
+      title: 'Cancel Entire Batch',
+      content: paymentsThatCanBeCancelled.length === paymentsForBatch.length
+        ? 'You are about to cancel all payments in this batch.'
+        : 'This batch contains checks which have already been processed and cannot be cancelled. All other payments in this batch will be cancelled.',
+      noText: 'No',
+      yesText: 'Yes',
+      onYes: (params) => this.props.markBatchAsCancelled(paymentsThatCanBeCancelled, {}),
+    });
+  };
+
+  render() {
+    const {
+      orgId, accountId, organizations, accounts, fundingDetails,
+    } = this.props;
+    const pendingResolvedIssues = _try(() => fundingDetails.pendingResolvedIssues);
+    const pendingResolvedIssueIds = pendingResolvedIssues && Object.keys(pendingResolvedIssues);
+    const error = this.props.paymentStatuses.status.updatingError || '';
+
+    return (
+      <div className="components_cards_csraccountdetails">
+        <h3>{_try(() => organizations[orgId].name)} {'>'} <span className="text-primary">{_try(() => accounts[accountId].name)}</span></h3>
+        <Components.tabs defaultTab="payments">
+          <Components.tab name="payments" label="Payments" iconClassName="mdi-cash-multiple" isValidTab>
+            {this.props.paymentStatuses.status.fetched
+              && <Fragment>
+                <Components.tables.components.multiFilter
+                  tableName="Components.tables.csrpayments"
+                  tableKey={this.state.tableKey}
+                  filterConfig={filterConfig.payments.multiFilter}
+                />
+                {error
+                  && (
+                    <div className="col-12">
+                      <div className="alert alert-danger" role="alert">
+                        {error}
+                      </div>
+                    </div>
+                  )}
+                <Components.tables.csrpayments
+                  tableKey={this.state.tableKey}
+                />
+              </Fragment>}
+            {!this.props.paymentStatuses.status.fetched
+              && <Components.spinner />}
+          </Components.tab>
+          <Components.tab name="transfers" label="Transfers" iconClassName="mdi-credit-card-outline" isValidTab>
+            <Components.tables.csrtransfers />
+          </Components.tab>
+          <Components.tab name="withdrawalOverrides" label="Withdrawal Overrides" iconClassName="mdi-inbox-arrow-up" isValidTab>
+            {!_try(() => this.props.paymentStatuses.status.fetched)
+              && <Components.spinner />}
+            {_try(() => this.props.paymentStatuses.status.fetched)
+              && <Fragment>
+                {this.props.canUpdateWithdrawals && pendingResolvedIssues && Boolean(pendingResolvedIssueIds.length)
+                  && <Components.button
+                    buttonText="Submit all Pending Withdrawals"
+                    onClick={() => {
+                      this.props.openSubmitQueuedResolvedIssues({
+                        submitAll: true,
+                        pendingResolvedIssueIds,
+                      });
+                    }}
+                    ariaLabel="Submit all Pending Withdrawals"
+                    className="btn btn-primary mt-4"
+                  // disabled={disabled}
+                  // updating={creating}
+                  />}
+                <Components.tables.resolvedIssues forCSR />
+              </Fragment>}
+          </Components.tab>
+          <Components.tab name="transactionHistory" label="Transaction History" iconClassName="mdi-history" isValidTab>
+            <Components.tables.virtualcardtransactionhistory />
+          </Components.tab>
+          <Components.tab name="syncCreditLimit" label="Sync Credit Limit" iconClassName="mdi-sync" isValidTab>
+            {_try(() => this.props.creditLimitSync)
+              ? <div className="col-12">
+                <div className="d-flex align-items-center">
+                  <i className="mdi text-danger mdi-alert-circle-outline mdi-36px" />
+                  <h2 className="my-0 ms-1">{'Credit Limit Update Required'}</h2>
+                </div>
+                <h4 className="my-0 ms-1">{`Current Credit Limit: $${this.props.creditLimitSync.creditLimit} --- Target Credit Limit: $${this.props.creditLimitSync.targetCreditLimit}`}</h4>
+                <p className="my-0 ms-1"><b>{accounts[accountId].name}</b> needs their credit limit <span>{`${this.props.creditLimitSync.creditLimit < this.props.creditLimitSync.targetCreditLimit ? 'increased' : 'decreased'}`}</span> to <b>${this.props.creditLimitSync.targetCreditLimit}</b>. Once this is updated, please allow some time for the system to recognize the update. If it is not resolved by the next day, get in touch with a developer.</p>
+              </div>
+              : <div className="col-12">
+                <div className="d-flex align-items-center justify-content-center">
+                  <i className="mdi text-success mdi-check mdi-48px" />
+                  <h2 className="my-0 ms-1">Nothing to see here, Credit Limits are in sync!</h2>
+                </div>
+              </div>}
+          </Components.tab>
+          <Components.tab name="batchPayments" label="Batch Payments" iconClassName="mdi-hexagon-multiple" isValidTab>
+            {!this.props.batchPayments.status.fetched || this.props.batchPayments.status.fetching
+              ? <Components.spinner />
+              : <Fragment>
+                <Components.tables.components.multiFilter
+                  tableName="Components.tables.batchhistory"
+                  tableKey={this.state.tableKey}
+                  filterConfig={filterConfig.batch.multiFilter}
+                />
+                <Components.tables.batchhistory
+                  tableKey={this.state.tableKey}
+                  onActionClick={(title, id) => { this.onActionClick(title, id); }}
+                  cancelBatch={this.cancelBatch}
+                  editBatch={this.props.openSchedulerModal}
+                />
+              </Fragment>}
+          </Components.tab>
+        </Components.tabs>
+      </div>
+    );
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(components_cards_csraccountdetails);
+
+// Internal Helper Functions ...
+const filterConfig = {
+  payments: {
+    multiFilter: {
+      vendorName: {
+        key: 'vendorName',
+        type: 'string',
+        display: 'Vendor',
+      },
+      createdAtAfter: {
+        key: 'createdAt',
+        type: 'date',
+        display: 'Date From',
+        condition: 'isAfter',
+      },
+      createdAtBefore: {
+        key: 'createdAt',
+        type: 'date',
+        display: 'Date To',
+        condition: 'isBefore',
+      },
+      status: {
+        key: 'status',
+        type: 'option',
+        display: 'Status',
+        options: {
+          Scheduled: { display: 'Scheduled' },
+          'Needs Approval': { display: 'Needs Approval' },
+          'Pending...': { display: 'Pending' },
+          'Processing...': { display: 'Processing' },
+          'Verifying...': { display: 'Verifying' },
+          'Funding...': { display: 'Funding' },
+          'Tracking...': { display: 'Tracking' },
+          Complete: { display: 'Completed' },
+          Cancelled: { display: 'Cancelled' },
+        },
+      },
+      hasIssues: {
+        key: 'hasIssues',
+        type: 'bool',
+        display: 'Issue',
+      },
+      pendingIssues: {
+        key: 'hasPendingIssues',
+        type: 'bool',
+        display: 'Pending Issues',
+      },
+      method: {
+        key: 'method',
+        type: 'option',
+        display: 'Method',
+        options: {
+          vCard: { display: 'Card' },
+          check: { display: 'Check' },
+          ACH: { display: 'ACH' },
+        },
+      },
+      amount: {
+        key: 'amount',
+        type: 'number',
+        display: 'Amount',
+      },
+      details: {
+        key: 'details',
+        type: 'string',
+        display: 'Details',
+      },
+      refNumber: {
+        key: 'refNumber',
+        type: 'number',
+        display: 'Ref #',
+      },
+      tagName: {
+        key: 'tagName',
+        type: 'string',
+        display: 'Vertical',
+      },
+      groupName: {
+        key: 'groupName',
+        type: 'string',
+        display: 'Group',
+      },
+      psopDeliveryMethod: {
+        key: 'psopDeliveryMethod',
+        type: 'option',
+        display: 'Type',
+        options: {
+          Phone: { display: 'Phone' },
+          Fax: { display: 'Fax' },
+          Email: { display: 'Email' },
+          Portal: { display: 'Portal' },
+          Automation: { display: 'Automation' },
+          Unknown: { display: 'Unknown' },
+        },
+      },
+      deliveryIssue: {
+        key: 'deliveryIssue',
+        type: 'bool',
+        display: 'Has Delivery Issue',
+      },
+      hasActiveErrors: {
+        key: 'hasActiveErrors',
+        type: 'bool',
+        display: 'Has Active Errors',
+      },
+      cardExpiringSoon: {
+        key: 'cardExpiringSoon',
+        type: 'bool',
+        display: 'Card Expiring Soon',
+      },
+      errorMessage: {
+        key: 'errorMessage',
+        type: 'string',
+        display: 'Error Message',
+      },
+      last4s: {
+        key: 'cardLast4s',
+        type: 'string',
+        display: 'Card Last 4',
+      },
+      botErrors: {
+        key: 'botErrors',
+        type: 'number',
+        display: 'Bot Errors',
+      },
+    },
+    originalFilter: {
+      isActive: {
+        key: 'isActive',
+        type: 'bool',
+        display: 'Active',
+      },
+      status: {
+        key: 'status',
+        type: 'option',
+        display: 'Status',
+        options: {
+          Scheduled: { display: 'Scheduled' },
+          'Needs Approval': { display: 'Needs Approval' },
+          'Pending...': { display: 'Pending' },
+          'Processing...': { display: 'Processing' },
+          'Verifying...': { display: 'Verifying' },
+          'Funding...': { display: 'Funding' },
+          'Tracking...': { display: 'Tracking' },
+          Complete: { display: 'Completed' },
+          Cancelled: { display: 'Cancelled' },
+        },
+      },
+      createdAt: {
+        key: 'createdAt',
+        type: 'date',
+        display: 'Date',
+      },
+      vendorName: {
+        key: 'vendorName',
+        type: 'string',
+        display: 'To',
+      },
+      amount: {
+        key: 'amount',
+        type: 'number',
+        display: 'Amount',
+      },
+      method: {
+        key: 'method',
+        type: 'option',
+        display: 'Method',
+        options: {
+          vCard: { display: 'Card' },
+          check: { display: 'Check' },
+          ACH: { display: 'ACH' },
+        },
+      },
+      refNumber: {
+        key: 'refNumber',
+        type: 'number',
+        display: 'Ref #',
+      },
+      tagName: {
+        key: 'tagName',
+        type: 'string',
+        display: 'Vertical',
+      },
+      groupName: {
+        key: 'groupName',
+        type: 'string',
+        display: 'Group',
+      },
+      psopDeliveryMethod: {
+        key: 'psopDeliveryMethod',
+        type: 'option',
+        display: 'Type',
+        options: {
+          Phone: { display: 'Phone' },
+          Fax: { display: 'Fax' },
+          Email: { display: 'Email' },
+          Portal: { display: 'Portal' },
+          Automation: { display: 'Automation' },
+          Unknown: { display: 'Unknown' },
+        },
+      },
+      deliveryIssue: {
+        key: 'deliveryIssue',
+        type: 'bool',
+        display: 'Has Delivery Issue',
+      },
+      hasIssues: {
+        key: 'hasIssues',
+        type: 'bool',
+        display: 'Has Issues',
+      },
+      hasPendingIssues: {
+        key: 'hasPendingIssues',
+        type: 'bool',
+        display: 'Has Pending Issues',
+      },
+      hasErrors: {
+        key: 'hasErrors',
+        type: 'bool',
+        display: 'Has Errors',
+      },
+      hasActiveErrors: {
+        key: 'hasActiveErrors',
+        type: 'bool',
+        display: 'Has Active Errors',
+      },
+      cardExpiringSoon: {
+        key: 'cardExpiringSoon',
+        type: 'bool',
+        display: 'Card Expiring Soon',
+      },
+    },
+  },
+  batch: {
+    multiFilter: {
+      batchDateAfter: {
+        key: 'createdAt',
+        type: 'date',
+        display: 'Date From',
+        condition: 'isAfter',
+      },
+      batchDateBefore: {
+        key: 'createdAt',
+        type: 'date',
+        display: 'Date To',
+        condition: 'isBefore',
+      },
+      status: {
+        key: 'status',
+        type: 'option',
+        display: 'Batch Status',
+        options: {
+          Scheduled: { display: 'Scheduled' },
+          'Needs Approval': { display: 'Needs Approval' },
+          'Pending...': { display: 'Pending' },
+          'Processing...': { display: 'Processing' },
+          'Verifying...': { display: 'Verifying' },
+          'Funding...': { display: 'Funding' },
+          'Tracking...': { display: 'Tracking' },
+          Complete: { display: 'Completed' },
+          Cancelled: { display: 'Cancelled' },
+        },
+      },
+      batchTotal: {
+        key: 'total',
+        type: 'number',
+        display: 'Total Amount',
+      },
+      cardTotal: {
+        key: 'vCard',
+        type: 'number',
+        display: 'Card Amount',
+      },
+      checkTotal: {
+        key: 'check',
+        type: 'number',
+        display: 'Check Amount',
+      },
+      achTotal: {
+        key: 'ACH',
+        type: 'number',
+        display: 'ACH Amount',
+      },
+      batchId: {
+        key: '_id',
+        type: 'string',
+        display: 'Batch Id',
+      },
+    },
+    originalFilter: {
+      isActive: {
+        key: 'isActive',
+        type: 'bool',
+        display: 'Active',
+      },
+      status: {
+        key: 'status',
+        type: 'option',
+        display: 'Batch Status',
+        options: {
+          Scheduled: { display: 'Scheduled' },
+          'Needs Approval': { display: 'Needs Approval' },
+          'Pending...': { display: 'Pending' },
+          'Processing...': { display: 'Processing' },
+          'Verifying...': { display: 'Verifying' },
+          'Funding...': { display: 'Funding' },
+          'Tracking...': { display: 'Tracking' },
+          Complete: { display: 'Completed' },
+          Cancelled: { display: 'Cancelled' },
+        },
+      },
+      batchDate: {
+        key: 'createdAt',
+        type: 'date',
+        display: 'Date',
+      },
+      paymentCount: {
+        key: 'paymentCount',
+        type: 'number',
+        display: 'Number of Payments',
+      },
+      batchTotal: {
+        key: 'total',
+        type: 'number',
+        display: 'Total Amount',
+      },
+      cardTotal: {
+        key: 'vCard',
+        type: 'number',
+        display: 'Card Amount',
+      },
+      checkTotal: {
+        key: 'check',
+        type: 'number',
+        display: 'Check Amount',
+      },
+      achTotal: {
+        key: 'ACH',
+        type: 'number',
+        display: 'ACH Amount',
+      },
+    },
+  },
+};
+
+// GENERATOR_TYPE='component';

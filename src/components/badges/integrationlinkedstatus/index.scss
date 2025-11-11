@@ -1,0 +1,11 @@
+.components_badges_integrationlinkedstatus {
+  // Overriding Bootstrap 5's ".row > * {" selector
+  // !important is not ideal, but it's the only way to
+  // override without adding more specificity
+  padding-left: 0 !important;
+  width: initial !important;
+
+  & + p {
+    width: initial;
+  }
+}

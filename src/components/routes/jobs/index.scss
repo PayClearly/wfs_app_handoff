@@ -1,0 +1,39 @@
+.components_routes_jobs {
+  overflow-y: scroll;
+  padding-bottom: 10px;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .filters-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .card {
+    &.status-card {
+      background-color: var(--theme-header-border-color) !important;
+    }
+  }
+  .card {
+    .card-body {
+      padding: 1.25rem !important;
+    }
+
+    &.card-with-label {
+      position: relative;
+
+      & .card-label {
+        position: absolute;
+        top: -12px;
+        left: 5px;
+        background-color: var(--theme-body-content-color);
+        margin: 0;
+      }
+    }
+
+    & .small-padding {
+      padding: 0.5rem;
+    }
+  }
+}

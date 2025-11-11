@@ -1,0 +1,174 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "_importDirectory": "readonly",
+    "_patch": "readonly",
+    "_resolve": "readonly",
+    "_try": "readonly",
+    "chai": "readonly",
+    "expect": "readonly",
+    "firebase": "readonly",
+    "GLOBALCERT": "readonly",
+    "sinon": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "chai-friendly",
+    "no-only-tests",
+    "import",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "chai-friendly/no-unused-expressions": 2,
+    // jsx-a11y
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/heading-has-content": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-tabindex": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    // React
+    "react/destructuring-assignment": 0,
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-curly-spacing": ["error", {
+      "when": "never",
+      "children": true
+      }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-pascal-case": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/no-did-mount-set-state": [
+      0,
+      "allow-in-func"
+    ],
+    "react/no-did-update-set-state": 0,
+    "react/no-unused-prop-types": 0,
+    "react/prefer-stateless-function": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/state-in-constructor": 0,
+    "react/no-array-index-key": 0,
+    "semi": [
+      2,
+      "always"
+    ],
+    // Import plugin
+    "import/extensions": [
+      0,
+      {
+        "tsx": "never"
+      }
+    ],
+    "import/no-duplicates": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.{test,vtest,spec}.{js,jsx}",
+          "**/*TesterHelper.js",
+          "site/test/**/*.js",
+          "**/webpack.config.js",
+          "**/webpack.config.*.js"
+        ],
+        "optionalDependencies": false
+      }
+    ],
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "import/exports-last": 1,
+    // Overrides
+    "arrow-parens": [
+      "warn",
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "curly": [
+      "error",
+      "multi-line"
+    ],
+    "indent": 0,
+    "keyword-spacing": [
+      2,
+      {
+        "after": true,
+        "before": true
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 120
+      }
+    ],
+    "max-nested-callbacks": [
+      2,
+      6
+    ],
+    "no-eq-null": 1,
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 2
+      }
+    ],
+    "no-only-tests/no-only-tests": 2,
+    "no-trailing-spaces": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": 0,
+    "nonblock-statement-body-position": [
+      "warn",
+      "below"
+    ],
+    "padded-blocks": 0,
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.config.js"
+      }
+    }
+  }
+}

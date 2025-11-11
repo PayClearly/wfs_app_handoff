@@ -1,0 +1,31 @@
+.components_routes_resetpassword {
+
+  .reset-password-transitioner-enter {
+    opacity: 0;
+  }
+
+  .reset-password-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .reset-password-transitioner-enter-done {
+    opacity: 1;
+    z-index: -100;
+    background-color: #fff;
+  }
+
+  .reset-password-transitioner-exit {
+    opacity: 1;
+  }
+
+  .reset-password-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+
+  .reset-password-transitioner-exit-done {
+    opacity: 0;
+  }
+
+}

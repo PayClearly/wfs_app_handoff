@@ -1,0 +1,24 @@
+.components_login {
+  .login-card {
+    position: relative;
+    width: 350px;
+  }
+  .login-component-transitioner {
+    opacity: 0;
+  }
+
+  .login-component-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  .login-component-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+
+  .login-component-transitioner-active {
+    opacity: 1;
+    z-index: -100;
+  }
+}

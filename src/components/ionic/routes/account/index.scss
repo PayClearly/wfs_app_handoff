@@ -1,0 +1,26 @@
+.components_ionic_routes_account {
+  background-color: var(--dark-grey);
+  height: 100%;
+
+  [class*=ionic-account-route-transitioner] {
+    opacity: 0;
+  }
+
+  .ionic-account-route-transitioner-enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in;
+  }
+
+  .ionic-account-route-transitioner-enter-done {
+    opacity: 1;
+  }
+
+  .ionic-account-route-transitioner-exit {
+    opacity: 1;
+  }
+
+  .ionic-account-route-transitioner-exit-active {
+    opacity: 0;
+    transition: opacity 100ms ease-out;
+  }
+}

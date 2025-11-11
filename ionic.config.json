@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "my-wallet": {
+      "name": "myWallet",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "react",
+      "root": "src/apps/wfsapp",
+      "id": "23f92ca6"
+    }
+  },
+  "defaultProject": "my-wallet"
+}

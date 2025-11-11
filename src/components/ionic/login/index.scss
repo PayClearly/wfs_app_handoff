@@ -1,0 +1,23 @@
+.components_ionic_login {
+  color: var(--ion-color-light);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ion-color-dark);
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .ion-padding {
+    padding: 100px
+  }
+
+  ion-img {
+    width: 70vw;
+  }
+}

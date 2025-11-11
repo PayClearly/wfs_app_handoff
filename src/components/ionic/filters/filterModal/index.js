@@ -1,0 +1,40 @@
+import { connect, Component, bindActionCreators, Fragment } from 'component';
+
+// import Utils from 'utils';
+// import Store from 'store';
+// import Selectors from 'selectors';
+import Components from 'components';
+// import Resources from 'resources';
+
+const mapStateToProps = (state, props) => {
+  return ({});
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+  return ({});
+};
+
+const mapResourcesToProps = (state, props) => {
+  return ({});
+};
+
+class components_ionic_filters_filterModal extends Component {
+  // Size will determine the height of the modal at the bottom
+  componentDidMount() { }
+  componentWillUnmount() { }
+
+  render() {
+
+    switch (this.props.type) {
+      case 'documentsFilter':
+      default:
+        return (
+          <Components.ionic.filters.documentsFilter {...this.props} />
+        );
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_ionic_filters_filterModal);
+
+
