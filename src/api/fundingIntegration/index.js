@@ -1,27 +1,39 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function updatePreferences(organizationId, accountId, data) {
-  return api().patch(`/fundingintegration/${organizationId}/${accountId}/preferences`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function unlink(organizationId, accountId, data) {
-  return api().delete(`/fundingintegration/${organizationId}/${accountId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function link(organizationId, accountId, data) {
-  return api().put(`/fundingintegration/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(organizationId, accountId, data) {
-  return api().patch(`/fundingintegration/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function createTransfer(organizationId, accountId, data) {
-  return api().post(`/fundingintegration/${organizationId}/${accountId}/transfer`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateTransfer(organizationId, accountId, data) {
-  return api().post(`/fundingintegration/${organizationId}/${accountId}/transfer/${data.id}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

@@ -1,27 +1,39 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function create(data) {
-  return api().post('/twofactor/enroll', { ...data });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function verify(uid, data) {
-  return api().post('/twofactor/verify', { ...data });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function fetchQrCode() {
-  return api().get('/twofactor/fetchqr');
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function requestSMS() {
-  return api().post('/twofactor/sms');
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function cancelSetup() {
-  return api().post('/twofactor/cancel');
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function removeTwoFactorAuth(token) {
-  return api().post('/twofactor/remove', { token });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

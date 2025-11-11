@@ -70,74 +70,27 @@ const tenants = {
 };
 
 const getAuthorizationCodePath = (appName, authorizeConfig = {}) => {
-  const {
-    oAuthAuthorizeEndpoint,
-    clientId,
-    darkTheme,
-  } = tenants[appName];
-  if (
-    !authorizeConfig.scope
-    || !authorizeConfig.state
-    || !authorizeConfig.challenge
-    || !authorizeConfig.redirectURI
-  ) {
-    throw new Error('Invalid parameters for wfsapp oAuth authorize');
-  }
+  // Add code for database or API integrations
 
-  return `${oAuthAuthorizeEndpoint}?`
-    + 'response_type=code&'
-    + `scope=${encodeURIComponent(authorizeConfig.scope)}&`
-    + `client_id=${clientId}&`
-    + 'audience=https%3A%2F%2Fworld-graph.wfscorp.com&'
-    + `state=${authorizeConfig.state}&`
-    + 'code_challenge_method=S256&'
-    + `code_challenge=${authorizeConfig.challenge}&`
-    + `redirect_uri=${authorizeConfig.redirectURI}&`
-    + `darkTheme=${darkTheme}`;
+  return false;
 };
 
 const getLogoutInformation = (appName, logoutConfig = {}) => {
-  const tenantInfo = tenants[appName];
-  return {
-    returnTo: tenantInfo.oAuthLogoutRedirect(logoutConfig),
-    clientId: tenantInfo.clientId,
-    logoutUrl: tenantInfo.oAuthLogoutEndpoint,
-  };
+  // Add code for database or API integrations
+
+  return false;
 };
 
 const fetchAccessTokenUsingAuthorizationCode = (verifier, authorizationCode, redirectURI, appName) => {
-  const {
-    oAuthTokenEndpoint,
-    clientId,
-  } = tenants[appName];
+  // Add code for database or API integrations
 
-  return axios.post(
-    oAuthTokenEndpoint,
-    'grant_type=authorization_code&'
-      + `code_verifier=${verifier}&`
-      + `client_id=${clientId}&`
-      + `code=${authorizationCode}&`
-      + `redirect_uri=${redirectURI}`,
-    {
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    }
-  );
+  return false;
 };
 
 const fetchAccessTokenUsingRefreshToken = (refreshToken, appName) => {
-  const {
-    oAuthTokenEndpoint,
-    clientId,
-  } = tenants[appName];
-  return axios.post(
-    oAuthTokenEndpoint,
-    'grant_type=refresh_token&'
-      + `client_id=${clientId}&`
-      + `refresh_token=${refreshToken}`,
-    {
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    }
-  );
+  // Add code for database or API integrations
+
+  return false;
 };
 
 export default {

@@ -1,7 +1,9 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function setMock(organizationId, accountId, data) {
-  return api().post(`/testmocks/${organizationId}/${accountId}`, _adaptToAPI(data));
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {
@@ -13,12 +15,7 @@ export default scope;
 // private helper
 
 function _adaptToAPI(data) {
-  const scrubbedItem = Object.keys(data.item || {}).reduce((acc, key) => {
-    const value = data.item[key];
-    acc[key] = value;
-    if (value === '') acc[key] = null;
-    return acc;
-  }, {});
+  // Add code for database or API integrations
 
-  return { ...data, item: scrubbedItem };
+  return false;
 }

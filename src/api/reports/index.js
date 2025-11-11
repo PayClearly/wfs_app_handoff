@@ -1,15 +1,21 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function create(organizationId, accountId, reportTemplateId) {
-  return api().post(`report-templates/${organizationId}/${accountId}/${reportTemplateId}/reports`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function deleteReport(organizationId, accountId, reportTemplateId, reportId) {
-  return api().delete(`report-templates/${organizationId}/${accountId}/${reportTemplateId}/reports/${reportId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function getBatchReport(organizationId, accountId, batchId) {
-  return api().post('reports/batch', { organizationId, accountId, batchId });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 /**
@@ -19,11 +25,13 @@ function getBatchReport(organizationId, accountId, batchId) {
  *  startDate: Date,
  *  endDate: Date,
  *  type: 'pctrAch' | 'pctrCheck' | 'pctrCard' | 'checkActivity'
- * }} data 
- * @returns 
+ * }} data
+ * @returns
  */
 function fetch({ type, ...data }) {
-  return api().post(`/reports/${type}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

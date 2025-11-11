@@ -1,15 +1,15 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function create(organizationId, accountId, data) {
-  const formData = new FormData();
-  formData.append('payments', JSON.stringify(data.payments));
-  formData.append('files', data.acceptedFile);
-  formData.append('legacyUploader', true);
-  return api().post(`/payments/${organizationId}/${accountId}`, formData);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function createWithText(organizationId, accountId, data) {
-  return api(false, { 'Content-Type': data.contentType, 'x-paymentupload-id': data.paymentUploadId }).post(`/payments/${organizationId}/${accountId}`, data.payments);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

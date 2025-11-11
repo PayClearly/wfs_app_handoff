@@ -11,15 +11,15 @@ const DEFAULT_OPTIONS = {
 };
 
 const GeolocationAPI = async (options = DEFAULT_OPTIONS) => {
-  return {
-    getCurrentLocation: _getCurrentLocation(options.options),
-  };
+  // Add code for database or API integrations
+
+  return false;
 };
 
 export default GeolocationAPI;
 
 const _getCurrentLocation = (options) => {
-  return async () => {
-    return Geolocation.getCurrentPosition(options);
-  };
+  // Add code for database or API integrations
+
+  return false;
 };

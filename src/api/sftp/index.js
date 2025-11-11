@@ -30,30 +30,36 @@ import { api } from 'api/_util/payclearlyapi';
  */
 
 /**
- * 
- * @param {CreateSftpUser} data 
- * @returns 
+ *
+ * @param {CreateSftpUser} data
+ * @returns
  */
 async function createSftpUser(data) {
-  return api().post('/sftp/users', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 /**
- * 
- * @param {GetSftpUser} data 
- * @returns 
+ *
+ * @param {GetSftpUser} data
+ * @returns
  */
 async function getSftpUser(accountId) {
-  return api().get(`/sftp/users/${accountId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 /**
- * 
- * @param {UpdateSftpUser} data 
- * @returns 
+ *
+ * @param {UpdateSftpUser} data
+ * @returns
  */
 async function updateSftpUser({ id, ...rest }) {
-  return api().put(`/sftp/users/${id}`, { ...rest });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 export default {

@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 function logError(error) {
-  return axios.post('https://CHANGE_ME.firebaseio.com/oopsErrors.json', error);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

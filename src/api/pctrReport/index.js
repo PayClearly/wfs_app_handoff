@@ -1,12 +1,14 @@
 import { api } from 'api/_util/payclearlyapi';
 
 /**
- * 
- * @param {PctrReportParams} data 
- * @returns 
+ *
+ * @param {PctrReportParams} data
+ * @returns
  */
 function fetch(data) {
-  return api().post(`/reports/${data.pctrType}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

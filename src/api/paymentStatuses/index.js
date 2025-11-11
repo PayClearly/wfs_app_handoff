@@ -1,8 +1,9 @@
 import { api } from 'api/_util/payclearlyapi';
 
 async function fetchFilteredKeys(organizationId, accountId, filters, callback) {
-    const res = await api().post(`/paymentFilters/${organizationId}/${accountId}`, filters);
-    return callback(res.data.data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

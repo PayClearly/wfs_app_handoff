@@ -1,23 +1,33 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function updatePreferences(organizationId, accountId, data) {
-  return api().patch(`/erpintegration/${organizationId}/${accountId}/preferences`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function unlink(organizationId, accountId, data) {
-  return api().delete(`/erpintegration/${organizationId}/${accountId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function link(organizationId, accountId, data) {
-  return api().put(`/erpintegration/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(organizationId, accountId, data) {
-  return api().patch(`/erpintegration/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function createVendor(organizationId, accountId, data) {
-  return api().post(`/erpintegration/${organizationId}/${accountId}/vendor`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

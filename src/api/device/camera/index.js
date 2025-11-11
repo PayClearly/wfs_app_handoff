@@ -9,35 +9,22 @@ const DEFAULT_OPTIONS = {
 };
 
 const CameraAPI = async (options = DEFAULT_OPTIONS) => {
-  return {
-    takePhoto: _takePhoto(),
-    choosePhoto: _choosePhoto(),
-  };
+  // Add code for database or API integrations
+
+  return false;
 };
 
 export default CameraAPI;
 
 // TODO :// Update this to only one function, if we don't pass source or do .Prompt then it will ask if take or choose photo
 const _takePhoto = () => {
-  return async () => {
-    return Camera.getPhoto({
-      quality: 100,
-      allowEditing: true,
-      resultType: CameraResultType.Uri,
-      correctOrientation: true,
-      source: CameraSource.Camera,
-    });
-  }
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const _choosePhoto = () => {
-  return async () => {
-    return Camera.getPhoto({
-      quality: 100,
-      allowEditing: true,
-      resultType: CameraResultType.Uri,
-      correctOrientation: true,
-      source: CameraSource.Photos,
-    })
-  }
+  // Add code for database or API integrations
+
+  return false;
 }

@@ -1,59 +1,87 @@
 import { api, database } from 'api/_util/payclearlyapi';
 
 function create(data) {
-  return api().post('/globalVendors/vendors', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(vendorId, data) {
-  return api().patch(`/globalVendors/vendors/${vendorId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function createGroup(data) {
-  return api().post('/globalVendors/groups', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateGroup(groupId, data) {
-  return api().patch(`/globalVendors/groups/${groupId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function createTag(data) {
-  return api().post('/globalVendors/tags', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateTag(tagId, data) {
-  return api().patch(`/globalVendors/tags/${tagId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function createProcedure(data) {
-  return api().post('/globalVendors/procedures', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateProcedure(procedureId, data) {
-  return api().patch(`/globalVendors/procedures/${procedureId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function createCredentialSchema(data) {
-  return api().post('/globalVendors/credentialSchemas', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateCredentialSchema(schemaId, data) {
-  return api().patch(`/globalVendors/credentialSchemas/${schemaId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function resendACHTermsAndConditionsEmail(procedureId, data) {
-  return api().post(`/globalvendors/procedures/${procedureId}/resend-ach-terms-and-conditions-email`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updatePrefill(attachmentId, data) {
-  return api().put(`/globalVendors/prefills/${attachmentId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function acceptTermsAndConditions(token) {
-  return api(token).post('/globalvendors/accept-terms-and-conditions');
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function fetchLatestTermsAndConditions(timestamp) {
-  return database().get(`/termsAndConditions/${timestamp}.json`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

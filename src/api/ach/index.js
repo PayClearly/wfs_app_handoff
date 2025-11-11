@@ -1,47 +1,57 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function fetchIavToken(organizationId, accountId) {
-  return api().get(`/ach/${organizationId}/${accountId}/iav-tokens`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function create(organizationId, accountId, data) {
-  return api().post(`/ach/${organizationId}/${accountId}/accounts`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(organizationId, accountId, data) {
-  return api().put(`/ach/${organizationId}/${accountId}/accounts/`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function fetchBusinessClassifications(organizationId, accountId) {
-  return api().get(`/ach/${organizationId}/${accountId}/business-classifications`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function submitDocuments(organizationId, accountId, data, query) {
-  // filter out non files
-  if (!data.files.length) { return Promise.resolve({ data: { attachments: [] } }); }
-  if (data.files[0] && data.files[0]._createdBy) { return Promise.resolve({ data: { attachments: data.files } }); }
+  // Add code for database or API integrations
 
-  const documentData = new FormData();
-  documentData.append('file', data.files[0]);
-  documentData.append('documentType', data.documentType);
-
-  return api(false, { 'Content-Type': 'multipart/form-data' }).put(`/ach/${organizationId}/${accountId}/documents${query ? `?context=${query}` : ''}`, documentData);
+  return false;
 }
 
 function addBeneficialOwner(organizationId, accountId, data) {
-  return api().put(`/ach/${organizationId}/${accountId}/beneficial-owner`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateBeneficialOwner(organizationId, accountId, data) {
-  return api().patch(`/ach/${organizationId}/${accountId}/beneficial-owner/`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function addFundingSource(organizationId, accountId, data) {
-  return api().put(`/ach/${organizationId}/${accountId}/funding-source/`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function certifyBeneficialOwnership(organizationId, accountId, data) {
-  return api().put(`/ach/${organizationId}/${accountId}/certify-ownership`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

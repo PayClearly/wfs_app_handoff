@@ -2,36 +2,39 @@ import { api } from 'api/_util/payclearlyapi';
 import firebase from 'firebase';
 
 function create(data) {
-  return api().post('/users', { ...data });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(uid, data) {
-  return api().patch(`/users/${uid}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updatePreferences(uid, data = {}) {
-  const dataToWrite = Object.keys(data).reduce((acc, key) => {
-    const val = data[key];
-    if (val !== undefined) {
-      acc[key] = val;
-    }
-    return acc;
-  }, {});
-  return firebase.database().ref(`default/state/userPreferences/${uid}`).update({
-    ...dataToWrite,
-  });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function acceptTermsAndConditions(uid, data) {
-  return api().patch(`/users/${uid}/accept-terms-and-conditions`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function deletePermissions(userId) {
-  return api().delete(`/permissions/${userId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function resendInvite(data) {
-  return api().post('/resendinvite', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

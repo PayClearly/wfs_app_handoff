@@ -1,58 +1,84 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function create(organizationId, data) {
-  return api().post(`/accounts/${organizationId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(organizationId, accountId, data) {
-  return api().patch(`/accounts/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateAccountOptions(organizationId, accountId, data) {
-  return api().patch(`/accounts/${organizationId}/${accountId}/options`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 // ACH Account Integration
 function updateACHAccountCredentials(organizationId, accountId, data) {
-  return api().put(`/achaccountcredentials/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function deleteACHCredentials(organizationId, accountId) {
-  return api().delete(`/achaccountcredentials/${organizationId}/${accountId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function fetchPrivateAchCreds(organizationId, accountId) {
-  return api().get(`/achaccountcredentials/secure/${organizationId}/${accountId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateACHAccountDetailsFundingPreferences(organizationId, accountId, data) {
-  return api().patch(`/achaccountdetails/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 // Payment Preferences
 function updatePaymentCustomFields(organizationId, accountId, data) {
-  return api().put(`/paymentcustomfields/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updatePaymentCardCustomFields(organizationId, accountId, data) {
-  return api().put(`/paymentcardcustomfields/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updatePaymentPipelinePreferences(organizationId, accountId, data) {
-  return api().put(`/paymentpipelinepreferences/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 
 function setAccountVendorCredentials(organizationId, accountId, id, data) {
-  return api().put(`/accountvendorcredentials/${organizationId}/${accountId}/${id}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function setFtpAccountDetails(organizationId, accountId, data) {
-  return api().put(`/ftpaccountdetails/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateFtpAccountDetails(organizationId, accountId, data) {
-  return api().patch(`/ftpaccountdetails/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

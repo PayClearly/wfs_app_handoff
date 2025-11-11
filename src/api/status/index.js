@@ -1,7 +1,9 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function update(data) {
-  return api().patch('/status', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

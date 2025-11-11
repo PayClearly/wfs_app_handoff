@@ -1,10 +1,9 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function validateAddress(organizationId, accountId, data) {
-  return api().post(`/addresses/${organizationId}/${accountId}`, data)
-  .then((response) => {
-    return response.data;
-  });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

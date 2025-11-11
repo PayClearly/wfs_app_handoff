@@ -1,23 +1,33 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function fetch(jobType, organizationId, accountId, data) {
-  return api().post(`jobs/${jobType}/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function retry(jobType, organizationId, accountId, jobId) {
-  return api().post(`jobs/${jobType}/${organizationId}/${accountId}/${jobId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function cancel(jobType, organizationId, accountId, jobId) {
-  return api().put(`jobs/${jobType}/${organizationId}/${accountId}/${jobId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function retryAll(organizationId, accountId, data) {
-  return api().post(`jobs/${organizationId}/${accountId}/retryAll`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function create(jobType, organizationId, accountId, data) {
-  return api().post(`jobs/${jobType}/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

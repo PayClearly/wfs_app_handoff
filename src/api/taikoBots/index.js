@@ -6,38 +6,41 @@ import { api } from 'api/_util/payclearlyapi';
  */
 
 async function fetchKeys({ organizationId, status, callback }) {
-    let endpoint = `/taikoBots?status=${status}`;
-    if (organizationId) {
-        endpoint += `&organizationId=${organizationId}`;
-    }
+  // Add code for database or API integrations
 
-    const res = await api().get(endpoint);
-    return callback(res.data);
+  return false;
 }
 
 async function updateTaikoBot(id, data) {
-    return api().patch(`/taikoBots/${id}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 async function updateTaikoBotsByIds(updators) {
-    return api().patch('/taikoBots', { data: updators });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 /**
- * 
+ *
  * @returns {Promise<Botworker[]>}
  */
 async function fetchBotWorkers() {
-    const response = await api().get('/botWorkers');
-    return response.data;
+  // Add code for database or API integrations
+
+  return false;
 }
 
 /**
- * 
- * @param {BotworkerUpdate} data 
+ *
+ * @param {BotworkerUpdate} data
  */
 async function updateBotWorker(data) {
-    return api().patch('/botWorkers', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 export default {

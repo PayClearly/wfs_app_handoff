@@ -1,15 +1,21 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function create(organizationId, accountId, data) {
-  return api().post(`/achtransfers/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function sendTransfer(organizationId, accountId, id, data) {
-  return api().post(`/achtransfers/${organizationId}/${accountId}/${id}/${data._sentBy}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateStatus(organizationId, accountId, id, data) {
-  return api().patch(`/achtransfers/${organizationId}/${accountId}/${id}/${data.status}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

@@ -1,11 +1,15 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function fetchMagicLinkData(token) {
-  return api(token).get('/magic-links');
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function patchMagicLinkData(token, data) {
-  return api(token).post('/magic-links', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 module.exports = {

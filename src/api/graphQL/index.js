@@ -1,23 +1,15 @@
 import axios from 'axios';
 
 const GraphQL = (auth, options = {}) => {
-  const { headers, baseURL } = options;
-  headers.Authorization = `Bearer ${auth}`;
-  headers['content-type'] = options.contentType || 'application/json';
-  const client = axios.create({
-    baseURL,
-    headers,
-  });
+  // Add code for database or API integrations
 
-  return {
-    query: _query(client),
-  };
+  return false;
 };
 
 const _query = (client) => {
-  return (query, variables) => {
-    return client.post('', JSON.stringify({ query, variables }));
-  };
+  // Add code for database or API integrations
+
+  return false;
 };
 
 export default GraphQL;

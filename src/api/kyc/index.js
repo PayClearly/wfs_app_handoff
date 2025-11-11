@@ -1,26 +1,33 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function createBusinessEnrollment(organizationId, accountId, data) {
-  return api().post(`/kyc/${organizationId}/${accountId}/business`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function enrollCustomer(organizationId, accountId, data) {
-  // data must be of structure { providerName, ...data };
-  return api().post(`/kyc/${organizationId}/${accountId}/customer`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function updateCustomer(organizationId, accountId, data, customerId) {
-  // data must be of structure { providerName, ...data };
-  return api().patch(`/kyc/${organizationId}/${accountId}/customer/${customerId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function deleteCustomer(organizationId, accountId, customerId) {
-  return api().delete(`/kyc/${organizationId}/${accountId}/customer/${customerId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function retrieveCustomer(organizationId, accountId, id) {
-  // data must be of structure { providerName, ...data };
-  return api().get(`/kyc/${organizationId}/${accountId}/customer/${id}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 const scope = {
   createBusinessEnrollment,

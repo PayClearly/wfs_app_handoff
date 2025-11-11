@@ -1,23 +1,33 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function updatePreferences(organizationId, accountId, data) {
-  return api().patch(`/achintegration/${organizationId}/${accountId}/preferences`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(organizationId, accountId, data) {
-  return api().patch(`/achintegration/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function unlink(organizationId, accountId, data) {
-  return api().delete(`/achintegration/${organizationId}/${accountId}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function link(organizationId, accountId, data) {
-  return api().put(`/achintegration/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function getGroviderSetupResource(organizationId, accountId, resource) {
-  return api().get(`/achintegration/${organizationId}/${accountId}/${resource}`);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

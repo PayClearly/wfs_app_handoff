@@ -1,11 +1,15 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function create(data) {
-  return api().post('/globalVendors/schemas', data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function update(schemaId, data) {
-  return api().patch(`/globalVendors/schemas/${schemaId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {

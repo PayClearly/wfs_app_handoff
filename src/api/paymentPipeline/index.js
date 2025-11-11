@@ -2,30 +2,33 @@ import { api } from 'api/_util/payclearlyapi';
 // import data from './data.json';
 
 function update(organizationId, accountId, data) {
-  return api().post(`/paymentstatuses/${organizationId}/${accountId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 /**
- * 
+ *
  * @param {string} organizationId
  * @param {string} accountId
  * @param {string} paymentId
  * @param {{ 'Confirmation Number': string }} data
  */
 function updateVendorRemittanceFields(
-  organizationId, 
-  accountId, 
-  paymentId, 
+  organizationId,
+  accountId,
+  paymentId,
   data
 ) {
-  const path = `/paymentstatuses/${organizationId}/${accountId}/${paymentId}/sent/vendorRemittanceFields`;
-  return api().patch(path, { vendorRemittanceFields: data });
+  // Add code for database or API integrations
+
+  return false;
 }
 
 function get(routeParams) {
-  const queryString = buildQueryString(routeParams);
-  return api().get(`/paymentstatuses/?${queryString}`)
-  .then((res) => res.data);
+  // Add code for database or API integrations
+
+  return false;
 }
 const scope = {
   update,
@@ -36,14 +39,9 @@ const scope = {
 export default scope;
 
 const buildQueryString = (routeParams) => {
-  let stringToReturn = '';
-  Object.entries(routeParams).forEach((param) => {
-    if (availableQueries[param[0]]) {
-      stringToReturn += `${param[0]}=${param[1]}&`;
-    }
-  });
-  // slice off trailing '&'
-  return stringToReturn.slice(0, -1);
+  // Add code for database or API integrations
+
+  return false;
 };
 
 const availableQueries = {

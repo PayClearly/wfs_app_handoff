@@ -1,7 +1,9 @@
 import { api } from 'api/_util/payclearlyapi';
 
 function update(organizationId, accountId, vendorId, data) {
-  return api().patch(`/vendorPaymentStrategies/${organizationId}/${accountId}/${vendorId}`, data);
+  // Add code for database or API integrations
+
+  return false;
 }
 
 const scope = {
