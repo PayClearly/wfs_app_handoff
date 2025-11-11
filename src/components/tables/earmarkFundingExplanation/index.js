@@ -36,7 +36,7 @@ class components_tables_earmarkFundingExplanation extends Component {
     ];
     this.setState({ columns });
   }
-  componentWillUnmount() { }
+
 
   getRowData = (transfer) => {
     return {

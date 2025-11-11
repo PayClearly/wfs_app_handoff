@@ -20,8 +20,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_userdetails extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { profile, className } = this.props;

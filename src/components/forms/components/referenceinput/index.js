@@ -42,7 +42,7 @@ class components_forms_components_referenceinput extends Component {
 
     if (this.state.loading) this.setState({ loading: false });
   }
-  componentWillUnmount() { }
+
 
   actionIntercepter(type, fieldName, value) {
     const { refKey = 'name', refs } = this.props;

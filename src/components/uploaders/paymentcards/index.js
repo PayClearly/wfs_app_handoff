@@ -132,7 +132,7 @@ class components_uploaders_paymentcards extends Component {
     uploadingError: '',
   };
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps = {}) {
     // this is what i think this will probably look like to close the mdoal on error
@@ -149,7 +149,7 @@ class components_uploaders_paymentcards extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   onCreate = () => {
     this.setState({

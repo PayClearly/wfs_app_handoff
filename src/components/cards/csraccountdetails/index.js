@@ -39,9 +39,9 @@ class components_cards_csraccountdetails extends Component {
     tableKey: 'csraccountdetails',
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   onActionClick(title, id) {
     this.props.openPaymentPresendModal(id);

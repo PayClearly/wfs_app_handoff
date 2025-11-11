@@ -25,8 +25,8 @@ class components_ionic_routes_account extends Component {
     show: 'profile',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSegmentChange = (e) => {
     this.setState({ show: e.detail.value });
@@ -56,10 +56,10 @@ class components_ionic_routes_account extends Component {
             key={this.state.show}
           >
             <div>
-              { this.state.show === 'profile' &&
+              {this.state.show === 'profile' &&
                 <Components.ionic.profile />
               }
-              { this.state.show === 'mycard' &&
+              {this.state.show === 'mycard' &&
                 <Components.ionic.userCard cardData={cardData} />
               }
             </div>

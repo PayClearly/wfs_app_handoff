@@ -93,7 +93,7 @@ class components_reports_spendByCard extends Component {
     const renderedColumns = [...this.state.renderedColumns, ...paymentCardCustomFieldsToColumns];
     this.setState({ selectedColumns, renderedColumns });
   }
-  componentDidMount() {}
+  componentDidMount() { }
   componentWillReceiveProps(nextProps) {
     const { status, accountId, organizationId, forms } = nextProps;
     const { selectedColumns } = this.state;
@@ -131,7 +131,7 @@ class components_reports_spendByCard extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   getCsvData = (transactions, renderedColumns, orderBy) => {
     return Object.values(this.adaptTransactions(transactions))

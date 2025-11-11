@@ -75,9 +75,9 @@ class components_tables_csrpayments extends Component {
     ],
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   onActionClick = (title, id) => {
     this.props.openPaymentPresendModal(id);

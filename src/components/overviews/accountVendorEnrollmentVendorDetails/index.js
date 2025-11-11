@@ -28,8 +28,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_overviews_accountVendorEnrollmentVendorDetails extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { selectedVendor, id } = this.props;

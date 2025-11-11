@@ -37,7 +37,7 @@ class components_modals_areyousure extends Component {
     }
     // set up the inital props
   }
-  componentWillUnmount() { }
+
 
   render() {
     return (

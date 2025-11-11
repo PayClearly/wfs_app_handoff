@@ -29,9 +29,9 @@ class components_integrationsetups_achintegration_GALILEO extends Component {
 
   state = {};
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const cardsIntegrationDetails = _try(() => this.props.cardsIntegration.details, {});

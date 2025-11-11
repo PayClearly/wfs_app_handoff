@@ -20,9 +20,9 @@ const mapDispatchToProps = (dispatch, props) => ({});
 
 class components_overviews_globalVendor extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const { globalVendorId, globalVendors, globalVendorMetadata } = this.props;

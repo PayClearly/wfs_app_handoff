@@ -27,8 +27,8 @@ class components_ripple extends Component {
     count: 0,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   cleanUp = () => {
     this.setState({ count: 0, ripples: {} });

@@ -24,8 +24,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_integrationcomps_achintegration_DWOLLA_overviews_fundingsource extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { fundingSource, details, status } = this.props;

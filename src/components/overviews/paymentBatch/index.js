@@ -115,7 +115,7 @@ class components_overviews_paymentBatch extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   _generateActionButton = (data, rowId, rowData) => {
     let showSendButton = true;

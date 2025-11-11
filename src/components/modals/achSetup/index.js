@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_achSetup extends Component {
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.integrations.achFundingSource.linked) {
@@ -37,7 +37,7 @@ class components_modals_achSetup extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   onClose() {
     this.props.close();

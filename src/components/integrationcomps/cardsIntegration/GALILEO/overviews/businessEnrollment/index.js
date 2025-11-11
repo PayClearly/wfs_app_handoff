@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_integrationcomps_cardsIntegration_GALILEO_overviews_businessEnrollment extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { details } = _try(() => this.props.cardsIntegration, {});

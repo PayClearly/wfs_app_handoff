@@ -34,8 +34,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_tables_paymentcardchippopover extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   navigateToDetails = () => {
     if (_try(() => this.props.modals.length)) this.props.closeModal();

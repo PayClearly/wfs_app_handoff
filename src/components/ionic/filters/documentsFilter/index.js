@@ -33,7 +33,7 @@ class components_ionic_filters_documentsFilter extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   setFilters = (key, val) => {
     this.setState({ filters: { ...this.state.filters, [key]: val } }, () => {

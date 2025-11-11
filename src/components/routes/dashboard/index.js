@@ -17,9 +17,9 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_dashboard extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) { }
-  componentWillUnmount() { }
+
 
   render() {
     return (

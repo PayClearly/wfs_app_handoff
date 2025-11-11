@@ -44,13 +44,13 @@ class components_ionic_modals_card extends Component {
     },
   };
 
-  componentDidMount() { }
+
   componentDidUpdate(prevProps) {
     if (!prevProps.dismissing && this.props.dismissing) {
       this.animation.current.animation.play();
     }
   }
-  componentWillUnmount() { }
+
 
   animation = createRef(null);
 

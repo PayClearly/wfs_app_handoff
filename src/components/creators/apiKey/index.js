@@ -44,7 +44,7 @@ class components_creators_apiKey extends Component {
     hasCopied: false,
   }
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.hasCopied) {

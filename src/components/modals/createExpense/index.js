@@ -34,8 +34,8 @@ class components_modals_createExpense extends Component {
     blurAll: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = _try(() => this.props.forms['Components.forms.expense'][this.state.formKey], {});

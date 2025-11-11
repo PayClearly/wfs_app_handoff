@@ -42,7 +42,7 @@ class components_forms_resetpassword extends Component {
     });
   }
 
-  componentWillUnmount() { }
+
 
   standardFormAction = (action, field, value) => {
     if (action === 'change') {

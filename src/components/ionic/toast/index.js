@@ -32,8 +32,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_toast extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

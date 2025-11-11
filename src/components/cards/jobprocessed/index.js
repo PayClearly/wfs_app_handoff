@@ -13,9 +13,9 @@ const mapDispatchToProps = (dispatch, props) => ({});
 
 class components_cards_jobprocessed extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const { data, actionButtonOptions } = this.props;

@@ -38,8 +38,8 @@ class components_entities_client extends Component {
     editBtnText: 'Edit Client',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { client, form } = this.props;

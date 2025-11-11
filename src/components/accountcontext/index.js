@@ -48,7 +48,7 @@ class components_accountcontext extends Component {
     this.props.changeAccount(id);
   }
 
-  componentWillUnmount() { }
+
 
   render() {
     const loading = !this.props.account.id || !this.state.accounts;

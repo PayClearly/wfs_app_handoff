@@ -110,7 +110,7 @@ class components_uploaders_clientVendorLinks extends Component {
       });
     }
   }
-  componentWillUnmount() { }
+
 
   onCreate = () => {
     this.setState({

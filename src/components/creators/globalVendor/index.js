@@ -40,8 +40,8 @@ class components_creators_globalVendor extends Component {
     showCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.setState({ showCreatedNotification: true });

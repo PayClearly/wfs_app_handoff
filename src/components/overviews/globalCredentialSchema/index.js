@@ -25,8 +25,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_overviews_globalCredentialSchema extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderRow = (credentialFields) => {
     const { standardCredentialFields } = this.props;

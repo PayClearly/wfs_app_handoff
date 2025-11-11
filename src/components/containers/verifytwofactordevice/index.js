@@ -33,7 +33,7 @@ class components_containers_verifytwofactordevice extends Component {
       this.props.requestSMS();
     }
   }
-  componentWillUnmount() { }
+
 
   render() {
     const metadata = this.props.privateMetadata;

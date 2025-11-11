@@ -35,7 +35,7 @@ class components_entities_accountvendor extends Component {
     editBtnText: 'Edit',
   };
 
-  componentDidMount() { }
+
 
   onSubmit = () => {
     const { _values } = this.props.forms['Components.forms.accountvendor'][this.props.id];

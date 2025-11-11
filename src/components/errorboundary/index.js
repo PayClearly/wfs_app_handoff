@@ -15,7 +15,7 @@ class components_errorboundary extends Component {
     this.state = { hasError: false };
   }
 
-  componentDidMount() { }
+
 
   componentDidCatch(error, info) {
     this.setState({ hasError: true });
@@ -54,7 +54,7 @@ class components_errorboundary extends Component {
     }
 
   }
-  componentWillUnmount() { }
+
 
   render() {
     if (this.state.hasError) {

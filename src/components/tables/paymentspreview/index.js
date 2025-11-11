@@ -79,7 +79,7 @@ class components_tables_paymentspreview extends Component {
     this.setState(columns);
   }
 
-  componentWillUnmount() { }
+
 
   rowItemAdapter = (item) => {
     const derived = this.props.derivedForms[item.id] || {};

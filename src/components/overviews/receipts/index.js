@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_receipts extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderCards = () => {
     return this.props.attachments.map((attachment, index) => {

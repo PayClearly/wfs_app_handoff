@@ -33,8 +33,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_fundingExplanation extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   formatLineItemInflow = (value) => {
     return <h4 className="font-light mb-0 text-end"><i className={`mdi mdi-${value >= 0 ? 'plus' : 'minus'} text-${value >= 0 ? 'success' : 'danger'}`} />{numeral(Math.abs(value)).format('$0,0.00')}</h4>;

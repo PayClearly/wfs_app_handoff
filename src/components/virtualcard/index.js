@@ -26,9 +26,9 @@ const mapDispatchToProps = (dispatch, props) => ({});
 
 class components_virtualcard extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   logoOptions = {
     wex: logoWex,

@@ -38,7 +38,7 @@ class components_forms_customreportfields extends Component {
       formKey,
     });
   }
-  componentWillUnmount() { }
+
 
   handleAddCustomField = () => {
     const customFields = JSON.parse(JSON.stringify(this.state.customFields));

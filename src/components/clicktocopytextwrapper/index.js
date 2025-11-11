@@ -24,8 +24,8 @@ class components_clicktocopytextwrapper extends Component {
     copied: false,
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   copyToClipboard = (str) => {
     if (window.getSelection && document.createRange) {

@@ -30,8 +30,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_routes_camera extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

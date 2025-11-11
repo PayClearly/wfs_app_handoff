@@ -43,7 +43,7 @@ class components_cards_wizard extends Component {
       this.setState({ selected: nextCurrent });
     }
   }
-  componentWillUnmount() { }
+
 
   handleSelected(index, disabled) {
     return () => {

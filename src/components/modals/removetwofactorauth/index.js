@@ -31,7 +31,7 @@ class components_modals_removetwofactorauth extends Component {
     forms: {},
   };
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     this.setState({ forms: nextProps.forms });
 
@@ -39,7 +39,7 @@ class components_modals_removetwofactorauth extends Component {
       this.props.close();
     }
   }
-  componentWillUnmount() { }
+
 
   handleRemove = () => {
     this.props.remove(this.props.forms['Components.forms.verifytwofactordevice'].default._values.token);

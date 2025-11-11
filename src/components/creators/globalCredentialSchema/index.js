@@ -48,8 +48,8 @@ class components_creators_globalCredentialSchema extends Component {
     };
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm(this.state.formName, this.state.formKey, Object.keys(this.props.forms[this.state.formName][this.state.formKey]._values).reduce((acc, cur) => { acc[cur] = undefined; return acc; }, {}));

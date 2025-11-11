@@ -21,9 +21,9 @@ const mapDispatchToProps = (dispatch, props) => ({});
 
 class components_modals_integrationdetail extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const {

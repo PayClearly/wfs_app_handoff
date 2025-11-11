@@ -21,7 +21,7 @@ class components_overviews_opsNotes extends Component {
   state = {
     showAll: false,
   }
-  componentDidMount() { }
+
   render() {
 
     const { resource, resourceType } = this.props;

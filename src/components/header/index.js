@@ -44,7 +44,7 @@ class components_header extends Component {
       });
     });
   }
-  componentWillUnmount() { }
+
 
   render() {
     const { darkMode } = this.props;

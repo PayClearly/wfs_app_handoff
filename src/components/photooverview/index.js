@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_photooverview extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     if (this.props.src) {

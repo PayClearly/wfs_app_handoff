@@ -33,9 +33,9 @@ class components_integrationcomps_cardsIntegration_GALILEO_creators_fundingProvi
     formKey: 'fundingProvider',
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   submit = () => {
     const form = (this.props.forms['Components.integrationcomps.cardsIntegration.GALILEO.forms.fundingProvider'] && this.props.forms['Components.integrationcomps.cardsIntegration.GALILEO.forms.fundingProvider'][this.state.formKey] || {});

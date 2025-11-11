@@ -54,13 +54,13 @@ class components_photouploader extends Component {
 
   state = {}
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (this.props.accountId && (this.props.accountId !== nextProps.accountId)) {
       this.setState({ croppedPhoto: null, photo: null, errorMessage: null });
     }
   }
-  componentWillUnmount() { }
+
 
   _getBase64(file) {
     return new Promise((resolve, reject) => {

@@ -27,7 +27,7 @@ class components_forms_components_accordion extends Component {
   componentDidMount() {
     if (this.props.initialOpen) this.setState({ isOpen: true });
   }
-  componentWillUnmount() { }
+
 
   handleAccordionClick = () => {
     this.setState({

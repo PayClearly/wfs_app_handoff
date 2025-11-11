@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_tables_components_filterform extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { filterBy, onChange, options, className, selected } = this.props;

@@ -33,7 +33,7 @@ class components_modals_funding extends Component {
     manualCreateClicked: false,
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     const depositNeeded = Boolean(_try(() => this.props.fundingDetails.currentTransferPool));
     const depositNeededNow = Boolean(_try(() => nextProps.fundingDetails.currentTransferPool));
@@ -47,7 +47,7 @@ class components_modals_funding extends Component {
     }
 
   }
-  componentWillUnmount() { }
+
 
   onCreateClick = () => {
     this.setState({ manualCreateClicked: true });

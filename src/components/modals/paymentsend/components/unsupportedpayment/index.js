@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_paymentsend_components_unsupportedpayment extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

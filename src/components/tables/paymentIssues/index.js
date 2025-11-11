@@ -54,9 +54,9 @@ class components_tables_paymentIssues extends Component {
     ],
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   rowRenderer = (rowId) => {
     const issue = this.props.paymentIssues[rowId];

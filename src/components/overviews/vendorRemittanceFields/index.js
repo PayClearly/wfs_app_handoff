@@ -18,9 +18,9 @@ const mapResourcesToProps = (state, props) => ({});
 
 class components_overviews_vendorRemittanceFields extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     if (!this.props) { return <div />; }

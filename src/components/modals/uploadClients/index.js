@@ -23,8 +23,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_modals_uploadClients extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

@@ -30,13 +30,13 @@ class components_modals_resetpassword extends Component {
     showEmailSentNotification: false,
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.authStatus.updating && !nextProps.authStatus.updating) {
       this.emailSent();
     }
   }
-  componentWillUnmount() { }
+
 
   onSubmit(data) {
     this.props.sendResetPasswordEmail(data);

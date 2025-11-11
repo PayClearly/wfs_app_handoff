@@ -22,8 +22,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_tabs extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const tabs = (this.props.children.length && this.props.children) || [this.props.children];

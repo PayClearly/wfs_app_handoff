@@ -28,8 +28,8 @@ class components_containers_accountVendorEnrollments extends Component {
   state = {
     exporting: false,
   }
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { status } = this.props;

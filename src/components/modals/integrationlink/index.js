@@ -189,7 +189,7 @@ class components_modals_integrationlink extends Component {
     },
   };
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) {
     if (
@@ -201,7 +201,7 @@ class components_modals_integrationlink extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   render() {
     const { integration, type, provider } = this.props;

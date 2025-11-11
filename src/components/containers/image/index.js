@@ -31,7 +31,7 @@ class components_containers_image extends Component {
       });
     });
   }
-  componentWillUnmount() { }
+
 
   onImageLoad = () => {
     this.setState({

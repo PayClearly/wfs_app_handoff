@@ -25,8 +25,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_uploaders_components_batchOverrideFields extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
 

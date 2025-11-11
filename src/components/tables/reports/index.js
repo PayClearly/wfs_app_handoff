@@ -55,7 +55,7 @@ class components_tables_reports extends Component {
     rowsToDisplay: 25,
   };
 
-  componentDidMount() { }
+
   componentDidUpdate(prevProps) {
     const { reports, accountId, organizationId, syncJobs } = this.props;
 
@@ -63,7 +63,7 @@ class components_tables_reports extends Component {
       syncJobs(organizationId, accountId, Object.keys(reports));
     }
   }
-  componentWillUnmount() { }
+
 
   getRowData = ({ attachments = [], _createdAt, startDate, endDate, _id, _reportTemplateId, filename, description, schedule }) => {
     const { organizationId, accountId, downloadAttachment, reportJobs, reportTemplates } = this.props;

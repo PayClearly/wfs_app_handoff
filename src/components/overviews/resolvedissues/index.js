@@ -23,8 +23,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_resolvedissues extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

@@ -55,7 +55,7 @@ class components_invoiceoverlaydropdown extends Component {
       this.setState({ labelledAs: this.props.line.label });
     }
   }
-  componentWillUnmount() { }
+
 
   toggle = () => {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });

@@ -88,7 +88,7 @@ class components_tables_components_paginateWrapper extends Component {
     // if sort changes (maybe this one)
   }
 
-  componentWillUnmount() { }
+
 
   _handlePageClick = (data) => {
     const { selected } = data;

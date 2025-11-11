@@ -26,13 +26,13 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_submitQueuedResolvedIssues extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (this.props.paymentIssuesStatus.updating && !nextProps.paymentIssuesStatus.updating) {
       this.props.close();
     }
   }
-  componentWillUnmount() { }
+
 
   submitQueuedResolvedIssues = () => {
     const { pendingResolvedIssueIds, forms } = this.props;

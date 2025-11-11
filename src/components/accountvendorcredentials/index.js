@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_accountvendorcredentials extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderFields = () => {
     return Object.values((this.props.credentialSchema && this.props.credentialSchema.fields) || {})

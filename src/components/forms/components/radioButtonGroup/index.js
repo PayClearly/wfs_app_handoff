@@ -22,8 +22,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_forms_components_radioButtonGroup extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const form = this.props.form;

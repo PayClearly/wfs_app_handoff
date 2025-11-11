@@ -44,7 +44,7 @@ class components_forms_unlinkedvendor extends Component {
 
     this.setState({ form });
   }
-  componentWillUnmount() { }
+
 
   standardFormAction = (action, field, value) => {
     if (action === 'change') {

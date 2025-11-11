@@ -47,7 +47,7 @@ class components_usersettings extends Component {
     };
   }
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) {
     // if (nextProps.notificationPreferences.status.updated && !nextProps.notificationPreferences.status.updating) {
@@ -55,7 +55,7 @@ class components_usersettings extends Component {
     // }
   }
 
-  componentWillUnmount() { }
+
 
   handleEditBtnClick = (e) => {
     e.preventDefault();

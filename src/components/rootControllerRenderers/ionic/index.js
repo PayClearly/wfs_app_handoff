@@ -41,9 +41,9 @@ const mapResourcesToProps = (state, props) => ({});
 
 class components_rootControllerRenderers_ionic extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

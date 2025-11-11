@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_exceptions extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     if (!Object.keys(this.props.adminAccounts).length) return <Components.spinner />;

@@ -182,7 +182,7 @@ class components_tables_paymenthistory extends Component {
     this.setState(columns);
   }
 
-  componentWillUnmount() { }
+
 
   actionButtonRenderer = (data) => {
     const { onActionClick } = this.props;

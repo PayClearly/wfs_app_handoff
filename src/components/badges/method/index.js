@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_badges_method extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { data } = this.props;

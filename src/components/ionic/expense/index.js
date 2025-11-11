@@ -28,8 +28,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_expense extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   handleClick = () => {
     if (this.props.onClick && typeof this.props.onClick === 'function') this.props.onClick();

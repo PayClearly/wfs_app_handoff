@@ -23,8 +23,8 @@ class components_badges_beingHandledBy extends Component {
 
   state = {};
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const userIdOfHandler = this.props.paymentStatus.sent && this.props.paymentStatus.sent.beingHandledBy;

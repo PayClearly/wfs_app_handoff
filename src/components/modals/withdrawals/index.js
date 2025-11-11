@@ -32,7 +32,7 @@ class components_modals_withdrawals extends Component {
     manualCreateClicked: false,
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     const withdrawalNeeded = Boolean(_try(() => this.props.fundingDetails.currentPendingWithdrawalTotal));
     const withdrawalNeededNow = Boolean(_try(() => nextProps.fundingDetails.currentPendingWithdrawalTotal));
@@ -46,7 +46,7 @@ class components_modals_withdrawals extends Component {
     }
 
   }
-  componentWillUnmount() { }
+
 
   onCreateClick = () => {
     this.setState({ manualCreateClicked: true });

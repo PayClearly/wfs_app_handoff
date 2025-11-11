@@ -33,7 +33,7 @@ class components_modals_createTransfer extends Component {
       nextProps.close();
     }
   }
-  componentWillUnmount() { }
+
 
   render() {
     const title = this.props.title || 'Deposit Funds Manually';

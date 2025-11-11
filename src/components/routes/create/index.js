@@ -21,9 +21,9 @@ class components_routes_create extends Component {
 
   state = {};
 
-  componentDidMount() { }
-  componentWillReceiveProps() { }
-  componentWillUnmount() { }
+
+
+
 
   render() {
     return null;

@@ -46,8 +46,8 @@ class components_tables_paymentIssues extends Component {
     ],
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { columns } = this.state;
@@ -82,7 +82,7 @@ class components_tables_paymentIssues extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_tables_paymentIssues);
 
-// Internal Helper Functions ... 
+// Internal Helper Functions ...
 const _isMissingFrontZero = lastFour => `${lastFour[0]}0${lastFour.slice(1)}`;
 
 function formatAmount(amount) {
@@ -163,7 +163,7 @@ function getWithdrawalTrackerData(props) {
 
         return { cardNumberLastFour };
       };
-      
+
       const supplierDirectData = () => {
         const cardIds = Object.values(payment.funded.vCards)
           .map(card => card.id);

@@ -36,8 +36,8 @@ class components_uploaders_components_plasticCardsAggregation extends Component 
     }],
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { counts } = this.props.data;

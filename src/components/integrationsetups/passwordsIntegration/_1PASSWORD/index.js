@@ -35,8 +35,8 @@ class components_integrationsetups_passwordsIntegration_1PASSWORD extends Compon
     showCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit() {
     this.props.createIntegration({ ...this.props.form._values });

@@ -23,9 +23,9 @@ class components_forms_components_daypicker extends Component {
     isFocused: false,
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   /**
    * `date` comes from {@link DayPickerInput} as the client's timezone

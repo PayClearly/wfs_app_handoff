@@ -33,9 +33,9 @@ const mapResourcesToProps = (state, props) => Object.keys(props.organizations ||
 
 class components_routes_ftpPayments extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   onGoToPayments = ({ _id, forSFTP }) => this.props.navigateToPayments({ tab: 'payments', ftpItem: _id, forSFTP });
 

@@ -43,8 +43,8 @@ class components_integrationcomps_cardsIntegration_GALILEO_comps_customerEnrollm
     formName: 'Components.integrationcomps.cardsIntegration.GALILEO.forms.customerEnrollment',
   }
 
-  componentDidMount() { }
-  componentWillReceiveProps() { }
+
+
   componentWillUnmount() {
     this.props.clearStatusErrors();
   }

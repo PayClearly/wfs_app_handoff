@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_tables_integrationIssues extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const columns = [

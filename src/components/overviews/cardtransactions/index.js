@@ -20,8 +20,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_cardtransactions extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { data } = this.props;

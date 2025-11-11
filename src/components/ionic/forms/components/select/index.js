@@ -39,7 +39,7 @@ class components_ionic_forms_components_select extends Component {
     }, {});
     this.setState({ optionsByValue });
   }
-  componentWillUnmount() { }
+
 
   render() {
     const form = this.props.form;

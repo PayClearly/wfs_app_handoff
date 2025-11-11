@@ -20,8 +20,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_usericon extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { user } = this.props;

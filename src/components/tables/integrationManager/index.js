@@ -30,7 +30,7 @@ class components_tables_integrationManager extends Component {
     });
     this.setState({ columns });
   }
-  componentWillUnmount() { }
+
 
   rowRenderer = (rowId, rowData, expanded) => {
     return (

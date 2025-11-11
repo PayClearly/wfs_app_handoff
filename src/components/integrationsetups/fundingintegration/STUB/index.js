@@ -23,8 +23,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_integrationsetups_fundingintegration_STUB extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

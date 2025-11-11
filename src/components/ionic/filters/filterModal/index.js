@@ -20,8 +20,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_filters_filterModal extends Component {
   // Size will determine the height of the modal at the bottom
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
 

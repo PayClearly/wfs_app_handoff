@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_containers_pendingExpenseReports extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

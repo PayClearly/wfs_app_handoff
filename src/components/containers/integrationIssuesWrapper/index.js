@@ -38,7 +38,7 @@ class components_containers_integrationIssuesWrapper extends Component {
       this.props.getIssues(this.props.integration);
     }
   }
-  componentWillUnmount() { }
+
 
   render() {
     return (

@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_globalVendorTag extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { id, tags } = this.props;

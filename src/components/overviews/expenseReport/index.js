@@ -46,7 +46,7 @@ const mapResourcesToProps = (state, props) => {
 class components_overviews_expenseReport extends Component {
   state = {};
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (_try(() => this.props.expenseReportCommentsStatus.creating) && (!_try(() => nextProps.expenseReportCommentsStatus.creating) && !_try(() => nextProps.expenseReportCommentsStatus.creatingError))) {
       const formName = 'Components.forms.expenseReportComment';
@@ -54,7 +54,7 @@ class components_overviews_expenseReport extends Component {
       if (_try(() => this.props.forms[formName][formKey])) this.props.resetForm(formName, formKey, Object.keys(this.props.forms[formName][formKey]._values).reduce((acc, cur) => { acc[cur] = undefined; return acc; }, {}));
     }
   }
-  componentWillUnmount() { }
+
 
   createExpenseReportComment = () => {
     const { id, forms } = this.props;

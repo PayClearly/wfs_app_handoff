@@ -36,7 +36,7 @@ class components_ionic_image extends Component {
   componentDidMount() {
     return firebase.auth().currentUser.getIdToken().then(token => this.setState({ token }));
   }
-  componentWillUnmount() { }
+
 
   onImageLoad = () => {
     this.setState({ loaded: true });

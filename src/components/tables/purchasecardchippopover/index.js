@@ -33,7 +33,7 @@ class components_tables_purchasecardchippopover extends Component {
   componentDidMount() {
 
   }
-  componentWillUnmount() { }
+
 
   navigateToDetails = () => {
     const { refId, purchaseCards } = this.props;

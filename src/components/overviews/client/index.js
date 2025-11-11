@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_overviews_client extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { id, clients } = this.props;

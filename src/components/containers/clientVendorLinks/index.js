@@ -29,8 +29,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_containers_clientVendorLinks extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { clientVendorLinkStatus, clientVendorLinkPolicies } = this.props;

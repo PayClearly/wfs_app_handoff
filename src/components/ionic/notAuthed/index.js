@@ -47,7 +47,7 @@ class componentsIonicNotAuthed extends Component {
     logUserOut: false,
   };
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) {
     if (!this.props.preferences.useBiometrics) { return; }
@@ -72,7 +72,7 @@ class componentsIonicNotAuthed extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   handleLogout = (biometricsChanged) => {
     if (biometricsChanged) { this.props.setUseBiometrics(false); }

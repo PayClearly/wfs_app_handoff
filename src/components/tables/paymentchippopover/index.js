@@ -53,7 +53,7 @@ class components_tables_paymentchippopover extends Component {
       },
     });
   }
-  componentWillUnmount() { }
+
 
   navigateToDetails = () => {
     const paymentId = this.state.paymentStatus._id || null;

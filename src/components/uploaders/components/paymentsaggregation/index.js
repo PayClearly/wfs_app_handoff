@@ -52,8 +52,8 @@ class components_uploaders_components_paymentsaggregation extends Component {
     }],
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { counts, amounts } = this.props.data;

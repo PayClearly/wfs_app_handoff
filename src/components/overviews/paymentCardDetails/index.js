@@ -37,8 +37,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_paymentCardDetails extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   cancelPaymentCard = (id) => {
     this.props.openCancelModal({

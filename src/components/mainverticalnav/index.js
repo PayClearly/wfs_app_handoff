@@ -42,9 +42,9 @@ class components_mainverticalnav extends Component {
 
   state = {};
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   menuItemClicked = (e, name, params) => {
     e.preventDefault();

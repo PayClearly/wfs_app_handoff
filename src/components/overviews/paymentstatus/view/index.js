@@ -50,7 +50,7 @@ class components_overviews_paymentstatus_view extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   navigateToInvoice = (id) => {
     this.props.goToInvoiceTable({ invoice: id });

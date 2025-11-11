@@ -20,8 +20,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_paymentCardStatus extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderOverviewStatus = () => {
     const paymentCard = _try(() => this.props.paymentCards[this.props.id], {});

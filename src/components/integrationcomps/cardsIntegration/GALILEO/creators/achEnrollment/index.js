@@ -41,8 +41,8 @@ class components_integrationcomps_cardsIntegration_GALILEO_creators_achEnrollmen
     formName: 'Components.integrationcomps.cardsIntegration.GALILEO.forms.achEnrollment',
     formKey: 'create',
   }
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.setState(() => {

@@ -40,8 +40,8 @@ class components_creators_globalVendorSchema extends Component {
     formKey: `${Date.now()}`,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm('Components.forms.globalVendorSchema', this.state.formKey, {

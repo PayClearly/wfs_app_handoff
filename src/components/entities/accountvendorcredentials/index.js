@@ -39,8 +39,8 @@ class components_entities_accountvendorcredentials extends Component {
     editBtnText: 'Edit',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const schemaId = this.props.id;

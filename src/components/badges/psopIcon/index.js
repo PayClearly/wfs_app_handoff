@@ -24,8 +24,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_badges_psopIcon extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { method, accepts, groupId } = this.props;

@@ -41,7 +41,7 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_comps_microDep
     formKey: 'SMARTPAYABLES',
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (_try(() => nextProps.checksIntegration.details.microDepositAttempts, 0) > _try(() => this.props.checksIntegration.details.microDepositAttempts, 0)) {
       const attemptsRemaining = 4 - _try(() => nextProps.checksIntegration.details.microDepositAttempts, 0);

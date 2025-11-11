@@ -30,9 +30,9 @@ const mapResourcesToProps = (state, props) => {
 class components_ionic_applicationPreferences extends Component {
   state = {}
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   onToggle = (e) => {
     // we want to manage the state ourselves because the ionic event triggers twice sometimes (known bug)

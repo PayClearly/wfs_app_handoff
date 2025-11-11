@@ -17,9 +17,9 @@ const mapDispatchToProps = () => ({});
 
 class components_overviews_address extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     if (!this.props) { return <div />; }

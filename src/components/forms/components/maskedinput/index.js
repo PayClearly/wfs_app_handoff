@@ -35,8 +35,8 @@ class components_forms_components_maskedinput extends Component {
 
   state = { hasFocused: false }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const form = this.props.form;

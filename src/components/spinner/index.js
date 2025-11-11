@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_spinner extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

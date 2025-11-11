@@ -31,7 +31,7 @@ class components_tooltip extends Component {
     });
   }
 
-  componentWillUnmount() { }
+
 
   toggle() {
     this.setState({

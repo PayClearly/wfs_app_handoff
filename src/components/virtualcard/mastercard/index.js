@@ -25,8 +25,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_virtualcard_mastercard extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { card, blur, logo, nameOnCard, overlay } = this.props;

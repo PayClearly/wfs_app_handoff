@@ -31,7 +31,7 @@ class components_modals_resendnotification extends Component {
     emailsSent: false,
   };
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (this.state.clickedSend && !this.state.emailsSent && this.props.paymentStatusesStatus.updating && !nextProps.paymentStatusesStatus.updating && !nextProps.paymentStatusesStatus.updatingError) {
 

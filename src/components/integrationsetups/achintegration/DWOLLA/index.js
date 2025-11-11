@@ -31,7 +31,7 @@ class components_integrationsetups_achintegration_DWOLLA extends Component {
 
   state = {};
 
-  componentDidMount() { }
+
   componentWillUnmount() {
     this.props.clearStatusErrors();
   }

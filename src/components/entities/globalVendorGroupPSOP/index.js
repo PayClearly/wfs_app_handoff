@@ -36,8 +36,8 @@ class components_entities_globalVendorGroupPSOP extends Component {
     formKey: `${this.props.method}-${this.props.groupId}`,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { method, groupId, groups, forms } = this.props;

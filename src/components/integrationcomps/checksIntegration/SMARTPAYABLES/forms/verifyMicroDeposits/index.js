@@ -22,8 +22,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_integrationcomps_checksIntegration_SMARTPAYABLES_forms_verifyMicroDeposits extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

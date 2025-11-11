@@ -23,8 +23,8 @@ const mapResourcesToProps = (state, props) => {
 class components_opsNotesList extends Component {
   state = {}
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   _sortNotes = (noteA, noteB) => {
     const noteADate = noteA._createdAt;

@@ -28,8 +28,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_entities_twofactorauthsettings extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

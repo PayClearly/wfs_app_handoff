@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_invalidpermissions extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     if (!this.props.fetched) return null;

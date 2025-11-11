@@ -42,7 +42,7 @@ class components_organizationcontext extends Component {
       organizations: nextProps.organizations.data.items || {},
     });
   }
-  componentWillUnmount() { }
+
 
   organizationClicked(id) {
     this.props.changeOrganization(id);

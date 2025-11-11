@@ -52,7 +52,7 @@ class components_ionic_modals_airportSelect extends Component {
       this.setState({ distanceSearch: this.props.data.radius });
     }
   }
-  componentWillUnmount() { }
+
 
   handleClick = (airport) => {
     this.props.data.setParams(airport, this.state.distanceSearch);

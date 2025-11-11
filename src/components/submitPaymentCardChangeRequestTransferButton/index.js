@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch, props) => {
 class components_submitPaymentCardChangeRequestTransferButton extends Component {
   state = {};
 
-  componentDidMount() { }
+
   componentWillUnmount() {
     if (typeof this.props.clearStatusErrors === 'function' && this.props.achTransfersStatus && this.props.achTransfersStatus.creatingError) {
       this.props.clearStatusErrors();

@@ -98,9 +98,9 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
     galileoPurchaseCardBin: 'Galileo Default Bin for Purchase Cards',
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
 
   onSubmit() {

@@ -27,8 +27,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_avatar extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { userProfile } = this.props;

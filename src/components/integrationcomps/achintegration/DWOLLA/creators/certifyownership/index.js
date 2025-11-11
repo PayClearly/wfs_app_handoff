@@ -34,8 +34,8 @@ class components_integrationcomps_achintegration_DWOLLA_creators_certifyownershi
     formKey: 'create',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
 

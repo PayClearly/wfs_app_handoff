@@ -27,8 +27,8 @@ class components_ionic_userCard extends Component {
     showActionSheet: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { cardData } = this.props;

@@ -45,8 +45,8 @@ class components_entities_account extends Component {
   };
 
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = this.props.forms[this.state.formName][this.props.accountItem._id];

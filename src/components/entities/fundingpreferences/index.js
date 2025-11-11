@@ -36,8 +36,8 @@ class components_entities_fundingpreferences extends Component {
     editBtnText: 'Edit Preferences',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
 
   onSubmit() {

@@ -34,13 +34,13 @@ class components_modals_resendUserInvite extends Component {
     showPastInvites: false,
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.inviteStatus.updating && !nextProps.inviteStatus.updating) {
       this.inviteSent();
     }
   }
-  componentWillUnmount() { }
+
 
   onYes() {
     this.props.resendUserInvite(this.props.user.email);

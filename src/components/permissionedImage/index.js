@@ -31,7 +31,7 @@ class components_permissionedImage extends Component {
       });
     });
   }
-  componentWillUnmount() { }
+
 
   render() {
     let imageToDisplay = this.props.default;

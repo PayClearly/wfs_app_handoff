@@ -14,9 +14,9 @@ const mapDispatchToProps = () => ({});
 // eslint-disable-next-line camelcase
 class components_overviews_globalVendorGroupPSOP extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const {

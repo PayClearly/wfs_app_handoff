@@ -43,7 +43,7 @@ class components_entities_integrationManager extends Component {
     const formKey = `${this.props.integrationName}-${this.props.resourceName}-${this.props.id}`;
     this.setState({ formKey });
   }
-  componentWillUnmount() { }
+
 
   onSubmit = () => {
     const item = _try(() => this.props.forms['Components.forms.integrationManager'][this.props.formKey]._values);

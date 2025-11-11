@@ -46,8 +46,8 @@ class components_creators_expenseReport extends Component {
     };
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm(this.state.formName, this.state.formId, Object.keys(this.props.forms[this.state.formName][this.state.formId]._values).reduce((acc, cur) => { acc[cur] = undefined; return acc; }, {}));

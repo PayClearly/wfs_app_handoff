@@ -27,8 +27,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_integrationcomps_achintegration_DWOLLA_entities_main extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
 

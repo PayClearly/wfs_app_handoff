@@ -21,13 +21,13 @@ const mapDispatchToProps = (dispatch, props) => {
 class components_menu extends Component {
   state = {};
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (!this.props.reset && nextProps.reset) {
       this.setState({ open: null });
     }
   }
-  componentWillUnmount() { }
+
 
   renderItems = () => {
     const { items, hasActions, onClick } = this.props;

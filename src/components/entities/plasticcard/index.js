@@ -32,8 +32,8 @@ class components_entities_plasticcard extends Component {
     editBtnText: 'Edit Card',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   on = {
     submit: () => {

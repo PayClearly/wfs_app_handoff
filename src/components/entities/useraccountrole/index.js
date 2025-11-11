@@ -37,8 +37,8 @@ class components_entities_useraccountrole extends Component {
     editBtnText: 'Edit Account Role',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = this.props.forms[this.state.formName][this.props.id];

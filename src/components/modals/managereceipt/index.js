@@ -30,13 +30,13 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_managereceipt extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if ((_try(() => this.props.paymentStatuses[nextProps.id].sent.receipts) && this.props.paymentStatuses[nextProps.id].sent.receipts.length) && (!_try(() => nextProps.paymentStatuses[nextProps.id].sent.receipts) || !nextProps.paymentStatuses[nextProps.id].sent.receipts.length)) {
       this.props.close();
     }
   }
-  componentWillUnmount() { }
+
 
   removeReceipt = (index) => {
     const paymentStatus = this.props.paymentStatuses[this.props.id];

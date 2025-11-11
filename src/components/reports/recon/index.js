@@ -85,9 +85,9 @@ class components_reports_recon extends Component {
     actions: ['Schedule', 'Export CSV'],
     transactions: [],
   };
-  componentWillMount() {}
-  componentDidMount() {}
-  componentWillReceiveProps(nextProps) { 
+  componentWillMount() { }
+  componentDidMount() { }
+  componentWillReceiveProps(nextProps) {
     if (nextProps.transactions) {
       this.setState({
         csvData: this.getCsvData(this.adaptTransactions(nextProps.transactions), this.state.selectedColumns, this.state.orderBy),
@@ -95,7 +95,7 @@ class components_reports_recon extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   getCsvData = (transactions, selectedColumns, orderBy) => {
     return Object.values(transactions)

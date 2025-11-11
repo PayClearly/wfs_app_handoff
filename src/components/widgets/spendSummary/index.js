@@ -28,9 +28,9 @@ class components_widgets_spendSummary extends Component {
     popoverOpen: false,
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   togglePopover = () => {
     this.setState((prevState) => ({ popoverOpen: !prevState.popoverOpen }));

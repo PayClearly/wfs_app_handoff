@@ -54,8 +54,8 @@ class components_ionic_modals_createNew extends Component {
     },
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   navigate = (key) => {
     this.props.closeCreateMenu();

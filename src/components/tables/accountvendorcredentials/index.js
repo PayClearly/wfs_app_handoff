@@ -43,8 +43,8 @@ class components_tables_accountvendorcredentials extends Component {
     ],
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { accountVendorCredentials, filteredAndSortedItems } = this.props;

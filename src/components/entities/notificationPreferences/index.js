@@ -33,8 +33,8 @@ class components_entities_notificationPreferences extends Component {
     selectedCategory: '',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = this.props.forms['Components.forms.notificationPreferenceCategory'].default;

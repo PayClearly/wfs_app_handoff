@@ -119,7 +119,7 @@ class components_uploaders_plasticCards extends Component {
     uploadingError: '',
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (this.props.status && !this.props.status.creatingError && nextProps.status.creatingError) {
       this.onCreate();
@@ -133,7 +133,7 @@ class components_uploaders_plasticCards extends Component {
       }
     }
   }
-  componentWillUnmount() { }
+
 
   onCreate = () => {
     this.setState({

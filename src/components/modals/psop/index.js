@@ -27,7 +27,7 @@ class components_modals_psop extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   render() {
     const { method, groupId, groups } = this.props;

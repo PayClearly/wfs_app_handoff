@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch) => {
 
 class components_routes_completedreports extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return null;

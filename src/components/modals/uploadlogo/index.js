@@ -45,7 +45,7 @@ class components_modals_uploadlogo extends Component {
     this._onCancelPhoto = this._onCancelPhoto.bind(this);
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.organizationsStatus.updating && !nextProps.organizationsStatus.updating && !nextProps.organizationsStatus.updatingError) {
       this.props.close();

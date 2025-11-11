@@ -28,8 +28,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_reportComment extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { comment, userProfile, currentUser } = this.props;

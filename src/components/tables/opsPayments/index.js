@@ -39,7 +39,7 @@ class components_tables_opsPayments extends Component {
     ],
   };
 
-  componentDidMount() { }
+
   componentWillUnmount() {
     // if (_try(() => this.props.routeParams.transferId)) {
     //   this.props.removeQueryParams(['transferId']);

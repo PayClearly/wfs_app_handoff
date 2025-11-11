@@ -96,7 +96,7 @@ class components_overviews_csrPaymentBatch extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   _fetchPaymentsFromBatch = (paymentIds, batchId) => {
     let startIndex = 0;

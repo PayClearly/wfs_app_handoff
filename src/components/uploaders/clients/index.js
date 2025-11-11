@@ -74,7 +74,7 @@ class components_uploaders_clients extends Component {
     blurAll: false,
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (this.props.status && !this.props.status.creatingError && nextProps.status.creatingError) {
       this.onCreate();
@@ -89,7 +89,7 @@ class components_uploaders_clients extends Component {
       }
     }
   }
-  componentWillUnmount() { }
+
 
   onCreate = () => {
     this.setState({

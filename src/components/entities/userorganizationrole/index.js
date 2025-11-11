@@ -37,8 +37,8 @@ class components_entities_userorganizationrole extends Component {
     editBtnText: 'Edit Organizational Role',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = this.props.forms[this.state.formName][this.props.id];

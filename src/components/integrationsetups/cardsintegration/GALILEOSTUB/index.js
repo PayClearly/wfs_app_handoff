@@ -37,8 +37,8 @@ class components_integrationsetups_cardsintegration_GALILEOSTUB extends Componen
     passCustomerEnrollment: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate() {
     this.setState({

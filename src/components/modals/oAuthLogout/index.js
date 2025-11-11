@@ -22,9 +22,9 @@ const mapDispatchToProps = (dispatch, props) => ({
 class componentsModalsOAuthLogout extends Component {
   state = {};
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

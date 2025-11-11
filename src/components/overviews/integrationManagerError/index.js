@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_integrationManagerError extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { integrationMeta, id } = this.props;

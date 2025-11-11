@@ -39,9 +39,9 @@ class components_ionic_fab extends Component {
     showPopover: false,
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   createNavigate = (key) => {
     this.toggleFab();

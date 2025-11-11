@@ -31,8 +31,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_invoice extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
 
   navigateToPaymentHistory = (e) => {

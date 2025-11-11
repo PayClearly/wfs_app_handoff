@@ -73,14 +73,14 @@ class components_uploaders_accountvendor extends Component {
     successfullyCreated: false,
   };
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps = {}) {
     if (this.props.status.creating && !nextProps.status.creatingError && !nextProps.status.creating) {
       this.setState({ successfullyCreated: true });
     }
   }
-  componentWillUnmount() { }
+
 
   onDrop = (acceptedFiles) => {
     // const vendors = [];

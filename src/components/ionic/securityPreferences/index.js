@@ -46,7 +46,7 @@ class components_ionic_securityPreferences extends Component {
     this.setState({ toggleVal: this.props.deviceSecurity.useBiometrics });
   }
 
-  componentWillUnmount() { }
+
 
   onToggle = (e) => {
     // we want to manage the state ourselves because the ionic event triggers twice sometimes (known bug)

@@ -22,8 +22,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_routes_expenseReportApprovals extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

@@ -33,8 +33,8 @@ class components_integrationcomps_achintegration_DWOLLA_creators_declareExemptio
     formKey: 'create',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   submit = () => {
     const form = (this.props.forms['Components.integrationcomps.achintegration.DWOLLA.forms.declareExemption'] && this.props.forms['Components.integrationcomps.achintegration.DWOLLA.forms.declareExemption'][this.state.formKey] || {});

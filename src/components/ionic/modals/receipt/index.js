@@ -45,7 +45,7 @@ class components_ionic_modals_receipt extends Component {
   componentDidMount() {
     return firebase.auth().currentUser.getIdToken().then(token => this.setState({ token }));
   }
-  componentWillUnmount() { }
+
 
   close = () => {
     if (this.props.modal.current) this.props.modal.current.dismiss();

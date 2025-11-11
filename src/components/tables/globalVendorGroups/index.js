@@ -60,8 +60,8 @@ class components_tables_globalVendorGroups extends Component {
     ],
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   rowRenderer = (rowId, rowData, expanded) => {
     return (

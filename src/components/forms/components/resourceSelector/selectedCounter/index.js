@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_forms_components_resourceSelector_selectedCounter extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   clearSelection = () => {
     _try(() => this.props.form.action('change', this.props.form.fieldName, {}));

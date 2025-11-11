@@ -31,8 +31,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_fundingtransfers extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { transferItem, transferStatus } = this.props;

@@ -40,8 +40,8 @@ class components_integrationcomps_cardsIntegration_GALILEO_creators_businessEnro
     formName: 'Components.integrationcomps.cardsIntegration.GALILEO.forms.businessEnrollment',
     formKey: 'create',
   };
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.setState(() => {

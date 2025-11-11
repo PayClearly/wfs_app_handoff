@@ -37,7 +37,7 @@ class components_twoFactorAuthWatcher extends Component {
     opened: false,
   };
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     const projectDbContext = window.GLOBALCERT;
     const isProd = !projectDbContext.storageBucket.includes('staging') && !projectDbContext.storageBucket.includes('test');
@@ -60,7 +60,7 @@ class components_twoFactorAuthWatcher extends Component {
       this.props.logout();
     }
   }
-  componentWillUnmount() { }
+
 
   render() {
     return (

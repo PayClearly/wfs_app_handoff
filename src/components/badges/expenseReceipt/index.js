@@ -22,8 +22,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_badges_expenseReceipt extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (this.props.receipt ?

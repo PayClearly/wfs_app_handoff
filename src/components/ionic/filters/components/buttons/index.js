@@ -23,8 +23,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_filters_components_buttons extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const {

@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_funding extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { achTransfersStatus, fundingIntegrationStatus } = this.props;

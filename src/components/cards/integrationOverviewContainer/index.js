@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_cards_integrationOverviewContainer extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const integrations = Object.keys(this.props.account || {}).filter(key => key.toLowerCase().includes('integration'));

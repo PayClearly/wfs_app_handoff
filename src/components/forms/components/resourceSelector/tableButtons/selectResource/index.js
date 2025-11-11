@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_forms_components_resourceSelector_tableButtons_selectResource extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   // _toggleAllEditedItems = (e) => {
   //   const { forms, fieldName, formName, formKey, action, getCurrentlyInScope } = this.props;

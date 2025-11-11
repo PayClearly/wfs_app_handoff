@@ -62,8 +62,8 @@ class components_entities_paymentcardcustomfields extends Component {
     customFields: {},
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit() {
     const customFieldForms = this.props.forms['Components.forms.createcustomfield'];

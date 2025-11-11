@@ -27,8 +27,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_plasticcard extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderCycleLimits = ({ cycleIndicator, cycleRefreshDay, cycleRefreshDate, cycleTransactionAmountLimit, cycleTransactionAmountUsed, cycleTransactionCountLimit, cycleTransactionCountUsed }) => {
     if (cycleIndicator === 'N') {

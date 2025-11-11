@@ -88,7 +88,7 @@ class components_widgets_paymentMethodsStatus extends Component {
     fetched: false,
   };
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.integrations.cardsIntegration.status.fetched
@@ -98,7 +98,7 @@ class components_widgets_paymentMethodsStatus extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   _onClickToggleDetails = () => {
     if (!this.state.fetched) { return; }

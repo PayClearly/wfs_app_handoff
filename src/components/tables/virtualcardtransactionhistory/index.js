@@ -45,9 +45,9 @@ class components_tables_virtualcardtransactionhistory extends Component {
     ],
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   rowRenderer = (rowId, rowData, expanded) => (
     <div className="p-4">

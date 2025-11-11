@@ -86,9 +86,9 @@ class components_tables_csrpayments extends Component {
     ],
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   onActionClick = (title, id) => {
     if (this.props.isOps) {

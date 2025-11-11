@@ -22,9 +22,9 @@ const mapResourcesToProps = () => ({});
 
 class components_ftpPaymentsLoader extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     if (!this.props.paymentUploadsStatus.fetched) { return <Components.spinner />; }

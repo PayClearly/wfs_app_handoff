@@ -39,8 +39,8 @@ class components_creators_fundingtransfer extends Component {
     formKey: 'create',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm('Components.forms.fundingtransfer', this.state.formKey, {

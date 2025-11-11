@@ -68,7 +68,7 @@ class components_integrationcomps_cardsIntegration_GALILEO_creators_customerEnro
       });
     }
   }
-  componentWillUnmount() { }
+
 
   onCreate = () => {
     this.setState(() => {

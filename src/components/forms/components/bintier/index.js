@@ -48,7 +48,7 @@ class components_forms_components_bintier extends Component {
       key: nextProps.formKey,
     });
   }
-  componentWillUnmount() { }
+
 
   standardFormAction = (action, field, value) => {
     if (action === 'change') {

@@ -37,8 +37,8 @@ class components_entities_useradminrole extends Component {
     editBtnText: 'Edit Admin Role',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = this.props.forms[this.state.formName][this.props.id];

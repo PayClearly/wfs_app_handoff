@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_reporttemplate extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { filename, description, status, type, schedule, orderBy, exports, startDate, endDate, emailContacts, selectFields } = _formatTemplateFields(this.props.template);

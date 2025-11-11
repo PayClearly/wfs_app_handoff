@@ -19,9 +19,9 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_organization extends Component {
 
-  componentDidMount() { }
-  componentWillReceiveProps() { }
-  componentWillUnmount() { }
+
+
+
 
   render() {
     return null;

@@ -47,8 +47,8 @@ class components_creators_plastic extends Component {
     formKey: 'default',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     if (this.props.forCreate) {

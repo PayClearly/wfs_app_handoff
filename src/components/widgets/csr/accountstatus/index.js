@@ -31,8 +31,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_widgets_csr_accountstatus extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { accountData, context } = this.props;

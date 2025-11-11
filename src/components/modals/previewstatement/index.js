@@ -23,8 +23,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_previewstatement extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

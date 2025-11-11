@@ -44,8 +44,8 @@ class components_creators_user extends Component {
     createFormActive: true,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm('Components.forms.useremail', this.state.formKey);

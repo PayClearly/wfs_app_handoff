@@ -55,8 +55,8 @@ class components_creators_payment extends Component {
     fuzzySet: null,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     const formKey = this.props.formKey || this.state.formKey;

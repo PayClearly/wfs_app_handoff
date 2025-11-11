@@ -30,7 +30,7 @@ class components_imagecontainer extends Component {
       this.setState({ token });
     });
   }
-  componentWillUnmount() { }
+
 
   onImageLoad = () => {
     this.setState({

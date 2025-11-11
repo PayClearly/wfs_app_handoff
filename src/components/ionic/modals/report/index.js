@@ -80,7 +80,7 @@ class components_ionic_modals_report extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   createExpenseReport = () => {
     const data = this.props.forms['Components.ionic.forms.report'].default._values;

@@ -20,8 +20,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_profile extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

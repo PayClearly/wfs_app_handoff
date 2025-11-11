@@ -25,11 +25,11 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_userswatcher extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     this.props.syncUsers(nextProps.storedUsers);
   }
-  componentWillUnmount() { }
+
 
   render() {
     return (

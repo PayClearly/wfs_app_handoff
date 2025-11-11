@@ -49,7 +49,7 @@ class components_forms_ftpAccountDetails extends Component {
     });
   }
 
-  componentWillUnmount() { }
+
 
   standardFormAction = (action, field, value) => {
     if (action === 'change') {

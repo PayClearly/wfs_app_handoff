@@ -39,7 +39,7 @@ class components_integrationcomps_achintegration_DWOLLA_comps_microDeposits exte
     error: false,
   };
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (_try(() => nextProps.achIntegration.details.fundingSource.microDepositAttempts, 0) > _try(() => this.props.achIntegration.details.fundingSource.microDepositAttempts, 0)) this.setState({ error: 'Wrong amount(s).' });
   }

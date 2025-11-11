@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_overviews_paymentstatus_modules_lineItems extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { id } = this.props;

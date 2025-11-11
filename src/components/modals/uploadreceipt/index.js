@@ -32,7 +32,7 @@ class components_modals_uploadreceipt extends Component {
     showError: false,
   };
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.paymentStatusesStatus.updating && !nextProps.paymentStatusesStatus.updating && !nextProps.paymentStatusesStatus.updatingError) {
       this.props.close();
@@ -41,7 +41,7 @@ class components_modals_uploadreceipt extends Component {
       this.props.close();
     }
   }
-  componentWillUnmount() { }
+
 
   onDrop = (files) => {
     this.setState({

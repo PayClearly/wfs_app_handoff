@@ -22,8 +22,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_badges_clientVendorLinkCredentialsDisplay extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { data } = this.props;

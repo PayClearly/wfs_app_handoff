@@ -23,8 +23,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_accountvendor extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderWarning(vendor) {
 

@@ -44,7 +44,7 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_entities_transfersettings extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.params.modal) {
       this.props.removeQueryParams(['modal']);
@@ -53,7 +53,7 @@ class components_entities_transfersettings extends Component {
       }, 500);
     }
   }
-  componentWillUnmount() { }
+
 
   onSubmit() {
     const form = _try(() => this.props.forms['Components.forms.achAccountCredentials'].setup);

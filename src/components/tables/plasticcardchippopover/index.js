@@ -26,8 +26,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_tables_plasticcardchippopover extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   navigateToDetails = () => {
     const { refId } = this.props;

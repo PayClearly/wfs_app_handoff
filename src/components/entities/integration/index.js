@@ -36,9 +36,9 @@ const mapDispatchToProps = (dispatch, props) => ({
 
 class components_entities_integration extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   unlink = () => {
     this.props.openUnlinkModal({

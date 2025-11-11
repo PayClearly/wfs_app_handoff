@@ -37,8 +37,8 @@ class components_integrationcomps_achintegration_DWOLLA_creators_document extend
     formKey: 'create',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onDocumentDrop = (files) => {
     this.setState({

@@ -29,8 +29,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_containers_expenses extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { expenseStatus, expensePolicies } = this.props;

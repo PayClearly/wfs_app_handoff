@@ -61,7 +61,7 @@ class components_reports_ac28 extends Component {
       { dataField: 'Comdata Account Code One', type: 'Char', isCustomField: true },
       { dataField: 'Customer Id', type: 'Char', isCustomField: true },
       { dataField: 'Match Id', type: 'Char' },
-      { dataField: 'Vendor Name', type: 'Char' }, // we store the client's vendor ID number as Vendor Name in SQL 
+      { dataField: 'Vendor Name', type: 'Char' }, // we store the client's vendor ID number as Vendor Name in SQL
       { dataField: 'Card Last 4', type: 'Num' },
       { dataField: 'Transaction Date', type: 'Char' },
       { dataField: 'Transaction Time', type: 'Char' },
@@ -101,13 +101,13 @@ class components_reports_ac28 extends Component {
     actions: ['Schedule'],
   };
 
-  componentWillMount() {}
+  componentWillMount() { }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentWillReceiveProps() {}
+  componentWillReceiveProps() { }
 
-  componentWillUnmount() { }
+
 
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;

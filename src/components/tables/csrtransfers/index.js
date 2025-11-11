@@ -54,7 +54,7 @@ class components_tables_csrtransfers extends Component {
     ],
   };
 
-  componentDidMount() { }
+
   componentWillUnmount() {
     if (_try(() => this.props.routeParams.transferId)) {
       this.props.removeQueryParams(['transferId']);
@@ -71,9 +71,9 @@ class components_tables_csrtransfers extends Component {
     /**
      * Allow ops users to submit ACH debit transfers if the amount is negative,
      * even if 'enableOpsAchDebit' feature flag is disabled.
-     * 
+     *
      * This is needed for submitting refunds.
-     * 
+     *
      * This is client side validation for convenience and UI only, back end must do actual validation
      * of whether user is allowed to submit ACH debit transfers.
      */
@@ -169,7 +169,7 @@ class components_tables_csrtransfers extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_csrtransfers);
 
-// Internal Helper Functions ... 
+// Internal Helper Functions ...
 const filterConfig = {
   multiFilter: {
     transferAmount: {

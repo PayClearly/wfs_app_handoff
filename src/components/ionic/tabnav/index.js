@@ -54,8 +54,8 @@ class components_ionic_tabnav extends Component {
       cardOutline, receipt, earth, documentText, person,
     },
   }
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   tabButton = ({ id, icon, name }, routeName, index) => {
     const unassignedExpenses = this.props.expenses.filter(expense => !expense.deleted && !expense.reportId).length;

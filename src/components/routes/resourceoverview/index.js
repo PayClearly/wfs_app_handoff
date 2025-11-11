@@ -50,7 +50,7 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_resourceoverview extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.organizationId && this.props.accountId && this.props.router) {
       const currentContext = { organizationId: this.props.organizationId, accountId: this.props.accountId };

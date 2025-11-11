@@ -25,8 +25,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_inbox extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   tabSelected(tab) {
     this.props.setTabInRoute(tab);

@@ -25,8 +25,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_opsNote extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { note, users } = this.props;

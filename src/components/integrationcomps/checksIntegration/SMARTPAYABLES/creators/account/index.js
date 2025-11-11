@@ -41,8 +41,8 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_creators_accou
     formName: 'Components.integrationcomps.checksIntegration.SMARTPAYABLES.forms.account',
     formKey: 'create',
   }
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.setState(() => {

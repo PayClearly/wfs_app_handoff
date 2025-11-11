@@ -26,9 +26,9 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_ghostBatches extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   handleDenormalizeClick = (batchId) => {
     const reqBody = {

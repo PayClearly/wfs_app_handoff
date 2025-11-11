@@ -35,8 +35,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_virtualcardentity extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   cancelCard = (id) => {
     if (this.props.forPayment) return;

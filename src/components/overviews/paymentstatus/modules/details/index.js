@@ -23,9 +23,9 @@ const mapDispatchToProps = () => ({});
 // eslint-disable-next-line camelcase
 class components_overviews_paymentstatus_modules_details extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const { paymentStatus } = this.props;

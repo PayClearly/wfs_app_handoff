@@ -45,8 +45,8 @@ class components_tables_approvals extends Component {
     ],
     dropdownOpen: false,
   }
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   on = {
     searchChange: e => this.setState({ searchText: e.target.value }),

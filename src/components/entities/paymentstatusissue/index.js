@@ -34,7 +34,7 @@ class components_entities_paymentstatusissue extends Component {
     selectedResolution: null,
   };
 
-  componentDidMount() { }
+
 
   componentWillUnmount() {
     this.props.clearErrors();

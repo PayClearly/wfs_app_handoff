@@ -17,8 +17,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_integrationManager extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { data, resourceDef } = this.props;

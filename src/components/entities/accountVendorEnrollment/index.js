@@ -40,8 +40,8 @@ class components_entities_accountVendorEnrollment extends Component {
     editBtnText: 'Edit Enrollment Details',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { id, form } = this.props;

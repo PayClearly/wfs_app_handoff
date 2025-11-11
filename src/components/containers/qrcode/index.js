@@ -43,7 +43,7 @@ class components_containers_qrcode extends Component {
         });
       });
   }
-  componentWillUnmount() { }
+
 
   render() {
     if (this.state.qrCodeUrl) {

@@ -27,7 +27,7 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_integrationsetups_checksintegration_SMARTPAYABLES extends Component {
 
-  componentDidMount() { }
+
   componentWillUnmount() {
     this.props.clearStatusErrors();
   }

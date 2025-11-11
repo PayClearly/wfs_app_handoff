@@ -48,9 +48,9 @@ class componentsIonicProfile extends Component {
     defaultUserPhoto: this.props.photo,
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   choosePhoto = async () => {
     const photoTimestamp = Date.now();

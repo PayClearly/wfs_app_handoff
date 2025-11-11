@@ -22,8 +22,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_routes_wallet extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

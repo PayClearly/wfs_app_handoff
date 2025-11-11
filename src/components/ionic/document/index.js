@@ -21,8 +21,8 @@ const mapResourcesToProps = (state, props) => ({});
 
 class components_ionic_document extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     let title;

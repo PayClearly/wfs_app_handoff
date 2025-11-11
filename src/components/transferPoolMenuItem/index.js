@@ -32,8 +32,8 @@ class components_transferPoolMenuItem extends Component {
     popoverOpen: false,
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

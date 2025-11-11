@@ -32,8 +32,8 @@ class components_integrationsetups_cardsintegration_EFS extends Component {
     showCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit() {
     this.props.createIntegration({ ...this.props.form._values });

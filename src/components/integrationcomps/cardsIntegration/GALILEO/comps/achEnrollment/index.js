@@ -29,7 +29,7 @@ class components_integrationcomps_cardsIntegration_GALILEO_comps_achEnrollment e
 
   componentDidMount() {
   }
-  componentWillUnmount() { }
+
 
   render() {
     // const updating = _try(() => this.props.cardsIntegration.status.updating);

@@ -36,7 +36,7 @@ class components_creators_integrationManager extends Component {
   componentDidMount() {
     this.setState({ formKey: `${this.props.integrationName}-${this.props.resourceName}` });
   }
-  componentWillUnmount() { }
+
 
   onCreate = () => {
     this.setState({ showCreatedNotification: true });

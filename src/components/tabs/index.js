@@ -43,7 +43,7 @@ class components_tabs extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   _handleTabClick = (e) => {
     e.preventDefault();

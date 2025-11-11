@@ -43,8 +43,8 @@ class components_creators_opsNotes extends Component {
     createFormActive: true,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm('Components.forms.opsNotes', this.state.formKey, Object.keys(this.props.forms['Components.forms.opsNotes'][this.state.formKey]._values).reduce((acc, cur) => { acc[cur] = undefined; return acc; }, {}));

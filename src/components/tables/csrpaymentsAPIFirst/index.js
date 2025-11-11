@@ -157,7 +157,7 @@ class components_tables_csrpaymentsAPIFirst extends Component {
     ],
   };
 
-  componentDidMount() { }
+
 
   shouldComponentUpdate(nextProps) {
     return !(this.props.replacing && nextProps.replacing);

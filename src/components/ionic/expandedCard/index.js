@@ -33,8 +33,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_expandedCard extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   unSetCard = () => {
     this.props.updateSelectedCard(null);

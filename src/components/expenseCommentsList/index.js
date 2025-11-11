@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_expenseCommentsList extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   _sortComments = (commentAId, commentBId) => {
     const commentADate = _try(() => this.props.expenseReportComments[commentAId]._createdAt);

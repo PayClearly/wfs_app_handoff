@@ -36,8 +36,8 @@ class components_entities_reporttemplate extends Component {
     formName: 'Components.forms.editreporttemplate',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { organizationId, accountId, template, forms } = this.props;

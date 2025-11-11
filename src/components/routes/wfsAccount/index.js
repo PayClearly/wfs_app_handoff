@@ -27,8 +27,8 @@ const mapResourcesToProps = (state, props) => { };
 
 class components_routes_wfsAccount extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   tabSelected(tab) {
     this.props.setTabInRoute(tab);

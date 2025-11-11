@@ -56,7 +56,7 @@ class components_cards_opsAccountDetails extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   onActionClick(title, id) {
     this.props.openPaymentPresendModal(id);

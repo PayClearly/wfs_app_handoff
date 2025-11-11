@@ -28,8 +28,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_accountVendorAddress extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderValidationIcon = () => {
     const { vendor } = this.props;

@@ -40,7 +40,7 @@ class components_modals_paymentsend_components_checkview extends Component {
       return this.props.verifyMailingAddress(accountVendor.checkPaymentAddress);
     }
   }
-  componentWillUnmount() { }
+
 
   render() {
     const paymentStatus = this.props.paymentStatuses.data.items[this.props.id];

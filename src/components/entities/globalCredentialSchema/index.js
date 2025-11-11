@@ -39,8 +39,8 @@ class components_entities_globalCredentialSchema extends Component {
     editBtnText: 'Edit Credential Schema',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { credentialSchema, form, standardCredentialFields } = this.props;

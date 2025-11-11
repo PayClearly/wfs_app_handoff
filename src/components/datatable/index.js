@@ -29,9 +29,9 @@ class components_datatable extends Component {
 
   state = {};
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const { data, columns, defaultSorted, onTableChange, handleCustomize, status } = this.props;

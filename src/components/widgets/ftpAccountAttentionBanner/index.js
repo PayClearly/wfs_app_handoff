@@ -31,9 +31,9 @@ const mapResourcesToProps = (state, props) => {
 
 class components_widgets_ftpAccountAttentionBanner extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const { organization, account, orgs, accs } = this.props;

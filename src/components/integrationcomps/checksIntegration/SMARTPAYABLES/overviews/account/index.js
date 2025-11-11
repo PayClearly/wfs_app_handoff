@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_integrationcomps_checksIntegration_SMARTPAYABLES_overviews_account extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { details } = _try(() => this.props.checksIntegration, {});

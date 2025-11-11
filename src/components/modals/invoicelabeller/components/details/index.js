@@ -17,8 +17,8 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_modals_invoicelabeller_components_details extends Component {
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     return (

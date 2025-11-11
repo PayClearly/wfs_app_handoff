@@ -40,7 +40,7 @@ class componentsIonicRoutesTrips extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   onSegmentChange = (e) => {
     this.setState({ show: e.detail.value });

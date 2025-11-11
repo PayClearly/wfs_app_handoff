@@ -42,8 +42,8 @@ class components_creators_organization extends Component {
     showOrganizationCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm('Components.forms.createorganization', 'default');

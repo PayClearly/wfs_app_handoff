@@ -53,8 +53,8 @@ class components_tables_invoices extends Component {
     ],
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   deriveActions = (id) => {
     return this.props.invoices[id].status === 'reviewing' ? <Components.button data={id} buttonText="Review" onClick={(e) => { e.stopPropagation(); this.on.review(id); }} disabled={this.props.invoices[id].status === 'processing'} /> : null;

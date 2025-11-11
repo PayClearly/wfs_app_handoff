@@ -54,11 +54,11 @@ class components_ionic_modals_tailSelect extends Component {
     searchText: '',
   };
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) { }
 
-  componentWillUnmount() { }
+
 
   setContext = (customerNumber, tailNumber) => {
     this.props.setContext({ customerNumber, tailNumber });

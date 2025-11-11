@@ -28,8 +28,8 @@ const paymentMethodMap = {
 
 class components_paymentdetails extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderCustomFields(customFields) {
     if (!Object.keys(customFields).length) return null;

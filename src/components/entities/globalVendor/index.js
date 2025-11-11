@@ -34,8 +34,8 @@ class components_entities_globalVendor extends Component {
     editBtnText: 'Edit',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { globalVendorId } = this.props;

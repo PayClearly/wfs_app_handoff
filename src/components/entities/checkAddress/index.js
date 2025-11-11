@@ -41,8 +41,8 @@ class components_entities_checkAddress extends Component {
     editBtnText: 'Edit Address',
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { _values } = this.props.forms[this.state.formName][this.props.id];

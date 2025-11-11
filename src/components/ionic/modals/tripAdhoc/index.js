@@ -56,7 +56,7 @@ class components_ionic_modals_tripAdhoc extends Component {
     }
   }
 
-  componentWillUnmount() { }
+
 
   handleClick = async () => {
     const data = Object.assign({}, this.props.forms['Components.ionic.forms.tripAdhoc'].default._values);

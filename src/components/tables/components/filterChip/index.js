@@ -23,8 +23,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_tables_components_filterChip extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   removeFilter = (e) => {
     e.preventDefault();

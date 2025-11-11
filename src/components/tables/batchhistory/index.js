@@ -23,8 +23,8 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_tables_batchhistory extends Component {
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     if (this.props.batchPayments.fetching || !this.props.batchPayments.fetched) return <Components.spinner />;

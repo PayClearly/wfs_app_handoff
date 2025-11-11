@@ -46,8 +46,8 @@ class components_creators_paymentcard extends Component {
     formKey: 'default',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     const formKey = this.props.formKey || this.state.formKey;

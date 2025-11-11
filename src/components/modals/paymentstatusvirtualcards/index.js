@@ -29,7 +29,7 @@ class components_modals_paymentstatusvirtualcards extends Component {
   componentDidMount() {
     if (this.props.isOps) this.props.syncCardsintegration(this.props.id);
   }
-  componentWillUnmount() { }
+
   render() {
     const { paymentStatus } = this.props;
     const fundedData = _try(() => paymentStatus.funded);

@@ -49,8 +49,8 @@ class components_creators_statement extends Component {
     showStatementCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm('Components.forms.createstatement', this.props.revenueShare._id, this.props.forms['Components.forms.createstatement'][this.props.revenueShare._id]._values);

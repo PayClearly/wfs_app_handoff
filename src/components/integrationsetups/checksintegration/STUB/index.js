@@ -32,7 +32,7 @@ class components_integrationsetups_checksintegration_STUB extends Component {
   componentDidMount() {
     this.setState({ requiresSetup: !!this.props.setup.requiresSetup });
   }
-  componentWillUnmount() { }
+
 
   render() {
     return (

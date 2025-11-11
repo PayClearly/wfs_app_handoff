@@ -33,11 +33,11 @@ const mapResourcesToProps = (state, props) => {
 
 class components_modals_rejectExpenseReport extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) {
     if (_try(() => this.props.expenseReports.status.updating) && (!_try(() => nextProps.expenseReports.status.updating) && !_try(() => nextProps.expenseReports.status.updatingError))) this.props.close();
   }
-  componentWillUnmount() { }
+
 
   rejectExpenseReport = () => {
     const { forms, expenseReportId } = this.props;

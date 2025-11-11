@@ -40,13 +40,13 @@ class components_modals_termsandconditions extends Component {
     agreed: false,
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.hasAccepted && !nextProps.static) {
       this.props.close();
     }
   }
-  componentWillUnmount() { }
+
 
   onAccept = () => {
     if (!this.props.termsHTML || this.state.accepting) return;

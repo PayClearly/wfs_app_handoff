@@ -30,8 +30,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_paymentsend_components_achview extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const paymentStatus = this.props.paymentStatuses.data.items[this.props.id];

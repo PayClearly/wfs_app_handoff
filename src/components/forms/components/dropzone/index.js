@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_forms_components_dropzone extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onDrop = (acceptedFiles) => {
     const items = [];

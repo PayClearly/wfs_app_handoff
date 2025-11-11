@@ -38,8 +38,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_entities_ftpaccountsettings extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     this.props.updateFtpAccount({

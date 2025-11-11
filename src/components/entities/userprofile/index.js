@@ -41,8 +41,8 @@ class components_entities_userprofile extends Component {
     editBtnText: 'Edit Profile',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = this.props.forms[this.state.formName][this.state.formKey];

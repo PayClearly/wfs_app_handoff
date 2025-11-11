@@ -35,8 +35,8 @@ class components_integrationsetups_erpintegration_ADVANTAGE extends Component {
     showCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit() {
     this.props.createIntegration({ ...this.props.form._values });

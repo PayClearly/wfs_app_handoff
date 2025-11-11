@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_globalVendorGroup extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   _generatePSOPIcons = () => {
     const { globalVendorGroups, id } = this.props;

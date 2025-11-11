@@ -25,8 +25,8 @@ class components_ionic_button extends Component {
   state = {
     activated: false,
   }
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const {

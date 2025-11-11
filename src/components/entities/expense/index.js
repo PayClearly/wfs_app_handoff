@@ -44,8 +44,8 @@ class components_entities_expense extends Component {
     };
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { id, forms, expenses } = this.props;

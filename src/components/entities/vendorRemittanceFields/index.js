@@ -40,9 +40,9 @@ class components_entities_vendorRemittanceFields extends Component {
     },
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const { _values } = this.props.form;

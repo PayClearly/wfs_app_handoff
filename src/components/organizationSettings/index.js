@@ -34,8 +34,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_organizationSettings extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   removeLogo = (mode) => {
     const { name, active } = _try(() => this.props.organizations[this.props.orgId], {});

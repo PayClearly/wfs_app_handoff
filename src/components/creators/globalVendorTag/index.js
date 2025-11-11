@@ -38,8 +38,8 @@ class components_creators_globalVendorTag extends Component {
     showCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.setState({ showCreatedNotification: true });

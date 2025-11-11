@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_forms_components_dynamicfield extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { field, fieldKey, form, formAction, disabled, disablePrefix, className, fieldPlaceholder, enforce } = this.props;

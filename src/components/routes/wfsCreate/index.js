@@ -24,8 +24,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_routes_wfsCreate extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
 
   render() {

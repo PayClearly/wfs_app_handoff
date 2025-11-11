@@ -29,9 +29,9 @@ class components_tables_components_exportWrapper extends Component {
     dropDownIsOpen: false,
   }
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps = {}) { }
-  componentWillUnmount() { }
+
 
   handleCSVExport = (type) => {
     const { table, columns = [], data = {}, itemOrder = [], paginate, exportFilePrefix } = this.props;

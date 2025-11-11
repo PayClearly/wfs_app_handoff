@@ -36,8 +36,8 @@ class components_uploaders_components_paymentcardsaggregation extends Component 
     }],
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { counts, amounts } = this.props.data;

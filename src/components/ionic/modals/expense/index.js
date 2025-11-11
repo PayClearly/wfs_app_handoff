@@ -55,7 +55,7 @@ class components_ionic_modals_expense extends Component {
       this.close();
     }
   }
-  componentWillUnmount() { }
+
 
   handleClick = async () => {
     const data = Object.assign({}, this.props.forms['Components.ionic.forms.expense'].default._values);

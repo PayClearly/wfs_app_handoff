@@ -187,13 +187,13 @@ class components_reports_vapCleared extends Component {
     actions: ['Schedule'],
   };
 
-  componentWillMount() { }
 
-  componentDidMount() { }
 
-  componentWillReceiveProps() { }
 
-  componentWillUnmount() { }
+
+
+
+
 
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;

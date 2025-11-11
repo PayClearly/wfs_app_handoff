@@ -37,8 +37,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_tables_components_header extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { draggableId, index, text, orderBy } = this.props;

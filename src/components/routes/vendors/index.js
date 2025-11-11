@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_routes_vendors extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     if (!this.props.loaded) return <Components.spinner />;

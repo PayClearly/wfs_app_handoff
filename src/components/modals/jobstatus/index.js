@@ -24,8 +24,8 @@ class components_modals_jobstatus extends Component {
     emailsSent: true,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const disableButtons = false;

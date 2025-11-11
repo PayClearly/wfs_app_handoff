@@ -23,8 +23,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_skeletonDocument extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     if (this.props.type === 'serviceProviderDocuments') {

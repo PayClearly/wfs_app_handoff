@@ -33,7 +33,7 @@ class components_modals_notificationsmethodsetup extends Component {
     forms: {},
   };
 
-  componentDidMount() { }
+
 
   componentWillReceiveProps(nextProps) {
     const { forms } = nextProps;

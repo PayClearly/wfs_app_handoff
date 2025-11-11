@@ -68,7 +68,7 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
       });
     });
   }
-  componentWillUnmount() { }
+
 
   render() {
     return (

@@ -39,8 +39,8 @@ class components_notificationbar extends Component {
     isDismissed: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   handleDismiss = () => {
     this.setState({

@@ -38,8 +38,8 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_entities_achsettings extends Component {
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   setupAchPayments = () => {
     this.props.openAchSetupModal();

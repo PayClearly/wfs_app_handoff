@@ -38,7 +38,7 @@ class components_routes_oauthlogout extends Component {
   }
   componentWillReceiveProps(nextProps) {
   }
-  componentWillUnmount() { }
+
 
 
   render() {

@@ -38,9 +38,9 @@ class components_entities_globalVendorProcedure extends Component {
     },
   };
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const formName = this.state.formMap[this.props.method];

@@ -36,8 +36,8 @@ class components_entities_organization extends Component {
     editBtnText: 'Edit Organization',
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCancel = () => this.setState({ blurAll: false });
 

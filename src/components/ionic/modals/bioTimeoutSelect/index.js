@@ -36,9 +36,9 @@ class components_ionic_modals_bioTimeoutSelect extends Component {
 
   state = {};
 
-  componentDidMount() { }
-  componentDidUpdate() { }
-  componentWillUnmount() { }
+
+
+
 
   onChoose = (e) => {
     this.props.biometricsTimeoutSet(e.currentTarget.value);

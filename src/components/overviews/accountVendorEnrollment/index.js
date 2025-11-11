@@ -25,8 +25,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_overviews_accountVendorEnrollment extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const { accountVendorEnrollments = {}, id } = this.props;

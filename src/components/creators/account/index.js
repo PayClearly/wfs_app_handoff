@@ -42,8 +42,8 @@ class components_creators_account extends Component {
     showAccountCreatedNotification: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate = () => {
     this.props.resetForm('Components.forms.createaccount', 'default');

@@ -19,9 +19,9 @@ const mapResourcesToProps = (state, props) => ({});
 
 class components_paymentSettings extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const { config = {}, integrations, options = {} } = this.props;

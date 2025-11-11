@@ -28,7 +28,7 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_setupachpayments extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (objectResolvePath(nextProps.achAccount, 'beneficialOwner.beneficialOwnershipStatus') === 'certified') {
       this.props.close();

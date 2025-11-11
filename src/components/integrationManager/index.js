@@ -25,8 +25,8 @@ class components_integrationManager extends Component {
     showContent: false,
   }
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onControlButtonClick = () => {
     this.setState(prevState => ({ ...defaultState, ...{ showContent: !prevState.showContent } }));
@@ -202,7 +202,7 @@ class components_integrationManager extends Component {
                       .map((key) => (
                         // if the selected options matches a key from the overall options remove it from the menu to avoid duplication
                         <optgroup label={items[key].display}>
-                          { Object.keys(items[key].subItems).map((subKey) => {
+                          {Object.keys(items[key].subItems).map((subKey) => {
                             if (!items[key].subItems[subKey].display) return null;
                             return (
                               <option value={subKey}>{items[key].subItems[subKey].display}</option>

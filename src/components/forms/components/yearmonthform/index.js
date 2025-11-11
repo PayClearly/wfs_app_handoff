@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_forms_components_yearmonthform extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   handleChange = (e) => {
     const { year, month } = e.target.form;

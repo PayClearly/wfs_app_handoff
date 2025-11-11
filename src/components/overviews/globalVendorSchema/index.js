@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_overviews_globalVendorSchema extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   renderRow = (customFields) => {
     return Object.values(customFields).map((customField) => {

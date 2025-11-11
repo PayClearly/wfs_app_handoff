@@ -28,13 +28,13 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_logbackin extends Component {
 
-  componentDidMount() { }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.access.data.canWrite) {
       this.props.close();
     }
   }
-  componentWillUnmount() { }
+
 
   loginClicked = () => {
     const form = this.props.forms['Components.forms.login'].logBackIn;

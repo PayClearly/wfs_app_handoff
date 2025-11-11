@@ -31,8 +31,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_ionic_recenttransactions extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   render() {
     const transactionItems = Object.values(this.props.transactions).map((transaction, index, arr) => (

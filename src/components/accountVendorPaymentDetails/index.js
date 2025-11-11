@@ -23,9 +23,9 @@ const mapResourcesToProps = (state, props) => ({});
 
 class components_accountVendorPaymentDetails extends Component {
 
-  componentDidMount() { }
 
-  componentWillUnmount() { }
+
+
 
   render() {
     const { vendor, selectedVendor = {} } = this.props;

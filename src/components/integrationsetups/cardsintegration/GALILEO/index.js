@@ -37,8 +37,8 @@ class components_integrationsetups_cardsintegration_GALILEO extends Component {
     passCustomerEnrollment: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onCreate() {
     this.setState({

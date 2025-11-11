@@ -33,8 +33,8 @@ const mapResourcesToProps = (state, props) => {
 
 class components_tables_transferChipPopover extends Component {
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   navigateToDetails = () => {
     const transferId = this.props.refId || null;

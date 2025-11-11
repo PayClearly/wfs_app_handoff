@@ -35,8 +35,8 @@ class components_modals_createExpenseReport extends Component {
     submitReport: false,
   };
 
-  componentDidMount() { }
-  componentWillUnmount() { }
+
+
 
   onSubmit = () => {
     const form = _try(() => this.props.forms['Components.forms.expenseReport'][this.state.formKey], {});
