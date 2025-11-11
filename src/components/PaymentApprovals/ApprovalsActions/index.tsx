@@ -10,7 +10,7 @@ import {
   PaymentApproval,
   PaymentPipelinePreferences,
 } from '../types';
-import { api } from '../../../api/_util/payclearlyapi';
+import { api } from '../../../api/_util/wfsapi';
 import paymentPipelineApi from '../../../api/paymentPipeline';
 import Button from '../../button';
 

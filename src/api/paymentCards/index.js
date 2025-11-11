@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 import Utils from 'utils';
 
 function create(organizationId, accountId, data) {

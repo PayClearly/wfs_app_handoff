@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 function updatePreferences(organizationId, accountId, data) {
   // Add code for database or API integrations

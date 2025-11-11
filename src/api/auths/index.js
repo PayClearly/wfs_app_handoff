@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 import oAuthApi from 'api/oAuth';
 import jwtDecode from 'jwt-decode';
 

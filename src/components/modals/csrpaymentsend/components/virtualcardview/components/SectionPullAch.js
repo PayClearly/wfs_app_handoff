@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Components from 'components';
 import numeral from 'numeral';
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 import VendorFeeDetails from './VendorFeeDetails';
 import TransactionAmountsBreakdown from '../../../../../overviews/paymentstatus/components/TransactionAmountsBreakdown';

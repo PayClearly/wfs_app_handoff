@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 import batchRequester from 'api/_util/batchRequester';
 
 function createExpense(organizationId, accountId, data) {

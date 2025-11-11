@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 /**
  * @typedef {import('../../store/global/botWorkers/types').BotworkerUpdate} BotworkerUpdate
@@ -44,9 +44,9 @@ async function updateBotWorker(data) {
 }
 
 export default {
-    fetchKeys,
-    updateTaikoBot,
-    updateTaikoBotsByIds,
-    fetchBotWorkers,
-    updateBotWorker,
+  fetchKeys,
+  updateTaikoBot,
+  updateTaikoBotsByIds,
+  fetchBotWorkers,
+  updateBotWorker,
 };

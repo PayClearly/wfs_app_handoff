@@ -3,7 +3,7 @@ import { connect, Component } from 'component';
 import Components from 'components';
 import Store from 'store';
 
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 import UPLOAD_TEMPLATE from './constants';
 
@@ -50,15 +50,15 @@ class componentsModalsUploadvendors extends Component {
     if (!selectedOrg) {
       return this.setState({ uploadingError: 'Please select an organization' });
     }
-    
+
     if (!selectedAccount) {
       return this.setState({ uploadingError: 'Please select an account' });
     }
-    
+
     if (!acceptedFiles) {
       return this.setState({ uploadingError: 'Please select or drag and drop a file' });
     }
-    
+
     if (selectedOrg && selectedAccount && acceptedFiles) {
       this.setState({ uploading: true });
       this.setState({ uploadingError: '' });
@@ -74,7 +74,7 @@ class componentsModalsUploadvendors extends Component {
           });
         })
         .catch((err) => {
-          const errorMessage = (err && err.response && err.response.data && err.response.data.error) 
+          const errorMessage = (err && err.response && err.response.data && err.response.data.error)
             || 'Something went wrong';
 
           this.setState({ uploadingError: errorMessage });
@@ -94,7 +94,7 @@ class componentsModalsUploadvendors extends Component {
       console.error('Cant navigate to job. jobId is null');
       return null;
     }
-    
+
     this.props.navigateToBulkVendorUploadJob(jobId);
     this.props.close();
 
@@ -174,9 +174,9 @@ class componentsModalsUploadvendors extends Component {
                       value={selectedAccount ? selectedAccount.id : ''}
                       label="Account"
                       onChange={(e) => {
-                      this.setState({ selectedAccount: e.target.value });
-                      this.clearErrors();
-                    }}
+                        this.setState({ selectedAccount: e.target.value });
+                        this.clearErrors();
+                      }}
                     >
                       <option value="">Select an account</option>
                       {accountsFilteredAndSorted.map((account) => <option value={account.id}>{account.name}</option>)}
@@ -206,14 +206,14 @@ class componentsModalsUploadvendors extends Component {
 
             {uploadingSuccess && <div className="alert alert-success" role="alert">{uploadingSuccess}</div>}
 
-            <Components.dropzone 
+            <Components.dropzone
               onDrop={this.onDrop}
               accept="text/csv,.csv"
               csvFields={[UPLOAD_TEMPLATE]}
               featureName="bulk-vendors"
               dropzoneError={uploadingError}
             />
-            { this.state.acceptedFiles && (
+            {this.state.acceptedFiles && (
               <div className="alert alert-success" role="alert">File Accepted. Press Submit to upload.</div>
             )}
           </div>

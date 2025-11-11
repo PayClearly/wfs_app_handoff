@@ -37,7 +37,7 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
 
     //   stylesheets.unshift('http://localhost:5005/index.css');
     // } else {
-    //   stylesheets.unshift('https://app.payclearly.com/index.css');
+    //   stylesheets.unshift('https://changeme.com/index.css');
     // }
     const { organizationId, accountId } = this.props;
     api.getGroviderSetupResource(organizationId, accountId, 'iavToken').then((data) => {
@@ -47,7 +47,7 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
         container: 'iavContainer',
         stylesheets: [
           // 'http://localhost:5005/index.css',
-          'https://app.payclearly.com/index.css',
+          'https://changeme.com/index.css',
           'https://fonts.googleapis.com/css?family=Rubik:300,400,700',
         ],
         microDeposits: true,

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-import-module-exports */
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 import axios from 'axios';
 import download from 'downloadjs';
 import firebase from 'firebase';

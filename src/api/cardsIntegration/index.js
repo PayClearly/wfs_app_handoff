@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 import Promise from 'bluebird';
 import firebase from 'firebase';
 

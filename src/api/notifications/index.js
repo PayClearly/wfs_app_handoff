@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 function add(userId, orgId, accountId, data) {
   // Add code for database or API integrations

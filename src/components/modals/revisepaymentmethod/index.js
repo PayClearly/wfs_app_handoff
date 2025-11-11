@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   Dropdown, DropdownToggle, DropdownMenu, DropdownItem,
 } from 'reactstrap';
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 const mapStateToProps = () => ({});
 

@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 function create(context, data) {
   // Add code for database or API integrations
@@ -7,7 +7,7 @@ function create(context, data) {
 }
 
 const scope = {
- create,
+  create,
 };
 
 export default scope;

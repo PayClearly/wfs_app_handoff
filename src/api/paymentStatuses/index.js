@@ -1,4 +1,4 @@
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 async function fetchFilteredKeys(organizationId, accountId, filters, callback) {
   // Add code for database or API integrations
@@ -7,7 +7,7 @@ async function fetchFilteredKeys(organizationId, accountId, filters, callback) {
 }
 
 const scope = {
-    fetchFilteredKeys,
+  fetchFilteredKeys,
 };
 
 

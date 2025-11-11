@@ -5,7 +5,7 @@ import Store from 'store';
 
 import Selectors from 'selectors';
 import Components from 'components';
-import { api } from 'api/_util/payclearlyapi';
+import { api } from 'api/_util/wfsapi';
 
 // Component Specific Imports
 import {

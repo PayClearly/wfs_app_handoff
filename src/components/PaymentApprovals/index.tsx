@@ -9,7 +9,7 @@ import Spinner from '../spinner';
 import ByUser from '../badges/createdby';
 import TSTable, { Column } from '../tables/TSTable';
 import './index.scss';
-import { api, apiErrorSchema } from '../../api/_util/payclearlyapi';
+import { api, apiErrorSchema } from '../../api/_util/wfsapi';
 import TSFilter, { FilterConfig } from '../forms/TSFilter';
 import ApprovalsActions from './ApprovalsActions';
 import { useSortableData } from '../tables/customHooks/useSortableData';
