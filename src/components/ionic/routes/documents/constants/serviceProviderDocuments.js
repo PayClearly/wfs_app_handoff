@@ -18,10 +18,6 @@ export const DOC_FILTERS_TO_DISPLAY_NAMES = {
   dateOrder: 'Sort by',
 };
 
-// export const DOC_SORT_OPTIONS = {
-//   dateOrder: ['Newest', 'Oldest'],
 // };
 
-// export const DEFAULT_DOC_SORT = {
-//   dateOrder: 'Newest',
 // };

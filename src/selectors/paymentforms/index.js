@@ -17,7 +17,6 @@ const selectors_paymentforms = () => {
   return Utils.cachedSelector('selectors_paymentforms', ids.join('-'),
     ...states,
 
-    // state => _try(() => state.prop.prop.prop.prop, {}),
 
     (...items) => {
       return items.reduce((acc, item) => {

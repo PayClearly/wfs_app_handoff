@@ -122,4 +122,3 @@ function _importNestedDirectory(context) {
     return acc;
   }), {});
 }
-// GENERATOR_TYPE='component';

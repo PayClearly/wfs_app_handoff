@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import FuzzySet from 'fuzzyset.js';
 
-// import Utils from 'utils';
 import Store from 'store';
 //
 import Selectors from 'selectors';

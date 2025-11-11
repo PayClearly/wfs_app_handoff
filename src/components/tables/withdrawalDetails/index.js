@@ -1,9 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import numeral from 'numeral';
 
@@ -17,7 +13,6 @@ const mapStateToProps = (state, props) => {
     vCards: state.account.cardsIntegration.data.resources.vCards,
     clears: state.account.cardsIntegration.data.resources.clears,
     auths: state.account.cardsIntegration.data.resources.auths,
-    // filteredAndSortedItems: Selectors.tableItems('Components.tables.paymentIssues', props.tableKey, 'Selectors.tableData.paymentIssues(state)')(state),
   });
 };
 
@@ -216,7 +211,6 @@ function getWithdrawalTrackerData(props) {
 
       if (paymentIssue.code === '1') return { ...rows, [id]: { ...row, ...fundsRemainingData() } };
       if (paymentIssue.code === '2') return { ...rows, [id]: { ...row, ...supplierDirectData() } };
-      // if (paymentIssue.code === '3') return { ...rows, [id]: { ...row, ...cancelledPaymentData() } };
       return { ...rows, [id]: row };
     }, {});
 }

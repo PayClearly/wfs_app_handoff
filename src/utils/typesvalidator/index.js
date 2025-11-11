@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-// import Utils from 'utils';
 
 function validateSchema(validator, schema, against) {
   const allValid = !Object.keys(schema).some((key) => validateType(validator, schema[key], against[key]).valid === false);
@@ -183,4 +182,3 @@ function _validateBusinessState(value) {
   };
 }
 
-// GENERATOR_TYPE='util';

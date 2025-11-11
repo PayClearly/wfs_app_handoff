@@ -3,9 +3,7 @@ import resolvePath from 'object-resolve-path';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';

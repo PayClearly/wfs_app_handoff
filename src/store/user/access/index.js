@@ -157,7 +157,6 @@ export function oAuthLogin(appName, callback) {
       const error = ((err.response || {}).data || {}).error || err.message || err || '';
       const mobileApplication = appName === `wfsappDEV${window.GLOBALCERT.WFS_TEST_ENV || ''}`
         || appName === 'wfsappPROD';
-      // if login failed because of a bad refreshToken, request regular auth0 authorization grant flow.
       if (error === 'invalid_grant') {
         await device.removeRefreshToken()(dispatch, getState);
         await device.removeOAuthState()(dispatch, getState);

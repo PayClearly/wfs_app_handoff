@@ -31,4 +31,3 @@ const selectors_usersWithoutAssignedCards = createSelector('selectors_usersWitho
 
 export default selectors_usersWithoutAssignedCards;
 
-// GENERATOR_TYPE='selector';

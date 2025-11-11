@@ -2,7 +2,6 @@
 import { createActionTypes, createStatusReducer } from 'store/_utilities/statusReducerFactory';
 import { combineReducers } from 'redux';
 import query from './query';
-// import utils from '../_utils';
 import * as device from '../../device';
 
 const namespace = 'WFS_AIRPORTS_GEOLOCATION';
@@ -96,7 +95,6 @@ export function clearErrors() {
 
 // Internal Helper Functions
 
-// https://cs.nyu.edu/visual/home/proj/tiger/gisfaq.html
 function _haversineFormula(currentLocation, airportLocation) {
   const earthRadius = 6371e3;
   const lat1 = _toRadians(currentLocation.latitude);

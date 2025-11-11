@@ -5,7 +5,6 @@ import classNames from 'classnames';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -118,7 +117,6 @@ class components_entities_entitywrapper extends Component {
                 {this.props.includeDelete
                   && <Components.button
                     onClick={this._handleDeleteClick}
-                    // onDisabledClick={this._handleOnDisabledDeleteClick}
                     className={classNames('btn btn-outline-primary ms-2', this.props.deleteButtonClasses)}
                     disabled={this.props.editDisabled}
                     buttonText={this.props.deleteBtnText || 'Delete'}

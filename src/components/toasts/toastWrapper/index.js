@@ -31,7 +31,6 @@ class components_toasts_toastWrapper extends Component {
     this.props.closeToast();
   }
 
-  // This component is underused and difficult to recreate existing behavior with new react-transition-group
   // No use of this exists, but being left in for now in case we want to update and use it in the future
   render() {
     const { name, data } = this.props.toast;

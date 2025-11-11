@@ -1,11 +1,8 @@
 import { connect, Component } from 'component';
-// import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -92,7 +89,6 @@ class components_forms_jobsearch extends Component {
 
   componentWillUnmount() {
     this.props.destroy(this.state.name, this.state.key);
-    // this.props.clearJobs();
   }
 
   getJobs = (forms) => {
@@ -226,4 +222,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_forms_job
 // Internal Helper Functions ...
 const _dateToCreatedAtValue = (date) => date.setHours(0, 0, 0, 0);
 
-// GENERATOR_TYPE='component';

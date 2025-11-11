@@ -4,8 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import numeral from 'numeral';
 
 import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -135,4 +133,3 @@ const _getPaymentCardChangeRequestItemsForFundingView = (ids, items, sortState) 
   return sortedItems;
 };
 
-// GENERATOR_TYPE='component';

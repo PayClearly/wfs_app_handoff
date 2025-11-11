@@ -144,7 +144,6 @@ function VirtualCardView({
     const paymentStatusFundedData = paymentStatus?.funded || {};
     const vCardIds = paymentStatusFundedData.vCards ? paymentStatusFundedData.vCards.map((card) => card.id) : [];
 
-    // If vCardIds is not empty, fetch the private cards
     if (vCardIds.length) {
       setPrivateCards(vCardIds);
     }

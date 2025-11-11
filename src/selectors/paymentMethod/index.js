@@ -30,7 +30,6 @@ const selectors_paymentMethod = createSelector('selectors_paymentMethod',
       const paymentProcedure = paymentProcedures[paymentProcedureId];
 
       // Is a PSOP payment method is manual, determine whether it's a phone or portal method. 
-      // If a psop has a phone number in its notes, it takes phone payments. Otherwise, it takes portal payments
       if (paymentProcedure && paymentProcedure.vCardDeliveryMethod === 'manual') {
         // Regex will match most phone number formats
         const isPhone = !!paymentProcedure.notes.match(/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/);

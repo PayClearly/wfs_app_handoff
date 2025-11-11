@@ -1,7 +1,6 @@
 import createSelector from 'selector';
 
 
-// import Utils from 'utils';
 import Selectors from 'selectors';
 
 const selectors_tableData_csrtransfers = createSelector(
@@ -61,4 +60,3 @@ const _getTransferRefsMap = (transfers) => {
   }, {});
 };
 
-// GENERATOR_TYPE='selector';

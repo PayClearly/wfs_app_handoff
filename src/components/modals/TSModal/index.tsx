@@ -58,7 +58,6 @@ const TSModal = ({ config }: { config: ModalConfig }) => {
               <Button
                 onClick={() => onContinue()}
                 className='btn btn-danger'
-                // updating={this.state.cancelling}
                 disabled={false}
                 buttonText={yesText || 'Continue'}
               />

@@ -5,9 +5,6 @@ import classNames from 'classnames';
 import csvtojson from 'csvtojson';
 import axios from 'axios';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -52,8 +49,6 @@ class components_forms_components_dropzone extends Component {
       >
         <Components.dropzone
           onDrop={this.onDrop}
-          // if there is a csvFields prop then it needs featureName as well to account for the name of the downloaded template file
-          // featureName={this.props.featureName}
           accept="text/csv,.csv"
           csvFields={[Object.values(this.props.template)]}
         />

@@ -16,7 +16,6 @@ const mapStateToProps = (state, props) => {
   });
 };
 
-// const mapDispatchToProps = { ...Store.forms };
 
 const mapDispatchToProps = (dispatch, props) => {
   return ({
@@ -118,10 +117,8 @@ class components_integrationcomps_cardsIntegration_GALILEO_forms_customerUpdate 
       if (_includesSpecialCharacters(fields.lastName)) errors.lastName = 'Must not include special characters (.,?@&!#~*;+)';
     }
     if (fields.address1) {
-      // TODO : CHECK ADDRESS VALIDATION DOESN'T FLAG INCORRECTLY
 
       // Maximum length -- 40 characters. Cannot be a P.O. Box.
-      // For legal reasons, the address1 parameter cannot contain a post office box. The system checks for the following and returns an error when detected:
       // Any string that starts with APO, PO, APOB, POB, post office, call box, or gpobox and is followed by numbers or box. Street names that start with apo or po are not detected, e.g., Apollo street, Polar street.
       // These elements do not affect the result:
         // Leading, trailing, or in-between white-space characters such as space, tab, or enter
@@ -319,4 +316,3 @@ function _includesNumbers(string) {
   return (/([1-9])/.test(string));
 }
 
-// GENERATOR_TYPE='component';

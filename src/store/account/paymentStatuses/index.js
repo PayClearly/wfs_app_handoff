@@ -208,29 +208,14 @@ export function fetchResource(organizationId, accountId, resourceId) {
   };
 }
 
-// export function fetchRangeOfPayments(organizationId, accountId, start, end) {
-//   return (dispatch, getState) => {
 //     dispatch({ type: actionTypes.fetchStart });
-//     const params = { start, end };
-//     return watchKeyRange(`state/paymentStatuses/${organizationId}/${accountId}`, params, (items, paths) => { // initial call back runs once
-//       const adaptedItems = _adaptFrom(items);
-//       const collections = Object.keys(adaptedItems).reduce((acc, id) => {
-//         const item = adaptedItems[id];
 //         acc.batch[item._batchId] = acc.batch[item._batchId] ? [...acc.batch[item._batchId], id] : [id];
-//         if (acc.fetched[`${organizationId}/${accountId}`] && acc.fetched[`${organizationId}/${accountId}`][id]) acc.fetched[`${organizationId}/${accountId}`][id] = false;
-//         if (id === item._oldId) return acc;
 //         acc._oldIds[item._oldId] = acc._oldIds[item._oldId] ? [...acc._oldIds[item._oldId], id] : [id];
-//         return acc;
 //       }, getState().account.paymentStatuses.collections ? getState().account.paymentStatuses.collections : DEFAULT_COLLECTION_STATE);
 //       dispatch({ type: actionTypes.fetchSuccess, items: adaptedItems, paths, collections });
 //     }, (items, paths) => {
 //       dispatch({ type: actionTypes.updateStart });
-//       const adaptedItems = _adaptFrom(items);
-//       const collections = Object.keys(adaptedItems).reduce((acc, id) => {
-//         const item = adaptedItems[id];
-//         if (id === item._oldId) return acc;
 //         acc._oldIds[item._oldId] = acc._oldIds[item._oldId] ? [...acc._oldIds[item._oldId], id] : [id];
-//         return acc;
 //       }, getState().account.paymentStatuses.collections ? getState().account.paymentStatuses.collections : DEFAULT_COLLECTION_STATE);
 //       dispatch({ type: actionTypes.updateSuccess, items: adaptedItems, paths, collections });
 //     });
@@ -258,25 +243,15 @@ export function fetchPayments(organizationId, accountId, paymentIds) {
     return watchValuesWithFinalCallback(`state/paymentStatuses/${organizationId}/${accountId}`, paymentIds, callback, finalCallback);
   };
 }
-// return (dispatch, getState) => {
 //   dispatch({ type: actionTypes.replaceStart });
-//   return watchValuesWithBatchedCallback(`state/paymentStatuses/${organizationId}/${accountId}`, paymentIds,
 //   (item, path) => {
-//     if (!getState().account.paymentStatuses.status.replacing) {
 //       dispatch({ type: actionTypes.fetchStart });
-//       const adaptedItem = _adaptFrom({ [item._id]: item });
-//       const collections = DEFAULT_COLLECTION_STATE;
 //       dispatch({ type: actionTypes.fetchSuccess, items: adaptedItem, collections, path });
 //     }
 //   },
 //   (items, paths) => {
-//     const adaptedItems = _adaptFrom(items);
-//     const collections = Object.keys(adaptedItems).reduce((acc, id) => {
-//       const payment = adaptedItems[id];
 //       acc.batch[payment._batchId] = acc.batch[payment._batchId] ? [...acc.batch[payment._batchId], id] : [id];
-//       if (id === payment._oldId) return acc;
 //       acc._oldIds[payment._oldId] = acc._oldIds[payment._oldId] ? [...acc._oldIds[payment._oldId], id] : [id];
-//       return acc;
 //     }, DEFAULT_COLLECTION_STATE);
 //     removeListeners(getState().account.paymentStatuses.data.items);
 //     dispatch({ type: actionTypes.replaceSuccess, items: adaptedItems, collections, paths });

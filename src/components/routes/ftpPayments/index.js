@@ -1,17 +1,13 @@
 import { connect, Component } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 import { downloadAttachment, fetchAttachment } from '../../../api/attachments';
 
 import './index.scss';
 
 const mapStateToProps = (state) => ({
   organizations: state.organizations.data.items,
-  // paymentUploads: _try(() => state.account.paymentUploads.data.items),
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -132,4 +128,3 @@ function _isDateOlderThanNinetyDays(dateString) {
   const thirtyDaysAgo = now - thirtyDaysInMS;
   return thirtyDaysAgo > dateToMS;
 }
-// GENERATOR_TYPE='component';

@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -17,7 +16,6 @@ const RESERVED_CUSTOM_FIELDS = [
   'paymentmethod',
   'vendor',
   'vendorname',
-  // default payment fields
   'agency',
   'agencyname',
   'candidate',
@@ -83,7 +81,6 @@ class components_entities_paymentcustomfields extends Component {
       };
     });
     this.props.setCustomFields(customFields);
-    // This will update uploadTemplate / downloadTemplate on fieldName changes
     if (this.props.paymentPipelinePreferences.uploadTemplate || this.props.paymentPipelinePreferences.downloadTemplate) this.handleUpdatingTemplates();
     this.setState({ customFields: {} });
   }
@@ -104,7 +101,6 @@ class components_entities_paymentcustomfields extends Component {
     // Check to see if names were updated, rather than added (aka initial !== '')
     const updatedFields = Object.values(customFieldForms).filter(field => field.fieldName.intial !== '' && field.fieldName.initial !== field.fieldName.value);
 
-    // If we update a custom field name, and that name also exists as a 'pcField' on an upload and/or download template field, we also need to update the upload and/or download template. This is a refactor of code that was erroneously treating upload/download templates as objects instead of arrays
     const { uploadTemplate, downloadTemplate } = updateUploadAndDownloadTemplates(updatedFields, pipelinePreferences);
 
     // no need to setPreferences if nothing changed in the template
@@ -268,7 +264,6 @@ function updateUploadAndDownloadTemplates(updatedFields, pipelinePreferences) {
   let updateUpload = false;
   let updateDownload = false;
 
-  // if an upload/download template has a field with a 'pcField' that matches the custom field name, update the 'pcField' to match the updated custom field name
   const uploadTemplate = pipelinePreferences.uploadTemplate && pipelinePreferences.uploadTemplate.map((field) => {
     if (field.pcField in updatedNames) {
       updateUpload = true;
@@ -292,4 +287,3 @@ function updateUploadAndDownloadTemplates(updatedFields, pipelinePreferences) {
 
   return toReturn;
 }
-// GENERATOR_TYPE='component';

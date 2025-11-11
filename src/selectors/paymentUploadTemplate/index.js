@@ -172,4 +172,3 @@ const _formatDollars = (amount) => {
   return formatted;
 };
 
-// GENERATOR_TYPE='selector';

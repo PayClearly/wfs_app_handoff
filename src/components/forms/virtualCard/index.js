@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -103,7 +102,6 @@ class components_forms_virtualCard extends Component {
     }
 
     // region - temporarily disabled
-    // if (!this.checkType(types.VirtualCard.properties.region, fields.region)) {
     //   errors.region = 'Must be a valid region';
     // }
 
@@ -119,7 +117,6 @@ class components_forms_virtualCard extends Component {
     }
 
     if (fields.sendMethod === 'fax') {
-      // TODO = use a better fax number validator
       if (!fields.sendField.length) {
         errors.sendField = 'Fax number is required';
       }
@@ -137,22 +134,18 @@ class components_forms_virtualCard extends Component {
     if (fields.validThrough.getTime() > Utils.dates.plusThreeYears(_try(() => initialFormData.createdAt) || Date.now())) {
       errors.validThrough = _try(() => initialFormData.createdAt) ? 'Must be less than 3 years from creation date' : 'Must be less than 3 years in the future';
     }
-    // if (!this.checkType(types.VirtualCard.properties.validThroughDay, fields.validThroughDay)) {
     //   errors.validThroughDay = 'Must be a valid date';
     // }
 
     // Previous validators
 
     // amount
-    // if (fields.amount < 1 || fields.amount > 5) {
     //   errors.amount = 'Must be between 1 and 5 dollars';
     // }
     // numberOfUses
-    // if (fields.numberOfUses < 1 || fields.numberOfUses > 99) {
     //   errors.numberOfUses = 'Must be between 1 and 99';
     // }
     // sendField
-    // if (fields.sendMethod === 'email' && !fields.sendField.length) {
     //   // TODO = use a better email address vaildator
     //   errors.sendField = 'Must be a vaild email address';
     // }
@@ -280,4 +273,3 @@ const statusOptions = {
   },
 };
 
-// GENERATOR_TYPE='component';

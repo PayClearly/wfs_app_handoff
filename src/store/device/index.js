@@ -6,7 +6,6 @@ import { createActionTypes, createStatusReducer } from 'store/_utilities/statusR
 import { combineReducers } from 'redux';
 import { SplashScreen } from '@capacitor/splash-screen';
 
-// Import Child Ducks
 import * as storage from 'store/device/storage';
 import * as biometrics from 'store/device/biometrics';
 import * as camera from 'store/device/camera';
@@ -281,7 +280,6 @@ export function getCache(key, options = {}) {
       return setCache(key, data, options)(dispatch, getState);
     };
 
-    // if skipping cache fetch from API
     if (options.skipCache) { return _makeRequestAndSetCache(); }
 
     // get all entries from cache and check if they are still valid
@@ -296,7 +294,6 @@ export function getCache(key, options = {}) {
     const isEveryCacheEntryIsValid = Object.keys(cache).length > 0
       && Object.values(cache).every((entry) => entry.data && (!entry.expires || entry.expires > Date.now()));
 
-    // if any of the entries matching the given key are expired invalidate all cache matching given key
     if (!isEveryCacheEntryIsValid && Object.keys(cache).length) {
       await Promise.all(Object.keys(cache).map((k) => removeCache(k)));
     }

@@ -1,7 +1,6 @@
 import createSelector from 'selector';
 import moment from 'moment';
 
-// import Utils from 'utils';
 import Selectors from 'selectors';
 
 const selectors_paymentDownloadTemplate = createSelector(

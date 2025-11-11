@@ -7,7 +7,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -103,7 +102,6 @@ class components_ionic_forms_report extends Component {
     if (!values.name) {
       errors.name = 'Amount is required';
     }
-    // if (!(Object.keys(values.expenseIds || {}).length)) {
     //   errors.expenseIds = 'Expense is required';
     // }
 
@@ -163,4 +161,3 @@ export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)
 const _snakeCaseToCapitalCase = (value) => {
   return value.replace(/[A-Z]/g, n => ` ${n}`);
 }
-// GENERATOR_TYPE='component';

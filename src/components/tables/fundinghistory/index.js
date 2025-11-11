@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 
 import Utils from 'utils';
-// import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
@@ -183,4 +182,3 @@ const formatMoneyAmount = (amount) => {
   return Utils.numeral()(amount).format('$0,0.00');
 };
 
-// GENERATOR_TYPE='component';

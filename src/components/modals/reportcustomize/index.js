@@ -4,9 +4,7 @@ import { connect, Component } from 'component';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import resolvePath from 'object-resolve-path';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import {
@@ -164,10 +162,6 @@ class components_modals_reportcustomize extends Component {
 
   onSave = (e) => {
     e.preventDefault();
-    // const selectedFields = Object.values(this.state.selected).filter(selected => !this.state.customFields.map(f => f.dataField).includes(selected.dataField));
-    // const selectedCustomFields = Object.values(this.state.selected).filter(selected => this.state.customFields.map(f => f.dataField).includes(selected.dataField));
-    // this.props.fetchTransactions(new Date(startDate).toISOString(), new Date(endDate).toISOString(), selectedFields, selectedCustomFields);
-    // this.props.onSave(selectedFields, selectedCustomFields);
     const { forms } = this.props;
     const { startDate, endDate } = forms['Components.forms.reportsearch'].default._values;
     this.props.fetchTransactions(new Date(startDate).toISOString(), new Date(endDate).toISOString(), this.state.selected);

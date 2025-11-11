@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -339,8 +338,6 @@ function _aggregateFormData(derivedForms, uploaded) {
       const derived = derivedForms[formId];
       if (!derived) return acc;
 
-      // const duplicateNameInUpload = Object.keys(derivedForms).some((derivedFormId) => {
-      //   return derivedFormId !== formId && _try(() => derivedForms[derivedFormId].adapted.name) && _try(() => derived.adapted.name) && derivedForms[derivedFormId].adapted.name === derived.adapted.name;
       // });
 
       let category;
@@ -369,4 +366,3 @@ function _aggregateFormData(derivedForms, uploaded) {
     });
 }
 
-// GENERATOR_TYPE='component';

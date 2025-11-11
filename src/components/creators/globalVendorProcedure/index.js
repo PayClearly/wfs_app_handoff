@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -147,7 +146,6 @@ const INITIAL_FIELDS = {
     vCardFaxNumbers: '',
     vCardUseFaxTemplate: false,
     vCardUseEmailTemplate: false,
-    // vCardPortalUrl: initialData.vCardPortalUrl || '',
     active: true,
   },
   check: {
@@ -174,4 +172,3 @@ const INITIAL_FIELDS = {
   },
 };
 
-// GENERATOR_TYPE='component';

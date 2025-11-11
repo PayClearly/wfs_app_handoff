@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -178,4 +177,3 @@ const _formatStatus = status => <Components.badges.status data={_formatString(st
 const _formatDescription = (description) => {
   return (description && description.length > 15) ? `${description.substring(0, 15)}...` : description;
 };
-// GENERATOR_TYPE='component';

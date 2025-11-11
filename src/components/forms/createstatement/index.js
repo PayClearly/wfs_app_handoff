@@ -7,7 +7,6 @@ import { Menu, MenuItem } from 'react-bootstrap-typeahead';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -149,25 +148,12 @@ class components_forms_createstatement extends Component {
     this.setState({ yearOptions });
   }
 
-  // renderMenu = (results, menuProps) => {
-  //   if (!results.length) {
-  //     return (
   //       <Menu {...menuProps}>
   //         <a
-  //           className={classNames('dropdown-item', this.props.noItemsClicked && 'pointer ps-3 text-center')}
-  //           role="button"
-  //           tabIndex="-1"
-  //           onClick={(e) => {
-  //             this.setState({
-  //               blockBlur: true,
   //             });
   //             setTimeout(() => {
-  //               this.setState({
-  //                 blockBlur: false,
   //               });
   //             }, 400);
-  //             if (this.props.noItemsClicked) {
-  //               this.props.noItemsClicked(e, this.props.form._values[this.props.field]);
   //             }
   //           }}
   //         >
@@ -177,43 +163,26 @@ class components_forms_createstatement extends Component {
   //     );
   //   }
 
-  //   const menuItems = results.map((result, index, array) => {
-  //     if (index === 0 && array.length === 1) {
-  //       const labelKey = this.props.labelKey || 'label';
-  //       return (
   //         <MenuItem option={result} position={index}>
   //           {`"${result[labelKey] || result}" is not a valid field`}
   //         </MenuItem>
   //       );
   //     } else if (typeof result === 'string') {
-  //       return (
   //         <MenuItem option={result} position={index}>
   //           {`Add "${result}" field`}
   //         </MenuItem>
   //       );
   //     }
-  //     return null;
   //   });
 
-  //   return (
   //     <Menu {...menuProps}>
   //       {menuItems}
   //       {this.props.alwaysShowNoItemsOption && !(results.length === 1 && (results[0].name === this.state.value)) &&
   //         <a
-  //           className={classNames('dropdown-item', this.props.noItemsClicked && 'pointer ps-3 text-center')}
-  //           role="button"
-  //           tabIndex="-1"
-  //           onClick={(e) => {
-  //             this.setState({
-  //               blockBlur: true,
   //             });
   //             setTimeout(() => {
-  //               this.setState({
-  //                 blockBlur: false,
   //               });
   //             }, 400);
-  //             if (this.props.noItemsClicked) {
-  //               this.props.noItemsClicked(e, this.props.form._values[this.props.field]);
   //             }
   //           }}
   //         >

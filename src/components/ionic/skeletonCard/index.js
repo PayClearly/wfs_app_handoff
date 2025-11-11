@@ -11,8 +11,6 @@ import {
   IonThumbnail,
 } from '@ionic/react';
 
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -73,4 +71,3 @@ class componentsIonicSkeletonCard extends Component {
 
 export default connect(() => {}, () => {})(componentsIonicSkeletonCard);
 
-// GENERATOR_TYPE='component';

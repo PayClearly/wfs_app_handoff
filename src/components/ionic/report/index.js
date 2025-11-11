@@ -2,11 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { IonItem, IonGrid, IonRow, IonCol, IonChip, IonIcon, IonSpinner, IonButton } from '@ionic/react';
 import { downloadOutline } from 'ionicons/icons';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 

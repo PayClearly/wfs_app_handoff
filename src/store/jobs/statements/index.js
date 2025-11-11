@@ -44,13 +44,7 @@ export default reducer;
 export function sync(organizationId, accountId) {
   return (dispatch) => {
     dispatch({ type: actionTypes.fetchStart });
-    // return watchValue(`denormalized/approvedStatements/${organizationId}/${accountId}`, (items, paths) => {
-    //   return watchValues(`state/jobs/statements/${organizationId}/${accountId}`, Object.keys(items || {}), (_items, _paths) => {
-    //     const data = Object.keys(_items).reduce((acc, curr) => {
-    //       if (!acc[organizationId]) acc[organizationId] = { [accountId]: {} };
-    //       if (!acc[organizationId][accountId]) acc[organizationId][accountId] = {};
     //       acc[organizationId][accountId][curr] = _items[curr];
-    //       return acc;
     //     }, {});
     //     dispatch({ type: actionTypes.fetchSuccess, items: data, _paths });
     //   });

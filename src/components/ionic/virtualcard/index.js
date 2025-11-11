@@ -143,4 +143,3 @@ function isDisplayed(props) {
   return '';
 }
 
-// GENERATOR_TYPE='component';

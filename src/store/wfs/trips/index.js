@@ -51,7 +51,6 @@ export function sync(context, skipCache = true) {
   return async (dispatch, getState) => {
     dispatch({ type: actionTypes.initializeStart });
     try {
-      // if on wallets page only sync the current trip
       const { customerNumber, tailNumber } = context || getState().wfs.data.context;
       const params = { customerNumber: parseInt(customerNumber, 10), tailNumber, first: 6 };
       const indexByItemId = (item) => item.tripNumber;

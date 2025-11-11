@@ -3,8 +3,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_paymentsToBatches = createSelector('selectors_paymentsToBatches',
   state => state.account.paymentStatuses.data.items,
@@ -25,4 +23,3 @@ function _adaptPaymentsToBatches(paymentStatuses = {}) {
 }
 
 
-// GENERATOR_TYPE='selector';

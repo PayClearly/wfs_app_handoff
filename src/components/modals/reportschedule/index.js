@@ -208,4 +208,3 @@ function formatVAPClearedFilename(accountName, date) {
   const ext = 'dat';
   return `${name}.${formatDate}.${fileType}.${ext}`;
 }
-// GENERATOR_TYPE='component';

@@ -3,7 +3,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import Dropzone from 'react-dropzone';
 
@@ -161,10 +160,8 @@ class components_forms_expense extends Component {
                   options={{
                     USD: { display: 'USD' },
                   }}
-                  // placeholder={(selectedVendor.name && !Object.keys(tagOptions).length && 'N/A') || '--'}
                   disabled={this.props.disabled}
                   hideError={_try(() => !form.currency.touched)}
-                // required={Object.keys(tagOptions).length}
                 />
               </div>
               <div className="col-12">
@@ -176,7 +173,6 @@ class components_forms_expense extends Component {
                   label="Date"
                   hideError={!form.date.touched}
                   required
-                // disabled={!form._values.filterBy || !form._values.comparator}
                 />
               </div>
               <div className="col-12">

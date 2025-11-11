@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 
 import Utils from 'utils';
-// import Selectors from 'selectors';
 
 // TODO: Make expenses have collections on tripNumbers?
 const selectors_trips = createSelector(
@@ -40,4 +39,3 @@ const _getTailNumbers = (legs) => {
   }, []);
 };
 
-// GENERATOR_TYPE='selector';

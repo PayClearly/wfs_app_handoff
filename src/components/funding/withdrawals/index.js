@@ -185,4 +185,3 @@ function _timeIsBefore(time, referenceTime) {
   return ((timeHour < referenceHour) || (timeHour === referenceHour && timeMinutes < referenceMinutes) || (timeHour === referenceHour && timeMinutes === referenceMinutes && timeSeconds < referenceSeconds));
 }
 
-// GENERATOR_TYPE='component';

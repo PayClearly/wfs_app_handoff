@@ -12,10 +12,6 @@ const _formatOptionName = (option) => {
   return optionsMap[option] || option;
 };
 
-/*
-  This function prepares all the data that can be used in the
-  overlay editor (builder) that we have available in our state.
-*/
 const preparePaymentAutomationInformation = (
   previousInitialData,
   previousFieldOptions,

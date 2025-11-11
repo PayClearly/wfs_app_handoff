@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-// import Utils from 'utils';
 
 function utils_dates_dateToDay(at, format) {
   let timestamp = at;
@@ -43,8 +42,6 @@ function utils_dates_dateToDay(at, format) {
     case 'returnFile': // return files are generated on-demand from batch history table (PS21, APReturn, etc);
       hour = _formatLessThanTen(date.getHours());
       minutes = _formatLessThanTen(date.getMinutes());
-      // seconds = _formatLessThanTen(date.getSeconds());
-      // return `${yyyy}${mm}${dd}${hour}${minutes}${seconds}`;
       return `${yyyy}${mm}${dd}${hour}${minutes}`;
     case 'dayAndMilitaryTime':
       hour = date.getHours();
@@ -73,4 +70,3 @@ function _formatLessThanTen(time) {
   return time < 10 ? `0${time}` : time;
 }
 
-// GENERATOR_TYPE='util';

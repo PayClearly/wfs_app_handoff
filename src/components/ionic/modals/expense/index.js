@@ -2,11 +2,9 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { IonPage, IonContent, IonHeader, IonFooter, IonButtons, IonButton, IonIcon, IonToolbar, IonTitle, IonSpinner, IonText } from '@ionic/react';
 import { close } from 'ionicons/icons';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 

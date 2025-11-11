@@ -118,8 +118,6 @@ class components_cards_csraccountdetails extends Component {
                     }}
                     ariaLabel="Submit all Pending Withdrawals"
                     className="btn btn-primary mt-4"
-                  // disabled={disabled}
-                  // updating={creating}
                   />}
                 <Components.tables.resolvedIssues forCSR />
               </Fragment>}
@@ -514,4 +512,3 @@ const filterConfig = {
   },
 };
 
-// GENERATOR_TYPE='component';

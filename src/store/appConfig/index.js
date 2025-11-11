@@ -15,11 +15,7 @@ export function _moduleReducers(state = defaultState, action) {
     case actionTypes.clear:
       return { ...defaultState };
 
-    // case actionTypes.fetchSuccess:
-    //   return {
     //     ...state,
-    //     items: { ...state.items, ...action.data },
-    //     paths: { ...state.paths, ...action.paths },
     //   };
 
     default:
@@ -36,17 +32,12 @@ export const reducer = combineReducers({
 export default reducer;
 
 // action creators
-// export function sync() {
-//   return (dispatch, getState) => {
 //     dispatch({ type: actionTypes.fetchStart });
-//     return watchCollection('integrationDefinitions', (data, paths) => {
 //       dispatch({ type: actionTypes.fetchSuccess, data, paths });
 //     });
 //   };
 // }
 
-// export function clear() {
-//   return (dispatch, getState) => {
 //     removeListeners(getState().integrationDefinitions.data.paths);
 //     dispatch({ type: actionTypes.clear });
 //   };

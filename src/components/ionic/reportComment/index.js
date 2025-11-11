@@ -3,8 +3,6 @@ import { IonItem, IonGrid, IonRow, IonCol, IonChip } from '@ionic/react';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 import Resources from 'resources';
 
 import './index.scss';

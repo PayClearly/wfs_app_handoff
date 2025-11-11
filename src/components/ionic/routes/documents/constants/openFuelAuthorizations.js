@@ -21,10 +21,6 @@ export const OFA_FILTERS_TO_DISPLAY_NAMES = {
   'dateOrder': 'Sort by',
 };
 
-// export const OFA_SORT_OPTIONS = {
-//   dateOrder: ['Newest', 'Oldest'],
 // };
 
-// export const DEFAULT_OFA_SORT = {
-//   dateOrder: 'Newest',
 // };

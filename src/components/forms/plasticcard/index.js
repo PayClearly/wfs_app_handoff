@@ -66,8 +66,6 @@ class components_forms_plasticcard extends Component {
     if (!this.props.blurAll && nextProps.blurAll === true) {
       this.props.blur(this.state.name, this.state.key, this.props.forms[this.state.name][this.state.key]._values);
     }
-    // if (_try(() => (!prevProps.derived && this.props.derived) || (prevProps.derived.form._values !== this.props.derived.form._values))) {
-    //   this.resolve();
     // }
     this.setState({
       form: nextProps.forms[this.state.name] && nextProps.forms[this.state.name][nextProps.formKey || 'default'],
@@ -87,12 +85,7 @@ class components_forms_plasticcard extends Component {
     }
   }
 
-  // resolver = (key, field, values) => {
-  //   const derived = _try(() => this.props.derived);
-  //   if (!derived) return {};
-  //   const resolved = {};
 
-  //   const {
   //     paymentOptions,
   //     tagOptions,
   //     selectedVendor,
@@ -100,80 +93,47 @@ class components_forms_plasticcard extends Component {
   //     // fee,
   //   } = derived;
 
-  //   const {
   //     initial,
   //     value,
   //     touched,
   //   } = field;
 
-  //   if (key === 'globalVendorTagName') {
 
-  //     const initalOption = _findOption(tagOptions, initial);
-  //     const currentOption = _findOption(tagOptions, value);
-  //     const firstOption = Object.keys(tagOptions || {})[0];
 
-  //     if (value && !currentOption) resolved[key] = null;
 
-  //     if (!value) {
-  //       if (initalOption) resolved[key] = initalOption;
-  //       if (!initial && firstOption) resolved[key] = firstOption;
   //     }
 
   //   }
 
-  //   if (key === 'method') {
 
-  //     const currentOption = _findOption(paymentOptions, value);
-  //     const initalOption = _findOption(tagOptions, initial);
-  //     const firstOption = Object.keys(paymentOptions || {})[0];
 
-  //     if (value && !currentOption) { resolved[key] = null; }
 
-  //     if (!value) {
-  //       if (initalOption || firstOption) resolved[key] = initalOption || firstOption;
   //     }
 
   //   }
 
-  //   if (key === 'repEmails') {
-  //     if (value && !PSOP.accepts) {
   //       resolved[key] = '';
   //     }
-  //     if (!value && PSOP.accepts && (_try(() => selectedVendor.repEmails.length) || _try(() => initial.length))) {
   //       resolved[key] = `${(selectedVendor.repEmails || []).join(',')},${initial || ''}`.split(',').filter(item => item).map(item => item.trim()).join(',');
   //     }
   //   }
 
-  //   if (key === 'erpVendor' || key === 'erpCategory') {
-  //     if (value !== (selectedVendor[key] || null) && !touched && PSOP.accepts) resolved[key] = selectedVendor[key] || null;
-  //     if ((value || resolved[key]) && !PSOP.accepts) resolved[key] = null;
   //   }
 
-  //   if (key === 'vCardRequireExactMatch' && value && _try(() => values.vCardUsageLimit > 1)) {
   //     resolved[key] = false;
   //   }
 
-  //   if ((key === 'vCardEmails' || key === 'vCardFaxNumbers') && value && _try(() => values.vCardUsageLimit > 1)) {
   //     resolved[key] = '';
   //   }
 
-  //   return resolved;
   // }
 
-  // resolve = () => {
-  //   const derived = _try(() => this.props.derived);
-  //   if (!derived) return null;
-  //   const values = derived.form._values;
 
-  //   const resolved = Object.keys(values).reduce((acc, key) => {
-  //     return {
   //       ...acc,
   //       ...this.resolver(key, derived.form[key], values, derived),
   //     };
   //   }, {});
 
-  //   if (Object.keys(resolved).length) {
-  //     this.standardFormAction('change', resolved);
   //   }
   // }
 
@@ -220,7 +180,6 @@ class components_forms_plasticcard extends Component {
     if (fields.cycleIndicator !== 'None' && !fields.cycleTransactionCountLimit) errors.cycleTransactionCountLimit = 'Cycle Transaction Count limit is required.';
 
     // Delivery
-    // if (!fields.useDefaultAddress) {
     if (!fields.contactName) errors.contactName = 'Contact Name is required.';
     if (!fields.addressLine) errors.addressLine = 'Address Line is required.';
     if (!fields.city) errors.city = 'City is required.';

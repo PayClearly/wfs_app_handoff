@@ -16,11 +16,8 @@ import {
 } from '@ionic/react';
 import { airplane, ellipse, ellipsisVertical } from 'ionicons/icons';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -224,4 +221,3 @@ class componentsIonicTrip extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(componentsIonicTrip);
 
-// GENERATOR_TYPE='component';

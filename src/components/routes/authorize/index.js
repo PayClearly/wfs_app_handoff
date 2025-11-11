@@ -1,6 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
 
 const mapStateToProps = (state, props) => {

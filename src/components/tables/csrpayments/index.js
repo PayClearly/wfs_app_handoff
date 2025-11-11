@@ -395,4 +395,3 @@ function isGalileoCheckOrACHPayment(paymentMethod, achIntegrationDetails, checks
     || (paymentMethod === 'check' && checksIntegrationDetails.provider === GALILEO);
 }
 
-// GENERATOR_TYPE='component';

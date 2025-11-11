@@ -2,19 +2,11 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports...
-// import { CSVLink } from 'react-csv';
-// import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider from 'react-bootstrap-table2-toolkit';
-// import paginationFactory from 'react-bootstrap-table2-paginator';
-// import overlayFactory from 'react-bootstrap-table2-overlay';
-// import numeral from 'numeral';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -162,4 +154,3 @@ const _getStartDate = () => {
   return new Date(new Date(new Date().setMonth(new Date().getMonth() - 1)).setHours(0, 0, 0, 0)).toISOString();
 };
 
-// GENERATOR_TYPE='component';

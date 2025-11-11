@@ -43,10 +43,7 @@ class components_routes_jobs extends Component {
     this.props.cancelJob(type, _id);
   };
 
-  // handleChange = (e) => {
-  //   const { name, value } = e.currentTarget;
   //   // must pass down null as the 'all' option to the table to show all options
-  //   this.setState({ [name]: value === 'all' ? null : value });
   // };
 
   render() {

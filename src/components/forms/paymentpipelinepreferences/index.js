@@ -4,7 +4,6 @@ import {
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -666,4 +665,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(componentsFormsPayme
 // Internal Helper Functions ...
 
 const binOptions = Utils.getGalileoBinDropdownOptions();
-// GENERATOR_TYPE='component';

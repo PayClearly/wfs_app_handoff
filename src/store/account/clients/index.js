@@ -3,7 +3,6 @@ import { createStatusReducer, createActionTypes } from 'store/_utilities/statusR
 import { watchCollection, removeListeners, watchSlice } from 'store/_utilities/firebaseHelpers';
 import ClientsAPI from 'api/clients';
 
-// import Utils from 'utils';
 
 const namespace = 'CLIENTS';
 export const actionTypes = createActionTypes(namespace);

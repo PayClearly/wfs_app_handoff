@@ -3,7 +3,6 @@ import firebase from 'firebase';
 import jwtDecode from 'jwt-decode';
 import { CSSTransition } from 'react-transition-group';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Resources from 'resources';
@@ -70,7 +69,6 @@ class components_rootcontroller extends Component {
               isLoggedIn: true, isGuest: false, uid: user.uid, jwt,
             });
             // Mixpanel's identify() method associates all analytics data with a unique id. In this case, the user's email is treated as a unique id.
-            // This logic assumes that all users have a unique email address.
             window._analytics.mixpanel.identify(user.user_id || '');
             window._analytics.mixpanel.track('Login');
             if (this.props.router.route.params.orgId || this.props.router.route.params.accountId) {
@@ -132,7 +130,6 @@ class components_rootcontroller extends Component {
         this.props.openTermsModal();
       }
 
-      // If myWorldCard portal
       if (this.props.appName === 'wfs') {
         const wfsTokenExp = _resolve(this.props.access, 'data.jwt.tokenExp');
         const updating = _resolve(this.props.access, 'status.updating') || _resolve(this.props.wfsOAuthStatus, 'status.updating');
@@ -154,7 +151,6 @@ class components_rootcontroller extends Component {
   render() {
     const { logo } = this.props;
     let loading;
-    // If myWorld Card portal we want to avoid loading state change on session
     if (this.props.appName === 'wfs') {
       loading = !_try(() => this.props.access.data.isLoggedIn && this.props.access.data.jwt.jwtId) && !_try(() => this.props.access.data.isGuest);
     } else {

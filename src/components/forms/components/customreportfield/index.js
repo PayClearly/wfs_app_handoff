@@ -85,7 +85,6 @@ class components_forms_components_customreportfield extends Component {
 
   validate = (values = {}) => {
     const errors = {};
-    // if (values.fieldName.includes(',')) {
     if (values.fieldName && values.fieldName.includes(',')) {
       errors.fieldName = 'Commas are not allowed.';
     }

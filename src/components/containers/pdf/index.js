@@ -4,9 +4,7 @@ import { connect, Component } from 'component';
 import PDF from 'react-pdf-js';
 import ReactPaginate from 'react-paginate';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -26,12 +24,10 @@ class components_containers_pdf extends Component {
   };
 
   componentDidMount() {
-    // this occurs when someone is uploading a file from the client.
     if (this.props.file) {
       return this.setState({ file: this.props.file.preview ? this.props.file.preview : this.props.file });
     }
 
-    // this occurs when we have already fetched this file from the server.
     const { md5Hash } = this.props.pdf;
     const file = this.props.files[md5Hash];
 
@@ -39,7 +35,6 @@ class components_containers_pdf extends Component {
       return this.setState({ file });
     }
 
-    // this occurs when we are fetching this file for the first time.
     return this.props.fetchAttachment(this.props.pdf);
   }
 

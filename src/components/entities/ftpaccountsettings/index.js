@@ -2,7 +2,6 @@ import { connect, Component, /* bindActionCreators */ Fragment } from 'component
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -61,7 +60,6 @@ class components_entities_ftpaccountsettings extends Component {
     const { canRead, canUpdate, canDelete } = this.props.policies;
     const { active } = this.props.ftpAccountDetails;
     const { updatingError: error, updating } = this.props.ftpAccountStatus;
-    // const updating = this.props.ftpAccountDetails.updating;
 
     return (
       <div className={'components_entities_ftpaccountsettings'}>
@@ -148,4 +146,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_entities_
 // Internal Helper Functions ...
 const _isDev = () => window.GLOBALCERT.projectId.includes('test');
 
-// GENERATOR_TYPE='component';

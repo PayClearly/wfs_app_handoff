@@ -32,8 +32,6 @@ const selectors_spendByVendor = createSelector('selectors_spendByVendor',
 export default selectors_spendByVendor;
 
 // Internal Helper Functions ...
-// function _daysInMonth(month, year) {
-//   return new Date(year, month, 0).getDate();
 // }
 
 function _formatSpendByVendorData(paymentStatuses, vendors, fundedPayments) {
@@ -422,4 +420,3 @@ const vendorsTest = {
     name: 'UNIVISION',
   },
 };
-// GENERATOR_TYPE='selector';

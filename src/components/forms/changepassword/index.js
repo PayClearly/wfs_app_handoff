@@ -4,7 +4,6 @@ import { connect, Component } from 'component';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';

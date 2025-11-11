@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -71,7 +70,6 @@ class components_integrationcomps_achintegration_DWOLLA_creators_document extend
           documentContext: this.props.documentContext,
         };
         this.props.submitAchDocument(data);
-        // this.setState({ showACHAccountCreatedNotification: false });
       });
 
   }

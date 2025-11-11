@@ -2,9 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -146,7 +144,6 @@ class components_modals_resendnotification extends Component {
                 buttonText="Send"
                 onClick={() => {
                   if (disableButtons || disableUpload) return;
-                  // this.props.action();
                   this.setState({ clickedSend: true }, this.sendEmail);
                 }}
                 onDisabledClick={() => { this.setState({ blurAll: true }); }}

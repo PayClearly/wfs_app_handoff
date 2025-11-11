@@ -3,11 +3,7 @@ import {
 } from 'component';
 import ReactPaginate from 'react-paginate';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -84,8 +80,6 @@ class components_tables_components_paginateWrapper extends Component {
     }
 
     // reset pagination based on certain props changes
-    // DONE: if number of items changes (based on filter or search)
-    // if sort changes (maybe this one)
   }
 
 

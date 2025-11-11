@@ -110,7 +110,6 @@ class components_containers_paymenthistory extends Component {
 
     const newPaymentId = _try(() => this.state.newPaymentId);
 
-    // for table utilities
     return (
       <Fragment>
         <div className="row justify-content-between align-items-center mb-3">
@@ -458,4 +457,3 @@ const filterConfig = {
   },
 };
 
-// GENERATOR_TYPE='component';

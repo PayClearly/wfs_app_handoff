@@ -1,9 +1,7 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -45,7 +43,6 @@ class components_forms_credentials extends Component {
       this.props.blur(this.state.name, Utils.getFormKey(this.props), this.props.form._values);
     }
 
-    // if the initial data changed then re-initialize the form
     if (nextProps.credentialSchemaFields && nextProps.credentialSchemaFields && nextProps.credentialSchemaFields !== this.props.credentialSchemaFields && !(Object.keys(nextProps.credentialSchemaFields).length === 0 && Object.keys(this.props.credentialSchemaFields).length === 0)) {
       this.props.destroy(this.state.name, Utils.getFormKey(this.props));
       this.initializeForm(nextProps);
@@ -192,4 +189,3 @@ export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)
 const _1Day = 1 * 24 * 60 * 60 * 1000;
 const _180Days = 180 * 24 * 60 * 60 * 1000;
 
-// GENERATOR_TYPE='component';

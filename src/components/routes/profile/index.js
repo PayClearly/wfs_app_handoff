@@ -2,11 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
 // Store.router.setQueryParams
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 

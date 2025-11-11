@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 
@@ -44,7 +43,6 @@ class components_twoFactorAuthWatcher extends Component {
 
     if (!isProd) return;
 
-    // if the app is open and the user has csr privileges and they do not have two factor auth enabled, open the modal
     if (this.props.termsAccepted && !this.state.opened && nextProps.loggedIn && this.props.isCsr && nextProps.isCsr && !this.props.modalOpen && !this.props.twoFactorAuthVerified && !nextProps.twoFactorAuthVerified) {
       this.props.openTwoFactorAuthSetupModal();
       this.setState({ opened: true });
@@ -55,7 +53,6 @@ class components_twoFactorAuthWatcher extends Component {
     const isProd = !projectDbContext.storageBucket.includes('staging') && !projectDbContext.storageBucket.includes('test');
 
     if (!isProd) return;
-    // if the user closed the two factor modal without registering
     if (this.props.isCsr && prevProps.modalOpen && prevProps.modals.includes(modal => modal.name === 'Components.modals.twofactorauthsetup') && !this.props.modalOpen && !this.props.privateMetadata.twoFactorAuthVerified) {
       this.props.logout();
     }

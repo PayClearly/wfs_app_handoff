@@ -74,7 +74,6 @@ const _categorizeExpenses = (expenses, selectedExpenses, { selectingExpenses = f
 const downloadCSV = async (expenses, fileName, { callback = false, toastShow = () => {} }) => {
   try {
     const parser = new Parser({ formatters: {} });
-    // const parser = new Parser({ fields, formatters });
     const csv = parser.parse(expenses);
     const res = await Filesystem.writeFile({
       path: fileName,

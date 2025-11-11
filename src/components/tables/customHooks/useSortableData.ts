@@ -36,11 +36,9 @@ function customCompare<T extends object>(a: keyof T, b: keyof T, items: T, sortC
   const valueA = items[a][sortConfig.key]
   const valueB = items[b][sortConfig.key]
 
-  // If the types are not the same, sort them by type
   if (typeA < typeB) return sortConfig.direction === "asc" ? -1 : 1;
   if (typeA > typeB) return sortConfig.direction === "asc" ? 1 : -1;
 
-// If the types are the same, compare their values based on type
   if (typeA === "number") {
     return sortConfig.direction === "asc" ? valueA - valueB : valueB - valueA;
   } else if (typeA === "string") {
@@ -48,7 +46,6 @@ function customCompare<T extends object>(a: keyof T, b: keyof T, items: T, sortC
   } else if (Array.isArray(valueA)) {
     return sortConfig.direction === "asc" ? valueA.length - valueB.length : valueB.length - valueA.length;
   } else {
-    // If the type is not a number, string, or array, consider them equal
     return 0;
   }
 }

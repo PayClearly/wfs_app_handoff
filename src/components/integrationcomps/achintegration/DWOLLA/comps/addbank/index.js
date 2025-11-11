@@ -3,9 +3,7 @@ import api from 'api/achIntegration';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -35,11 +33,8 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
   };
 
   componentDidMount() {
-    // For Testing Locally
     // You must pass your local stylesheet to the iframe options object, not the production path
-    // const stylesheets = ['https://fonts.googleapis.com/css?family=Rubik:300,400,700'];
 
-    // if () {
     //   stylesheets.unshift('http://localhost:5005/index.css');
     // } else {
     //   stylesheets.unshift('https://app.payclearly.com/index.css');

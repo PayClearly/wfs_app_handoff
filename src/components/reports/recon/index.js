@@ -10,11 +10,9 @@ import overlayFactory from 'react-bootstrap-table2-overlay';
 import numeral from 'numeral';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -292,7 +290,6 @@ const _getStartDate = () => {
 };
 
 
-// GENERATOR_TYPE='component';
 const sortCaret = (order) => {
   if (order === 'asc') return (<Fragment>&nbsp;<i className={'mdi mdi-chevron-down'} /></Fragment>);
   if (order === 'desc') return (<Fragment>&nbsp;<i className={'mdi mdi-chevron-up'} /></Fragment>);

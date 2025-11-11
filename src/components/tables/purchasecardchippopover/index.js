@@ -7,7 +7,6 @@ import { PopoverHeader, PopoverBody } from 'reactstrap';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -108,18 +107,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_tables_pu
 
 
 
-// const data = {
 //   ...purchaseCard,
 //   ...purchaseCard.customFields,
-//   amount: virtualCard.amount,
-//   balance: transactionInformation.remaining,
-//   dateCreated: purchaseCard._createdAt,
-//   formattedBalance: transactionInformation.remaining,
-//   formattedLimit: virtualCard.amount,
-//   id: purchaseCard.id,
-//   issueDate: virtualCard._createdAt,
-//   lastFour: virtualCard.cardNumberLastFour,
-//   purchaseCardRef: purchaseCard._ref,
-//   status: transactionInformation.status,
 //   transactionInformation,
 // }

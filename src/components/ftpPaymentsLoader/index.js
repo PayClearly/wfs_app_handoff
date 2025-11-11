@@ -105,4 +105,3 @@ function _sortByUploadTime(a, b) {
   return bDate - aDate;
 }
 
-// GENERATOR_TYPE='component';

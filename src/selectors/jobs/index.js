@@ -3,8 +3,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const JobsSelector = createSelector(
   (state) => state.organization.data.id,

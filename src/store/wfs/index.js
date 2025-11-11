@@ -9,7 +9,6 @@ import * as device from 'store/device';
 import * as account from 'store/account';
 import * as organization from 'store/organization';
 
-// Import Child Ducks
 import * as cards from 'store/wfs/cards';
 import * as oAuth from 'store/wfs/oAuth';
 import * as tails from 'store/wfs/tails';
@@ -223,7 +222,6 @@ export const contextSync = (context, event) => async (dispatch, getState) => {
   trips.sync(context)(dispatch, getState);
 
   // facilities relies on the icao identifiers returned by trips.
-  // await Promise.all([
   //   // facilities.sync(context, !!event)(dispatch, getState),
   //   // airports.sync(context, !!event)(dispatch, getState),
   // ]);
@@ -381,7 +379,6 @@ export function fetchDocuments({ type, icao, dateOrder, toDate, fromDate, isUpda
         // TODO error handling
         break
     }
-    // If an event was passed, complete it
     // Currently used by infinite scroll spinner
     if (event) {
       event.target.complete();

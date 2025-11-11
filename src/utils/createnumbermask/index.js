@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-// import Utils from 'utils';
 
 function utils_createnumbermask({
   prefix = dollarSign,
@@ -47,7 +46,6 @@ function utils_createnumbermask({
     }
 
     const isNegative = (rawValue[0] === minus) && allowNegative;
-    // If negative remove "-" sign
     if (isNegative) {
       rawValue = rawValue.toString().substr(1);
     }
@@ -117,7 +115,6 @@ function utils_createnumbermask({
     }
 
     if (isNegative) {
-      // If user is entering a negative number, add a mask placeholder spot to attract the caret to it.
       if (mask.length === prefixLength) {
         mask.push(digitRegExp);
       }
@@ -157,9 +154,7 @@ function convertToMask(strNumber) {
     .map(char => (digitRegExp.test(char) ? digitRegExp : char));
 }
 
-// http://stackoverflow.com/a/10899795/604296
 function addThousandsSeparator(n, thousandsSeparatorSymbol) {
   return n.replace(/\B(?=(\d{3})+(?!\d))/g, thousandsSeparatorSymbol);
 }
 
-// GENERATOR_TYPE='util';

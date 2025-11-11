@@ -90,14 +90,8 @@ class components_forms_accountvendor extends Component {
       checkAddressValidated: initialData.checkAddressValidated || null,
       checkAddressUserForceValidated: initialData.checkAddressUserForceValidated || null,
       checkStufferEnabled: initialData.checkStufferEnabled || false,
-      // checkFee: Boolean(initialData.checkFee) || false,
-      // checkFeeType: _try(() => initialData.checkFee.type) || '',
-      // checkFeeValue: _try(() => initialData.checkFee.value) || '',
 
       // ACH
-      // ACHFee: Boolean(initialData.ACHFee) || false,
-      // ACHFeeType: _try(() => initialData.ACHFee.type) || '',
-      // ACHFeeValue: _try(() => initialData.ACHFee.value) || '',
     });
     validate(this.state.name, key, this.validate);
   }
@@ -917,4 +911,3 @@ const FEE_TYPE_OPTIONS = {
   },
 };
 
-// GENERATOR_TYPE='component';

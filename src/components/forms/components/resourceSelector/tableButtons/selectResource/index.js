@@ -1,10 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -27,19 +22,12 @@ class components_forms_components_resourceSelector_tableButtons_selectResource e
 
 
 
-  // _toggleAllEditedItems = (e) => {
-  //   const { forms, fieldName, formName, formKey, action, getCurrentlyInScope } = this.props;
-  //   const field = _try(() => forms[formName][formKey][fieldName]);
-  //   const items = { ...field.value };
 
-  //   const currentlyInScope = getCurrentlyInScope();
   //   console.log(currentlyInScope);
   //   Object.keys(currentlyInScope || {})
   //     .forEach((id) => {
-  //       if (e.currentTarget.checked === true) {
   //         items[id] = true;
   //       } else {
-  //         delete items[id];
   //       }
   //     });
   //   action('change', fieldName, items);

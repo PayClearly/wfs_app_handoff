@@ -36,7 +36,6 @@ export function convertDates({ type, toDate, fromDate }) {
   switch (type) {
     case 'serviceProviderDocuments':
       dateEnd = timespanToDate(toDate, futureDate);
-      // If we're fetching all documents up to today, then we don't need a dateStart
       dateStart = fromDate !== "All" ? timespanToDate(fromDate, pastDate) : null;
       break;
     case 'salesOrders':
@@ -45,7 +44,6 @@ export function convertDates({ type, toDate, fromDate }) {
       dateStart = timespanToDate(fromDate, pastDate);
       break;
     case 'openFuelAuthorizations':
-      // If a date range is selected, then use it
       if (toDate !== 'All' && fromDate !== 'All') {
         dateEnd = timespanToDate(toDate, futureDate);
         dateStart = timespanToDate(fromDate, pastDate);
@@ -143,7 +141,6 @@ export function createParams({ type, customerNumber, tailNumber, icao = null, da
       break;
     default:
       // There is no default case
-      // Return 'undefined' so it can be handled in the calling function
       break;
   }
 
@@ -181,7 +178,6 @@ export function createFetchParams({ type, _documents, dateOrder, icao, isUpdate,
   // Get the cursor from the last entry, or set it to null if there is no last entry
   const after = lastEntry !== undefined ? lastEntry.cursor : null;
   // Set the first parameter to the newestFetchCount or oldestFetchCount if isUpdate is true, otherwise set it to FETCH_COUNT
-  // This is because we want to fetch the same number of documents as the last fetch to check for updates
   let first = FETCH_COUNT;
   if (isUpdate) {
     first = dateOrder === 'DESC' ? icaoInfo.newestFetchCount : icaoInfo.oldestFetchCount;
@@ -227,7 +223,6 @@ export function parseData({ documents, icao, reduceCallback }) {
  */
 export function createCollections({ collections, documents = [], dateOrder, icao, newest = [], oldest = [], updated = false }, fromFetch = false) {
   if (!fromFetch) {
-    // If we're not fetching, then we're initializing
     // TODO Support receiving unique documents and populated newest or oldest to remove duplicated code
     const _ids = documents.map((doc) => doc._id);
     switch (dateOrder) {
@@ -293,22 +288,18 @@ export function updateCollections({ _documents, documents, dateOrder, icao, isUp
         break;
     }
   } else {
-    // If we're updating, then we need to check if the documents returned are different than the last fetch
     const updatedIds = documents.map((doc) => doc.documentId);
     if (updatedIds.length) {
-      // If there are updated documents, then we need to check if they are already in the current list
       const { newest: _newest, oldest: _oldest } = _documents.collections.icaoInfo[icao];
       const currentIds = dateOrder === 'DESC' ? _newest : _oldest;
       let j = 0;
       for (let i = 0; i < first; i += 1) {
-        // If the updated document is not in the current list, then we need to update
         if (updatedIds[i] && updatedIds[i] !== currentIds[j] && !currentIds.includes(updatedIds[i])) {
           currentIds.splice(i, 0, updatedIds[i]);
         } else {
           j += 1;
         }
       }
-      // If the updatedIds array is longer than the currentIds array, then we need to update by setting updated to false
       if (updatedIds.length > currentIds.length) {
         updated = false;
       }

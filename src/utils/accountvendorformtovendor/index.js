@@ -1,20 +1,7 @@
 // Third Party Imports ...
 
-// import Utils from 'utils';
 
 function utils_accountvendorformtovendor(formValues, globalVendors) {
-  /*
-  
-  accountVendorFormToVendor
-  =========================
-  
-  Helper function to convert accountVendor form values to accountVendor data prior to being sent to API
-  
-  Expected Parameters
-    formValues: state.forms['Components.forms.accountvendor']<id>._values
-    globalVendors: state.global.vendors.data.items
-  
-  */
 
   const payClearlyVendorId = ((name) => {
     const vendor = Object.values(globalVendors).find(item => item.name === name) || {};

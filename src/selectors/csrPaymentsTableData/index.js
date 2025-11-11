@@ -9,7 +9,6 @@ import Constants from '../../constants';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 
 const selectors_csrPaymentsTableData = createSelector(
 'selectors_csrPaymentsTableData',
@@ -100,8 +99,6 @@ id,
 
         const paymentProcedure = JSON.parse(_paymentProcedure);
         // Sorting order is Phone > Fax > Email > Portal
-        // If a PSOP payment method is manual, determine whether it's a phone or portal method.
-        // If a psop has a phone number in its notes, it takes phone payments. Otherwise, it takes portal payments
         paymentDeliveryMethod = _resolve(paymentProcedure, 'vCardDeliveryMethod', '');
         if (paymentProcedure && paymentProcedure.vCardDeliveryMethod === 'manual') {
           // Regex will match most phone number formats
@@ -139,7 +136,6 @@ id,
       }
 
       const linked = _resolve(paymentStatus, 'verified.vendor.globalVendorRef');
-      // const paymentSent = paymentStatus.sent && (_resolve(paymentStatus, 'sent.markedAsReadyToSendOrSent') || !_resolve(paymentStatus, 'sent.waitingToBeMarkedAsSent'));
       const paymentSent = paymentStatus.sent && _resolve(paymentStatus, 'sent.markedAsReadyToSendOrSent');
 
       let status = paymentStatus.status || 'Scheduled';
@@ -179,9 +175,7 @@ id,
         createdAt: _resolve(paymentStatus, 'created._createdAt') || _resolve(paymentStatus, 'created._at') || Date.now(),
         vendorName: accountVendor && accountVendor.display || paymentStatus.verified && _resolve(paymentStatus, 'verified.vendor.displayName') && `${_resolve(paymentStatus, 'verified.vendor.displayName')} (${_resolve(paymentStatus, 'verified.vendor.name')})` || _resolve(paymentStatus, 'verified.vendor.name'),
         method: _resolve(paymentStatus, 'created.method'),
-        // formattedAmount: numeral(_resolve(paymentStatus, 'created.amount', 0)).format('$0,0.00'),
         amount: _resolve(paymentStatus, 'created.amount', 0),
-        // formattedDate: Utils.dates.dateToDay(_try(() => paymentStatus.created._createdAt) || _try(() => paymentStatus.created._at) || Date.now()),
         status,
         substatus: paymentStatus.substatus,
         statusClassOverride: status === 'Processing...' && linked && !_resolve(paymentStatus, 'sent.markedAsReadyToSendOrSent') && 'info',
@@ -217,7 +211,6 @@ export default selectors_csrPaymentsTableData;
 
 // Internal Helper Functions ...
 const _getLatestErrorMessage = (paymentStatus) => {
-  // if (_resolve(paymentStatus, 'created._errors.length') || _resolve(paymentStatus, 'verified._errors.length') || _resolve(paymentStatus, 'funded._errors.length') || _resolve(paymentStatus, 'sent._errors.length') || _resolve(paymentStatus, 'tracked._errors.length')) {
   const _getLast = (array) => _try(() => array[array.length - 1], {});
   return _try(() => _getLast(_resolve(paymentStatus, 'tracked._errors', [])).message
     || _getLast(_resolve(paymentStatus, 'sent._errors', [])).message
@@ -239,17 +232,14 @@ function getVendorPSOP(globalTagId, paymentMethod, groupIds, globalGroups) {
 
   const groupInfo = globalGroups[relevantGroup];
 
-  // if the payment method is accepted, get the procedure if there is one
   const procedureId = !groupInfo[paymentMethod] ? '' : groupInfo[paymentMethod].procedure || '';
 
-  // return the procedure id and group name
   return {
     procedureId,
     groupName: globalGroups[relevantGroup].name || '',
   };
 }
 
-// GENERATOR_TYPE='selector';
 const _generatePaymentDetails = (customFields, paymentFields) => {
   let details = [];
   if (customFields) { details = details.concat(Object.values(customFields)); }

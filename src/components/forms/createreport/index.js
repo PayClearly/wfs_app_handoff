@@ -1,9 +1,7 @@
 /* eslint-disable max-len */
 import { connect, Component } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -33,7 +31,6 @@ class componentsFormsCreatereport extends Component {
       pctrCheck: { display: 'PCTR (Check)' },
       pctrCard: { display: 'PCTR (Card)' },
       checkActivity: { display: 'Check Activity' },
-      // recon: { display: 'Recon' }, // ops is no longer using a recon report, removing this as an option to improve app performance
     },
     reportOptions: {},
   };

@@ -22,10 +22,6 @@ export const SO_FILTERS_TO_DISPLAY_NAMES = {
   dateOrder: 'Sort by',
 };
 
-// export const SO_SORT_OPTIONS = {
-//   dateOrder: ['Newest', 'Oldest'],
 // };
 
-// export const DEFAULT_SO_SORT = {
-//   dateOrder: 'Newest',
 // };

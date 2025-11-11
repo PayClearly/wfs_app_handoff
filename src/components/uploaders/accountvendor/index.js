@@ -83,7 +83,6 @@ class components_uploaders_accountvendor extends Component {
 
 
   onDrop = (acceptedFiles) => {
-    // const vendors = [];
     acceptedFiles.forEach((acceptedFile) => {
       return axios.get(acceptedFile.preview)
         .then(({ data }) => {
@@ -232,8 +231,6 @@ class components_uploaders_accountvendor extends Component {
     const { dropped, newVendors, noNewVendors, successfullyCreated, showUploadNotification, existingVendorIds, uploadingError } = this.state;
 
     const { creatingError: error, creating } = status;
-    // const form = (this.props.forms['Components.forms.accountvendor'] && this.props.forms['Components.forms.accountvendor'].createVendor) || {};
-    // const disabled = creating || form._allInitial || !form._allValid;
     const success = dropped && successfullyCreated;
     const numberNotReadyNewVendors = successfullyCreated ?
       newVendors.reduce((total, vendor) => {
@@ -303,7 +300,6 @@ class components_uploaders_accountvendor extends Component {
                 tableOnly
                 vendors={this.getNewVendors()}
                 sortBy="readyToPay"
-              // updateVendor={this.props.updateVendor}
               />
             </div>
           </div>
@@ -362,4 +358,3 @@ const _camelize = (str) => {
   });
 };
 
-// GENERATOR_TYPE='component';

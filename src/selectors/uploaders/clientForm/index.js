@@ -1,7 +1,6 @@
 import createSelector from 'selector';
 
 import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_uploaders_clientForm = (key) => {
 
@@ -37,4 +36,3 @@ const _adaptToCreatable = (values) => {
   };
 };
 
-// GENERATOR_TYPE='selector';

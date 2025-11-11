@@ -2,12 +2,8 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
-// import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({
@@ -62,8 +58,6 @@ class components_forms_customreportfields extends Component {
   };
 
   render() {
-    // const { customReportFields } = this.props;
-    // if (!customReportFields) return null;
 
     return (
       <div className="card card-body components_forms_customreportfields mt-5">

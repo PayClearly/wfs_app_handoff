@@ -6,7 +6,6 @@ import {
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 import Constants from '../../../constants';
 
@@ -248,7 +247,6 @@ class components_forms_globalVendorProcedureACH extends Component {
                   label="ACH Delivery Speed"
                   options={ACH_SPEED_OPTIONS}
                   placeholder={(ACH_SPEED_OPTIONS[form.achDeliverySpeed.value] && ACH_SPEED_OPTIONS[form.achDeliverySpeed.value].display) || ''}
-                  // required={form.achDeliverySpeed.value}
                   disabled={!form.achDeliverySpeed.value}
                   hideError={!form.achDeliverySpeed.touched}
                 />
@@ -391,4 +389,3 @@ function getAchProviderOptions(achDeliveryMethod) {
   return ACH_PROVIDERS;
 }
 
-// GENERATOR_TYPE='component';

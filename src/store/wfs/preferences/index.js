@@ -65,7 +65,6 @@ export function sync() {
             tailsCollection[previousContext.customerNumber].includes(previousContext.tailNumber);
         }),
       };
-      // if they dont use biometrics to authenticate, lets just assume they are authenticated
       if (!filteredData.useBiometrics) {
         await biometrics.setAuthed(true)(dispatch);
       }

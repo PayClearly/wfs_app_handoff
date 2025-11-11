@@ -72,7 +72,6 @@ export function syncRelevantData(organizationId, accountId, paymentId) {
         dispatch({ type: actionTypes.fetchSuccess, items: adapted, paths });
         
       }, (item, paths) => {
-        // this call back is ran once for initial sync               
         if (!item.globalVendorRef) return;
 
         const globalVendorId = item.globalVendorRef;

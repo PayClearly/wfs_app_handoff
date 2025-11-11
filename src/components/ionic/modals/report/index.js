@@ -3,11 +3,8 @@ import { IonPage, IonContent, IonHeader, IonFooter, IonButtons, IonButton, IonIc
 import { close, send, pencil, trashOutline, alertOutline, chevronDownOutline, chevronBackOutline, sendSharp } from 'ionicons/icons';
 import { Collapse } from 'react-collapse';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 import nopic from 'assets/nopic.svg';
 
 import './index.scss';

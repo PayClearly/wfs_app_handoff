@@ -17,7 +17,6 @@ const DOCUMENT_TYPE = 'salesOrders';
 const DEFAULT_DATA_STATE = {};
 const DEFAULT_COLLECTION_STATE = {
   icaoInfo: {
-    // ICAO: { initialized: false, updated: false, newest: [], newestFetchCount: 0, oldest: [], oldestFetchCount: 0  },
   },
   lastUsedIcao: '',
 };

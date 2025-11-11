@@ -70,7 +70,6 @@ const selectors_paymentHistoryTableData = createSelector(
         createdByProfile: (paymentStatus._createdBy && users[paymentStatus._createdBy]),
         createdTime,
         sentTime,
-        // createdTimeSanitizedToMinute: (new Date(createdTime)).setSeconds(0, 0),
         formattedDate: Utils.dates.dateToDay(_try(() => paymentStatus.created._at) || Date.now()),
         status,
         isManual: !accountVendor.vCardEmails && !accountVendor.vCardFaxNumbers,
@@ -120,4 +119,3 @@ const _generatePaymentDetails = (customFields, paymentFields) => {
   return details.join(' ');
 };
 
-// GENERATOR_TYPE='selector';

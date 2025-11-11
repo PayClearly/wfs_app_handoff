@@ -45,7 +45,6 @@ class components_forms_globalVendorProcedureVCard extends Component {
       vCardNotifyOnCreationEmails: initialData?.vCardNotifyOnCreationEmails?.length ? initialData.vCardNotifyOnCreationEmails.join(',') : '',
       vCardNotifyOnCompletion: Object.prototype.hasOwnProperty.call(initialData, 'vCardNotifyOnCompletion') ? !!initialData.vCardNotifyOnCompletion : false,
       vCardNotifyOnCompletionEmails: initialData?.vCardNotifyOnCompletionEmails?.length ? initialData.vCardNotifyOnCompletionEmails.join(',') : '',
-      // vCardPortalUrl: initialData.vCardPortalUrl || '',
       active: Object.prototype.hasOwnProperty.call(initialData, 'active') ? !!initialData.active : true,
       vCardHideCCBINNumber: initialData.vCardHideCCBINNumber || false,
       bin: initialData.bin || '',
@@ -421,7 +420,6 @@ class components_forms_globalVendorProcedureVCard extends Component {
               action={this.standardFormAction}
               label="Notes"
               disabled={this.props.disabled}
-            // hideError={!form.notes.touched}
             />
           </div>
         </div>
@@ -453,4 +451,3 @@ const deliveryOptions = {
 const binOptions = Utils.getGalileoBinDropdownOptions();
 
 
-// GENERATOR_TYPE='component';

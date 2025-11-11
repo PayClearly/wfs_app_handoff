@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_approvedStatements = createSelector('selectors_approvedStatements',
 

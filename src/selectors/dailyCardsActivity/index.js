@@ -1,7 +1,6 @@
 import createSelector from 'selector';
 
 import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_dailyCardsActivity = createSelector('selectors_dailyCardsActivity',
 
@@ -111,4 +110,3 @@ function _generateDefaultMonthData(thisMonth, thisYear) {
   }, {});
 }
 
-// GENERATOR_TYPE='selector';

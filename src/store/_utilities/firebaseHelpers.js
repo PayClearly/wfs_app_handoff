@@ -142,14 +142,10 @@ export function watchValuesWithFinalCallback(path, children, callback, finalCall
   return watchValues(path, children, callback).then(() => finalCallback());
 }
 
-// function watchValuesWithBatchedCallback(path, children, callback, batchedCallback) {
-//   return Promise.all(
 //     children.map((child) => {
 //       watchValue(`${path}/${child}`, callback);
-//       return _ref(`${path}/${child}`).once('value').then(snap => snap.val());
 //       // return _ref(`${path}/${child}`).once('value').then(snap => snap.val());
 //     })).then((items) => {
-//     return batchedCallback(items.reduce((acc, item) => ({ ...acc, [item._id]: item }), {}), children);
 //   });
 // }
 
@@ -177,14 +173,6 @@ export function getContext(path, callback, options = {}) {
 }
 
 export function watchCollection(path, callback, options = {}) {
-  /*
-  return _ref(path).once('value')
-    .then((snap) => {
-
-     //  console.log(snap);
-      callback(snap.val() || {}, path);
-    });
-  */
 
   return Promise.all([
     _hasChildren(path),

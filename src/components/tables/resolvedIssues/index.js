@@ -102,4 +102,3 @@ const FormatAmount = (amount) => {
   return (amount) ? numeral(amount).format('$0,0.00') : null;
 };
 
-// GENERATOR_TYPE='component';

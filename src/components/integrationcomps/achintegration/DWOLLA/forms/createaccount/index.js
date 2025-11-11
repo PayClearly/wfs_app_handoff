@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -121,7 +120,6 @@ class components_integrationcomps_achintegration_DWOLLA_forms_createaccount exte
   validate = (values) => {
     const errors = {};
 
-    // if (values.adminEmail && !this.checkType('EmailAddress', values.adminEmail)) {
     //   errors.adminEmail = Utils.typesvalidator.validationErrorMsgs.email;
     // }
 

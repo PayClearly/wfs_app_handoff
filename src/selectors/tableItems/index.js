@@ -136,4 +136,3 @@ function _escapeRegExp(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
 
-// GENERATOR_TYPE='selector';

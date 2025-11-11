@@ -1,10 +1,7 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -182,7 +179,6 @@ class components_tables_components_multiFilterAPIFirst extends Component {
               buttonText="Search"
               onClick={this.setFilters}
               disabled={_try(() => !formsHaveValue)}
-              //   disabled={false}
               ariaLabel="Set Search Filters"
             />
             <Components.button
@@ -267,4 +263,3 @@ function _transformFiltersToQueryParams(filters) {
   }, {});
 }
 
-// GENERATOR_TYPE='component';

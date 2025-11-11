@@ -12,21 +12,10 @@ import Components from 'components';
 
 import './index.scss';
 
-// const makeMapStateToProps = () => {
-//   const filteredAndSortedItemsSelector = Selectors.tableItems();
-//   const mapStateToProps = (state, props) => {
-//     return ({
-//       paymentStatuses: props.nestedInBatch ? _getNestedInBatchData(Selectors.paymentHistoryTableData(state), props)
 // : Selectors.paymentHistoryTableData(state),
-//       filteredAndSortedItems: props.nestedInBatch ? _getNestedInBatchFilteredItems(state, props)
 // : filteredAndSortedItemsSelector(state, {
-//    filterName: 'Components.tables.paymenthistory',
-//    dataToFilter: Selectors.paymentHistoryTableData(state) }),
-//       paymentPipelinePreferences: state.account.paymentPipelinePreferences.data.item,
-//       organization: state.organization.data,
 //     });
 //   };
-//   return mapStateToProps;
 // };
 const mapStateToProps = (state, props) => ({
   paymentStatuses: Selectors.paymentHistoryTableData(state),
@@ -139,7 +128,6 @@ class components_tables_paymenthistory extends Component {
         dataKey: 'sentTime',
         sortable: false,
         default: '',
-        // cellRenderer: SubmittedDate,
         exportFormatter: SubmittedDate,
         disableRender: true,
       },
@@ -310,4 +298,3 @@ function FormatAmount(amount) {
   return (amount) ? numeral(amount).format('$0,0.00') : null;
 }
 
-// GENERATOR_TYPE='component';

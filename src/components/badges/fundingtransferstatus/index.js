@@ -2,10 +2,6 @@ import { connect, Component } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 
@@ -24,21 +20,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_badges_fu
 
 // Internal Helper Functions ...
 function _badgeType(status) {
-  // switch (status) {
-  //   case 'processed':
-  //     return 'primary';
 
-  //   case 'cancelled':
-  //   case 'failed':
-  //     return 'danger';
 
-  //   case 'reclaimed':
-  //   case 'complete':
-  //     return 'success';
 
-  //   case 'pending':
-  //   default:
-  //     return 'secondary';
   // }
   if (status === 'complete') {
     return 'success';

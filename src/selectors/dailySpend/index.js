@@ -204,4 +204,3 @@ function _generateDailySpendTestData() {
   return testPaymentsData;
 }
 
-// GENERATOR_TYPE='selector';

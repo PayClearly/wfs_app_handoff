@@ -59,12 +59,6 @@ export function PaymentInfoHeader({
     setFundedAgoInterval(interval);
   };
 
-  /* Note:
-     If the payment has been funded, calculate the time since it was funded
-     If the payment has been funded for less than 5 minutes, warning message will be displayed.
-     If the payment has been funded for more than 5 minutes, stop interval and remove warning message.
-     useEffect will fire on load and when paymentStatusFundedData changes
-  */
   useEffect(() => {
     if (paymentStatusFundedData?._at) {
       calculateFundedAgo(paymentStatusFundedData);

@@ -338,7 +338,6 @@ class components_uploaders_payment extends Component {
             uploadAndCreate
             add={() => this.addPayment(false)}
             instructions={<h5>Upload a supported <b>csv</b> file or start creating your payments manually</h5>}
-            // title="Upload Payments"
             dropzoneError={this.state.uploadingError}
             onDrop={this.onDrop}
             featureName="payment"
@@ -770,7 +769,6 @@ const _rubiconTxtToJSON = (data, template) => new Promise((resolve, reject) => {
   }
 });
 
-// GENERATOR_TYPE='component';
 
 const _wexAP3ToJSON = (data, template) => new Promise((resolve, reject) => {
   try {

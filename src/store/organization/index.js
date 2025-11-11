@@ -4,7 +4,6 @@ import { createActionTypes, reducerCreator } from 'store/_utilities/statusReduce
 // Action Creators
 import * as accounts from 'store/accounts';
 
-// Import Child Ducks
 import * as roles from 'store/organization/roles';
 
 const namespace = 'ORGANIZATION';

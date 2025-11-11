@@ -367,4 +367,3 @@ const Total = (amount) => {
 function _createReturnFileDate(at, format) {
   return Utils.dates.dateToDay(at, format);
 }
-// GENERATOR_TYPE='component';

@@ -3,9 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import numeral from 'numeral';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -62,4 +59,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_modals_re
 const _formatLastFour = (lastFour) => {
   return `*${numeral(lastFour).format('0000')}`;
 };
-// GENERATOR_TYPE='component';

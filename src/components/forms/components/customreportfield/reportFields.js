@@ -377,32 +377,10 @@ export const paymentPipelinePreferencesFields = {
   },
 };
 
-// export const customFieldOptions = [, {
-//     name: 'Advertiser Number',
-//     type: 'Char',
-//     description: 'The ID associated with the advertiser submitted with the original payment creation. This is requested by vendors who require the Advertiser ID when processing payments. This does not apply to all payments.',
 //   }, {
-//     name: 'Agency Name',
-//     type: 'Char',
-//     description: 'The name of the Agency that was submitted with the original payment creation.',
 //   }, {
-//     name: 'Candidate',
-//     type: 'Char',
-//     description: 'The Issue/Candidate/Advertiser submitted with the original payment creation.',
 //   }, {
-//     name: 'Invoice Number',
-//     type: 'Num',
-//     description: 'The Invoice number submitted with the original payment creation.',
 //   }, {
-//     name: 'Market',
-//     type: 'Char',
-//     description: 'The market for advertisement submitted with the original payment creation.',
 //   }, {
-//     name: 'Media Type',
-//     type: 'Char',
-//     description: 'The media type (e.g. TV, Radio, Cable, etc...) submitted with the original payment creation.',
 //   }, {
-//     name: 'Memo',
-//     type: 'Char',
-//     description: 'The memo submitted with the original payment creation. This is a free field.',
 //   }];

@@ -2,11 +2,8 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { IonPage, IonContent, IonHeader, IonFooter, IonButtons, IonButton, IonIcon, IonToolbar, IonTitle, IonSearchbar, IonList, IonItem, IonLabel } from '@ionic/react';
 import { close } from 'ionicons/icons';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -96,4 +93,3 @@ const _sortAlphabetically = (categories) => {
   return categories.sort((a, b) => a.label.localeCompare(b.label));
 };
 
-// GENERATOR_TYPE='component';

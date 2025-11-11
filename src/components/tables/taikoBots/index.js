@@ -332,4 +332,3 @@ class componentsTablesTaikoBots extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(componentsTablesTaikoBots);
 
-// GENERATOR_TYPE='component';

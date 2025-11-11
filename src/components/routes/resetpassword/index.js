@@ -4,9 +4,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import classNames from 'classnames';
 import { CSSTransition } from 'react-transition-group';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import logo from 'assets/logos/logo.png';

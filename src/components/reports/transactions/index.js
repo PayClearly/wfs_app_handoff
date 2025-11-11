@@ -14,7 +14,6 @@ import {
   DropdownItem,
 } from 'reactstrap';
 
-// import Utils from 'utils';
 import Components from 'components';
 import Store from 'store';
 
@@ -225,7 +224,6 @@ class components_reports_transactions extends Component {
       type,
       isCustomField,
       sort: true,
-      // align: type === 'Cur' ? 'right' : 'left',
       sortCaret,
       formatter: (cell) => {
         if (cell === null || cell === undefined) {
@@ -333,7 +331,6 @@ class components_reports_transactions extends Component {
                 hover
                 loading={status.fetching && status.fetched}
                 noDataIndication={() => {
-                  // If no data here due ot no card say this
                   if (!status.fetched) {
                     return <Components.spinner style={{ minHeight: '300px' }} />;
                   }
@@ -356,7 +353,6 @@ class components_reports_transactions extends Component {
 export default connect(mapStateToProps, mapDispatchToProps)(components_reports_transactions);
 
 // Internal Helper Functions ...
-// function from stack overflow
 const _formatCurrency = (amount) => {
   try {
     const negativeSign = amount < 0 ? '-' : '';
@@ -369,4 +365,3 @@ const _formatCurrency = (amount) => {
   }
 };
 
-// GENERATOR_TYPE='component';

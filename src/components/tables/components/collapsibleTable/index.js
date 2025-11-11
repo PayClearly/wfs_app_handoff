@@ -6,11 +6,8 @@ import { Collapse } from 'react-collapse';
 import download from 'downloadjs';
 import { Parser } from 'json2csv';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -196,7 +193,6 @@ class components_tables_components_collapsibleTable extends Component {
             )}
           {
             columns.map((column) => {
-              // this is a temporary measure until we get a better version of table exports completed. for now we
               // will disable rendering on columns that we dont want to show but we want in our exported items
               if (column.disableRender) {
                 return null;
@@ -295,7 +291,6 @@ class components_tables_components_collapsibleTable extends Component {
       row = this.props.adapter(row);
     }
 
-    // if no data to render return null
     if (!row) { return null; }
 
     // expanded settings
@@ -473,10 +468,8 @@ class components_tables_components_collapsibleTable extends Component {
         if (index === 0) {
           acc['PayClearly Id'] = row._id || row.id || '-';
         }
-        // If disabled or actions (buttons) then don't include in the file
         if (column.disableExport || !column.label || column.label === 'Actions') { return acc; }
 
-        // If there is an exportFormatter use it
         if (column.exportFormatter) {
           fieldValue = column.exportFormatter(fieldValue) || '-';
         } else {
@@ -584,14 +577,12 @@ class components_tables_components_collapsibleTable extends Component {
     let noDataText = this.props.noDataText || 'No data available';
     if (this.props.typeForNoDataText) { noDataText = filteringInProgress ? `No Matching ${this.props.typeForNoDataText}` : `No ${this.props.typeForNoDataText} Available`; }
 
-    // This makes sure the table doesn't attempt to render all items while waiting for pagination state to initialize
     let itemsToRender = itemOrder;
     if (paginate) {
       const havePaginationState = _try(() => table.pagination.currentPage > -1) && table.pagination.rowsPerPage;
       itemsToRender = havePaginationState ? itemOrder.slice(table.pagination.currentPage * table.pagination.rowsPerPage, (table.pagination.currentPage * table.pagination.rowsPerPage) + table.pagination.rowsPerPage) : [];
     }
 
-    // For update-able table scoping
     if (this.props.setItemScopeForUpdate) {
       this.props.setItemScopeForUpdate(itemsToRender.reduce((acc, id) => { acc[id] = true; return acc; }, {}));
     }

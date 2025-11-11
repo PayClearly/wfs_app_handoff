@@ -218,5 +218,4 @@ const selectors_countryCodes = createSelector('selectors_countryCodes', () => {
 
 export default selectors_countryCodes;
 
-// GENERATOR_TYPE='selector';
 

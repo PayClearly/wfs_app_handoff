@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import firebase from 'firebase';
 
-// Import Child Ducks
 import * as access from 'store/user/access';
 import * as privileges from 'store/user/privileges';
 import * as profile from 'store/user/profile';

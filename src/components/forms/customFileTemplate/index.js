@@ -2,11 +2,9 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import axios from 'axios';
 
 import { Collapse } from 'react-collapse';
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -254,4 +252,3 @@ const _checkForDuplicates = (values = [], mode) => {
   return duplicates.join(', ');
 };
 
-// GENERATOR_TYPE='component';

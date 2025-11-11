@@ -25,4 +25,3 @@ const selectors_vendorsByGroup = createSelector('selectors_vendorsByGroup',
 
 export default selectors_vendorsByGroup;
 
-// GENERATOR_TYPE='selector';

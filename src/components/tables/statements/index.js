@@ -3,9 +3,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 import Resources from 'resources';
 
@@ -184,7 +182,6 @@ class components_tables_statements extends Component {
   render() {
     const { filterValue } = this.state;
     const { statements = {} } = this.props;
-    // if (!Object.keys(statements).length) return <Components.spinner />;
 
     const data = Object.keys(statements).map(key => this.getRowData(statements[key], this.props[key] || {}));
 
@@ -241,4 +238,3 @@ function _formatLessThanTen(time) {
   return time < 10 ? `0${time}` : time;
 }
 
-// GENERATOR_TYPE='component';

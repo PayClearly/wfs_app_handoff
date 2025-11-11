@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -15,7 +14,6 @@ const mapStateToProps = (state, props) => {
     invoiceStatus: state.account.invoices.status,
     forms: state.forms,
     derivedFormData: _try(() => Selectors.paymentform(props.id)(state), {}),
-    // derived: _try(() => Selectors.invoiceform(props.id)(state), null),
     paymentStatus: state.account.paymentStatuses.status,
     instantTransfer: _try(() => Selectors.funding(state).instantTransfer, {}),
     annotationsStatus: state.account.annotations.status,
@@ -58,7 +56,6 @@ class components_modals_invoicelabeller_modal extends Component {
       this.setState({ lines: this.props.annotations.lines });
     }
 
-    // if there is a payment form, aka from create vendor modal, go to payment form
     if (_try(() => prevProps.forms['Components.forms.payment'][prevProps.id]) && !this.state.paymentFormActive) {
       this.setState({ paymentFormActive: true });
     }

@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import md5 from 'md5';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -25,7 +24,6 @@ const mapDispatchToProps = (dispatch, props) => {
     openRegisterNotificationsModal: () => {
       dispatch(Store.router.openModal('Components.modals.notificationsmethodsetup', {}));
     },
-    // openToast: (namespace, message) => {
     //   dispatch(Store.router.openToast(namespace, { message }));
     // },
     updatePassword: (currentPassword, newPassword) => {
@@ -50,8 +48,6 @@ class components_usersettings extends Component {
 
 
   componentWillReceiveProps(nextProps) {
-    // if (nextProps.notificationPreferences.status.updated && !nextProps.notificationPreferences.status.updating) {
-    //   this.props.openToast('Components.toasts.success', 'Settings Updated!');
     // }
   }
 

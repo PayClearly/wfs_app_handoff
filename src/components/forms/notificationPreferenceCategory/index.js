@@ -2,9 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -14,7 +12,6 @@ const mapStateToProps = (state, props) => {
   });
 };
 
-// update: Store.account.updateNotificationPreference,
 const mapDispatchToProps = { ...Store.forms };
 
 class components_forms_notificationPreferenceCategory extends Component {

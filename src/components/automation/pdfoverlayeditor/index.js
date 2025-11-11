@@ -5,9 +5,7 @@ import JsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import md5 from 'md5';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -319,4 +317,3 @@ function _cloneCanvas(oldCanvas) {
   return newCanvas;
 }
 
-// GENERATOR_TYPE='component';

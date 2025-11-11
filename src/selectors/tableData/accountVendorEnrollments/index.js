@@ -44,4 +44,3 @@ const _formatAccepts = (accepts) => {
   };
 };
 
-// GENERATOR_TYPE='selector';

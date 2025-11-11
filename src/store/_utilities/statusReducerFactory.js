@@ -9,22 +9,9 @@ const defaultErrorStates = {
   initializingError: undefined,
 };
 
-// export const defaultState = {
-  // fetching: undefined,
-  // updating: undefined,
-  // creating: undefined,
-  // deleting: undefined,
-  // validating: undefined,
-  // submitting: undefined,
-  // initializing: undefined
   // ...defaultErrorStates,
 
   // // is set to true when a FETCH_SUCCESS occurs
-  // fetched: undefined,
-  // validated: undefined,
-  // submitted: undefined,
-  // initialized: undefined,
-  // updated: undefined,
 // };
 
 export function createStatusReducer(n) {

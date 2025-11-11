@@ -60,13 +60,6 @@ function wrap(app) {
 module.exports = wrap;
 
 // POLYFILLS and Global Methods
-// require('core-js/fn/array/find'); // eslint-disable-line global-require
-// require('core-js/fn/array/find-index'); // eslint-disable-line global-require
-// require('core-js/fn/array/includes'); // eslint-disable-line global-require
-// require('core-js/fn/string/includes'); // eslint-disable-line global-require
-// require('core-js/fn/string/includes'); // eslint-disable-line global-require
-// require('core-js/fn/date/now'); // eslint-disable-line global-require
-// require('core-js/fn/date/to-iso-string'); // eslint-disable-line global-require
 
 window._resolve = (object, itemsString, fallback) => {
   if (object === undefined || object === null) { return fallback; }

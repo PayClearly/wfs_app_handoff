@@ -2,8 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
@@ -106,4 +104,3 @@ const filterConfig = {
   },
 };
 
-// GENERATOR_TYPE='component';

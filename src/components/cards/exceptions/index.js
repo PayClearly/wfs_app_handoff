@@ -434,4 +434,3 @@ const filterConfig = {
   },
 };
 
-// GENERATOR_TYPE='component';

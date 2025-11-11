@@ -2,11 +2,6 @@ import { connect, Component, Fragment } from 'component';
 import classNames from 'classnames';
 import { Popover, PopoverBody } from 'reactstrap';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -91,14 +86,12 @@ class components_tables_components_actionWrapper extends Component {
                           if (typeof onDisabledClick === 'function') {
                             onDisabledClick();
                           }
-                          // this.props.toggleOpenPopover();
                         }
                         if (disabled && onDisabledDoubleClick) {
                           if (this.state.disabledClickCount) {
                             if (typeof onDisabledDoubleClick === 'function') {
                               onDisabledDoubleClick();
                             }
-                            // this.props.toggleOpenPopover();
                           } else {
                             this.setState({ disabledClickCount: 1 });
                             setTimeout(() => { this.setState({ disabledClickCount: 0 }); }, 300);
@@ -108,7 +101,6 @@ class components_tables_components_actionWrapper extends Component {
                           if (typeof item.onClick === 'function') {
                             item.onClick();
                           }
-                          // this.props.toggleOpenPopover();
                         }
                       }}
                     >

@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-// import Utils from 'utils';
 
 function utils_hasPolicy(policies, policyTemplate, orgId = null, accountId = null) {
   return policies[policyTemplate.replace('idOrganization', '*').replace('idAccount', '*')] ||

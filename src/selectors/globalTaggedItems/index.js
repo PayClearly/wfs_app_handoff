@@ -3,8 +3,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_globalTaggedItems = createSelector('selectors_globalTaggedItems',
 
@@ -47,7 +45,6 @@ const selectors_globalTaggedItems = createSelector('selectors_globalTaggedItems'
             ['vCard', 'ACH', 'check'].forEach((method) => {
               const PSOP = { ...(group[method] || {}) };
 
-              // const fee = PSOP.fee;
               const credSchema = _try(() => credentialSchemas.data.items[credentialSchemas.collections._ids[PSOP.credentialSchema][0]]) || {};
               if (credSchema && credSchema.active) {
                 _credentialSchemas[PSOP.credentialSchema] = {
@@ -110,13 +107,7 @@ const selectors_globalTaggedItems = createSelector('selectors_globalTaggedItems'
 export default selectors_globalTaggedItems;
 
 
-// function _groupAcceptsPayment(group = {}) {
-//   return Object.values(Object.keys(group).reduce((acc, tagId) => {
-//     return {
 //       ...acc,
-//       vCard: acc.vCard || _try(() => group.vCard.accepts || group.vCard.accepted),
-//       ACH: acc.ACH || _try(() => group.ACH.accepts || group.ACH.accepted),
-//       check: acc.check || _try(() => group.check.accepts || group.check.accepted),
 //     };
 //   }, { vCard: false, ACH: false, check: false })).some(accepts => accepts);
 // }

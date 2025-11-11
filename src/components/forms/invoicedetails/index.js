@@ -3,9 +3,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import numeral from 'numeral';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -59,7 +57,6 @@ class components_forms_invoicedetails extends Component {
     });
   }
   componentWillUnmount() {
-    // this.props.destroy(this.state.name, this.state.key);
   }
 
   onTypeAheadChange = (options) => {
@@ -94,7 +91,6 @@ class components_forms_invoicedetails extends Component {
       [field]: value,
     };
     
-    // if (field === 'approvers' && !value && this.state.form._values.approvers) {
     //   fields.approvers = [];
     // }
 
@@ -303,4 +299,3 @@ const _pad = (n) => {
   return (n < 10) ? `0${n}` : n;
 };
 
-// GENERATOR_TYPE='component';

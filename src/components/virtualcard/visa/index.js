@@ -2,11 +2,8 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import classNames from 'classnames';
 import logoVisa from 'assets/logos/Visa_Logo.png';
 
-// import Utils from 'utils';
-// import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 

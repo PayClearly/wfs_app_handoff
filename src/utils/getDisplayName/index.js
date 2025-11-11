@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-// import Utils from 'utils';
 
 function utils_getDisplayName(user) {
   if (user.firstName) {

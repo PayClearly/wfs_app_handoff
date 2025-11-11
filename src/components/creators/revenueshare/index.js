@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import numeral from 'numeral';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -204,4 +203,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_creators_
 // Internal Helper Functions ...
 function _percentToDecimal(percent) { return `.${String(numeral(percent).divide(100).value()).split('.')[1]}`; }
 
-// GENERATOR_TYPE='component';

@@ -1,6 +1,5 @@
 
 import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_uploaders_clientVendorLinkForm = (key) => {
 
@@ -46,4 +45,3 @@ const _adaptToCreatable = (values, credentialsForm) => {
 
 const clientVendorLinkIdSeparator = '-';
 
-// GENERATOR_TYPE='selector';

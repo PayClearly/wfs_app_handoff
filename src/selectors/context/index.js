@@ -4,8 +4,6 @@ import md5 from 'md5';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_context = createSelector('selectors_context',
 

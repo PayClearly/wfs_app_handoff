@@ -9,8 +9,6 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import overlayFactory from 'react-bootstrap-table2-overlay';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-// import Selectors from 'selectors';
-// import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
@@ -211,7 +209,6 @@ class components_reports_spendbyvendor extends Component {
         text,
         type,
         sort: true,
-        // align: type === 'Cur' ? 'right' : 'left',
         sortCaret,
         formatter: (cell) => {
           if (cell === null || cell === undefined) return '';
@@ -332,7 +329,6 @@ class components_reports_spendbyvendor extends Component {
 export default connect(mapStateToProps, mapDispatchToProps)(components_reports_spendbyvendor);
 
 // Internal Helper Functions ...
-// function from stack overflow
 const _formatCurrency = (amount) => {
   try {
     const negativeSign = amount < 0 ? '-' : '';

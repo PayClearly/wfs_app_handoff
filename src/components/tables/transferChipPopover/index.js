@@ -3,7 +3,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import numeral from 'numeral';
 import { PopoverHeader, PopoverBody } from 'reactstrap';
@@ -39,7 +38,6 @@ class components_tables_transferChipPopover extends Component {
   navigateToDetails = () => {
     const transferId = this.props.refId || null;
     this.props.closeModal();
-    // if (this.props.closeAssociatedModal) this.props.closeAssociatedModal();
     this.props.goToTranfers({ transferId });
   }
 

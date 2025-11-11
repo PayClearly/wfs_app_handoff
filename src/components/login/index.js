@@ -55,7 +55,6 @@ class components_login extends Component {
   }
 
   componentWillUnmount() {
-    // If we are unmounting AND showTwoFactorLogin is true, we are logged in and most likely didn't fetch data restricted by twoFactorAuth (resync accounts)
     if (this.props.showTwoFactorLogin) {
       if (this.props.router.route.params.orgId || this.props.router.route.params.accountId) {
         this.props.syncAccounts(this.props.router.route.params);
@@ -69,7 +68,6 @@ class components_login extends Component {
     if (!this.state.loginEnabled) return;
 
     const { form } = this.state;
-    // This value is undefined until a user is logged in, therefore we "login" and sync before two factor auth
     if (this.props.showTwoFactorLogin) {
       return this.props.verifyTwoFactorAuthToken(form._values);
     }

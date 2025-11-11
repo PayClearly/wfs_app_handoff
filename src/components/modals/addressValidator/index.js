@@ -1,10 +1,8 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -95,8 +93,6 @@ class components_modals_addressValidator extends Component {
   render() {
     const { vendor, status, validatedAddress, accountVendorStatus } = this.props;
     const checkAddressSetOnVendor = _try(() => vendor.checkAddressLine1 || vendor.checkAddressLine2 || vendor.checkCity || vendor.checkStateProv || vendor.checkPostalCode);
-    // const addressSuccessfullyValidated = _try(() => validatedAddress.checkAddressLine1 || validatedAddress.checkAddressLine2 || validatedAddress.checkCity || validatedAddress.checkStateProv || validatedAddress.checkPostalCode);
-    // const checkAddressValidationFailed = status.fetchingError;
     const alreadyForceValidated = vendor.checkAddressUserForceValidated;
     const displayForceValidation = checkAddressSetOnVendor && !alreadyForceValidated;
 

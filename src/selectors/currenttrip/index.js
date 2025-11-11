@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_currenttrip = createSelector('selectors_currenttrip',
   state => state.wfs.trips.data,

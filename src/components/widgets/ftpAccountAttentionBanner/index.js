@@ -1,10 +1,6 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -40,7 +36,6 @@ class components_widgets_ftpAccountAttentionBanner extends Component {
     const orgName = _try(() => orgs[organization].name);
     const accName = _try(() => accs[account].name);
 
-    // if (!orgName || !accName) return null;
     return (
       <div className="components_widgets_ftpAccountAttentionBanner" style={{ marginBottom: '1rem' }}>
         <div className={`body w-100 card ${organization === this.props.currentOrg && account === this.props.currentAcc ? 'selected' : ''}`} style={{ padding: '.5rem', cursor: 'pointer' }} onClick={() => this.props.changeContext(organization, account)}>

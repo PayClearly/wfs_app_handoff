@@ -9,11 +9,8 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import overlayFactory from 'react-bootstrap-table2-overlay';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -345,7 +342,6 @@ const _getDateString = (string) => {
   return `${new Date(`${string.slice(0, 4)}/${string.slice(4, 6)}/${string.slice(6)}`).toISOString().split('T')[0]}`;
 };
 
-// function from stack overflow
 const _formatCurrency = (amount) => {
   try {
     const negativeSign = amount < 0 ? '-' : '';
@@ -358,4 +354,3 @@ const _formatCurrency = (amount) => {
   }
 };
 
-// GENERATOR_TYPE='component';

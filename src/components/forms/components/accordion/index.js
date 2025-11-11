@@ -4,10 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { Collapse, UnmountClosed } from 'react-collapse';
 import classnames from 'classnames';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 

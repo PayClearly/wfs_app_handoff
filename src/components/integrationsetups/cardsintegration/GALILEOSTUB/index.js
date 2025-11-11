@@ -1,10 +1,8 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -126,9 +124,7 @@ class components_integrationsetups_cardsintegration_GALILEOSTUB extends Componen
                     </div>
                     <div className="row mb-3">
                       <div className="col-12">
-                        {/* This will be a button to continue enrollment steps
-                      <Components.button />
-                      */}
+                        {}
                       </div>
                     </div>
                   </Fragment>

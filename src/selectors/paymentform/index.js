@@ -42,8 +42,6 @@ const selectors_paymentform = (key) => Utils.cachedSelector(
   ) => {
 
     if (!form) { return null; }
-    // const formErps =
-    // const erpFormKey = `erpFields-${paymentPipelinePreferences.allowBatchERPOverride ? 'override' : form._key}`;
     const populatedErpOverrides = Object.keys(erpOverrides || {}).reduce((acc, cur) => {
       if (erpOverrides[cur]) { acc[cur] = erpOverrides[cur]; }
       return acc;
@@ -215,4 +213,3 @@ const _timeToData = (time) => {
 
 const clientVendorLinkIdSeparator = '-';
 
-// GENERATOR_TYPE='selector';

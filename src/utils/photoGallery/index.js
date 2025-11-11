@@ -78,7 +78,6 @@ const savePicture = async (photo, fileName) => {
 
   if (isPlatform('hybrid')) {
     // Display the new image by rewriting the 'file://' path to HTTP
-    // Details: https://ionicframework.com/docs/building/webview#file-protocol
     return {
       filepath: savedFile.uri,
       webviewPath: Capacitor.convertFileSrc(savedFile.uri),

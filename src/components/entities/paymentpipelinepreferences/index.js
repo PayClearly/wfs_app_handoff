@@ -5,7 +5,6 @@ import {
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -61,7 +60,6 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
 
   state = {
     editBtnText: 'Edit Preferences',
-    // formName: 'Components.forms.paymentpipelinepreferences',
   };
 
   fieldsTitles = {
@@ -251,19 +249,12 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
 }
 
 // Internal Helper Functions ...
-// function getUpdatedFields(form) {
-//   const fieldsToParse = ['defaultCommissionRate', 'commissionOffsetPercentage', 'defaultValidThroughPeriod'];
-//   const fields = Object.keys(form._values);
 
-//   return fields.reduce((acc, key) => {
-//     if (form[key].initial !== form._values[key]) {
-//       if (fieldsToParse.includes(key)) {
 //         acc[key] = parseFloat(form._values[key]);
 //       } else {
 //         acc[key] = form._values[key];
 //       }
 //     }
-//     return acc;
 //   }, {});
 // }
 

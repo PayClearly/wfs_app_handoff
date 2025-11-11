@@ -2,10 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import ovalLoader from 'assets/loaders/oval.svg';
 import ovalLoaderWhite from 'assets/loaders/oval-white.svg';

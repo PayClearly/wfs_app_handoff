@@ -128,7 +128,6 @@ class components_tables_plasticcards extends Component {
       title: 'Unblock Card',
       show: () => status === 'blocked'
         // Currently EFS is our only Plastic provider, restricted to that
-        // TODO :: Update this when we add new providers
         && ['EFS', 'STUB'].some((provider) => provider === this.props.cardProvider)
         && (
           (rootLevelRoles && (rootLevelRoles.base_admin || rootLevelRoles.base_superAdmin))
@@ -298,7 +297,6 @@ const filterConfig = {
         on_hold: { display: 'On Hold' },
         cancelled: { display: 'Cancelled' },
         stolen: { display: 'Stolen' },
-        // lost: { display: 'Lost' },
       },
     },
     issuingStatus: {
@@ -333,7 +331,6 @@ const filterConfig = {
         on_hold: { display: 'On Hold' },
         cancelled: { display: 'Cancelled' },
         stolen: { display: 'Stolen' },
-        // lost: { display: 'Lost' },
       },
     },
     issuingStatus: {
@@ -392,4 +389,3 @@ const issuingStatusMap = {
   reissue: 'Your reissued card is currently being processed.',
 };
 
-// GENERATOR_TYPE='component';

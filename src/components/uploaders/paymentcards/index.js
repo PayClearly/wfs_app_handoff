@@ -135,7 +135,6 @@ class components_uploaders_paymentcards extends Component {
 
 
   componentWillReceiveProps(nextProps = {}) {
-    // this is what i think this will probably look like to close the mdoal on error
     if (this.props.status && !this.props.status.creatingError && nextProps.status.creatingError) {
       this.onCreate();
       this.props.closeModal();
@@ -353,7 +352,6 @@ function _aggregateFormData(derivedForms, uploaded) {
       // calculate purchaseCard totals
       const amount = parseFloat(purchaseCard.virtualCard.amount);
       const method = _try(() => purchaseCard.method);
-      // const isCommission = _try(() => uploaded[formId].isCommission);
       let category;
       if (!derived.valid || !acc.amounts[method]) {
         category = 'notReady';
@@ -395,7 +393,6 @@ function _aggregateFormData(derivedForms, uploaded) {
     });
 }
 
-// GENERATOR_TYPE='component';
 function _findOption(options, value, returnOriginalValue) {
   const _fuzzyMatch = (val, val2) => (val || '').toLowerCase() === (val2 || '').toLowerCase();
 

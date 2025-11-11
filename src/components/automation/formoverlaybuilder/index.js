@@ -5,10 +5,6 @@ import circle from 'assets/logos/form-circle.png';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 
@@ -519,7 +515,6 @@ function eventToPosition(e) {
   const clientX = e.clientX;
   const clientY = e.clientY;
 
-  // const myElement = e.target; 
   const myElement = document.querySelector('#overlay-builder'); 
   const elementPositions = myElement.getBoundingClientRect();
 
@@ -533,4 +528,3 @@ function eventToPosition(e) {
   return { x: percentageX, y: percentageY };
 }
 
-// GENERATOR_TYPE='component';

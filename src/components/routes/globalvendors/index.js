@@ -123,4 +123,3 @@ class componentsRoutesGlobalvendors extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(componentsRoutesGlobalvendors);
 
-// GENERATOR_TYPE='component';

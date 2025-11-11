@@ -14,8 +14,6 @@ export default reducer;
 
 // action creators
 
-// export function clear() {
-//   return (dispatch, getState) => {
 //     removeListeners(getState().account.usps.data.paths);
 //     dispatch({ type: actionTypes.clear });
 //   };

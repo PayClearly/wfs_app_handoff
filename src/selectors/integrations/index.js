@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Selectors from 'selectors';
 
 const selectors_integrations = createSelector('selectors_integrations',
@@ -104,7 +103,6 @@ function selectIntegration(integration, name, definitions = {}, context, showMoc
   };
 }
 
-// GENERATOR_TYPE='selector';
 
 // private helpers
 

@@ -1,11 +1,7 @@
 import { connect, Component } from 'component';
 import { IonItem, IonGrid, IonRow, IonCol } from '@ionic/react';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -34,8 +30,6 @@ class components_ionic_document extends Component {
     let statusClass;
     let paymentTypeString;
     let circle;
-    // TODO : Shown data will change on list item
-    // TODO : Clean up this code when we have the desired data set in stone (Irfan)
     switch (this.props.type) {
       case 'salesOrders':
         title = 'SO #';

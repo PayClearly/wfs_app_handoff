@@ -66,7 +66,6 @@ class components_entities_paymentcard extends Component {
     const validThroughUTCNoon = _try(() => new Date(validThrough));
     _try(() => validThroughUTCNoon.setUTCHours(12, 0, 0, 0));
     
-    // New card amount is the available balance plus total already spent
     const amount = Utils.addDollars([Number(availableBalance), Number(_try(() => transactionInformation.totalAuthorized, 0))]);
 
     // determine if virtual card is getting changed
@@ -186,4 +185,3 @@ function _compareAndGetEFSCustomFields(current = {}, incoming = {}) {
   return diff;
 }
 
-// GENERATOR_TYPE='component';

@@ -80,7 +80,6 @@ export function sync(params) {
         return acc;
       }, {}) : items;
       
-      // const parsedData = parseData(items, accounts, organizations);
       dispatch({ type: actionTypes.fetchSuccess, data: toReturn }); 
     });
   }

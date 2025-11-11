@@ -200,7 +200,6 @@ class components_integrationManager extends Component {
                     const items = this.generateGeneralMenuItems(true);
                     return Object.keys(items)
                       .map((key) => (
-                        // if the selected options matches a key from the overall options remove it from the menu to avoid duplication
                         <optgroup label={items[key].display}>
                           {Object.keys(items[key].subItems).map((subKey) => {
                             if (!items[key].subItems[subKey].display) return null;

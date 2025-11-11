@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import numeral from 'numeral';
 
 import Utils from 'utils';
-// import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
@@ -41,8 +40,6 @@ class components_tables_opsPayments extends Component {
 
 
   componentWillUnmount() {
-    // if (_try(() => this.props.routeParams.transferId)) {
-    //   this.props.removeQueryParams(['transferId']);
     // }
   }
   linkRenderer = (paymentStatus) => {
@@ -100,44 +97,16 @@ class components_tables_opsPayments extends Component {
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_opsPayments);
 
 // Internal Helper Functions ...
-// const filterConfig = {
-//   multiFilter: {
-//     vendorName: {
-//       key: 'vendorName',
-//       type: 'string',
-//       display: 'Vendor',
 //     },
-//     createdTimeAfter: {
-//       key: 'createdAt',
-//       type: 'date',
-//       display: 'Date From',
-//       condition: 'isAfter',
 //     },
-//     createdTimeBefore: {
-//       key: 'createdAt',
-//       type: 'date',
-//       display: 'Date To',
-//       condition: 'isBefore',
 //     },
-//     status: {
-//       key: 'status',
-//       type: 'option',
-//       display: 'Status',
-//     options: {
-//       Scheduled: { display: 'Scheduled' },
 //       'Needs Approval': { display: 'Needs Approval' },
 //       'Pending...': { display: 'Pending' },
 //       'Processing...': { display: 'Processing' },
 //       'Verifying...': { display: 'Verifying' },
 //       'Funding...': { display: 'Funding' },
 //       'Tracking...': { display: 'Tracking' },
-//       Complete: { display: 'Completed' },
-//       Cancelled: { display: 'Cancelled' },
 //     },
-//     amount: {
-//       key: 'amount',
-//       type: 'number',
-//       display: 'Amount',
 //     },
 //   },
 // };
@@ -146,4 +115,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_tables_op
 const FormatAmount = (amount) => {
   return (amount) ? numeral(amount).format('$0,0.00') : null;
 };
-// GENERATOR_TYPE='component';

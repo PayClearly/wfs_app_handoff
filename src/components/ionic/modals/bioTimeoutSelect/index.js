@@ -2,17 +2,14 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { IonIcon, IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonContent, IonItem, IonLabel, IonList } from '@ionic/react';
 import { checkmark } from 'ionicons/icons'
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({
-    // biometricsTimeout: _try(() => state.wfs.preferences.data.biometricsTimeout),
     deviceSecurity: Selectors.deviceSecurity(state),
   });
 };

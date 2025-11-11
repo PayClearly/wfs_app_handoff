@@ -3,11 +3,9 @@ import {
 } from 'component';
 import FuzzySet from 'fuzzyset.js';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -44,7 +42,6 @@ class components_forms_customFileField extends Component {
     initialize(this.state.name, formKey, {
       fieldName: _formatFieldName(initialData),
       pcField: _formatPcField(initialData) || (initialData.fieldName && _fuzzyFieldMatch(initialData.fieldName, templateFields.options)) || [],
-      // lineItemField: initialData.lineItemField || null,
       decoy: '',
     });
     if (parentFormKey && parentFormName) {
@@ -57,7 +54,6 @@ class components_forms_customFileField extends Component {
   }
 
   componentWillUnmount() {
-    // this.props.destroy(this.state.name, this.props.formKey);
   }
 
   onTypeAheadChange = (options) => {
@@ -195,4 +191,3 @@ const _formatPcField = ({ pcField, lineItemField, alias }) => {
  */
 const _formatFieldName = ({ fieldName = '', format }) => ((fieldName && format) ? `${fieldName}?format=${format}` : fieldName);
 
-// GENERATOR_TYPE='component';

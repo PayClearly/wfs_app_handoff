@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 
 import Utils from 'utils';
-// import Selectors from 'selectors';
 
 // Internal Helper Functions ...
 
@@ -46,4 +45,3 @@ const selectors_adhocTrips = createSelector(
 
 export default selectors_adhocTrips;
 
-// GENERATOR_TYPE='selector';

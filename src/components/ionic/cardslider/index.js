@@ -8,11 +8,9 @@ import mastercard from 'assets/myworld.png';
 import contractcard from 'assets/contractcard.png';
 import contractblackcard from 'assets/uvairblackcard.png';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -149,4 +147,3 @@ class components_ionic_cardslider extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_ionic_cardslider);
 
-// GENERATOR_TYPE='component';

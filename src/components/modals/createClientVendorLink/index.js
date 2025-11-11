@@ -1,10 +1,6 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -30,17 +26,10 @@ class components_modals_createClientVendorLink extends Component {
   componentDidMount() {}
   componentWillUnmount() {}
 
-  // onSubmit = () => {
-  //   const form = _try(() => this.props.forms['Components.forms.clientVendorLink'][this.state.formKey], {});
-  //   const data = {
   //     ...form._values,
   //   };
-  //   const _id = `${data.clientId}${clientVendorLinkIdSeparator}${data.vendorId}`;
 
-  //   const credentialsForm = _try(() => this.props.forms[form._children[0].name][form._children[0].key], {});
-  //   if (credentialsForm) data.credentials = credentialsForm._values;
 
-  //   return this.props.createClientVendorLink(_id, data);
   // }
 
   render() {
@@ -74,6 +63,4 @@ class components_modals_createClientVendorLink extends Component {
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_modals_createClientVendorLink);
 
 // Internal Helper Functions ... 
-// const clientVendorLinkIdSeparator = '-';
 
-// GENERATOR_TYPE='component';

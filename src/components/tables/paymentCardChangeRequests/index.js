@@ -119,5 +119,4 @@ const FormatType = (type) => {
   return formattedType;
 };
 
-// GENERATOR_TYPE='component';
 

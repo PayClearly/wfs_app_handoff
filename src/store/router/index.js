@@ -272,7 +272,6 @@ export function toggleCardEnlarged(data) {
 export function openNotAuthed() {
   return (dispatch, getState) => {
     const state = getState();
-    // if biometrics aren't enabled, we shouldn't show this page
     if (_try(() => !state.wfs.data.preferences.useBiometrics)) { return; }
     dispatch({ type: OPEN_NO_AUTH });
   };

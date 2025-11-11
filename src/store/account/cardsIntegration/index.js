@@ -163,7 +163,6 @@ export function sync(organizationId, accountId) {
     }
     dispatch({ type: actionTypes.fetchStart });
 
-    // if in ops dashboard we want to only sync accounts. dont need to sync other resources here 
     const resources = isOps ? { accounts: true } : definition.resources;
     if (getState().appConfig.data.metadata.name === 'wfs') {
       const userData = getState().user.access.data;

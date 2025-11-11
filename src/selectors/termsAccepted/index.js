@@ -17,4 +17,3 @@ const selectors_termsAndConditions = createSelector('selectors_termsAndCondition
 
 export default selectors_termsAndConditions;
 
-// GENERATOR_TYPE='selector';

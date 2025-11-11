@@ -2,11 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { IonItem, IonLabel, IonNote, IonButton, IonIcon, IonText } from '@ionic/react';
 import { caretDownSharp } from 'ionicons/icons';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -66,8 +62,6 @@ class components_ionic_forms_components_select extends Component {
           expand="block"
           style={errorState ? { 'border-color': 'var(--ion-color-danger)' } : {}}
           onClick={() => this.props.openSelectModal(fieldName, this.props.action, this.props.options)}
-          // onIonBlur={() => this.props.action('blur', fieldName)}
-          // onIonFocus={() => this.props.action('focus', fieldName)}
           disabled={this.props.disabled || this.props.readonly || false}
         >
           <div style={{ width: '100%' }} className="space-between">

@@ -444,7 +444,6 @@ class components_forms_payment extends Component {
       fee,
     } = derived;
     const isShowing = !!this.props.isShowing;
-    // if (!isShowing) return <div></div>;
     return (
       <form className="floating-labels components_forms_payment">
         <div className={`row pt-4 ${!this.props.isShowing && 'hideDisplay'}`}>
@@ -781,7 +780,6 @@ class components_forms_payment extends Component {
                       label="I Accept the Service Fee"
                       disabled={this.props.disabled}
                       required
-                    // hideError={!_try(() => form.acceptsVendorFee.touched)}
                     />
                   </div>
                   <br />
@@ -1050,5 +1048,4 @@ function convertToBoolean(str) {
 }
 
 
-// GENERATOR_TYPE='component';
 

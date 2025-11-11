@@ -1,5 +1,4 @@
 import createSelector from 'selector';
-// import Utils from 'utils';
 import Selectors from 'selectors';
 
 const selectors_usersTableData = createSelector('selectors_usersTableData',
@@ -20,7 +19,6 @@ const selectors_usersTableData = createSelector('selectors_usersTableData',
 
       usersTableData[userId] = {
         ...user,
-        // active: user.active !== false || true,
         adminRole,
         organizationRole,
         accountRole,

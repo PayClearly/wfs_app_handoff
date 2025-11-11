@@ -1,10 +1,7 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -188,28 +185,10 @@ const FILTER_CONDITIONS_BY_TYPE = {
     default: 'is',
   },
 };
-// const FILTER_CONDITIONS_BY_TYPE = {
-//   string: {
-//     includes: { display: 'Includes' },
-//     excludes: { display: 'Excludes' },
-//     equals: { display: 'Equals' },
 //   },
-//   number: {
-//     equals: { display: 'Equals' },
-//     greaterThan: { display: 'Is Greater Than (>)' },
-//     lessThan: { display: 'Is Less Than (<)' },
 //   },
-//   bool: {
-//     is: { display: 'Is' },
 //   },
-//   date: {
-//     isBefore: { display: 'Is Before' },
-//     isAfter: { display: 'Is After' },
 //   },
-//   option: {
-//     is: { display: 'Is' },
-//     isNot: { display: 'Is Not' },
 //   },
 // };
 
-// GENERATOR_TYPE='component';

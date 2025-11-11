@@ -103,12 +103,8 @@ export function create(context, data) {
   };
 }
 
-// export function update(organizationId, accountId, vendorId, data) {
-//   return (dispatch) => {
 //     dispatch({ type: actionTypes.updateStart });
-//     return VendorsAPI.updateVendor(organizationId, accountId, vendorId, data)
 //     .then(() => {
-//       return VendorsAPI.updatePaymentStrategies(organizationId, accountId, vendorId, data);
 //     })
 //     .then(() => {
 //       dispatch({ type: actionTypes.updateSuccess });

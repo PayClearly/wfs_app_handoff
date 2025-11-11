@@ -1,4 +1,3 @@
-// import Components from 'components';
 
 const routerConfig = {
   noAuthRoutes: ["error404", "confirmemail", "resetpassword", "termsandconditions"],
@@ -129,4 +128,3 @@ const routerConfig = {
 
 export default routerConfig;
 
-// GENERATOR_TYPE='exporter';

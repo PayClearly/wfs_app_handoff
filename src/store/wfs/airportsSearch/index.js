@@ -2,7 +2,6 @@
 import { createActionTypes, createStatusReducer } from 'store/_utilities/statusReducerFactory';
 import { combineReducers } from 'redux';
 import query from './query';
-// import utils from '../_utils';
 import * as device from '../../device';
 
 const namespace = 'WFS_AIRPORTS_SEARCH';

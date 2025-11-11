@@ -1,7 +1,6 @@
 import { connect, Component } from 'component';
 
 // Third Party Imports ...
-// import { Collapse } from 'react-collapse';
 import numeral from 'numeral';
 
 import Utils from 'utils';
@@ -239,7 +238,6 @@ class components_overviews_paymentstatus_modules_remittance extends Component {
             <h4>Card Details</h4>
             <div className="row">
               {paymentStatus.funded.vCards.map((card, index) => {
-                // const virtualCard = this.props.vCards[card.id];
                 const virtualCard = {
                   ...(vCards[card.id] || {}),
                   ..._try(() => vCardsDenorm.totalsByCard[card.id], {}) || {},

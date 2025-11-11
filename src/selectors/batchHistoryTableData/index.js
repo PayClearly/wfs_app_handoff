@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 
 import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_batchHistoryTableData = createSelector('selectors_batchHistoryTableData',
 
@@ -58,7 +57,6 @@ const selectors_batchHistoryTableData = createSelector('selectors_batchHistoryTa
 
         isFunded = statusIndexAndDisplay.index > 2;
         status = statusIndexAndDisplay.index >= 0 ? statusIndexAndDisplay.display : 'Scheduled';
-        // if (status === 'Scheduled') payAt =
       }
 
       const paymentsWithMemos = paymentsInBatch.filter(paymentId => _try(() => paymentStatuses[paymentId].created.customFields, false));

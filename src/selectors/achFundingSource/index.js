@@ -2,8 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const selectors_achFundingSource = createSelector('selectors_achFundingSource',
 
@@ -25,6 +23,5 @@ const selectors_achFundingSource = createSelector('selectors_achFundingSource',
 
 export default selectors_achFundingSource;
 
-// GENERATOR_TYPE='selector';
 
 // private helpers

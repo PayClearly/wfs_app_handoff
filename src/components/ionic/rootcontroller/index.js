@@ -8,7 +8,6 @@ import firebase from 'firebase';
 import queryString from 'query-string';
 import jwtDecode from 'jwt-decode';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 import Selectors from 'selectors';
@@ -109,7 +108,6 @@ class components_ionic_rootcontroller extends Component {
         });
         return this.props.syncValidations();
       }
-      // if there is no user and no refresh token, let the routeWrapper make the decision to show the login page and have the user
       // manually sign in.
       if (this.props.storageKeys.includes('payclearly.refresh_token')) { this.props.loginUser(this.props.env); }
     });

@@ -84,7 +84,6 @@ class componentsIonicLogin extends Component {
         <CreateAnimation
           ref={this.animation}
           duration={500}
-          // iterations={Infinity}
           easing="ease-out"
           fromTo={[{ property: 'opacity', fromValue: '0', toValue: '1' }]}
           play

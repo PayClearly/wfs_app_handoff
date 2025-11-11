@@ -5,7 +5,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-// import './index.scss';
 
 const mapStateToProps = (state) => ({
   reportTemplates: state.reportTemplates.data.items,
@@ -77,7 +76,6 @@ class components_tables_standardreporttemplates extends Component {
       },
     ];
 
-    // const buttonData = { organizationId, accountId, reportTemplateId, status: reportTemplate.status };
 
     return {
       ...reportTemplate,

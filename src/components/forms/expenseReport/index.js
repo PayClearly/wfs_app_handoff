@@ -1,9 +1,7 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -92,7 +90,6 @@ class components_forms_expenseReport extends Component {
     const errors = {};
 
     if (!values.name) errors.name = 'Field is required';
-    // if (!_try(() => Object.keys(values.expenseIds).length)) errors.expenseIds = 'At least one expense must be selected';
 
     return errors;
   };
@@ -123,9 +120,6 @@ class components_forms_expenseReport extends Component {
               formName={this.state.name}
               formKey={this.state.key}
               action={this.standardFormAction}
-              // label="Expenses"
-              // disabled={this.props.disabled}
-              // hideError={!form.expenseIds.touched}
               // required
 
               pathToData="state.account.expenses.data.items"

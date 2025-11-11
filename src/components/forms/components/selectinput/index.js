@@ -3,10 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import classNames from 'classnames';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 
@@ -59,7 +55,6 @@ class components_forms_components_selectinput extends Component {
             this.props.options &&
             Object.keys(this.props.options)
               .map((key) => {
-                // if the selected options matches a key from the overall options remove it from the menu to avoid duplication
                 const item = this.props.options[key] || {};
                 if (this.props.hasOptGroups) {
                   return (

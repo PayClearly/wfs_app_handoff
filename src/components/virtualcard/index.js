@@ -7,9 +7,6 @@ import clearlyLogo from 'assets/logos/clearly-logo.png';
 import bancorpLogo from 'assets/logos/bancorp.png';
 import logoWex from 'assets/logos/wex-logo.png';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -105,10 +102,8 @@ function _maskCardNumber(cardNumber) {
 }
 
 function _getCardLogo(props, logoOptions = {}) {
-  // if a custom vCard logo has been supplied then use it for Visa and Mastercard
   if (props.accountVCardLogo) { return props.accountVCardLogo; }
 
-  // assumption: all Visa cards will use Bancorp logo and all Mastercards will use Wex logo.
   const cardType = props.cardType && props.cardType.toLowerCase();
 
   switch (cardType) {
@@ -123,4 +118,3 @@ function _getCardLogo(props, logoOptions = {}) {
 
 }
 
-// GENERATOR_TYPE='component';

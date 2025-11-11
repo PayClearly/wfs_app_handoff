@@ -44,7 +44,6 @@ const selectors_funding = createSelector(
     const automaticFundingType = fundingPreferences.automaticFundingType;
     const earmarkEnforced = fundingPreferences.fundingStrategy === 'earmark';
 
-    // const virtualCardAccount = { availableBalance: 0, creditLimit: 0 };
 
     let availableFunds = {};
     let unfundedPayments = {};

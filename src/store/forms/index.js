@@ -279,7 +279,6 @@ export function reducer(state = {}, action) {
     let stateDiff = { ...formState };
     const formsToUpdateAfterDestroy = [];
 
-    // if form has parents, remove child from parents and mark them to update metadata
     if (_try(() => stateDiff[name][key]._parents && stateDiff[name][key]._parents.length)) {
       // Remove child reference from parents
       stateDiff[name][key]._parents.forEach((parent) => {
@@ -293,7 +292,6 @@ export function reducer(state = {}, action) {
         formsToUpdateAfterDestroy.push({ name: parent.name, key: parent.key });
       });
     }
-    // if form has children, remove parent reference from children
     if (_try(() => stateDiff[name][key]._children && stateDiff[name][key]._children.length)) {
       // remove parent reference from children
       stateDiff[name][key]._children.forEach((child) => {

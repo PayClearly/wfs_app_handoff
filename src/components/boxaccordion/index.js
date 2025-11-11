@@ -17,7 +17,6 @@ class components_boxaccordion extends Component {
   };
 
   render() {
-    // const active = this.props.label === this.props.selected;
     return (
       <div className={`components_boxaccordion${this.props.noBottomMargin ? '' : ' mb-3'}`}>
         <div

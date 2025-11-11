@@ -72,11 +72,6 @@ class components_forms_schedulereport extends Component {
       quarterly: { display: 'Quarterly' },
       annually: { display: 'Annually' },
     },
-    // payableStatusOptions: {
-    //   all: { display: 'All' },
-    //   created: { display: 'Created' },
-    //   refunded: { display: 'Refunded' },
-    //   reconciled: { display: 'Reconciled' },
     // },
     exportsOptions: {
       pdf: { display: 'PDF' },
@@ -108,7 +103,6 @@ class components_forms_schedulereport extends Component {
   componentDidMount() {
     // ftps account details load using the sync method when the app loads, but sftp account details
     // are lazy loaded in components that need to access them
-    // if no ftps account exists in the store attempt to fetch sftp account details
     if (!Object.keys(this.props.ftpAccountDetails).length && !Object.keys(this.props.sftp).length) {
       this.setState((prev) => ({ ...prev, loadingSftpAccountDetails: true }));
       this.props.fetchSftpUser();
@@ -447,4 +441,3 @@ class components_forms_schedulereport extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_schedulereport);
 
-// GENERATOR_TYPE='component';

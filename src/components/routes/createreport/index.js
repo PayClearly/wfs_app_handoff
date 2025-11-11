@@ -56,4 +56,3 @@ class components_routes_createreport extends Component {
 }
 export default connect(mapStateToProps, mapDispatchToProps)(components_routes_createreport);
 
-// GENERATOR_TYPE='component';

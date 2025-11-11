@@ -2,7 +2,6 @@ import { connect, Component } from 'component';
 
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 

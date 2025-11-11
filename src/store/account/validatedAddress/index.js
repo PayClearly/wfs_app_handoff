@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import { createStatusReducer, createActionTypes } from 'store/_utilities/statusReducerFactory';
-// import { watchValue, removeListeners } from 'store/_utilities/firebaseHelpers';
 import AddressesAPI from 'api/addresses';
 
 const namespace = 'VALIDATED_ADDRESS';

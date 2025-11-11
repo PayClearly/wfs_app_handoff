@@ -4,10 +4,8 @@ import { createActionTypes, reducerCreator } from 'store/_utilities/statusReduce
 import Utils from 'utils';
 import bluebird from 'bluebird';
 
-// Import Sibling Ducks
 import * as userActions from 'store/user';
 
-// Import Child Ducks
 import * as accountBalances from 'store/account/accountBalances';
 import * as accountVendorCredentials from 'store/account/accountVendorCredentials';
 import * as accountVendors from 'store/account/accountVendors';
@@ -317,7 +315,6 @@ export function getRangeOfPayments(currentIndex) {
     const start = keysArray[startingIndex];
     let end;
 
-    // this logic allows you to skip ahead in the table
     if (currentIndex && currentIndex > startingIndex) {
       end = keysArray[currentIndex + fetchAhead] ? keysArray[currentIndex + fetchAhead] : keysArray[keysArray.length - 1];
     } else {
@@ -465,7 +462,6 @@ export function clearPrivateCredentials() {
 }
 
 // integrations
-// for all integrations
 export function updateIntegrationPreferences(type, data) {
   return (dispatch, getState) => integrations[type].updatePreferences(getState().organization.data.id, getState().account.data.id, data)(dispatch, getState);
 }

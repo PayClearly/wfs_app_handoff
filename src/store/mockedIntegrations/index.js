@@ -41,8 +41,6 @@ export default reducer;
 
 // action creators
 
-// export function sync() {
-//   return (dispatch, getState) => {
 //     dispatch({ type: actionTypes.fetchStart });
 //     watchCollection('integrationDefinitions', (data, paths) => {
 //       dispatch({ type: actionTypes.fetchSuccess, data, paths });

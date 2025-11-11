@@ -1,4 +1,3 @@
-// import Components from 'components';
 
 const routerConfig = {
   noAuthRoutes: ['error404', 'confirmemail', 'resetpassword', 'termsandconditions', 'authorize', 'oauthlogout'],
@@ -111,8 +110,6 @@ const routerConfig = {
         component: 'Components.creators.plastic',
         icon: 'mdi-email-plus-outline',
         policies: ['cards_idOrganization_idAccount_create'],
-        // config: {
-        //   forCreate: true,
         // },
       },
     ],
@@ -333,4 +330,3 @@ const routerConfig = {
 
 export default routerConfig;
 
-// GENERATOR_TYPE='exporter';

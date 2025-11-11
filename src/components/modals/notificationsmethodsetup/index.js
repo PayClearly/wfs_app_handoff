@@ -2,9 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -38,7 +36,6 @@ class components_modals_notificationsmethodsetup extends Component {
   componentWillReceiveProps(nextProps) {
     const { forms } = nextProps;
     this.setState({ forms });
-    // this will be irrelevant when we can change the phone number being registered
     if (nextProps.smsRegistered) {
       this.props.close();
     }

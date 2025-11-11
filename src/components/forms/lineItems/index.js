@@ -5,7 +5,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -154,7 +153,6 @@ class components_forms_lineItems extends Component {
               label="Total"
               disabled={this.props.disabled}
               required
-            // hideError={_try(() => !form[`lineItem_${rowId}_amount`].touched)}
             />
           </div>
           <div className="col-12 col-md-2">
@@ -167,7 +165,6 @@ class components_forms_lineItems extends Component {
               action={this.standardFormAction}
               label="Balance"
               disabled={this.props.disabled}
-            // hideError={_try(() => !form[`lineItem_${rowId}_balance`].touched)}
             />
           </div>
           <div className="col-12 col-md-2">
@@ -180,7 +177,6 @@ class components_forms_lineItems extends Component {
               action={this.standardFormAction}
               label="Discount"
               disabled={this.props.disabled}
-            // hideError={_try(() => !form[`lineItem_${rowId}_discount`].touched)}
             />
           </div>
           <div className="col-12 col-md-2">
@@ -191,7 +187,6 @@ class components_forms_lineItems extends Component {
               action={this.standardFormAction}
               label="Date"
               disabled={this.props.disabled}
-            // hideError={!form[`lineItem_${rowId}_date`].touched}
             />
           </div>
           <div className="col-12 col-md-2">
@@ -202,7 +197,6 @@ class components_forms_lineItems extends Component {
               action={this.standardFormAction}
               label="Invoice Number"
               disabled={this.props.disabled}
-            // hideError={!form[`lineItem_${rowId}_invoice`].touched}
             />
           </div>
           <div className="col-12 col-md-2">
@@ -213,7 +207,6 @@ class components_forms_lineItems extends Component {
               action={this.standardFormAction}
               label="Description"
               disabled={this.props.disabled}
-            // hideError={!form[`lineItem_${rowId}_description`].touched}
             />
           </div>
         </div>

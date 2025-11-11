@@ -30,4 +30,3 @@ const selectors_credentialsByGroup = createSelector('selectors_credentialsByGrou
 
 export default selectors_credentialsByGroup;
 
-// GENERATOR_TYPE='selector';

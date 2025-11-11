@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Selectors from 'selectors';
 
 const selectors_csrGlobalItems = createSelector('selectors_csrGlobalItems',

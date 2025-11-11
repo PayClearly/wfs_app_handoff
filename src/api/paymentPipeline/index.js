@@ -1,5 +1,4 @@
 import { api } from 'api/_util/payclearlyapi';
-// import data from './data.json';
 
 function update(organizationId, accountId, data) {
   // Add code for database or API integrations

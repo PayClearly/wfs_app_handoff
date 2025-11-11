@@ -1,10 +1,7 @@
 import { connect, Component } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -48,7 +45,6 @@ class components_creators_opsNotes extends Component {
 
   onCreate = () => {
     this.props.resetForm('Components.forms.opsNotes', this.state.formKey, Object.keys(this.props.forms['Components.forms.opsNotes'][this.state.formKey]._values).reduce((acc, cur) => { acc[cur] = undefined; return acc; }, {}));
-    // for modal only
     if (this.props.close && typeof this.props.close === 'function') this.props.close();
   }
 
@@ -69,7 +65,6 @@ class components_creators_opsNotes extends Component {
         status={status}
         onCreateNotification="Note successfully created!"
         createDisabled={!form._allValid || form._allInitial || status.creating}
-        // clearStatusErrors={this.props.clearStatusErrors}
         onCreate={this.onCreate}
       >
         <div style={{ display: 'flex' }}>

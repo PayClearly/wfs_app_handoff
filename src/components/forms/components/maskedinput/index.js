@@ -5,23 +5,9 @@ import MaskedInput from 'react-text-mask';
 import classNames from 'classnames';
 
 import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 
-/*
-  Component behaves exactly as TextInput component, but now handles the following props:
-    mask (required): <Array or Function> defines how user input should be masked, see readme below for syntax & examples
-    maskPlaceholder (optional): <String> value to show when input field is empty and focused
-    useNumberMask (optional): <Boolean> if true, use special dollar amount number mask. Will override any mask prop
-      noPrefix (optional): <Boolean> disable default prefix when using number mask. Useful when displaying percentages
-      suffixOverride (optional): <String> character to display after input. Empty by default
-      decimalLimit (optional): <Number> limits characters to the right of the decimal point. Defaults to 2
-
-  Full Documentation: https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme
-*/
 
 const mapStateToProps = (state, props) => {
   return ({});

@@ -3,9 +3,7 @@ import {
 } from 'component';
 import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -72,7 +70,6 @@ class components_modals_customFileTemplate extends Component {
     } = this.props;
     const form = _try(() => this.props.forms[this.state.name][this.state.key], {});
     const valid = form._allValid;
-    // const valid = form._allValid && form._children && form._children.length;
 
     return (
       <div style={{ margin: '1.74rem' }} role="document">

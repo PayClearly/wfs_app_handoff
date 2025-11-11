@@ -3,8 +3,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Selectors from 'selectors';
 
 const TransactionsSelector = createSelector(
   state => state.account.paymentStatuses.data.items,
@@ -16,12 +14,6 @@ const TransactionsSelector = createSelector(
   state => state.account.cardsIntegration.data.resources.declines,
   state => state.forms['Components.forms.reportsearch'].default._values,
   (paymentStatuses = {}, vendors = {}, users = {}, vCards = null, auths = null, clears = null, declines = null, forms = {}) => {
-    /* this code is a bit awkward bit is basically running the equivilent of an outer join of transactions onto payments
-    necessary for the recon report, honestly probably not for much else.
-    other transaction reports rely upon making a request to pull transactions out of the SQL database, but this one is only
-    based on whats inside firebase so using a selector is fine. The selector is a bit slow but only because it waits for a lot
-    of data to be synced. honestly if there is ever a point where we dont sync all this data and instead make the report rely
-    upon an api request that would be ideal */
 
     const filteredPayments = Object.keys(paymentStatuses).reduce((acc, cur) => {
       if ((paymentStatuses[cur].created || {})._createdAt > Date.parse(forms.startDate) && (paymentStatuses[cur].created || {})._createdAt < Date.parse(forms.endDate)) {
@@ -115,7 +107,6 @@ const TransactionsSelector = createSelector(
           })];
         }
       }
-      // if there were no associated transactions, then we jsut want the payment as a line item
       if (!items.length) items = [item];
       acc.push(...items);
       return acc;

@@ -1,10 +1,7 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
-// import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -32,7 +29,6 @@ class components_integrationcomps_cardsIntegration_GALILEO_comps_achEnrollment e
 
 
   render() {
-    // const updating = _try(() => this.props.cardsIntegration.status.updating);
     const updatingError = _try(() => this.props.cardsIntegration.status.updatingError);
 
     return (

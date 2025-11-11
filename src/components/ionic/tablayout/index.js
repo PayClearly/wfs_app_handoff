@@ -3,11 +3,8 @@ import { IonPage, IonContent, IonRefresherContent, IonRefresher } from '@ionic/r
 import React from 'react';
 import { chevronDownOutline } from 'ionicons/icons';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -71,7 +68,6 @@ class components_ionic_tablayout extends Component {
     const onAcceptedRoute = acceptedRefresherRoutes.includes(this.props.router.name);
     const modalOpen = this.props.modals.length !== 0;
 
-    // This is to pass the children a prop that will allow hiding of the FAB button
     const childrenArray = React.Children.toArray(this.props.children);
     const elements = childrenArray.map((child) => {
       return React.cloneElement(child, { toggleFAB: this.toggleFAB });

@@ -1,10 +1,8 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -51,7 +49,6 @@ class components_creators_expenseReport extends Component {
 
   onCreate = () => {
     this.props.resetForm(this.state.formName, this.state.formId, Object.keys(this.props.forms[this.state.formName][this.state.formId]._values).reduce((acc, cur) => { acc[cur] = undefined; return acc; }, {}));
-    // for modal only
     if (this.props.close && typeof this.props.close === 'function') this.props.close();
   }
 

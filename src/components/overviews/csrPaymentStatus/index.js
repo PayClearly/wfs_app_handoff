@@ -81,8 +81,6 @@ class components_overviews_csrPaymentStatus extends Component {
     this.setState({ globalOnCompletionNotificationsDelivered: delivered });
   };
 
-  // openSendNotificationModal = (type) => {
-  //   this.props.openSendNotificationModal(this.props.paymentStatus._id, {
   //    type, title: type === 'confirmation'
   //      ? 'Send Payment Confirmation Email'
   //      : 'Send Payment On The Way Email' }

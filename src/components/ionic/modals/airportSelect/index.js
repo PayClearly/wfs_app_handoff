@@ -2,11 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { IonTitle, IonButton, IonButtons, IonHeader, IonToolbar, IonContent, IonList, IonItem, IonLabel, IonIcon, IonListHeader, IonActionSheet, IonSearchbar, IonSpinner, IonItemDivider } from '@ionic/react';
 import { caretDownSharp, close, sendSharp } from 'ionicons/icons';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -45,7 +41,6 @@ class components_ionic_modals_airportSelect extends Component {
   };
 
   componentDidMount() {
-    // If we can't use location, need to disable the range feature and use the search bar
     if (this.props.data.locationDisabled) {
       this.setState({ usingSearchBar: true, distanceSearch: null });
     } else {
@@ -84,7 +79,6 @@ class components_ionic_modals_airportSelect extends Component {
     const airports = this.props.airportsGeo.data;
 
     // Airport items display: ICAO - Airport Name
-    // If using searchWithRadius then the data will live in store and use airport param as key. aiport = ICAO
     // Using searchForAirports all data lives in airport param. airport = Airport Info
     const airportItem = (airport) => {
       if (airport && (airport.airportName || airport.icao)) {
@@ -111,7 +105,6 @@ class components_ionic_modals_airportSelect extends Component {
     }));
     rangeSelectButtons.push({ text: 'No Limit', handler: () => this.setState({ usingSearchBar: true }) });
     rangeSelectButtons.push({ text: 'Cancel', role: 'cancel' });
-    // If radius search is disabled say unavailable
     const noRangeText = this.props.data.locationDisabled ? 'Unavailable' : 'No Limit';
 
     return (

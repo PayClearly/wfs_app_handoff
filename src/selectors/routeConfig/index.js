@@ -48,8 +48,6 @@ const selectors_routeConfig = createSelector(
       });
 
     const loaded = userPrivileges.fetched || false;
-    // const loaded = _try(() => routeData.loaded, []).every((condition) => {
-    //   return _try(() => Utils.getNestedProperty(condition, totalState));
     // });
 
     return {

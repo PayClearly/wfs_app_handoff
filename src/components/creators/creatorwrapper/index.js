@@ -75,7 +75,6 @@ class components_creators_creatorwrapper extends Component {
       );
     }
 
-    // this is the transition feature, make sure to include logic for when create form is active
     return (
       <CSSTransition
         classNames="creator-wrapper-transitioner"

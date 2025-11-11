@@ -20,7 +20,6 @@ export function _moduleReducers(state = defaultState, action) {
       return {
         ...state,
         item: { ...action.data },
-        // item: _patchState(state.item, Object.keys(action.data)[0], action.data[Object.keys(action.data)[0]]),
         paths: { ...state.paths, ...action.paths },
       };
 

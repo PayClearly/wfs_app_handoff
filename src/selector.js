@@ -32,7 +32,6 @@ function selectorWrapper(...args) {
 }
 
 const inputSelectorWrapper = (inputSelector, name) => {
-  // return (...props) => _try(() => inputSelector(...props), name);
   return (...props) => {
     try {
       return inputSelector(...props);

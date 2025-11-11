@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import numeral from 'numeral';
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -253,4 +252,3 @@ function _dateIsWeekend(now) {
   return dayOfWeek === 0 || dayOfWeek === 6;
 }
 
-// GENERATOR_TYPE='component';

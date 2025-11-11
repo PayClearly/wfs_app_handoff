@@ -29,5 +29,4 @@ function _toRole(userRoles = {}) {
 
 export default selectors_userRoles;
 
-// GENERATOR_TYPE='selector';
 

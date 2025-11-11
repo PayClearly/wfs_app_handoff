@@ -1,7 +1,6 @@
 // Third Party Imports ...
 import download from 'downloadjs';
 
-// import Utils from 'utils';
 
 function utils_exportCSVFile(fileName, items, headers) {
   if (headers) {
@@ -77,4 +76,3 @@ const getValue = (item, key) => {
   return exportValue;
 };
 
-// GENERATOR_TYPE='util';

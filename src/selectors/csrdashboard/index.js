@@ -129,4 +129,3 @@ const selectors_csrDashboard = createSelector(
 
 export default selectors_csrDashboard;
 
-// GENERATOR_TYPE='selector';

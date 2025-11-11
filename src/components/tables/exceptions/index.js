@@ -336,4 +336,3 @@ function DeliveryIssue(data) {
 }
 
 
-// GENERATOR_TYPE='component';

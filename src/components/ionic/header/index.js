@@ -88,4 +88,3 @@ export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)
 
 // Internal Helper Functions ...
 const _formatPoints = (balance = 0) => balance.toLocaleString();
-// GENERATOR_TYPE='component';

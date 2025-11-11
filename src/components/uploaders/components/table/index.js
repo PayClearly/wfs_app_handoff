@@ -6,10 +6,6 @@ import {
 import classNames from 'classnames';
 import { Collapse } from 'react-collapse';
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 
@@ -63,7 +59,6 @@ class components_uploaders_components_table extends Component {
 
   _updateItems = (newData) => {
     // the table must manage its own state regarding what order items need to be displayed
-    // if  a new item is added the parent passes the data down and then we must update locally to
     // preserve the correctt oreder
     let data = [...this.state.items];
 

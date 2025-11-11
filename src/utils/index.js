@@ -25,4 +25,3 @@ function _importNestedDirectory(context) {
   return obj;
 }
 
-// GENERATOR_TYPE='exporter';

@@ -1,11 +1,8 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { Collapse } from 'react-collapse';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import './index.scss';
 
@@ -106,4 +103,3 @@ const _getTimezone = () => {
   const matches = regExp.exec(today.toString());
   return _try(() => matches[1], '');
 }
-// GENERATOR_TYPE='component';

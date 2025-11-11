@@ -3,7 +3,6 @@ import { reducerCreator, createActionTypes } from 'store/_utilities/statusReduce
 import AttachmentsAPI from 'api/attachments';
 
 
-// Import Child Ducks
 import * as vendors from 'store/global/vendors';
 import * as schemas from 'store/global/schemas';
 import * as credentialSchemas from 'store/global/credentialSchemas';
@@ -209,15 +208,9 @@ export function fetchLatestTermsAndConditions(token) {
   return (dispatch) => vendorTermsAndConditions.fetch(token)(dispatch);
 }
 
-// export function downloadPS21(batchId) {
-//   return (dispatch, getState) => {
-//     return attachments.downloadPS21(batchId)(dispatch, getState);
 //   };
 // }
 
-// export function downloadAPRETURN(batchId) {
-//   return (dispatch, getState) => {
-//     return attachments.downloadAPRETURN(batchId)(dispatch, getState);
 //   };
 // }
 

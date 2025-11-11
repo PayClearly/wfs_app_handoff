@@ -242,4 +242,3 @@ const MONTH_OPTIONS = {
   11: 'Dec',
 };
 
-// GENERATOR_TYPE='component';

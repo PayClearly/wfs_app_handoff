@@ -31,11 +31,8 @@ import {
   OFA_FILTERS_TO_DISPLAY_NAMES,
 } from './constants/openFuelAuthorizations.js';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
-// import Resources from 'resources';
 
 import * as device from '../../../../store/device';
 
@@ -111,7 +108,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_ionic_routes_documents extends Component {
-  // If geolocation errors out, then locationDisabled = true. Disables Range selection and use on airport select modal
   // Recently used icaos will be replaced by favoriting airpots (similar to tail select) but currently keeps a list to display in airport select modal
   state = {
     show: DOC_STRING,
@@ -127,7 +123,6 @@ class components_ionic_routes_documents extends Component {
   };
 
   componentDidMount() {
-    // If we have a location and a tailnumber, sync the documents.
     const airportICAO = this.state.airportICAO || this.props[this.state.show].collections.lastUsedIcao;
     if (this.props.context.tailNumber && !!airportICAO) {
       this.setState({ airportICAO });
@@ -165,7 +160,6 @@ class components_ionic_routes_documents extends Component {
     }
     /* GEO */
     if (tailNumber) {
-      // If we have a geolocation and we haven't initialized, then initialize
       const locationSet = geoStatus && geoStatus.fetched && geoData.location.timestamp !== null;
       const locationError = geoStatus && geoStatus.fetchingError;
 
@@ -181,7 +175,6 @@ class components_ionic_routes_documents extends Component {
       }
 
       const noAirport = airportICAO === '';
-      // If there is a nearest airport, set it. Else set the airport to null to handle in render. Append to recently used if not included
       if (initialized && noAirport && airportStatus.fetched) {
         const nearestAirports = Object.values(airportCollections.nearest);
 
@@ -202,7 +195,6 @@ class components_ionic_routes_documents extends Component {
     }
     /* End of GEO */
 
-    // If we haven't updated our current items in the store, and we have a new set of items, then update
     const nextDocumentCollections = nextProps[show].collections;
     const nextDocumentData = nextProps[show].data;
     if (nextDocumentCollections && nextDocumentCollections.icaoInfo[airportICAO] && nextDocumentData[airportICAO] && !nextDocumentCollections.icaoInfo[airportICAO].updated && !nextDocumentStoreStatus.updating) {
@@ -257,7 +249,6 @@ class components_ionic_routes_documents extends Component {
   };
 
   // Will call sync on the specific document type and icao set
-  // If it has already been synced, then it will call fetch
   syncDocuments = (airportICAO, newFilter = false) => {
     if (!this.props.context.tailNumber) {
       return null;
@@ -307,9 +298,6 @@ class components_ionic_routes_documents extends Component {
     const { lastUsedIcao, icaoInfo } = collections || {};
     const { initializing, initializeError } = status || {};
     const tailNumber = this.props.context.tailNumber;
-    // If there is no nearby airport or location failure
-    // If we have a last used in the store then set it
-    // Else open select modal to use search feature only
     if (airportICAO === null) {
       if (lastUsedIcao) {
         this.setState({ airportICAO: lastUsedIcao });
@@ -419,4 +407,3 @@ class components_ionic_routes_documents extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_ionic_routes_documents);
 
-// GENERATOR_TYPE='component';

@@ -352,7 +352,6 @@ function _aggregateFormData(derivedForms, uploaded) {
     });
 }
 
-// GENERATOR_TYPE='component';
 function _findOption(options, value, returnOriginalValue) {
   const _fuzzyMatch = (val, val2) => (val || '').toLowerCase() === (val2 || '').toLowerCase();
 

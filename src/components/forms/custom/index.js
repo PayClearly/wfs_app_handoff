@@ -3,9 +3,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import FuzzySet from 'fuzzyset.js';
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -39,7 +37,6 @@ class components_forms_custom extends Component {
       key,
     });
 
-    // if the intial data changed then re initilize the form
     if (nextProps.fields && nextProps.fields && nextProps.fields !== this.props.fields && !(Object.keys(nextProps.fields).length === 0 && Object.keys(this.props.fields).length === 0)) {
       this.props.destroy(this.state.name, this.state.key);
       this.initializeForm(nextProps);
@@ -47,7 +44,6 @@ class components_forms_custom extends Component {
   }
 
   componentDidUpdate(prevProps = {}) {
-    // this is used by the payment form to retrigger the custom field form validation for check number collisions
     if (this.props.validationTrigger !== prevProps.validationTrigger) {
       this.props.validate(this.state.name, this.state.key, this.validate(this.props.fields));
     }
@@ -136,12 +132,8 @@ class components_forms_custom extends Component {
     const initialFields = {};
     // { 
     //   Invoice Number:
-    //     fieldType: "string"
-    //     name: "Invoice Number"
-    //     required: true
     // }
     // {
-    //   invoiceNumber: 'asdf1234',
     // }
     Object.keys(fields || {}).forEach((key) => {
       const field = fields[key];
@@ -214,7 +206,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_forms_cus
 const _1Day = 1 * 24 * 60 * 60 * 1000;
 const _180Days = 180 * 24 * 60 * 60 * 1000;
 
-// GENERATOR_TYPE='component';
 const _fuzzyMatch = (key, fields = []) => {
   const fuzzySet = FuzzySet(fields);
   const result = fuzzySet.get(key, null, 0.5);

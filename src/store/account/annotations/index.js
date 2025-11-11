@@ -15,7 +15,6 @@ export const defaultState = {
 export function _moduleReducers(state = defaultState, action) {
 
   let newState = {};
-  // let denormalized = {};
 
   switch (action.type) {
 
@@ -28,7 +27,6 @@ export function _moduleReducers(state = defaultState, action) {
         paths: { ...state.paths, ...action.paths },
         created: { ...state.created },
       };
-      // denormalized = _denormalizer(newState);
       return {
         ...newState,
         // ...denormalized,
@@ -54,14 +52,9 @@ export function _moduleReducers(state = defaultState, action) {
 
 // denormalizer
 
-// function _denormalizer(state) {
 
-//   const paymentStatusIds = Object.keys(state.items);
-//   const paymentsByBatch = {};
 
 //   paymentStatusIds.forEach((id) => {
-//     const batchId = state.items[id]._batchId;
-//     if (paymentsByBatch[batchId] && paymentsByBatch[batchId].length) {
 //       paymentsByBatch[batchId].push(id);
 //     } else {
 //       paymentsByBatch[batchId] = [id];
@@ -69,7 +62,6 @@ export function _moduleReducers(state = defaultState, action) {
 //   });
 
 
-//   return {
 //     paymentsByBatch,
 //   };
 // }

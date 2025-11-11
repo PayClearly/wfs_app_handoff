@@ -3,10 +3,6 @@ import Components from 'components';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
-// import Components from 'components';
 
 import './index.scss';
 
@@ -62,7 +58,6 @@ class components_modals_jobstatus extends Component {
                 buttonText="Send"
                 onClick={() => {
                   if (disableButtons || disableUpload) return;
-                  // this.props.action();
                   this.setState({ clickedSend: true }, this.sendEmail);
                 }}
                 onDisabledClick={() => { this.setState({ blurAll: true }); }}

@@ -35,7 +35,6 @@ class componentsDropzone extends Component {
       'bulk-vendors': 'Bulk Vendors',
     };
 
-    // Default to 'Item' if the feature name isn't in the map
     return featureNameToDisplayNameMap[this.props.featureName] || 'Item';
   };
 

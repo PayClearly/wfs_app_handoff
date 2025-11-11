@@ -2,9 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
-// import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -57,4 +54,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_badges_er
 
 const STEPS = ['created', 'verified', 'funded', 'sent', 'tracked'];
 
-// GENERATOR_TYPE='component';

@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 import Selectors from 'selectors';
-// import Utils from 'utils';
 
 const selectors_tableData_paymentIssues = createSelector(
 
@@ -28,7 +27,6 @@ const selectors_tableData_paymentIssues = createSelector(
         paymentCreatedAt: paymentStatus.created._at,
         transferRef: transfer._ref ? transfer._ref : null,
         // we only need the formatted versions for the way export currently works, since we want to sort on unformatted refs and
-        // export formatted refs, although this should be obsolete once we build out a better exporting strategy
         paymentRefFormat: paymentStatus.created._ref ? `P_${paymentStatus.created._ref}` : '',
         transferRefFormat: transfer._ref ? `T_${transfer._ref}` : '',
       };

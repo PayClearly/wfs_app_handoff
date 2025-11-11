@@ -1,7 +1,6 @@
 import createSelector from 'selector';
 
 import Utils from 'utils';
-// import Selectors from 'selectors';
 
 // Internal Helper Functions ...
 function _denormalizeCard(cardData, transactions = {}) {
@@ -155,6 +154,5 @@ const selectors_cardsActivity = createSelector(
   }
 );
 
-// GENERATOR_TYPE='selector';
 
 export default selectors_cardsActivity;

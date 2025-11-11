@@ -2,9 +2,7 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
-// import Selectors from 'selectors';
 import Components from 'components';
 
 import './index.scss';
@@ -117,10 +115,5 @@ class components_uploaders_invoices extends Component {
 export default connect(mapStateToProps, mapDispatchToProps)(components_uploaders_invoices);
 
 // Internal Helper Functions ... 
-// function _parseDroppedFileData(acceptedFile, idKey) {
-//   const items = [];
-//   return new Promise((resolve, reject) => {
-//     return axios.get(acceptedFile.preview)
 //   })
 // }
-// GENERATOR_TYPE='component';

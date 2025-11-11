@@ -5,7 +5,6 @@ import {
 
 // Third Party Imports ...
 
-// import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
@@ -46,7 +45,6 @@ class components_creators_accountvendor extends Component {
 
   onCreate = () => {
     this.props.resetForm(this.state.formName, this.state.formId, this.props.forms[this.state.formName][this.state.formId]._values);
-    // for modal only
     if (this.props.close && typeof this.props.close === 'function') { this.props.close(); }
   };
 
@@ -120,4 +118,3 @@ class components_creators_accountvendor extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_creators_accountvendor);
 
-// GENERATOR_TYPE='component';

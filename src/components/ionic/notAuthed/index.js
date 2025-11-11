@@ -60,7 +60,6 @@ class componentsIonicNotAuthed extends Component {
         && !this.props.biometrics.status.submittingError
         && !nextProps.biometrics.status.submittingError
       );
-      // if we are not currently submitting, then we can show biometrics
       if (this.props.device.data.isActive && notCurrentlySubmittingBiometrics) {
         if (this.props.preferences.biometricsTimeout > (Date.now() - this.props.biometrics.data.lastActive)) {
           this.closeNotAuthed();
