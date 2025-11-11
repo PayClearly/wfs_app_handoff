@@ -10,7 +10,7 @@ import './index.scss';
 
 const mapStateToProps = (state, props) => ({
   accountResources: state.account,
-  env: window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging' ? 'DEV' : 'PROD',
+  env: window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME' ? 'DEV' : 'PROD',
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

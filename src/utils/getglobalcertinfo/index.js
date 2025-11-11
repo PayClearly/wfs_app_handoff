@@ -4,7 +4,7 @@
 
 function utils_getglobalcertinfo() {
   return {
-    dbContext: window.GLOBALCERT.projectId.includes('test') ? 'payclearly-test' : window.GLOBALCERT.projectId,
+    dbContext: window.GLOBALCERT.projectId.includes('test') ? 'TEST-ENV_CHANGE-ME' : window.GLOBALCERT.projectId,
     projectId: window.GLOBALCERT.projectId,
   };
 }

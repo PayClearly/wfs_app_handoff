@@ -31,7 +31,7 @@ const mapStateToProps = (state, props) => ({
   storageKeys: state.device.storage.collections.keys,
   storageStatus: state.device.storage.status,
   userInitialized: state.user.status.initialized,
-  env: _try(() => (window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging') && 'DEV' || 'PROD'),
+  env: _try(() => (window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME') && 'DEV' || 'PROD'),
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

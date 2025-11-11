@@ -13,7 +13,7 @@ const selectors_dailySpend = createSelector('selectors_dailySpend',
 
   (fundedPayments = [], paymentStatuses = {}, paymentStatusesFetched = {}, context = {}) => {
     let formattedDailySpendData = null;
-    if ((context.organizationId === 'org-for-testing-policies' || context.organizationId === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('payclearly-staging'))) && _try(() => context.account._options._useSampleDashboard)) {
+    if ((context.organizationId === 'org-for-testing-policies' || context.organizationId === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME'))) && _try(() => context.account._options._useSampleDashboard)) {
       // Test data
       const dailySpendTestPayments = _generateDailySpendTestData();
       formattedDailySpendData = _formatSpendData(dailySpendTestPayments, Object.keys(dailySpendTestPayments));
@@ -27,7 +27,7 @@ const selectors_dailySpend = createSelector('selectors_dailySpend',
 
 export default selectors_dailySpend;
 
-// Internal Helper Functions ... 
+// Internal Helper Functions ...
 function _daysInMonth(month, year) {
   return new Date(year, month, 0).getDate();
 }
@@ -52,7 +52,8 @@ function _generateLastThreeMonthsMetadata(thisMonth, thisYear) {
       days: _daysInMonth(lastMonth.month, lastMonth.year),
       ...lastMonth,
     },
-    { days: _daysInMonth(twoMonthsAgo.month, twoMonthsAgo.year),
+    {
+      days: _daysInMonth(twoMonthsAgo.month, twoMonthsAgo.year),
       ...twoMonthsAgo,
     },
   ];
@@ -127,7 +128,7 @@ function _generateDailySpendTestData() {
   };
 
   const daysInMonths = [
-    { 
+    {
       days: _daysInMonth(thisMonth, thisYear),
       month: thisMonth,
       year: thisYear,
@@ -136,7 +137,8 @@ function _generateDailySpendTestData() {
       days: _daysInMonth(lastMonth.month, lastMonth.year),
       ...lastMonth,
     },
-    { days: _daysInMonth(twoMonthsAgo.month, twoMonthsAgo.year),
+    {
+      days: _daysInMonth(twoMonthsAgo.month, twoMonthsAgo.year),
       ...twoMonthsAgo,
     },
   ];

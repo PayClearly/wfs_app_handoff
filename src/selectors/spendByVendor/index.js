@@ -16,7 +16,7 @@ const selectors_spendByVendor = createSelector('selectors_spendByVendor',
 
 
     let formattedSpendByVendorData = null;
-    if ((context.organizationId === 'org-for-testing-policies' || context.organizationId === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('payclearly-staging'))) && _try(() => context.account._options._useSampleDashboard)) {
+    if ((context.organizationId === 'org-for-testing-policies' || context.organizationId === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME'))) && _try(() => context.account._options._useSampleDashboard)) {
       // Test data
       formattedSpendByVendorData = _formatSpendByVendorData(paymentTestStatuses, vendorsTest, Object.keys(paymentTestStatuses));
     } else {
@@ -56,7 +56,7 @@ function _formatSpendByVendorData(paymentStatuses, vendors, fundedPayments) {
           name: vendors[vendorId].name,
           amount: amountToAdd,
         };
-      } else if(acc[paymentMonth].year === paymentYear){
+      } else if (acc[paymentMonth].year === paymentYear) {
         acc[paymentMonth][vendorId].amount = Utils.addDollars([acc[paymentMonth][vendorId].amount, amountToAdd]);
       }
     }
@@ -84,8 +84,8 @@ function _formatSpendByVendorData(paymentStatuses, vendors, fundedPayments) {
       toReturn[0].value += vendor.value;
       return toReturn;
     }, [{ name: 'Other Vendors', value: 0 }])
-    :
-    [];
+      :
+      [];
 
     if (otherVendors.length) {
       sortedVendorData[index] = month.concat(otherVendors);

@@ -39,7 +39,7 @@ export function sync() {
     try {
       const refreshToken = await device.getRefreshToken()(dispatch, getState);
       const app = getState().appConfig.data.metadata.name;
-      const env = _try(() => (window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging') && 'DEV' || 'PROD');
+      const env = _try(() => (window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME') && 'DEV' || 'PROD');
       const appName = `${app}${env}${window.GLOBALCERT.WFS_TEST_ENV || ''}`;
       if (!refreshToken) {
         throw Error('User is logged in through firebase but has no refresh token.');
@@ -67,7 +67,7 @@ export function refresh(callback) {
     try {
       const refreshToken = await device.getRefreshToken()(dispatch, getState);
       const app = getState().appConfig.data.metadata.name;
-      const env = _try(() => (window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging') && 'DEV' || 'PROD');
+      const env = _try(() => (window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME') && 'DEV' || 'PROD');
       const appName = `${app}${env}${window.GLOBALCERT.WFS_TEST_ENV || ''}`;
       if (!refreshToken) {
         throw Error('User is logged in through firebase but has no refresh token.');

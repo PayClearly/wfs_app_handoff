@@ -44,7 +44,7 @@ class components_forms_editaccount extends Component {
       suspended: accountItem.suspended || false,
     };
 
-    if (_try(() => this.props.organization.data.id) === 'org-for-testing-policies' || _try(() => this.props.organization.data.id) === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('payclearly-staging'))) {
+    if (_try(() => this.props.organization.data.id) === 'org-for-testing-policies' || _try(() => this.props.organization.data.id) === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME'))) {
       // add sample dashboard option if test org
       initialFields.useSampleDashboard = _try(() => accountItem._options._useSampleDashboard) || false;
     }
@@ -253,7 +253,7 @@ class components_forms_editaccount extends Component {
           label="Suspended Account"
           disabled={this.props.updating}
         />
-        {((_try(() => this.props.organization.data.id) === 'org-for-testing-policies' || _try(() => this.props.organization.data.id) === '57245f0a-7f86-4b55-9350-4a27a385f189') || _try(() => window.GLOBALCERT.projectId.includes('payclearly-staging'))) &&
+        {((_try(() => this.props.organization.data.id) === 'org-for-testing-policies' || _try(() => this.props.organization.data.id) === '57245f0a-7f86-4b55-9350-4a27a385f189') || _try(() => window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME'))) &&
           <Fragment>
             <h4>Options</h4>
             <div className="row mt-3">

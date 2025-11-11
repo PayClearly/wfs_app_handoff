@@ -7,23 +7,23 @@ import Components from 'components';
 import './index.scss';
 
 const mapStateToProps = (state) => ({
-    orgId: state.organization.data.id,
-    featureFlags: Selectors.featureFlags(state),
-    isLoggingOut: state.router.route.params.state,
-    env: _try(() => ((window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging') && 'DEV') || 'PROD'),
-    access: state.user.access,
-    userRoles: state.user.roles.data.item,
-    userRolesStatus: state.user.roles.status,
-  });
+  orgId: state.organization.data.id,
+  featureFlags: Selectors.featureFlags(state),
+  isLoggingOut: state.router.route.params.state,
+  env: _try(() => ((window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME') && 'DEV') || 'PROD'),
+  access: state.user.access,
+  userRoles: state.user.roles.data.item,
+  userRolesStatus: state.user.roles.status,
+});
 
 const mapDispatchToProps = (dispatch) => ({
-    logout: (appName) => {
-      dispatch(Store.user.oAuthLogout(appName));
-    },
-    navigate: (name, params = {}) => {
-      dispatch(Store.router.navigateTo(name, params));
-    },
-  });
+  logout: (appName) => {
+    dispatch(Store.user.oAuthLogout(appName));
+  },
+  navigate: (name, params = {}) => {
+    dispatch(Store.router.navigateTo(name, params));
+  },
+});
 
 class componentsWfcomponentsMainlayout extends Component {
 
@@ -32,9 +32,9 @@ class componentsWfcomponentsMainlayout extends Component {
     showprofilenav: false,
   };
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
   render() {
 

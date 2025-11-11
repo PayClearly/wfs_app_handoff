@@ -23,7 +23,7 @@ const mapStateToProps = (state, props) => ({
   syncedPhoto: state.wfs.data.profileImage || null,
   updatingPhoto: state.wfs.data.updating,
   profile: state.user.profile.data.item,
-  env: _try(() => (window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging') && 'DEV' || 'PROD'),
+  env: _try(() => (window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME') && 'DEV' || 'PROD'),
   device: state.device.data,
 });
 
@@ -94,7 +94,7 @@ class componentsIonicProfile extends Component {
 
   render() {
     const { user } = this.props;
-    const production = window.GLOBALCERT.projectId === 'payclearly-32f4e';
+    const production = window.GLOBALCERT.projectId === 'PROD_PROJECT_ID_CHANGE-ME';
     const imageToDisplay = (
       (!this.state.newPhoto && this.props.syncedPhoto && this.props.syncedPhoto.webviewPath)
       || this.state.userPhoto.filepath

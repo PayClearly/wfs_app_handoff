@@ -67,7 +67,7 @@ class components_entities_account extends Component {
       },
     };
 
-    if ((this.props.orgId === 'org-for-testing-policies' || this.props.orgId === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('payclearly-staging'))) && form.useSampleDashboard) {
+    if ((this.props.orgId === 'org-for-testing-policies' || this.props.orgId === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME'))) && form.useSampleDashboard) {
       Promise.resolve(this.props.updateAccount(data))
         .then(() => {
           const accountOptions = {

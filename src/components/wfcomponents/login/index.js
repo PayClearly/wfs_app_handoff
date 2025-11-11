@@ -16,7 +16,7 @@ const mapStateToProps = (state) => ({
   access: state.user.access,
   accessError: (state.user.access.status.updatingError && (state.user.access.status.updatingError.message || state.user.access.status.updatingError)) || false,
   logo: state.appConfig.data.logo,
-  env: _try(() => (window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging') && 'DEV' || 'PROD'),
+  env: _try(() => (window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME') && 'DEV' || 'PROD'),
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -148,7 +148,7 @@ class componentsDropzone extends Component {
             <div className="download">
               <CSVLink
                 data={this.props.csvFields}
-                filename={`payclearly-${this.props.featureName || 'vendor'}-template.csv`}
+                filename={`wfs-${this.props.featureName || 'vendor'}-template.csv`}
                 target="_blank"
               >
                 <span className="mdi mdi-cloud-download mb-4"> Download The Template</span>

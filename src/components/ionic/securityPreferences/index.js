@@ -58,7 +58,7 @@ class components_ionic_securityPreferences extends Component {
 
   render() {
     const selected = this.props.deviceSecurity.options.find((option => option.selected)) || {};
-    const production = window.GLOBALCERT.projectId === 'payclearly-32f4e';
+    const production = window.GLOBALCERT.projectId === 'PROD_PROJECT_ID_CHANGE-ME';
     return (
       <IonCard className="components_ionic_securityPreferences">
         <IonCardHeader style={{ padding: '10px 20px 5px' }}>

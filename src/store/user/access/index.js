@@ -193,7 +193,7 @@ export function oAuthLogout(appName, callbackOnly) {
         {
           platform,
           local,
-          staging: window.GLOBALCERT.projectId.includes('payclearly-staging'),
+          staging: window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME'),
         }
       );
 
@@ -222,9 +222,9 @@ export function ssoLogout() {
       let redirectTo = 'https%3A%2F%2Fmyworldcard.wfscorp.com';
 
       if (local) {
-        redirectTo = 'http%3A%2F%2Fwfs.payclearly.localdev:5005';
+        redirectTo = 'http%3A%2F%2Flocalhost:5005';
         wfsLogoutUrl = `https://kc-lower.wfscorp.com/auth/realms/QA_Ext/protocol/openid-connect/logout?redirect_uri=${redirectTo}&state=isLoggingOut`;
-      } else if (window.GLOBALCERT.projectId.includes('payclearly-staging')) {
+      } else if (window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME')) {
         redirectTo = 'https%3A%2F%2Fwfs-staging.payclearly.com';
         wfsLogoutUrl = `https://kc-lower.wfscorp.com/auth/realms/QA_Ext/protocol/openid-connect/logout?redirect_uri=${redirectTo}&state=isLoggingOut`;
       } else {

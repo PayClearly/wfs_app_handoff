@@ -63,7 +63,7 @@ export const timespanToDate = (timespan = '0d', direction = 'future') => {
   const nowMs = now.getTime();
   const date = new Date(nowMs + (direction === 'future' ? ms : -ms));
   const year = date.getFullYear();
-  const month = (date.getMonth()+1).toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
   let day = date.getDate().toString().padStart(2, '0');
   // Javascript Date object handles leap years, but want to add a redundant check to make sure the date is valid
   if (day === '29' && month === '02' && !isLeapYear(year)) {
@@ -82,7 +82,7 @@ export const getItemsByContext = async (query, params, state, indexBy) => {
   if (window.GLOBALCERT.WFS_TEST_ENV === 'Test') {
     baseURL = 'https://world-graph-gateway.test.wfscorp.com/graphql';
   }
-  if (window.GLOBALCERT.projectId === 'payclearly-32f4e') {
+  if (window.GLOBALCERT.projectId === 'PROD_PROJECT_ID_CHANGE-ME') {
     baseURL = 'https://world-graph-gateway.wfscorp.com/graphql';
   }
   const options = {

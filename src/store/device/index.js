@@ -157,12 +157,12 @@ export function checkIsActive(isActive) {
 }
 
 export const biometricsSetAuthed = (isAuthed) => async (dispatch, getState) => {
-    try {
-      await biometrics.setAuthed(isAuthed)(dispatch, getState);
-    } catch (err) {
-      // device.showToast({ message: `biometricsSetAuthed: ${err.message}`, color: 'danger' })(dispatch);
-    }
-  };
+  try {
+    await biometrics.setAuthed(isAuthed)(dispatch, getState);
+  } catch (err) {
+    // device.showToast({ message: `biometricsSetAuthed: ${err.message}`, color: 'danger' })(dispatch);
+  }
+};
 
 export function setOAuthState(appName) {
   return async (dispatch, getState) => {
@@ -178,8 +178,8 @@ export function setOAuthState(appName) {
       case 'wfsappDEVTest':
       case 'wfsappDEV':
         if (platform === 'web' && local) {
-          redirectURI = 'http%3A%2F%2Fwfsapp.payclearly.localdev%3A5005';
-        } else if (platform === 'web' && window.GLOBALCERT.projectId.includes('payclearly-staging')) {
+          redirectURI = 'http%3A%2F%localhost%3A5005';
+        } else if (platform === 'web' && window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME')) {
           redirectURI = 'https%3A%2F%2Fqa.myworldwallet.wfscorp.com';
         } else {
           redirectURI = 'com.wfscorp.mywallet%3A%2F%2Fcallback';
@@ -197,7 +197,7 @@ export function setOAuthState(appName) {
         break;
       case 'wfsDEV':
       default:
-        redirectURI = (window.GLOBALCERT.projectId.includes('payclearly-staging') && !local) ? 'https://qa.myworldcard.wfscorp.com/' : 'http://wfs.payclearly.localdev:5005/';
+        redirectURI = (window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME') && !local) ? 'https://qa.myworldcard.wfscorp.com/' : 'http://localhost:5005/';
         break;
     }
 

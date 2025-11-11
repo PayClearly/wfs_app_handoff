@@ -10,7 +10,7 @@ const mapStateToProps = (state, props) => ({
   deviceData: state.device.data,
   biometrics: state.device.biometrics,
   notAuthedShowing: state.router.notAuthed,
-  env: _try(() => (window.GLOBALCERT.projectId === 'payclearly-test' || window.GLOBALCERT.projectId === 'payclearly-staging') && 'DEV' || 'PROD'),
+  env: _try(() => (window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME' || window.GLOBALCERT.projectId === 'STAGING-ENV_CHANGE-ME') && 'DEV' || 'PROD'),
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

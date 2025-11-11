@@ -1,7 +1,7 @@
 import { SecureStoragePlugin } from 'capacitor-secure-storage-plugin';
 
 const DEFAULT_OPTIONS = {
-  keyPrefix: 'payclearly',
+  keyPrefix: 'wfs',
 };
 
 const SecureStorageAPI = (options = DEFAULT_OPTIONS) => {

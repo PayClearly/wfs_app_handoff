@@ -10,7 +10,7 @@ const tenants = {
     oAuthLogoutRedirect: (logoutConfig) => {
       if (logoutConfig.platform === 'web') {
         if (logoutConfig.local) {
-          return 'http://wfsapp.payclearly.localdev:5005';
+          return 'http://localhost:5005';
         }
         return 'https://qa.myworldwallet.wfscorp.com';
       }
@@ -26,7 +26,7 @@ const tenants = {
     oAuthLogoutRedirect: (logoutConfig) => {
       if (logoutConfig.platform === 'web') {
         if (logoutConfig.local) {
-          return 'http://wfsapp.payclearly.localdev:5005';
+          return 'http://localhost:5005';
         }
         return 'https://qa.myworldwallet.wfscorp.com';
       }
@@ -54,7 +54,7 @@ const tenants = {
     oAuthLogoutEndpoint: 'https://auth.qa.wfscorp.com/v2/logout',
     oAuthLogoutRedirect: (logoutConfig) => {
       if (logoutConfig.local) {
-        return 'http://wfs.payclearly.localdev:5005/logout';
+        return 'http://localhost:5005/logout';
       }
       return 'https://qa.myworldcard.wfscorp.com/logout';
     },

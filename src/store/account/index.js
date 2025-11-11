@@ -230,7 +230,7 @@ export function sync(accountId) {
     }, Promise.resolve())
       .catch((err) => {
         if (_try(() => err.message === 'context error')) {
-          if (window.GLOBALCERT.projectId === 'payclearly-test') { console.log('Context switch before full load'); }
+          if (window.GLOBALCERT.projectId === 'TEST-ENV_CHANGE-ME') { console.log('Context switch before full load'); }
         } else {
           throw err;
         }
