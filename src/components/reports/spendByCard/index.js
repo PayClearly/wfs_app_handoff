@@ -90,7 +90,6 @@ class components_reports_spendByCard extends Component {
     const renderedColumns = [...this.state.renderedColumns, ...paymentCardCustomFieldsToColumns];
     this.setState({ selectedColumns, renderedColumns });
   }
-  componentDidMount() { }
   componentWillReceiveProps(nextProps) {
     const { status, accountId, organizationId, forms } = nextProps;
     const { selectedColumns } = this.state;

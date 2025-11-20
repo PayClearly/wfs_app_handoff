@@ -94,14 +94,6 @@ class components_reports_ac28 extends Component {
     actions: ['Schedule'],
   };
 
-  componentWillMount() { }
-
-  componentDidMount() { }
-
-  componentWillReceiveProps() { }
-
-
-
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;
     this.props.openReportScheduleModal(selectedColumns, renderedColumns, orderBy);

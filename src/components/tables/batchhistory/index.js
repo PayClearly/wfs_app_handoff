@@ -26,16 +26,7 @@ class components_tables_batchhistory extends Component {
 
   render() {
     if (this.props.batchPayments.fetching || !this.props.batchPayments.fetched) return <Components.spinner />;
-    if (this.props.tableKey === 'csraccountdetails') {
-      return (
-        <Components.overviews.csrPaymentBatch
-          tableKey={this.props.tableKey}
-          onActionClick={this.props.onActionClick}
-          cancelBatch={this.props.cancelBatch}
-          editBatch={this.props.editBatch}
-        />
-      );
-    }
+
     return (
       <Components.overviews.paymentBatch
         tableKey={this.props.tableKey}

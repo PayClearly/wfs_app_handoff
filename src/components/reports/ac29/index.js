@@ -79,13 +79,6 @@ class components_reports_recon extends Component {
     actions: ['Schedule'],
   };
 
-  componentWillMount() { }
-
-  componentDidMount() { }
-
-  componentWillReceiveProps() { }
-
-
 
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;

@@ -83,8 +83,6 @@ class components_reports_recon extends Component {
     actions: ['Schedule', 'Export CSV'],
     transactions: [],
   };
-  componentWillMount() { }
-  componentDidMount() { }
   componentWillReceiveProps(nextProps) {
     if (nextProps.transactions) {
       this.setState({
