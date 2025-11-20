@@ -1,6 +1,5 @@
 import { connect, Component } from 'component';
 
-import './index.scss';
 
 const mapStateToProps = () => ({});
 const mapDispatchToProps = () => ({});

@@ -5,7 +5,6 @@ import {
 
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   users: state.users.data.items,

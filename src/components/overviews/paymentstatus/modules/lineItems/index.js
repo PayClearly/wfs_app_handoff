@@ -4,7 +4,6 @@ import Components from 'components';
 
 import { Collapse } from 'react-collapse';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({});

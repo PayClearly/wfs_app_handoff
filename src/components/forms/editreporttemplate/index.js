@@ -7,7 +7,6 @@ import Store from 'store';
 import Components from 'components';
 
 import { cannedFields } from 'components/forms/components/customreportfield/reportFields';
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

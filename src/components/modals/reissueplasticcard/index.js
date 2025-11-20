@@ -5,7 +5,6 @@ import numeral from 'numeral';
 
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

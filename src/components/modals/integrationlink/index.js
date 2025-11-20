@@ -7,7 +7,6 @@ import {
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => ({
   integration: _try(() => Selectors.integrations(state)[props.type]),

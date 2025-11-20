@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => {
   return ({

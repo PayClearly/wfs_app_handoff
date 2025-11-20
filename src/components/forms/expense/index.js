@@ -6,7 +6,6 @@ import Components from 'components';
 
 import Dropzone from 'react-dropzone';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

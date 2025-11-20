@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import { Popover, PopoverBody } from 'reactstrap';
 
 
-import './index.scss';
 
 const mapStateToProps = () => ({});
 

@@ -18,7 +18,6 @@ import Components from 'components';
 import Store from 'store';
 
 import { cannedFields } from 'components/forms/components/customreportfield/reportFields';
-import './index.scss';
 
 const fieldDict = cannedFields.reduce(((acc, field) => {
   acc[field.name] = field;

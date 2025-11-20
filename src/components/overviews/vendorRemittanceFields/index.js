@@ -3,7 +3,6 @@ import {
 } from 'component';
 
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => ({});
 

@@ -7,7 +7,6 @@ import Components from 'components';
 import numeral from 'numeral';
 import { PopoverHeader, PopoverBody } from 'reactstrap';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

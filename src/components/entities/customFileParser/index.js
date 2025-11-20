@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   paymentPipelinePreferences: _try(() => state.account.paymentPipelinePreferences.data.item, {}),

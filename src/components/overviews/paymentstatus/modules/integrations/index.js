@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   erpIntegration: _try(() => Selectors.integrations(state).erpIntegration),

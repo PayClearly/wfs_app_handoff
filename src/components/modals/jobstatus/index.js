@@ -4,7 +4,6 @@ import Components from 'components';
 // Third Party Imports ...
 
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({});

@@ -8,7 +8,6 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 import Store from 'store';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

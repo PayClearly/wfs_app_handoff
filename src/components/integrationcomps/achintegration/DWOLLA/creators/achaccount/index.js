@@ -7,7 +7,6 @@ import Selectors from 'selectors';
 import Components from 'components';
 import api from 'api/achIntegration';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

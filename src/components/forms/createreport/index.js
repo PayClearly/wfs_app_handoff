@@ -4,7 +4,6 @@ import { connect, Component } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   forms: state.forms,

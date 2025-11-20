@@ -5,7 +5,6 @@ import {
 import Store from 'store';
 import Selectors from 'selectors';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   cardsIntegration: Selectors.integrations(state).cardsIntegration,

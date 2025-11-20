@@ -3,7 +3,6 @@ import Utils from 'utils';
 import Components from 'components';
 import Resources from 'resources';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   expenseReportComments: state.account.expenseReportComments.data.items,

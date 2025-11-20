@@ -9,7 +9,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   accountId: state.account.data.id,

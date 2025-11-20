@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 // Third Party Imports ...
 
 
-import './index.scss';
 
 const mapStateToProps = () => ({});
 

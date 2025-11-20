@@ -2,7 +2,6 @@ import { connect, Component } from 'component';
 
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({});

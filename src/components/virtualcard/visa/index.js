@@ -5,7 +5,6 @@ import logoVisa from 'assets/logos/Visa_Logo.png';
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

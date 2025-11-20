@@ -5,7 +5,6 @@ import firebase from 'firebase';
 
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({});

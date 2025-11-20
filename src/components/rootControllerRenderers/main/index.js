@@ -2,7 +2,6 @@ import { connect, Component, Fragment } from 'component';
 
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   access: state.user.access,

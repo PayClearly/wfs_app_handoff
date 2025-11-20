@@ -8,7 +8,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   vCards: _try(() => state.account.cardsIntegration.data.resources.vCards),

@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import Store from 'store';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

@@ -9,8 +9,6 @@ import 'assets/static/browser_not_supported.html';
 import Components from './components';
 import * as Store from './store';
 
-// TODO: remove this placeholder comment
-
 function wrap(app) {
 
   window.APPLICATIONSTART = (state) => {

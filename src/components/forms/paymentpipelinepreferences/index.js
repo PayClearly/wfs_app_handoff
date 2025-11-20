@@ -9,7 +9,6 @@ import Selectors from 'selectors';
 import Components from 'components';
 import Utils from 'utils';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   forms: state.forms,

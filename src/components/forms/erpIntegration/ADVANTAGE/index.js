@@ -4,7 +4,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({

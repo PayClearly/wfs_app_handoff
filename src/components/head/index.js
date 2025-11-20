@@ -4,7 +4,6 @@ import { connect, Component } from 'component';
 import Helmet from 'react-helmet';
 import Selectors from 'selectors';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   head: Selectors.head(state),

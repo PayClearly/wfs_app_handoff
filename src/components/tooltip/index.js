@@ -5,7 +5,6 @@ import md5 from 'md5';
 import * as Reactstrap from 'reactstrap';
 
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({});

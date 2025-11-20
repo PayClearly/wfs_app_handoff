@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => ({
   achIntegration: _try(() => Selectors.integrations(state).achIntegration, {}),

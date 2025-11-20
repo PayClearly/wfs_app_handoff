@@ -1,6 +1,5 @@
 import { connect, Component } from 'component';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   forms: state.forms,

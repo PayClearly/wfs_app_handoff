@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-import './index.scss';
 
 const RESERVED_CUSTOM_FIELDS = [
   // basic payment information

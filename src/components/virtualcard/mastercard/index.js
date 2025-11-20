@@ -5,7 +5,6 @@ import logoMastercard from 'assets/logos/mastercard-logo.png';
 
 import Components from 'components';
 
-import './index.scss';
 
 const mapStateToProps = (state, props) => {
   return ({});

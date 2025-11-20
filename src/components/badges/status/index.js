@@ -1,7 +1,6 @@
 import { connect, Component } from 'component';
 import Utils from 'utils';
 
-import './index.scss';
 
 const mapStateToProps = () => ({});
 const mapDispatchToProps = () => ({});

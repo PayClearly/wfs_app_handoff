@@ -9,7 +9,6 @@ import Utils from 'utils';
 import Components from 'components';
 import TransactionAmountsBreakdown from '../../components/TransactionAmountsBreakdown';
 
-import './index.scss';
 
 const mapStateToProps = (state) => ({
   paymentPipelinePreferences: state.account.paymentPipelinePreferences.data.item,
