@@ -110,7 +110,7 @@ class components_modals_termsandconditions extends Component {
                   }}
                   checked={this.state.agreed}
                 />
-                <label className="form-check-label">By checking this box you agree to Our Terms of Service and Privacy Policy, as well as our partner Dwolla's <a href={'https://www.dwolla.com/legal/tos'}>Terms of Service</a> and <a href={'https://www.dwolla.com/legal/privacy'}>Privacy Policy</a></label>
+                <label className="form-check-label">By checking this box you agree to Our Terms of Service and Privacy Policy.</label>
               </div>
               <button disabled={this.state.accepting} style={{ width: '6rem' }} type="button" className="btn btn-secondary" data-dismiss="modal" onClick={() => { return this.onDecline(); }}>Decline</button>
               <button disabled={this.state.accepting || !this.state.agreed} style={{ width: '6rem' }} type="button" className="btn btn-primary" onClick={() => { return this.onAccept(); }}>{

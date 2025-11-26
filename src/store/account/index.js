@@ -517,7 +517,6 @@ export function createCardsIntegrationAccount(data) {
 
 // -- checksIntegration
 
-// SmartPayables Integration
 export function fetchCheckProofImageForReview() {
   return (dispatch, getState) => checksIntegration.fetchCheckProofImage()(dispatch, getState);
 }
@@ -814,14 +813,6 @@ export function clearErrorsAchTransfers() {
   return (dispatch, getState) => achTransfers.clearErrors()(dispatch, getState);
 }
 
-// Dwolla Integration
-export function fetchDwollaIavToken() {
-  return (dispatch, getState) => API_achIntegration.getGroviderSetupResource(getState().organization.data.id, getState().account.data.id, 'iavToken');
-}
-
-export function fetchDwollaBusinessClassifications() {
-  return (dispatch, getState) => API_achIntegration.getGroviderSetupResource(getState().organization.data.id, getState().account.data.id, 'businessClassifications');
-}
 
 export function verifyMailingAddress(mailingAddress) {
   return (dispatch, getState) => usps.verify(mailingAddress)(dispatch, getState);

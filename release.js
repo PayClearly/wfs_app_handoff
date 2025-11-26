@@ -14,8 +14,8 @@ const config = {
   },
   project: {
     name: 'WFS Frontend',
-    commitParsers: [/Merge pull request #(:<prId>[0-9]{1,7}) from CHANGE_ME\/(:<ticketId>(PC-|WFS-|WKC-|PAY-|QA-|PS-|MWW-)[0-9]{1,7}(-[0-9]+)*)/],
-    branchParsers: [/\/(:<wipId>(PC-|WFS-|WKC-|PAY-|QA-|PPS-|MWW-)[0-9]{1,7}(-[0-9]+)*)$/],
+    commitParsers: [/Merge pull request #(:<prId>[0-9]{1,7}) from CHANGE_ME\/(:<ticketId>(WFS-|WKC)[0-9]{1,7}(-[0-9]+)*)/],
+    branchParsers: [/\/(:<wipId>(WFS-|WKC-)[0-9]{1,7}(-[0-9]+)*)$/],
     tagParsers: [
       /build_app_(:<buildId>[0-9]{10,15})$/,
       /envreq_(:<envReqId>[A-Za-z]{2,10}_[a-z0-9_]{2,30})$/,

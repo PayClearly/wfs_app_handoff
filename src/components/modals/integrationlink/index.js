@@ -86,14 +86,6 @@ class components_modals_integrationlink extends Component {
               close={this.props.close}
             />
           );
-        case 'SMARTPAYABLES':
-          return (
-            <Components.integrationsetups.checksintegration.SMARTPAYABLES
-              type="achIntegration"
-              provider="SMARTPAYABLES"
-              close={this.props.close}
-            />
-          );
         default:
           return (<p>checksIntegration does not have a provider of type {provider}</p>);
       }
@@ -105,14 +97,6 @@ class components_modals_integrationlink extends Component {
             <Components.integrationsetups.achintegration.STUB
               type="achIntegration"
               provider="STUB"
-              close={this.props.close}
-            />
-          );
-        case 'DWOLLA':
-          return (
-            <Components.integrationsetups.achintegration.DWOLLA
-              type="achIntegration"
-              provider="DWOLLA"
               close={this.props.close}
             />
           );
