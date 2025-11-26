@@ -246,7 +246,7 @@ class components_mainverticalnav extends Component {
         </div>
         {!this.props.providerTheme.disableCopyright
           && <footer className="text-center">
-            <p className="my-2">© {currentYear} PayClearly</p>
+            <p className="my-2">© {currentYear} CHANGE_ME_COMPANY_NAME</p>
           </footer>}
       </aside>
     );

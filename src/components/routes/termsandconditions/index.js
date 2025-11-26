@@ -89,7 +89,7 @@ class components_routes_termsandconditions extends Component {
       <div className="components_routes_termsandconditions">
         <div className={'container'}>
           <div className="header">
-            <h2 className="title">PayClearly&apos;s Terms & Conditions</h2>
+            <h2 className="title">CHANGE_ME_COMPANY_NAME&apos;s Terms & Conditions</h2>
           </div>
           <div className="body">
             <h5>Effective as of {new Date(this.props.latestTermsDate).toLocaleString()}</h5>

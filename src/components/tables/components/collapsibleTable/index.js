@@ -466,7 +466,7 @@ class components_tables_components_collapsibleTable extends Component {
         let fieldValue = row[column.dataKey];
         // Add the id to the row
         if (index === 0) {
-          acc['PayClearly Id'] = row._id || row.id || '-';
+          acc['CHANGE_ME_COMPANY_NAME Id'] = row._id || row.id || '-';
         }
         if (column.disableExport || !column.label || column.label === 'Actions') { return acc; }
 
@@ -517,10 +517,10 @@ class components_tables_components_collapsibleTable extends Component {
         }
 
         if (includeVendorId && hasBeenCreated) {
-          dataMap['PayClearly Vendor Id'] = row.created.vendorId || '-';
+          dataMap['CHANGE_ME_COMPANY_NAME Vendor Id'] = row.created.vendorId || '-';
         }
         if (includeBatchId) {
-          dataMap['PayClearly Batch Id'] = row._batchId || '-';
+          dataMap['CHANGE_ME_COMPANY_NAME Batch Id'] = row._batchId || '-';
         }
         if (includeLineItems && hasLineItems) {
           return [dataMap, ...lineItemDataMap];
@@ -542,18 +542,18 @@ class components_tables_components_collapsibleTable extends Component {
 
       // Vendor Id Handling
       if (includeVendorId) {
-        fields.push('PayClearly Vendor Id');
+        fields.push('CHANGE_ME_COMPANY_NAME Vendor Id');
       }
 
       // Batch Id Handling
       if (includeBatchId) {
-        fields.push('PayClearly Batch Id');
+        fields.push('CHANGE_ME_COMPANY_NAME Batch Id');
       }
     }
     // End of Payment Table Specific Handling
 
     // Add id to the fields
-    fields.push('PayClearly Id');
+    fields.push('CHANGE_ME_COMPANY_NAME Id');
 
     // Parse the data using fields and data, maps fields to data row
     const parser = new Parser({ fields });

@@ -1,6 +1,6 @@
 const AUTOMATION_TAIKO = 'automation_taiko';
 const GALILEO = 'GALILEO';
-// PayClearly has banking compliance requirements that enforce cards to a limit of $500,000 or less
+// CHANGE_ME_COMPANY_NAME has banking compliance requirements that enforce cards to a limit of $500,000 or less
 const VCARD_MAX_AMOUNT = 500000;
 const ACH_MAX_TRANSACTION_AMOUNT = 500000;
 

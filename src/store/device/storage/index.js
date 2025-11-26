@@ -104,7 +104,7 @@ export function wipe(callback = () => {}) {
       const keysToRemove = storageKeys.filter((key) => !['auth', 'refresh_token'].includes(key.split('.')[1]));
       keysToRemove.reduce((acc, key) => {
         return acc.then(() => {
-          return remove(key.split(`${getState().device.storage.data && getState().device.storage.data.options && getState().device.storage.data.options.keyPrefix || 'payclearly'}.`)[1])(dispatch, getState);
+          return remove(key.split(`${getState().device.storage.data && getState().device.storage.data.options && getState().device.storage.data.options.keyPrefix || 'CHANGE_ME_COMPANY_NAME'}.`)[1])(dispatch, getState);
         });
       }, Promise.resolve()).then(() => { dispatch({ type: actionTypes.deleteSuccess }); callback(); });
     } catch (err) {

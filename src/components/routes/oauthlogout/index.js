@@ -47,7 +47,7 @@ class components_routes_oauthlogout extends Component {
           <h1 className="text-uppercase">Processing logout...</h1>
           <Components.horizontalLoader />
         </div>
-        <footer className="footer text-center mb-4">© {currentYear} PayClearly</footer>
+        <footer className="footer text-center mb-4">© {currentYear} CHANGE_ME_COMPANY_NAME</footer>
       </div>
     );
   }

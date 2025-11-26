@@ -69,7 +69,7 @@ class components_overviews_paymentstatus_modules_remittance extends Component {
     if (indexInProgress === 3) {
       if (additionalPaymentInfo.linked) {
         color = 'secondary';
-        message = 'PayClearly Concierge';
+        message = 'CHANGE_ME_COMPANY_NAME Concierge';
       } else {
         color = 'warning';
         message = 'Sending Required';

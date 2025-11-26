@@ -28,7 +28,7 @@ class components_routes_error404 extends Component {
           <h1 className="text-uppercase">{resourceNotFound ? 'Resource not found' : 'Page not Found'}</h1>
           {!resourceNotFound && <div><a href="/" className="btn btn-primary">Back to Home</a></div>}
         </div>
-        {!resourceNotFound && <footer className="footer text-center mb-4">© {currentYear} PayClearly</footer>}
+        {!resourceNotFound && <footer className="footer text-center mb-4">© {currentYear} CHANGE_ME_COMPANY_NAME</footer>}
       </div>
     );
   }
