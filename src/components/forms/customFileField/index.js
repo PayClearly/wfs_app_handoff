@@ -83,7 +83,7 @@ class components_forms_customFileField extends Component {
       errors.fieldName = 'A field name is required.';
     }
     if (pcFields.length === 1 && pcFields[0].includes('alias-')) {
-      errors.fieldName = 'A PayClearly field is required with an alias';
+      errors.fieldName = 'Field is required with an alias';
     }
     if (values.fieldName) {
       if (values.fieldName.includes(',')) {

@@ -73,7 +73,7 @@ class components_routes_termsandconditions extends Component {
         <div className={'p-5 h-100 text-center text align-middle align-middle'} style={{ margin: 'auto', 'max-width': '1500px' }}>
           <div className={'jumbotron'}>
             <h1>Thank you!</h1>
-            <p>You are now enrolled with {this.props.providerTheme.displayName} ACH payments. If you have any questions or would like additional information, please contact {this.props.providerTheme.displayName} support at <a href={`mailto: ${this.props.providerTheme.supportEmail}`}>{this.props.providerTheme.supportEmail}</a> or {this.props.providerTheme.supportPhone} or visit our website at <a href="https://www.payclearly.com/">www.payclearly.com</a></p>
+            <p>You are now enrolled with {this.props.providerTheme.displayName} ACH payments. If you have any questions or would like additional information, please contact {this.props.providerTheme.displayName} support at <a href={`mailto: ${this.props.providerTheme.supportEmail}`}>{this.props.providerTheme.supportEmail}</a> or {this.props.providerTheme.supportPhone} or visit our website at <a href="CHANGE_ME_WEBSITE_URL">CHANGE_ME_WEBSITE_URL</a></p>
           </div>
         </div>
       );

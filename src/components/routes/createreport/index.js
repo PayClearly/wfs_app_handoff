@@ -11,8 +11,8 @@ import {
 import './index.scss';
 
 const mapStateToProps = (state) => ({
-    forms: state.forms,
-  });
+  forms: state.forms,
+});
 
 
 const mapDispatchToProps = { ...Store.forms };
@@ -25,30 +25,24 @@ class components_routes_createreport extends Component {
     return (
       <div className={'components_routes_createreport floating-labels'}>
         <Components.forms.createreport />
-        { reportType === 'transactionDetails'
+        {reportType === 'transactionDetails'
           && <Components.reports.transactions />}
-        { reportType === 'spendByVendor'
+        {reportType === 'spendByVendor'
           && <Components.reports.spendbyvendor />}
-        { reportType === 'spendByCard'
+        {reportType === 'spendByCard'
           && <Components.reports.spendByCard />}
-        { reportType === 'recon'
+        {reportType === 'recon'
           && <Components.reports.recon />}
-        {/* comdata file output format */}
-        { reportType === 'ac28'
-          && <Components.reports.ac28 />}
-        {/* comdata file output format */}
-        { reportType === 'ac29'
-          && <Components.reports.ac29 />}
         {/* wex file output format */}
-        { reportType === 'vapCleared'
+        {reportType === 'vapCleared'
           && <Components.reports.vapCleared />}
-        { reportType === 'pctrAch'
+        {reportType === 'pctrAch'
           && <Components.reports.pctr pctrType="pctrAch" />}
-        { reportType === 'pctrCheck'
+        {reportType === 'pctrCheck'
           && <Components.reports.pctr pctrType="pctrCheck" />}
-        { reportType === 'pctrCard'
+        {reportType === 'pctrCard'
           && <Components.reports.pctr pctrType="pctrCard" />}
-        { reportType === REPORT_TYPES.CHECK_ACTIVITY
+        {reportType === REPORT_TYPES.CHECK_ACTIVITY
           && <Components.reports.checkActivity />}
       </div>
     );

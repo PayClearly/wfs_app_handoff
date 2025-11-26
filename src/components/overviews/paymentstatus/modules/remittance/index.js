@@ -218,7 +218,7 @@ class components_overviews_paymentstatus_modules_remittance extends Component {
           cardsIntegrationDetails,
         } = this.props;
         const { email = '' } = user.profile?.data?.item || {};
-        const isSupportTeamUser = email.includes('@payclearly.com');
+        const isSupportTeamUser = email.includes('@CHANGE_ME.com');
         const { provider } = cardsIntegrationDetails;
         const showPRN = provider === 'GALILEOSTUB' || provider === 'GALILEO';
         if (!paymentStatus.funded?.vCards) {

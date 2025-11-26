@@ -80,7 +80,7 @@ class components_forms_customFileTemplate extends Component {
         }
 
         if (this.props.mode === 'upload') {
-          errors.fields = `Upload template may not have duplicate PayClearly Field names: ${duplicates}`;
+          errors.fields = `Upload template may not have duplicate {CHANGE_ME_COMPANY_NAME} Field names: ${duplicates}`;
         }
       }
     }
@@ -229,7 +229,7 @@ const _checkForDuplicates = (values = [], mode) => {
           duplicates.push(fieldName);
         }
       }
-  
+
       return acc;
     }
 
@@ -241,7 +241,7 @@ const _checkForDuplicates = (values = [], mode) => {
           duplicates.push(pcField);
         }
       }
-  
+
       return acc;
     }
 

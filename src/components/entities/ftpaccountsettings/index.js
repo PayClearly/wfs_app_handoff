@@ -100,7 +100,7 @@ class components_entities_ftpaccountsettings extends Component {
               if (complete) {
                 return (
                   <Fragment>
-                    <p>Host IP Address: <strong>{_isDev() ? '35.209.103.128' : 'ftps.payclearly.com'}</strong></p>
+                    <p>Host IP Address: <strong>{_isDev() ? 'CHANGE_ME_HOST_IP_ADDRESS_TEST' : 'CHANGE_ME_HOST_IP_ADDRESS'}</strong></p>
                     <p>Username: <strong>{this.props.ftpAccountDetails.username}</strong></p>
                     <p>User IP Address Whitelist: <strong>{_try(() => this.props.ftpAccountDetails.ipWhitelist.join(', '))}</strong></p>
                     {complete && !active &&

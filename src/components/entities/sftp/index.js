@@ -117,7 +117,7 @@ class components_entities_sftpUser extends Component {
               if (sftpUser.id) {
                 return (
                   <Fragment>
-                    <p>Host IP Address: <strong>{'files.payclearly.com'}</strong></p>
+                    <p>Host IP Address: <strong>{'CHANGE_ME_HOST_IP_ADDRESS'}</strong></p>
                     <p>Username: <strong>{sftpUser.fileMage.username}</strong></p>
                     <p>
                       IP Address Whitelist: <strong>{_try(() => sftpUser.fileMage.whitelist.join(', '), '')}</strong>

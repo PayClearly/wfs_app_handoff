@@ -34,7 +34,7 @@ const tenants = {
     },
   },
   wfsappPROD: {
-    clientId: 'khigDfpHOOe254LoZxxPuBocW9GGjHiE',
+    clientId: 'CHANGE_ME_PROD_CLIENT_ID',
     darkTheme: 'true',
     oAuthAuthorizeEndpoint: 'https://auth.wfscorp.com/authorize',
     oAuthTokenEndpoint: 'https://auth.wfscorp.com/oauth/token',
@@ -47,7 +47,7 @@ const tenants = {
     },
   },
   wfsDEV: {
-    clientId: 'lBIfJX6h35cDnUymt2cHkZYXOY3QJX6J',
+    clientId: 'CHANGE_ME_DEV_CLIENT_ID',
     darkTheme: 'false',
     oAuthAuthorizeEndpoint: 'https://auth.qa.wfscorp.com/authorize',
     oAuthTokenEndpoint: 'https://auth.qa.wfscorp.com/oauth/token',
@@ -60,7 +60,7 @@ const tenants = {
     },
   },
   wfsPROD: {
-    clientId: 'HHXQWqxRZYEHFdiTyxGhLRikMkPQeWcE',
+    clientId: 'CHANGE_ME_PROD_CLIENT_ID',
     darkTheme: 'false',
     oAuthAuthorizeEndpoint: 'https://auth.wfscorp.com/authorize',
     oAuthTokenEndpoint: 'https://auth.wfscorp.com/oauth/token',

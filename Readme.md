@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-[Introduction](#introduction) 
+[Introduction](#introduction)
 
 [Features](#features)
 
@@ -33,7 +33,7 @@ __Dashboard__: Displays available funds, pending payments and a summary of payme
 __Payments__: Provides the tools a user needs to make payments, from setting up vendors, funding bank account, creating payments, managing payment history and downloading csv files.
 
 __Reports__: Allows the user to generate custom report templates, schedule reports, generate ad hoc reports, and schedule reports to be delivered via email, uploaded to our FTP server or downloaded to the local client.
- 
+
 __Settings__: Allows the user to customize their account configurations, integrate with 3rd party payment providers and create custom upload and download templates.
 
 __Admin__: Tools for managing organization, account, users, and feature flags. The admin section is also used to monitor the status of 3rd party inegrations.
@@ -63,7 +63,7 @@ Code is broken into three primary groups:
 Client-facing code is stored in src. Shared view components, state, and client API are located in `components/`, `store/`, and `api/`, respectively. Other shared code is are located top-level in `src/`. App-specific code, such as: configs, style-sheets, and the entry-point, is located in `apps/`.
 
 ## Setup & Installation
-Steps to setup the PayClearly APP development environment.
+Steps to setup the APP development environment.
 
 1. Make sure you are running node 16.15.0, this is the node version that runs on Google's cloud functions
 
@@ -122,9 +122,7 @@ WIP
 
 ## Deployment
 
-We use an internal release tool to deploy the app. The bundled assets are hosted on a Virtual Machine called 'minion' in our Google Cloud project. To run the release tool, run command `npm run release` 
-
-Here is a [Loom video](https://www.loom.com/share/e33b5ce9271d43acbebd76dce82b6957?sid=a7210e68-657c-4980-95ee-6ad2b587ea11) demonstrating the deployment process.
+UPDATE_ME
 
 ## Internal Documentation
 

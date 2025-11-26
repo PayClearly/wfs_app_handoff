@@ -8,8 +8,6 @@ const selectors_fileTypeOptions = createSelector('selectors_fileTypeOptions',
   () => {
     return {
       csv: { display: 'Default (.csv)' },
-      comdata: { display: 'COMDATA' },
-      rubicon: { display: 'Rubicon' },
       wexap3: { display: 'Wex AP3' },
       bpam: { display: 'BPAM' },
     };

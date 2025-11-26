@@ -74,17 +74,7 @@ class componentsFormsCreatereport extends Component {
       this.props.initialize(name, key, { reportType: 'transactionDetails', emailContacts: null });
     }
 
-    // ac29 should only be a report option if you are currently set up to ingest comdata files
-    // and VAPCleared should be set an option only if you are currently set up to ingest wexap3
-    if (nextProps.paymentPipelinePreferences.paymentUploadFileType === 'comdata') {
-      this.setState((prevState) => ({
-        reportOptions: {
-          ...prevState.defaultReportOptions,
-          ac28: { display: 'COMDATA AC28' },
-          ac29: { display: 'COMDATA AC29' },
-        },
-      }));
-    } else if (nextProps.paymentPipelinePreferences.paymentUploadFileType === 'wexap3') {
+    if (nextProps.paymentPipelinePreferences.paymentUploadFileType === 'wexap3') {
       this.setState((prevState) => ({
         reportOptions: {
           ...prevState.defaultReportOptions,

@@ -224,7 +224,7 @@ export function ssoLogout() {
         redirectTo = 'http%3A%2F%2Flocalhost:5005';
         wfsLogoutUrl = `https://kc-lower.wfscorp.com/auth/realms/QA_Ext/protocol/openid-connect/logout?redirect_uri=${redirectTo}&state=isLoggingOut`;
       } else if (window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME')) {
-        redirectTo = 'https%3A%2F%2Fwfs-staging.payclearly.com';
+        redirectTo = 'https%3A%2F%2Fwfs-staging.CHANGE_ME_STAGING_URL.com';
         wfsLogoutUrl = `https://kc-lower.wfscorp.com/auth/realms/QA_Ext/protocol/openid-connect/logout?redirect_uri=${redirectTo}&state=isLoggingOut`;
       } else {
         wfsLogoutUrl = `https://kc-lower.wfscorp.com/auth/realms/WFS_Prod/protocol/openid-connect/logout?redirect_uri=${redirectTo}&state=isLoggingOut`;

@@ -264,19 +264,6 @@ class components_overviews_paymentBatch extends Component {
                 </div>
               }
               {
-                this.props.paymentPipelinePreferences.paymentUploadFileType === 'comdata'
-                && <div className="row mb-2">
-                  <Components.button
-                    onClick={() => this.downloadAttachmentPS21('generateOutputFile', rowData._id)}
-                    className="btn btn-primary"
-                    aria-label="export button"
-                    disabled={!(isProcessing || isSent || isTracked) || isCancelled}
-                    buttonText="Download PS21"
-                    updating={this.state.downloadClicked}
-                  />
-                </div>
-              }
-              {
                 this.props.paymentPipelinePreferences.paymentUploadFileType === 'wexap3'
                 && <div className="row mb-2">
                   <Components.button
