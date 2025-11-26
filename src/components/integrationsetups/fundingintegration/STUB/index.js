@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Store from 'store';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -18,9 +17,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_integrationsetups_fundingintegration_STUB extends Component {
-
-
-
 
   render() {
     return (
@@ -42,5 +38,4 @@ class components_integrationsetups_fundingintegration_STUB extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationsetups_fundingintegration_STUB);
-
 

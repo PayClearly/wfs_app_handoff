@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -31,9 +30,6 @@ class components_integrationcomps_achintegration_DWOLLA_creators_certifyownershi
   state = {
     formKey: 'create',
   };
-
-
-
 
   onCreate = () => {
 
@@ -112,5 +108,4 @@ class components_integrationcomps_achintegration_DWOLLA_creators_certifyownershi
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_creators_certifyownership);
-
 

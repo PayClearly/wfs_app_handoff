@@ -26,9 +26,6 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_integrationcomps_achintegration_DWOLLA_entities_main extends Component {
 
-
-
-
   render() {
 
     const { details } = this.props.integration;
@@ -65,5 +62,4 @@ class components_integrationcomps_achintegration_DWOLLA_entities_main extends Co
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_entities_main);
-
 

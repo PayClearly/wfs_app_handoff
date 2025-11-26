@@ -14,7 +14,6 @@ const mapStateToProps = (state) => ({
   forms: state.forms,
 });
 
-
 const mapDispatchToProps = { ...Store.forms };
 
 class components_routes_createreport extends Component {

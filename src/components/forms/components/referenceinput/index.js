@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Utils from 'utils';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     refs: _try(() => props.refPath.split('|').reduce((acc, curr) => { return { ...acc, ...Utils.deepdotproperty(state, curr || '') } }, null)),
@@ -39,7 +38,6 @@ class components_forms_components_referenceinput extends Component {
 
     if (this.state.loading) this.setState({ loading: false });
   }
-
 
   actionIntercepter(type, fieldName, value) {
     const { refKey = 'name', refs } = this.props;
@@ -92,5 +90,4 @@ class components_forms_components_referenceinput extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_referenceinput);
-
 

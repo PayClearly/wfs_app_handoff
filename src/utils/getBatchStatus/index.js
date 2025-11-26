@@ -14,7 +14,6 @@ function utils_getBatchStatus(statuses = [], requiresApproval = false, scheduled
   if (((statuses.cancelled || 0) + (statuses.tracked || 0)) === paymentCount) status = 'Complete';
   if ((statuses.cancelled || 0) === paymentCount) status = 'Cancelled';
 
-
   if (statuses.tracking) status = 'Tracking...';
   if (statuses.sending) status = 'Processing...';
   if (statuses.funding) status = 'Funding...';
@@ -27,5 +26,4 @@ function utils_getBatchStatus(statuses = [], requiresApproval = false, scheduled
 }
 
 export default utils_getBatchStatus;
-
 

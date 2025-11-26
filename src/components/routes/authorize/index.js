@@ -33,4 +33,3 @@ class components_routes_authorize extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_routes_authorize);
 
-

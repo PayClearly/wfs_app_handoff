@@ -5,7 +5,6 @@ import logoMastercard from 'assets/logos/mastercard-logo.png';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -19,9 +18,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_virtualcard_mastercard extends Component {
-
-
-
 
   render() {
     const { card, blur, logo, nameOnCard, overlay } = this.props;
@@ -273,5 +269,4 @@ class components_virtualcard_mastercard extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_virtualcard_mastercard);
-
 

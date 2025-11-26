@@ -444,7 +444,6 @@ export function updatePaymentPipelinePreferences(data) {
   return (dispatch, getState) => paymentPipelinePreferences.update(getState().organization.data.id, getState().account.data.id, data)(dispatch, getState);
 }
 
-
 export function fetchPrivateVirtualCards(ids) {
   return (dispatch, getState) => privateVirtualCard.fetch(getState().organization.data.id, getState().account.data.id, ids)(dispatch);
 }
@@ -962,7 +961,6 @@ export function createOpsNotes(resource, data) {
     return opsNotes.create(context, data)(dispatch, getState);
   };
 }
-
 
 export function fetchResource(resourceId, storeReducer, organizationId, accountId) {
   switch (storeReducer) {

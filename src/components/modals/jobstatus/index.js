@@ -3,8 +3,6 @@ import Components from 'components';
 
 // Third Party Imports ...
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -18,9 +16,6 @@ class components_modals_jobstatus extends Component {
   state = {
     emailsSent: true,
   };
-
-
-
 
   render() {
     const disableButtons = false;
@@ -73,5 +68,4 @@ class components_modals_jobstatus extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_jobstatus);
-
 

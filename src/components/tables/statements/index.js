@@ -7,7 +7,6 @@ import Store from 'store';
 import Components from 'components';
 import Resources from 'resources';
 
-
 const mapStateToProps = (state) => {
   return ({});
 };

@@ -64,7 +64,6 @@ export function sync(context, skipCache) {
       return dispatch({ type: actionTypes.fetchSuccess, data: { [customerNumber]: customerRewards }, collections });
     } catch (err) {
       if (getState().wfs.preferences.data.errorTracing) {
-        // device.showToast({ message: `Customer Rewards: ${err.message} ${err.stack}`, color: 'danger', duration: 5000 })(dispatch);
       } else {
         // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
       }

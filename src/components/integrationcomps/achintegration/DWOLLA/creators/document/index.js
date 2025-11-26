@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -34,9 +33,6 @@ class components_integrationcomps_achintegration_DWOLLA_creators_document extend
   state = {
     formKey: 'create',
   };
-
-
-
 
   onDocumentDrop = (files) => {
     this.setState({
@@ -133,5 +129,4 @@ class components_integrationcomps_achintegration_DWOLLA_creators_document extend
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_creators_document);
-
 

@@ -75,7 +75,6 @@ export function sync(searchRadius = 10) {
       }, { nearest: {} });
       return dispatch({ type: actionTypes.fetchSuccess, data, collections });
     } catch (err) {
-      // device.showToast({ message: `Airports Geo: ${err.message} ${err.stack}`, color: 'danger', duration: 5000 })(dispatch);
       dispatch({ type: actionTypes.fetchError, error: err.message });
     }
   };

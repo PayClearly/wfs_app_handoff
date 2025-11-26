@@ -73,7 +73,6 @@ export function sync() {
       return { ...DEFAULT_DATA_STATE, ...filteredData };
     } catch (err) {
       if (getState().wfs.preferences.data.errorTracing) {
-        // device.showToast({ message: `Preferences: ${err.message} ${err.stack}`, color: 'danger', duration: 5000 })(dispatch);
       } else {
         // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
       }

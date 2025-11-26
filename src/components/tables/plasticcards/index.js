@@ -8,7 +8,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
     routeParams: state.router.route.params,
     cardPolicies: Selectors.entity('cards_idOrganization_idAccount')(state),
@@ -56,8 +55,6 @@ class components_tables_plasticcards extends Component {
       {
         label: '', dataKey: 'transactionInformation', sortable: false, cellRenderer: (transactionInformation) => <Components.misc.cardactivity data={transactionInformation} />, 
       },
-      // { label: 'Created', dataKey: '_createdAt', sortable: true, default: 'Unknown', cellRenderer: _formatDate },
-      // { label: 'By', dataKey: '_createdBy', sortable: true, cellRenderer: (data, plasticCardId, plasticCard) => <Components.badges.createdby user={data} /> },
     ],
   };
 

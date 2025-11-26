@@ -110,7 +110,7 @@ const selectors_accountVendors = createSelector(
       selectedVendor.accepts = _acceptsAtAll(selectedVendor);
       selectedVendor.accepts.isNonAcceptor = selectedVendor.linkedWithPayClearly && !Object.keys(selectedVendor.accepts).some((method) => selectedVendor.accepts[method] === true);
       selectedVendor.tagsToPaymentMethodOptions = _selectablePaymentMethods(selectedVendor);
-      selectedVendor.readyToPay = { vCard: true, ACH: true, check: false }; // TODO
+      selectedVendor.readyToPay = { vCard: true, ACH: true, check: false };
 
       // Issues
       selectedVendor.needsAttentionNoMethodSelected = !selectedVendor?.linkedWithPayClearly && !(selectedVendor?.accepts?.vCard || selectedVendor?.accepts?.ACH || selectedVendor?.accepts?.check) || false;
@@ -202,7 +202,6 @@ function _linkedTagData(vendor, accountVendorCredentials, globalTaggedItems, int
 }
 
 function _configuredForPaymentMethod(methdo) {
-  // TODO
   return true;
 }
 
@@ -241,8 +240,11 @@ function _feeFactory(fee = {}, procedure = {}) {
     const { vCardMaxPerCardAmount, vCardRequireUniqueAmounts } = procedure;
 
     /**
+
      * The maximum vCard amount was changed from $990,000 to $500,000 therefore
+
      * we need to guard against legacy procedures that might have a max amount greater than $500,000
+
      */
     let vCardMaxPerCardAmountWithGuard = Constants.VCARD_MAX_AMOUNT;
 
@@ -259,16 +261,23 @@ function _feeFactory(fee = {}, procedure = {}) {
 
     return {
       /**
+
        * "amount" is "inputAmount" which is the base payment amount.
+
        * We also refer to this as the "netAmount" of the payment.
+
        */
       amount,
       feeAmount: totalFeeAmount,
       transactions,
       /**
+
        * Net amount previously was inputAmount + feeAmount. Not sure
+
        * why it is labeled "netAmount," but it corresponds to the
+
        * total amount of the payment including the fee.
+
        */
       netAmount: totalAmount,
 

@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 
 const selectors_tableData_expenseReports = createSelector(
@@ -57,5 +56,4 @@ const selectors_tableData_expenseReports = createSelector(
 );
 
 export default selectors_tableData_expenseReports;
-
 

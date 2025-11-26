@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_cardRegionOptions = createSelector('selectors_cardRegionOptions',
   () => {
@@ -27,5 +25,4 @@ const selectors_cardRegionOptions = createSelector('selectors_cardRegionOptions'
 );
 
 export default selectors_cardRegionOptions;
-
 

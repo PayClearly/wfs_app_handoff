@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_addDollars(amounts = []) {
   let amount = 0;
   amounts
@@ -16,5 +15,4 @@ function utils_addDollars(amounts = []) {
 }
 
 export default utils_addDollars;
-
 

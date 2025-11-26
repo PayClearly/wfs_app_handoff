@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -18,9 +17,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_forms_components_resourceSelector_selectedCounter extends Component {
-
-
-
 
   clearSelection = () => {
     _try(() => this.props.form.action('change', this.props.form.fieldName, {}));
@@ -48,5 +44,4 @@ class components_forms_components_resourceSelector_selectedCounter extends Compo
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_components_resourceSelector_selectedCounter);
-
 

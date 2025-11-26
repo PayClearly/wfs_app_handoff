@@ -62,7 +62,6 @@ function updatePaymentPipelinePreferences(organizationId, accountId, data) {
   return false;
 }
 
-
 function setAccountVendorCredentials(organizationId, accountId, id, data) {
   // Add code for database or API integrations
 

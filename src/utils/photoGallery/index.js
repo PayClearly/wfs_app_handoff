@@ -58,10 +58,8 @@ const _keys = async (extraFilter) => {
 
 const _remove = (key) => SecureStoragePlugin.remove({ key: key.includes('payclearlyPHOTOS.') ? `${key}` : `payclearlyPHOTOS.${key}` });
 
-
 const savePicture = async (photo, fileName) => {
   let base64Data;
-  // "hybrid" will detect Cordova or Capacitor;
   if (isPlatform('hybrid')) {
     const file = await Filesystem.readFile({
       path: photo.path,
@@ -301,7 +299,6 @@ const removePhotos = async (keys, setPhotoCallback, bypass = false, fuzzy) => {
 
   setPhotoCallback(returnPhotos);
 };
-
 
 export default {
   takePhoto,

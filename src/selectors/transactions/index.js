@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const TransactionsSelector = createSelector(
   state => state.account.paymentStatuses.data.items,
@@ -116,6 +114,4 @@ const TransactionsSelector = createSelector(
 );
 
 export default TransactionsSelector;
-
-
 

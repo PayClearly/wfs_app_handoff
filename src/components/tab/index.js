@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import classNames from 'classnames';
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -15,9 +14,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_tab extends Component {
-
-
-
 
   render() {
     const { children, name, isActive, tabClassName, isPersisted } = this.props;
@@ -38,5 +34,4 @@ class components_tab extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tab);
-
 

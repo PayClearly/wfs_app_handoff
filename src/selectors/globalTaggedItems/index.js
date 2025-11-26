@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_globalTaggedItems = createSelector('selectors_globalTaggedItems',
 
@@ -106,11 +104,7 @@ const selectors_globalTaggedItems = createSelector('selectors_globalTaggedItems'
 
 export default selectors_globalTaggedItems;
 
-
 //       ...acc,
-//     };
-//   }, { vCard: false, ACH: false, check: false })).some(accepts => accepts);
-// }
 function _groupAcceptsPayment(group = {}) {
   return _try(() => group.vCard.accepts || group.vCard.accepted || group.ACH.accepts || group.ACH.accepted || group.check.accepts || group.check.accepted);
 }

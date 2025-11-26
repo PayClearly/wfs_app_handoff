@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     cardsIntegration: Selectors.integrations(state).cardsIntegration || {},
@@ -29,9 +28,6 @@ class components_integrationsetups_cardsintegration_EFS extends Component {
   state = {
     showCreatedNotification: false,
   };
-
-
-
 
   onSubmit() {
     this.props.createIntegration({ ...this.props.form._values });
@@ -90,5 +86,4 @@ class components_integrationsetups_cardsintegration_EFS extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationsetups_cardsintegration_EFS);
-
 

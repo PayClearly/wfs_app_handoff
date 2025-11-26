@@ -2,8 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -13,9 +11,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_photooverview extends Component {
-
-
-
 
   render() {
     if (this.props.src) {
@@ -28,5 +23,4 @@ class components_photooverview extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_photooverview);
-
 

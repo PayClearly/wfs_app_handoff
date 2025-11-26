@@ -132,7 +132,6 @@ export function setFavoriteContext(context) {
       dispatch({ type: actionTypes.updateSuccess });
     } catch (err) {
       if (getState().wfs.preferences.data.errorTracing) {
-        // device.showToast({ message: `setFavoriteContext: ${err.message}`, color: 'danger' })(dispatch);
       } else {
         // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
       }
@@ -185,7 +184,6 @@ export function setContext(context) {
       return dispatch({ type: actionTypes.updateSuccess, data: { context } });
     } catch (err) {
       if (getState().wfs.preferences.data.errorTracing) {
-        // device.showToast({ message: `setContext: ${err.message}`, color: 'danger' })(dispatch);
       } else {
         // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
       }
@@ -256,7 +254,6 @@ export const setUseBiometrics = (useBiometrics) => async (dispatch, getState) =>
     dispatch({ type: actionTypes.createSuccess });
   } catch (err) {
     // console.log('there was an error!!!!!', err)
-    // device.showToast({ message: `setUseBiometrics: ${err.message}`, color: 'danger' })(dispatch);
     return dispatch({ type: actionTypes.createError, error: err.message });
   }
 };
@@ -272,7 +269,6 @@ export const setBiometricsTimeout = (biometricsTimeout) => async (dispatch, getS
     dispatch({ type: actionTypes.updateSuccess });
   } catch (err) {
     if (getState().wfs.preferences.data.errorTracing) {
-      // device.showToast({ message: `setBiometricsTimeout: ${err.message}`, color: 'danger' })(dispatch);
     } else {
       // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
     }
@@ -290,7 +286,6 @@ export const setErrorTracing = (errorTracing) => async (dispatch, getState) => {
     dispatch({ type: actionTypes.updateSuccess });
   } catch (err) {
     if (getState().wfs.preferences.data.errorTracing) {
-      // device.showToast({ message: `setErrorTracing: ${err.message}`, color: 'danger' })(dispatch);
     } else {
       // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
     }
@@ -316,20 +311,6 @@ export function getCurrentLocation() {
   };
 }
 
-/**
- * @typedef {Object} SyncDocumentsParameters
- * @property {'salesOrders' | 'serviceProviderDocuments' | 'openFuelAuthorizations'} type - The type of document to fetch
- * @property {string} icao - The icao of the airport to fetch documents for
- * @property {boolean} isUpdate - Whether or not to update the documents
- * @property {'ASC' | 'DESC'} dateOrder - The order to sort the documents by, which collection it goes into
- * @property {string} toDate - The date to fetch documents to
- * @property {string} fromDate - The date to fetch documents from
-*/
-/**
- * Syncs documents of the specified type
- * @param {SyncDocumentsParameters} param0 - The parameters for the sync
- * @returns
-*/
 export function syncDocuments({ type, icao, dateOrder, toDate, fromDate }) {
   return async (dispatch, getState) => {
     // Call the appropriate sync function based on the type of document
@@ -348,19 +329,6 @@ export function syncDocuments({ type, icao, dateOrder, toDate, fromDate }) {
     }
   };
 }
-// TODO come back to isUpdate
-/**
- * @typedef {Object} FetchDocumentsParameters
- * @extends SyncDocumentsParams
- * @property {boolean} isUpdate - TODO
- * @property {Event=} event - The event to complete after fetching documents
-*/
-/**
- * Fetches documents of the specified type
- * - Will complete the event if passed
- * @param {FetchDocumentsParameters} param0 - The parameters for the fetch
- * @returns
-*/
 export function fetchDocuments({ type, icao, dateOrder, toDate, fromDate, isUpdate, event = false }) {
   return async (dispatch, getState) => {
     // Call the appropriate fetch function based on the type of document
@@ -376,7 +344,6 @@ export function fetchDocuments({ type, icao, dateOrder, toDate, fromDate, isUpda
         break;
       default:
         // There was no type passed, this should never happen
-        // TODO error handling
         break
     }
     // Currently used by infinite scroll spinner
@@ -386,11 +353,6 @@ export function fetchDocuments({ type, icao, dateOrder, toDate, fromDate, isUpda
   }
 }
 
-/**
- * Fetches PDF information of the specified document
- * @param {string} resourceId - The id of the document to fetch
- * @returns
-*/
 export function getDocumentPDF(resourceId) {
   return async (dispatch, getState) => {
     await pdfs.getDocument(resourceId)(dispatch, getState);

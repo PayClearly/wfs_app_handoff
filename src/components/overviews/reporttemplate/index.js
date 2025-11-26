@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Utils from 'utils';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -15,9 +14,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_overviews_reporttemplate extends Component {
-
-
-
 
   render() {
     const { filename, description, status, type, schedule, orderBy, exports, startDate, endDate, emailContacts, selectFields } = _formatTemplateFields(this.props.template);

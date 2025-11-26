@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     cardPolicies: Selectors.entity('cards_idOrganization_idAccount')(state),
@@ -19,10 +18,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_routes_wfsCreate extends Component {
-
-
-
-
 
   render() {
     const tabs = [
@@ -44,5 +39,4 @@ class components_routes_wfsCreate extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_routes_wfsCreate);
-
 

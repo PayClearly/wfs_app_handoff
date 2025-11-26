@@ -1,9 +1,7 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 import Selectors from 'selectors';
-
 
 const selectors_featureFlags = createSelector(
   'selectors_featureflags',
@@ -62,9 +60,13 @@ const selectors_featureFlags = createSelector(
       manualWithdrawals: ON,
       achFunding: ON,
       /**
+
        * The 'enableOpsAchDebit' feature flag is currently commented out so that it will
+
        * not be editable by ops users. It can however exist and it's value
+
        * can be retrieved from firebase.
+
        */
       // WFS
       authRefresh: OFF,
@@ -121,7 +123,6 @@ const selectors_featureFlags = createSelector(
     // Vendor Create
     //   featureFlags.vendorCreateSingle = OFF;
     //   featureFlags.vendorCreateUpload = OFF;
-    // }
 
     return Object.keys(featureFlags).reduce((acc, cur) => {
       if (featureFlags[cur] === ON) { acc[cur] = true; }
@@ -130,12 +131,9 @@ const selectors_featureFlags = createSelector(
       return acc;
     }, {});
 
-
   }
-
 
 );
 
 export default selectors_featureFlags;
-
 

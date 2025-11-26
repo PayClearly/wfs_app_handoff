@@ -3,7 +3,6 @@ import { createStatusReducer, createActionTypes } from 'store/_utilities/statusR
 import { watchCollection, removeListeners, watchValue } from 'store/_utilities/firebaseHelpers';
 import SchemaAPI from 'api/schemas';
 
-
 const namespace = 'GLOBALVENDORSCHEMAS';
 export const actionTypes = createActionTypes(namespace);
 

@@ -23,9 +23,6 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_integrationcomps_achintegration_DWOLLA_overviews_fundingsource extends Component {
 
-
-
-
   render() {
     const { fundingSource, details, status } = this.props;
 
@@ -74,5 +71,4 @@ class components_integrationcomps_achintegration_DWOLLA_overviews_fundingsource 
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_overviews_fundingsource);
-
 

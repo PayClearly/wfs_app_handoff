@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -38,7 +37,6 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_comps_microDep
     formKey: 'SMARTPAYABLES',
   }
 
-
   componentWillReceiveProps(nextProps = {}) {
     if (_try(() => nextProps.checksIntegration.details.microDepositAttempts, 0) > _try(() => this.props.checksIntegration.details.microDepositAttempts, 0)) {
       const attemptsRemaining = 4 - _try(() => nextProps.checksIntegration.details.microDepositAttempts, 0);
@@ -55,7 +53,6 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_comps_microDep
     const values = form._values;
     return this.props.verifyMicroDeposits(values);
   }
-
 
   render() {
     const checksIntegrationDetails = _try(() => this.props.checksIntegration.details, {});
@@ -134,5 +131,4 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_comps_microDep
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_integrationcomps_checksIntegration_SMARTPAYABLES_comps_microDeposits);
-
 

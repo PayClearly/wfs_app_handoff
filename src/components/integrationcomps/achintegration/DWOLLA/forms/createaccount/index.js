@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -120,7 +119,6 @@ class components_integrationcomps_achintegration_DWOLLA_forms_createaccount exte
     const errors = {};
 
     //   errors.adminEmail = Utils.typesvalidator.validationErrorMsgs.email;
-    // }
 
     if (values.controllerDOB) {
       if (values.controllerDOB.length !== 10) {
@@ -527,5 +525,4 @@ class components_integrationcomps_achintegration_DWOLLA_forms_createaccount exte
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_forms_createaccount);
-
 

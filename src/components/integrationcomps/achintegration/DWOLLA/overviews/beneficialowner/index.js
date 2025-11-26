@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Utils from 'utils';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -12,9 +11,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_integrationcomps_achintegration_DWOLLA_overviews_beneficialowner extends Component {
-
-
-
 
   render() {
     const { data } = this.props;
@@ -42,5 +38,4 @@ class components_integrationcomps_achintegration_DWOLLA_overviews_beneficialowne
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_overviews_beneficialowner);
-
 

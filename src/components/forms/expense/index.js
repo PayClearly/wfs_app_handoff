@@ -6,7 +6,6 @@ import Components from 'components';
 
 import Dropzone from 'react-dropzone';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -184,16 +183,7 @@ class components_forms_expense extends Component {
                   hideError={_try(() => !form.reimbursable.touched)}
                 />
               </div>
-              {/* <div className="col-12">
-                <Components.forms.components.checkbox
-                  form={form}
-                  field="personal"
-                  action={this.standardFormAction}
-                  label="Personal"
-                  disabled={this.props.disabled}
-                  hideError={_try(() => !form.personal.touched)}
-                />
-              </div> */}
+              {}
               <div className="col-12">
                 <Components.forms.components.textinput
                   form={form}
@@ -314,5 +304,4 @@ class components_forms_expense extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_expense);
-
 

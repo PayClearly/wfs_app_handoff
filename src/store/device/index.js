@@ -62,14 +62,6 @@ export const reducer = combineReducers({
 
 export default reducer;
 
-/**
- * @function Device/init
- * @description initilizes the device duck by gaterhing all of the data associated with the device
- * and adding it to the store
- * @memberOf State
- * @returns {State.Thunk}
- * @instance
-*/
 export function init() {
   // eslint-disable-next-line consistent-return
   return async (dispatch, getState) => {
@@ -159,7 +151,6 @@ export const biometricsSetAuthed = (isAuthed) => async (dispatch, getState) => {
   try {
     await biometrics.setAuthed(isAuthed)(dispatch, getState);
   } catch (err) {
-    // device.showToast({ message: `biometricsSetAuthed: ${err.message}`, color: 'danger' })(dispatch);
   }
 };
 

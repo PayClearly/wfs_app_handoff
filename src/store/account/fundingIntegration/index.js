@@ -13,7 +13,7 @@ export const defaultState = {
     transfers: {},
     accounts: {},
   },
-  statuses: { // TODO add specific statuses for resouces
+  statuses: {
     transfers: {},
     accounts: {},
   },

@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -38,13 +37,12 @@ class components_forms_virtualCard extends Component {
       requireExactMatch: (initialFormData.exactMatch && 'yes') || 'no',
       status: initialFormData.status || 'active',
     };
-    
-    // Hack for RedBox to have custom fields
+
     if (this.props.orgId === 'e9eea221-c5b7-4fd4-9f9b-dcf42060050b') {
       initialData.customField1 = initialFormData.customFields && initialFormData.customFields['efs-customField1'] || '';
       initialData.customField2 = initialFormData.customFields && initialFormData.customFields['efs-customField2'] || '';
     }
-    
+
     initialize(this.state.name, formKey, initialData);
     validate(this.state.name, formKey, this.validate);
   }
@@ -102,7 +100,6 @@ class components_forms_virtualCard extends Component {
 
     // region - temporarily disabled
     //   errors.region = 'Must be a valid region';
-    // }
 
     // sendField
     if (fields.sendMethod === 'email') {
@@ -133,21 +130,6 @@ class components_forms_virtualCard extends Component {
     if (fields.validThrough.getTime() > Utils.dates.plusThreeYears(_try(() => initialFormData.createdAt) || Date.now())) {
       errors.validThrough = _try(() => initialFormData.createdAt) ? 'Must be less than 3 years from creation date' : 'Must be less than 3 years in the future';
     }
-    //   errors.validThroughDay = 'Must be a valid date';
-    // }
-
-    // Previous validators
-
-    // amount
-    //   errors.amount = 'Must be between 1 and 5 dollars';
-    // }
-    // numberOfUses
-    //   errors.numberOfUses = 'Must be between 1 and 99';
-    // }
-    // sendField
-    //   // TODO = use a better email address vaildator
-    //   errors.sendField = 'Must be a vaild email address';
-    // }
     return errors;
   };
 
@@ -235,7 +217,7 @@ class components_forms_virtualCard extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_virtualCard);
 
-// Internal Helper Functions ... 
+// Internal Helper Functions ...
 const regionOptions = {
   USA: {
     display: 'United States',

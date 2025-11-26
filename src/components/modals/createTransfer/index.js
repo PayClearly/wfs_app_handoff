@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     transfersPolicies: Selectors.entity('achTransfers_idOrganization_idAccount')(state),
@@ -31,11 +30,9 @@ class components_modals_createTransfer extends Component {
     }
   }
 
-
   render() {
     const title = this.props.title || 'Deposit Funds Manually';
     const message = this.props.message || `You may elect to manually deposit additional funds into your ${this.props.providerDisplayName} account. Please be aware that this is not recommended as our systems already monitor the status of your account and will notify you regarding funding if needed. If you have any questions about funding, please reach out to the ${this.props.providerDisplayName} support team.`;
-
 
     return (
       <div className="modal-dialog wide-modal wide-70" role="document">
@@ -65,5 +62,4 @@ class components_modals_createTransfer extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_createTransfer);
-
 

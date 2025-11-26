@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 import Selectors from 'selectors';
 
@@ -82,5 +81,4 @@ const selectors_availableFunds = createSelector(
 );
 
 export default selectors_availableFunds;
-
 

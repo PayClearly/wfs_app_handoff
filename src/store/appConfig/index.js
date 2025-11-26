@@ -16,7 +16,6 @@ export function _moduleReducers(state = defaultState, action) {
       return { ...defaultState };
 
     //     ...state,
-    //   };
 
     default:
       return state;
@@ -32,13 +31,4 @@ export const reducer = combineReducers({
 export default reducer;
 
 // action creators
-//     dispatch({ type: actionTypes.fetchStart });
-//       dispatch({ type: actionTypes.fetchSuccess, data, paths });
-//     });
-//   };
-// }
 
-//     removeListeners(getState().integrationDefinitions.data.paths);
-//     dispatch({ type: actionTypes.clear });
-//   };
-// }

@@ -1,7 +1,5 @@
 import createSelector from 'selector';
 
-
-
 const selectors_cardsCarousel = createSelector('selectors_cardsCarousel',
 
   state => state.account.cardsIntegration.data.resources.pCards,
@@ -14,5 +12,4 @@ const selectors_cardsCarousel = createSelector('selectors_cardsCarousel',
 );
 
 export default selectors_cardsCarousel;
-
 

@@ -5,7 +5,6 @@ import firebase from 'firebase';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -27,7 +26,6 @@ class components_containers_image extends Component {
       });
     });
   }
-
 
   onImageLoad = () => {
     this.setState({
@@ -75,5 +73,4 @@ class components_containers_image extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_containers_image);
-
 

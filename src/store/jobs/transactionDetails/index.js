@@ -37,7 +37,6 @@ export const reducer = combineReducers({
 
 export default reducer;
 
-
 export function fetch(organizationId, accountId, data) {
   return (dispatch) => {
     dispatch({ type: actionTypes.fetchStart });

@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_deepdotproperty(obj, ref) {
   const refParams = ref.split('.');
   let data = obj;
@@ -11,5 +10,4 @@ function utils_deepdotproperty(obj, ref) {
 }
 
 export default utils_deepdotproperty;
-
 

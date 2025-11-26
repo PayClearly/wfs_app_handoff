@@ -36,7 +36,6 @@ class components_routes_termsandconditions extends Component {
     accepted: false,
   };
 
-
   componentDidMount() {
     const latestTermsAndConditionsId = jwtDecode(this.props.routeParams.token).claims.latestTermsAndConditions.toString();
     this.setState({
@@ -109,5 +108,4 @@ class components_routes_termsandconditions extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_routes_termsandconditions);
-
 

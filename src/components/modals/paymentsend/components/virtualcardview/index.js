@@ -8,7 +8,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   paymentStatuses: state.account.paymentStatuses,
   privateVirtualCard: state.account.privateVirtualCard,
@@ -202,5 +201,4 @@ class components_modals_paymentsend_components_virtualcardview extends Component
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_modals_paymentsend_components_virtualcardview);
-
 

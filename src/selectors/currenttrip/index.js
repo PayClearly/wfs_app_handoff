@@ -1,7 +1,5 @@
 import createSelector from 'selector';
 
-
-
 const selectors_currenttrip = createSelector('selectors_currenttrip',
   state => state.wfs.trips.data,
   state => state.wfs.data.context,
@@ -32,5 +30,4 @@ const selectors_currenttrip = createSelector('selectors_currenttrip',
 );
 
 export default selectors_currenttrip;
-
 

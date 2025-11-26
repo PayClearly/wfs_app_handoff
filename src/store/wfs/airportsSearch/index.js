@@ -44,7 +44,6 @@ export function search(searchString) {
 
       return dispatch({ type: actionTypes.fetchSuccess, data });
     } catch (err) {
-      // device.showToast({ message: `Airports Search: ${err.message} ${err.stack}`, color: 'danger', duration: 5000 })(dispatch);
       dispatch({ type: actionTypes.fetchError, error: err.message });
     }
   };

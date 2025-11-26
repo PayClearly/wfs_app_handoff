@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 const selectors_usersAssignedToAccountVendorEnrollments = createSelector('selectors_usersAssignedToAccountVendorEnrollments',
 
   state => state.account.accountVendorEnrollments.data.items,
@@ -20,5 +19,4 @@ const selectors_usersAssignedToAccountVendorEnrollments = createSelector('select
 );
 
 export default selectors_usersAssignedToAccountVendorEnrollments;
-
 

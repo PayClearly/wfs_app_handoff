@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
 
 import Utils from 'utils';
@@ -17,7 +16,6 @@ const selectors_paymentforms = () => {
   return Utils.cachedSelector('selectors_paymentforms', ids.join('-'),
     ...states,
 
-
     (...items) => {
       return items.reduce((acc, item) => {
         return {
@@ -31,5 +29,4 @@ const selectors_paymentforms = () => {
 };
 
 export default selectors_paymentforms;
-
 

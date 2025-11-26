@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_csvToJson(data, template) {
   return new Promise((resolve, reject) => {
     try {
@@ -36,9 +35,13 @@ function utils_csvToJson(data, template) {
             }
 
             /**
+
              * PC-4348 a csv file with a trailing comma in the header
+
              * row created an empty-string header. Add this check to
+
              * ignore columns without a proper header.
+
              */
             if (header) {
               rowObject[header] = row[column];

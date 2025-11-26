@@ -571,4 +571,3 @@ class components_tables_components_collapsabletable extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_components_collapsabletable);
 
-

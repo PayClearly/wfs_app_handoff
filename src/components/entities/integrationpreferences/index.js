@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
   policies: Selectors.entity(`${props.type}_idOrganization_idAccount`)(state),
   integration: Selectors.integrations(state)[props.type] || {},

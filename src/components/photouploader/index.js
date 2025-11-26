@@ -9,16 +9,27 @@ import Components from 'components';
 import './index.scss';
 
 /**
+
  * Usage:
+
  * <PhotoUploader
+
  *  onSavePhoto={(img) => { console.log(img); }}
+
  *  onError={(error) => { console.log(error); }}
+
  *  outputWidth={200}
+
  *  outputHeight={200}
+
  *  cropperHeight={300}
+
  *  src={}
+
  *  iconClassName="mdi-face-profile"
+
  * />
+
  */
 
 const mapStateToProps = (state, props) => {
@@ -51,13 +62,11 @@ class components_photouploader extends Component {
 
   state = {}
 
-
   componentWillReceiveProps(nextProps = {}) {
     if (this.props.accountId && (this.props.accountId !== nextProps.accountId)) {
       this.setState({ croppedPhoto: null, photo: null, errorMessage: null });
     }
   }
-
 
   _getBase64(file) {
     return new Promise((resolve, reject) => {
@@ -181,5 +190,4 @@ class components_photouploader extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_photouploader);
-
 

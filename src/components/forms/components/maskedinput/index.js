@@ -8,7 +8,6 @@ import Utils from 'utils';
 
 import './index.scss';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -20,9 +19,6 @@ const mapDispatchToProps = (dispatch, props) => {
 class components_forms_components_maskedinput extends Component {
 
   state = { hasFocused: false }
-
-
-
 
   render() {
     const form = this.props.form;
@@ -95,5 +91,4 @@ class components_forms_components_maskedinput extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_maskedinput);
-
 

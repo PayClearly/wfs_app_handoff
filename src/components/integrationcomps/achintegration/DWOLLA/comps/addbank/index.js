@@ -36,9 +36,7 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
     // You must pass your local stylesheet to the iframe options object, not the production path
 
     //   stylesheets.unshift('http://localhost:5005/index.css');
-    // } else {
     //   stylesheets.unshift('https://changeme.com/index.css');
-    // }
     const { organizationId, accountId } = this.props;
     api.getGroviderSetupResource(organizationId, accountId, 'iavToken').then((data) => {
       const token = data.data.data.token;
@@ -46,7 +44,6 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
       window.dwolla.iav.start(token, {
         container: 'iavContainer',
         stylesheets: [
-          // 'http://localhost:5005/index.css',
           'https://changeme.com/index.css',
           'https://fonts.googleapis.com/css?family=Rubik:300,400,700',
         ],
@@ -64,7 +61,6 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
     });
   }
 
-
   render() {
     return (
       <div className="components_integrationcomps_achintegration_DWOLLA_comps_addbank" id="iavContainer">
@@ -78,5 +74,4 @@ class components_integrationcomps_achintegration_DWOLLA_comps_addbank extends Co
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_comps_addbank);
-
 

@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     privileges: Selectors.privileges(state),
@@ -26,9 +25,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_routes_wfsHistory extends Component {
-
-
-
 
   tabSelected = (tab) => {
     this.props.setTabInRoute(tab);
@@ -73,5 +69,4 @@ class components_routes_wfsHistory extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_routes_wfsHistory);
-
 

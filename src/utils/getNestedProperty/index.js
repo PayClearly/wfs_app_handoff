@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_getNestedProperty(dotNotatedPropertyString, object, defaultValue) {
   const propertyKeys = dotNotatedPropertyString.split('.');
   let value = object;
@@ -12,5 +11,4 @@ function utils_getNestedProperty(dotNotatedPropertyString, object, defaultValue)
 }
 
 export default utils_getNestedProperty;
-
 

@@ -4,7 +4,6 @@ import Components from 'components';
 
 import { Collapse } from 'react-collapse';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -18,9 +17,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_overviews_paymentstatus_modules_lineItems extends Component {
-
-
-
 
   render() {
     const { id } = this.props;
@@ -38,5 +34,4 @@ class components_overviews_paymentstatus_modules_lineItems extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_overviews_paymentstatus_modules_lineItems);
-
 

@@ -45,7 +45,6 @@ export const reducer = combineReducers({
 
 export default reducer;
 
-// TODO make sure user has secure screen lock set otherwise initialization will fail.
 export function init(options) {
   return async (dispatch, getState) => {
     dispatch({ type: actionTypes.initializeStart });

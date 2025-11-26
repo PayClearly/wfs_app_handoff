@@ -1,7 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -18,19 +16,10 @@ const mapResourcesToProps = (state, props) => {
 
 class components_forms_components_resourceSelector_tableButtons_selectResource extends Component {
 
-
-
-
-
   //   console.log(currentlyInScope);
   //   Object.keys(currentlyInScope || {})
   //     .forEach((id) => {
   //         items[id] = true;
-  //       } else {
-  //       }
-  //     });
-  //   action('change', fieldName, items);
-  // }
 
   _toggleSingleEditedItem = (e) => {
     const { forms, fieldName, formName, formKey, action } = this.props;
@@ -65,5 +54,4 @@ class components_forms_components_resourceSelector_tableButtons_selectResource e
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_components_resourceSelector_tableButtons_selectResource);
-
 

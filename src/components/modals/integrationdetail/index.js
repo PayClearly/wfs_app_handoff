@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
   integration: _try(() => Selectors.integrations(state)[props.type]),
   organization: state.organization.data.id,
@@ -18,10 +17,6 @@ const mapStateToProps = (state, props) => ({
 const mapDispatchToProps = (dispatch, props) => ({});
 
 class components_modals_integrationdetail extends Component {
-
-
-
-
 
   render() {
     const {
@@ -234,7 +229,6 @@ const INTEGRATION_DETAILS_DISPLAY_ICONS = {
     balance: 'mdi mdi-account-cash-outline',
   },
 };
-
 
 const INTEGRATION_RESOURCE_AlIASES = {
   erpIntegration: {},

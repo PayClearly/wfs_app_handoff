@@ -16,7 +16,6 @@ const selectors_usersTableData = createSelector('selectors_usersTableData',
       const organizationRole = (roles && roles.organization.split('_')[1]) || 'none';
       const accountRole = (roles && roles.account.split('_')[1]) || 'none';
 
-
       usersTableData[userId] = {
         ...user,
         adminRole,
@@ -33,5 +32,4 @@ const selectors_usersTableData = createSelector('selectors_usersTableData',
 );
 
 export default selectors_usersTableData;
-
 

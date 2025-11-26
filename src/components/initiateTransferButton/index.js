@@ -31,7 +31,6 @@ const mapDispatchToProps = (dispatch, props) => {
 class components_initiateTransferButton extends Component {
   state = {};
 
-
   componentWillUnmount() {
     if (typeof this.props.clearStatusErrors === 'function' && this.props.achTransfersStatus && this.props.achTransfersStatus.creatingError) {
       this.props.clearStatusErrors();
@@ -86,10 +85,15 @@ class components_initiateTransferButton extends Component {
           updating={correctButton && creating}
         />
         {/* {fundingAccountLinked && !autoFundingEnabled &&
+
           <div className="notify">
+
             <span className="heartbit danger" />
+
             <span className="point danger" />
+
           </div>
+
         } */}
       </Fragment>
     );
@@ -97,5 +101,4 @@ class components_initiateTransferButton extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_initiateTransferButton);
-
 

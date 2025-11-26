@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_getglobalcertinfo() {
   return {
     dbContext: window.GLOBALCERT.projectId.includes('test') ? 'TEST-ENV_CHANGE-ME' : window.GLOBALCERT.projectId,
@@ -9,5 +8,4 @@ function utils_getglobalcertinfo() {
 }
 
 export default utils_getglobalcertinfo;
-
 

@@ -377,10 +377,3 @@ export const paymentPipelinePreferencesFields = {
   },
 };
 
-//   }, {
-//   }, {
-//   }, {
-//   }, {
-//   }, {
-//   }, {
-//   }];

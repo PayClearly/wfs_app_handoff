@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-
 const selectors_context = createSelector(
 
   state => state.wfs.tails.collections.customerIds,
@@ -19,5 +18,4 @@ const selectors_context = createSelector(
 );
 
 export default selectors_context;
-
 

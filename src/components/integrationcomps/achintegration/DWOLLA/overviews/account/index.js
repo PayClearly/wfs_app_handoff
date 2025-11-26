@@ -2,8 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -13,9 +11,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_integrationcomps_achintegration_DWOLLA_overviews_account extends Component {
-
-
-
 
   render() {
     const { data } = this.props;
@@ -39,5 +34,4 @@ class components_integrationcomps_achintegration_DWOLLA_overviews_account extend
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_overviews_account);
-
 

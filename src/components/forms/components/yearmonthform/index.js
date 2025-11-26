@@ -2,8 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -13,9 +11,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_forms_components_yearmonthform extends Component {
-
-
-
 
   handleChange = (e) => {
     const { year, month } = e.target.form;
@@ -60,5 +55,4 @@ class components_forms_components_yearmonthform extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_yearmonthform);
-
 

@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import classNames from 'classnames';
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -39,7 +38,6 @@ class components_cards_wizard extends Component {
       this.setState({ selected: nextCurrent });
     }
   }
-
 
   handleSelected(index, disabled) {
     return () => {
@@ -112,5 +110,4 @@ class components_cards_wizard extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_cards_wizard);
-
 

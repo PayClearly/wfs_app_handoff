@@ -4,7 +4,6 @@ import { connect, Component } from 'component';
 // Third Party Imports ...
 import { Popover } from 'reactstrap';
 
-
 import Selectors from 'selectors';
 import Components from 'components';
 

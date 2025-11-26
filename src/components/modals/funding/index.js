@@ -7,7 +7,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     fundingDetails: Selectors.funding(state),
@@ -32,7 +31,6 @@ class components_modals_funding extends Component {
     manualCreateClicked: false,
   }
 
-
   componentWillReceiveProps(nextProps = {}) {
     const depositNeeded = Boolean(_try(() => this.props.fundingDetails.currentTransferPool));
     const depositNeededNow = Boolean(_try(() => nextProps.fundingDetails.currentTransferPool));
@@ -46,7 +44,6 @@ class components_modals_funding extends Component {
     }
 
   }
-
 
   onCreateClick = () => {
     this.setState({ manualCreateClicked: true });
@@ -174,5 +171,4 @@ class components_modals_funding extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_funding);
-
 

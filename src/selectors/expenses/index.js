@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const selectors_expenses = createSelector(
@@ -10,7 +9,6 @@ const selectors_expenses = createSelector(
   state => state.user.profile.data.item._id,
   state => Selectors.plasticCardAssignedToUser(state),
   state => state.account.cardsIntegration.data.resources.auths,
-
 
   (expenseReports = {}, expenses = {}, userId, pCard = {}, allAuths = {}) => {
     const toReturn = {

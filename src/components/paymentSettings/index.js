@@ -1,9 +1,7 @@
 import { connect, Component, Fragment } from 'component';
 
-
 import Selectors from 'selectors';
 import Components from 'components';
-
 
 const mapStateToProps = (state, props) => ({
   integrations: Selectors.integrations(state),
@@ -14,10 +12,6 @@ const mapDispatchToProps = (dispatch, props) => ({});
 const mapResourcesToProps = (state, props) => ({});
 
 class components_paymentSettings extends Component {
-
-
-
-
 
   render() {
     const { config = {}, integrations, options = {} } = this.props;
@@ -101,5 +95,4 @@ class components_paymentSettings extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_paymentSettings);
-
 

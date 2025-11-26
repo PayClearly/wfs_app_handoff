@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -25,19 +24,16 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_logbackin extends Component {
 
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.access.data.canWrite) {
       this.props.close();
     }
   }
 
-
   loginClicked = () => {
     const form = this.props.forms['Components.forms.login'].logBackIn;
     this.props.login(this.props.access.data.jwt.jwtId, form.email.value, form.password.value);
   };
-
 
   render() {
     const form = (this.props.forms['Components.forms.login'] && this.props.forms['Components.forms.login'].logBackIn) || {};
@@ -96,5 +92,4 @@ class components_modals_logbackin extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_logbackin);
-
 

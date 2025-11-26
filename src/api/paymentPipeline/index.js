@@ -7,11 +7,17 @@ function update(organizationId, accountId, data) {
 }
 
 /**
+
  *
+
  * @param {string} organizationId
+
  * @param {string} accountId
+
  * @param {string} paymentId
+
  * @param {{ 'Confirmation Number': string }} data
+
  */
 function updateVendorRemittanceFields(
   organizationId,

@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -34,9 +33,6 @@ class components_entities_userorganizationrole extends Component {
     formName: 'OrganizationRoleForm',
     editBtnText: 'Edit Organizational Role',
   };
-
-
-
 
   onSubmit = () => {
     const form = this.props.forms[this.state.formName][this.props.id];
@@ -94,5 +90,4 @@ class components_entities_userorganizationrole extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_userorganizationrole);
-
 

@@ -47,9 +47,13 @@ function pendingAmount(paymentStatusesDenorm, providers) {
 
 function pendingAmountForBalanceWidget(paymentStatusesDenorm, providers) {
   /**
+
    * After CHANGE_ME_PROVIDER ACH and check payments pass the funding step, funds will have
+
    * moved out of the MFA into the ACH or Check activity accounts, so at this point
+
    * funds for these payments should no longer be subtracted from 'total available'
+
    */
   const pastFundingStep = (step) => step === 'sending' || step === 'tracking';
 
@@ -135,7 +139,6 @@ function scheduledAmount(paymentStatusesDenorm, providers) {
     if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseFloat(paymentStatusesDenorm[step].checkTotal, 10);
     }
-
 
     return total + toAdd;
   }, 0);

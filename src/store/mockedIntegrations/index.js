@@ -6,7 +6,6 @@ import MOCKEDINTEGRATIONSAPI from 'api/mockedIntegrations';
 const namespace = 'MOCKEDINTEGRATIONS';
 export const actionTypes = createActionTypes(namespace);
 
-
 // Reducer //
 export const defaultState = {
   paths: {},
@@ -41,13 +40,6 @@ export default reducer;
 
 // action creators
 
-//     dispatch({ type: actionTypes.fetchStart });
-//     watchCollection('integrationDefinitions', (data, paths) => {
-//       dispatch({ type: actionTypes.fetchSuccess, data, paths });
-//     });
-//   };
-// }
-
 export function clear() {
   return (dispatch, getState) => {
     removeListeners(getState().integrationDefinitions.data.paths);
@@ -56,13 +48,6 @@ export function clear() {
 }
 
 export function setMock(data) {
-  /*
-    data: {
-      integration: string --> the Integration name in definition file
-      type: string --> the resource name in definition file
-      item: object --> the data object that the item should be set to, if has id will be update
-    }
-  */
 
   return (dispatch, getState) => {
     const forUpdate = _try(() => data.id);

@@ -42,10 +42,6 @@ class components_mainverticalnav extends Component {
 
   state = {};
 
-
-
-
-
   menuItemClicked = (e, name, params) => {
     e.preventDefault();
     this.props.navigating();
@@ -254,5 +250,4 @@ class components_mainverticalnav extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_mainverticalnav);
-
 

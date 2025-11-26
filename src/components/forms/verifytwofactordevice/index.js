@@ -7,7 +7,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -116,5 +115,4 @@ class components_forms_verifytwofactordevice extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_verifytwofactordevice);
-
 

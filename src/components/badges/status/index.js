@@ -1,7 +1,6 @@
 import { connect, Component } from 'component';
 import Utils from 'utils';
 
-
 const mapStateToProps = () => ({});
 const mapDispatchToProps = () => ({});
 

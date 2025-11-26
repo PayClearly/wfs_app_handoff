@@ -74,12 +74,19 @@ module.exports = {
 };
 
 /*
+
   . (period) 002e
+
   $ (dollar sign) 0024
+
   [ (left square bracket) 005b
+
   ] (right square bracket) 005d
+
   # (hash or pound sign) 0023
+
   / (forward slash) 005c
+
 */
 
 function _hexTobase64(val) {

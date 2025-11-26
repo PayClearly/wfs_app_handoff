@@ -29,7 +29,6 @@ const AUTOMATION_VM_WORKFLOW_STAGES = /** @type {const} */ ({
   WORKFLOW_BEGIN: 'workflow-begin',
 });
 
-
 const CHANGE_ME_PROVIDER_BIN_OPTIONS = ['credit', 'debit'];
 
 module.exports = {

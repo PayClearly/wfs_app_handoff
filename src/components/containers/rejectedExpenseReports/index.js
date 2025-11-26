@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     userId: _try(() => state.user.profile.data.item._id, ''),
@@ -18,9 +17,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_containers_rejectedExpenseReports extends Component {
-
-
-
 
   render() {
     return (
@@ -46,5 +42,4 @@ class components_containers_rejectedExpenseReports extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_containers_rejectedExpenseReports);
-
 

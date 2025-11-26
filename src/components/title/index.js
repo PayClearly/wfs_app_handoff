@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   route: state.router.route,
   routeConfig: Selectors.routeConfig(state),

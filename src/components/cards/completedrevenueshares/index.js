@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => {
   return ({
     statements: Selectors.approvedStatements(state),
@@ -55,5 +54,4 @@ class components_cards_completedrevenueshares extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_cards_completedrevenueshares);
-
 

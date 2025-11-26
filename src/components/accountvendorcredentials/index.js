@@ -2,8 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
-
 const mapStateToProps = (state, props) => {
   return ({
     standardCredentialFields: _resolve(state, 'global.standardCredentialFields.data.items', {}),
@@ -15,9 +13,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_accountvendorcredentials extends Component {
-
-
-
 
   renderFields = () => {
     return Object.values((this.props.credentialSchema && this.props.credentialSchema.fields) || {})
@@ -64,5 +59,4 @@ class components_accountvendorcredentials extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_accountvendorcredentials);
-
 

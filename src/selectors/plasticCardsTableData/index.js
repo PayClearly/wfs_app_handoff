@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const selectors_plasticCardsTableData = createSelector(
@@ -29,5 +28,4 @@ const selectors_plasticCardsTableData = createSelector(
 );
 
 export default selectors_plasticCardsTableData;
-
 

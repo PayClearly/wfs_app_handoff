@@ -1,7 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -16,9 +14,6 @@ const mapResourcesToProps = (state, props) => {
 
 class components_badges_expenseReceipt extends Component {
 
-
-
-
   render() {
     return (this.props.receipt ?
       <i className="mdi mdi-receipt text-primary mdi-24px" /> :
@@ -28,5 +23,4 @@ class components_badges_expenseReceipt extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_badges_expenseReceipt);
-
 

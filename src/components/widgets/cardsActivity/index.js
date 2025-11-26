@@ -130,7 +130,6 @@ class components_widgets_cardsActivity extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_widgets_cardsActivity);
 
-
 const _yAxisTickFormatter = (value) => {
   if (value > 999999) return numeral(value).format('$0.0a');
   else if (value > 100) return numeral(value).format('$0a');

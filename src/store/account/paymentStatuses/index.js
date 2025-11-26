@@ -113,7 +113,6 @@ function _denormalizer(state) {
     }
   });
 
-
   return {
     paymentsByBatch,
   };
@@ -208,19 +207,9 @@ export function fetchResource(organizationId, accountId, resourceId) {
   };
 }
 
-//     dispatch({ type: actionTypes.fetchStart });
 //         acc.batch[item._batchId] = acc.batch[item._batchId] ? [...acc.batch[item._batchId], id] : [id];
 //         acc._oldIds[item._oldId] = acc._oldIds[item._oldId] ? [...acc._oldIds[item._oldId], id] : [id];
-//       }, getState().account.paymentStatuses.collections ? getState().account.paymentStatuses.collections : DEFAULT_COLLECTION_STATE);
-//       dispatch({ type: actionTypes.fetchSuccess, items: adaptedItems, paths, collections });
-//     }, (items, paths) => {
-//       dispatch({ type: actionTypes.updateStart });
 //         acc._oldIds[item._oldId] = acc._oldIds[item._oldId] ? [...acc._oldIds[item._oldId], id] : [id];
-//       }, getState().account.paymentStatuses.collections ? getState().account.paymentStatuses.collections : DEFAULT_COLLECTION_STATE);
-//       dispatch({ type: actionTypes.updateSuccess, items: adaptedItems, paths, collections });
-//     });
-//   };
-// }
 
 export function fetchPayments(organizationId, accountId, paymentIds) {
   return (dispatch, getState) => {
@@ -243,21 +232,10 @@ export function fetchPayments(organizationId, accountId, paymentIds) {
     return watchValuesWithFinalCallback(`state/paymentStatuses/${organizationId}/${accountId}`, paymentIds, callback, finalCallback);
   };
 }
-//   dispatch({ type: actionTypes.replaceStart });
 //   (item, path) => {
-//       dispatch({ type: actionTypes.fetchStart });
-//       dispatch({ type: actionTypes.fetchSuccess, items: adaptedItem, collections, path });
-//     }
-//   },
 //   (items, paths) => {
 //       acc.batch[payment._batchId] = acc.batch[payment._batchId] ? [...acc.batch[payment._batchId], id] : [id];
 //       acc._oldIds[payment._oldId] = acc._oldIds[payment._oldId] ? [...acc._oldIds[payment._oldId], id] : [id];
-//     }, DEFAULT_COLLECTION_STATE);
-//     removeListeners(getState().account.paymentStatuses.data.items);
-//     dispatch({ type: actionTypes.replaceSuccess, items: adaptedItems, collections, paths });
-//   });
-// };
-// }
 
 export function sync(organizationId, accountId) {
   return (dispatch) => {

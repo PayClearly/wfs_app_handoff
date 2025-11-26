@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function validateSchema(validator, schema, against) {
   const allValid = !Object.keys(schema).some((key) => validateType(validator, schema[key], against[key]).valid === false);
 

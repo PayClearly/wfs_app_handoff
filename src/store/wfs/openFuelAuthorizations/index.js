@@ -12,8 +12,6 @@ import {
 } from '../_utils/documents';
 import query from './query';
 
-// TODO Test
-
 const namespace = 'WFS_OPEN_FUEL_AUTHORIZATIONS';
 const DOCUMENT_TYPE = 'openFuelAuthorizations';
 const DEFAULT_DATA_STATE = {};

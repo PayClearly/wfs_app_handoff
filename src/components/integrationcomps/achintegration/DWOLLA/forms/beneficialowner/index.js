@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -280,5 +279,4 @@ class components_integrationcomps_achintegration_DWOLLA_forms_beneficialowner ex
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_forms_beneficialowner);
-
 

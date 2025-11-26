@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     notificationStatuses: state.notificationStatuses,
@@ -157,5 +156,4 @@ class components_overviews_notifications extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_notifications);
-
 

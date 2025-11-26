@@ -4,12 +4,10 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import numeral from 'numeral';
 import { PopoverHeader, PopoverBody } from 'reactstrap';
 
-
 import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-
 
 const mapStateToProps = (state, props) => {
   return ({
@@ -32,9 +30,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_tables_paymentcardchippopover extends Component {
-
-
-
 
   navigateToDetails = () => {
     if (_try(() => this.props.modals.length)) this.props.closeModal();
@@ -99,5 +94,4 @@ class components_tables_paymentcardchippopover extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_paymentcardchippopover);
-
 

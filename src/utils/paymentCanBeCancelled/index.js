@@ -77,18 +77,6 @@ const PullAchCancellationPolicies = /** @type {const} */ {
   },
 };
 
-/**
- *
- * @param {{
- *  created: { method: typeof PAYMENT_METHODS[keyof PAYMENT_METHODS] }
- *  verified: { achDeliveryMethod?: 'pullAch' | 'pushAch' }
- * _status: typeof PAYMENT_STATUSES[keyof PAYMENT_STATUSES]
- * }} paymentStatus
- * @param {{
- *  achIntegrationProvider?: string,
- *  checksIntegrationProvider?: string
- * }} integrationProviders
- */
 function utils_paymentCanBeCancelled(paymentStatus, { achIntegrationProvider, checksIntegrationProvider }) {
   const { method } = paymentStatus.created;
   const { _status } = paymentStatus;

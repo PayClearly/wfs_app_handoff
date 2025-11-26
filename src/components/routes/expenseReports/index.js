@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -16,9 +15,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_routes_expenseReports extends Component {
-
-
-
 
   render() {
     return (
@@ -34,5 +30,4 @@ class components_routes_expenseReports extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_routes_expenseReports);
-
 

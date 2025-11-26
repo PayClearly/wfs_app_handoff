@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
   paymentStatuses: state.account.paymentStatuses.data.items,
   canRead: _try(() => Selectors.entity('cardsIntegration_idOrganization_idAccount')(state).canRead),
@@ -42,10 +41,6 @@ class components_tables_virtualcardtransactionhistory extends Component {
       },
     ],
   };
-
-
-
-
 
   rowRenderer = (rowId, rowData, expanded) => (
     <div className="p-4">

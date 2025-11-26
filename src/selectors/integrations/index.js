@@ -54,8 +54,8 @@ function selectIntegration(integration, name, definitions = {}, context, showMoc
   const possiblePreferences = _getPossiblePreferences(integration, definitions, name);
 
   // Remove and add as funding options for setup
-  preferences.fundingStrategy = 'earmark'; // TODO, remove
-  preferences.automaticFundingType = 'eod'; // TODO, remove
+  preferences.fundingStrategy = 'earmark';
+  preferences.automaticFundingType = 'eod';
 
   const possibleProviders = Object.keys(_try(() => definition.providers, {}))
     .reduce((acc, curr) => {
@@ -95,14 +95,13 @@ function selectIntegration(integration, name, definitions = {}, context, showMoc
       moreInfoNeeded: _try(() => Object.keys(possiblePreferences).some(preferenceKey => !preferences[preferenceKey] && possiblePreferences[preferenceKey].required)),
       errorSyncing: _try(() => integration.data.details._sync_error.message),
     },
-    warnings: { // TODO
+    warnings: {
       longTimeSinceSync: false, // it has been a long time since _sync has ran
       queueIsLarge: false, // there are a lot of items that are queued
       resourceErrors: false, // some of the resources have errors
     },
   };
 }
-
 
 // private helpers
 

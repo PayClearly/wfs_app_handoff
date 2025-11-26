@@ -1,11 +1,9 @@
 import createSelector from 'selector';
 
-
 const selectors_accountsByName = createSelector('selectors_accountsByName',
 
   state => state.admin.accounts.data.item,
   state => state.organizations.data.items,
-
 
   (accounts = {}, organizations = {}) => {
 

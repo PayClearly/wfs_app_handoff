@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-
 const selectors_deviceSecurity = createSelector(
 
   state => state.wfs.preferences.data,
@@ -15,20 +14,35 @@ const selectors_deviceSecurity = createSelector(
       label: 'Immediately',
       value: 0,
     }, /* {
+
       label: '1 minute',
+
       value: oneMinute,
+
     }, {
+
       label: '5 minutes',
+
       value: oneMinute * 5,
+
     }, {
+
       label: '15 minutes',
+
       value: oneMinute * 15,
+
     }, {
+
       label: '1 hour',
+
       value: oneMinute * 60,
+
     }, {
+
       label: '4 hours',
+
       value: oneMinute * 240,
+
     }*/];
 
     return {
@@ -48,5 +62,4 @@ const selectors_deviceSecurity = createSelector(
 );
 
 export default selectors_deviceSecurity;
-
 

@@ -40,7 +40,7 @@ export const defaultState = {
     clears: {},
     declines: {},
   },
-  statuses: { // TODO add specific statuses for resouces
+  statuses: {
     vCards: {},
     pCards: {},
     auths: {},

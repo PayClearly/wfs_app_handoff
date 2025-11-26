@@ -6,7 +6,6 @@ import numeral from 'numeral';
 import Utils from 'utils';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     paymentCardChangeRequests: state.account.paymentCardChangeRequests.data.items,

@@ -1,7 +1,5 @@
 import createSelector from 'selector';
 
-
-
 const selectors_fundingTableData = createSelector('selectors_fundingTableData',
 
   state => state.account.achTransfers.data.items,
@@ -26,5 +24,4 @@ const selectors_fundingTableData = createSelector('selectors_fundingTableData',
 );
 
 export default selectors_fundingTableData;
-
 

@@ -8,7 +8,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     paymentStatuses: state.account.paymentStatuses.data.items,
@@ -51,7 +50,6 @@ class components_tables_paymentchippopover extends Component {
       },
     });
   }
-
 
   navigateToDetails = () => {
     const paymentId = this.state.paymentStatus._id || null;
@@ -116,5 +114,4 @@ class components_tables_paymentchippopover extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_paymentchippopover);
-
 

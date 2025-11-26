@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -27,13 +26,11 @@ class components_modals_resetpassword extends Component {
     showEmailSentNotification: false,
   }
 
-
   componentWillReceiveProps(nextProps) {
     if (this.props.authStatus.updating && !nextProps.authStatus.updating) {
       this.emailSent();
     }
   }
-
 
   onSubmit(data) {
     this.props.sendResetPasswordEmail(data);
@@ -91,5 +88,4 @@ class components_modals_resetpassword extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_resetpassword);
-
 

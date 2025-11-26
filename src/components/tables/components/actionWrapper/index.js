@@ -2,8 +2,6 @@ import { connect, Component, Fragment } from 'component';
 import classNames from 'classnames';
 import { Popover, PopoverBody } from 'reactstrap';
 
-
-
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = () => ({});

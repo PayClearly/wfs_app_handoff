@@ -20,9 +20,6 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_tables_integrationIssues extends Component {
 
-
-
-
   render() {
     const columns = [
       { label: 'Type', dataKey: 'itemType', sort: true },
@@ -114,5 +111,4 @@ class components_tables_integrationIssues extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_integrationIssues);
-
 

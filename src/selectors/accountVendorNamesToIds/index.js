@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_accountVendorNamesToIds = createSelector('selectors_accountVendorNamesToIds',
 
@@ -19,5 +17,4 @@ const selectors_accountVendorNamesToIds = createSelector('selectors_accountVendo
 );
 
 export default selectors_accountVendorNamesToIds;
-
 

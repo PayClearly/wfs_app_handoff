@@ -27,9 +27,6 @@ const mapResourcesToProps = (state, props) => {
 
 class components_integrationcomps_checksIntegration_SMARTPAYABLES_overviews_main extends Component {
 
-
-
-
   render() {
     const setupRequired = _try(() => this.props.checksIntegration.details.requiresSetup);
 
@@ -53,5 +50,4 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_overviews_main
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_integrationcomps_checksIntegration_SMARTPAYABLES_overviews_main);
-
 

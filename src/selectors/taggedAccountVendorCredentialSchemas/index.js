@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_taggedAccountVendorCredentialSchemas = () => {
 
@@ -16,5 +14,4 @@ const selectors_taggedAccountVendorCredentialSchemas = () => {
 }
 
 export default selectors_taggedAccountVendorCredentialSchemas;
-
 

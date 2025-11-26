@@ -194,7 +194,6 @@ const LegDetails = `{
   arrivalLogisticsServices ${LogisticsServices}
 }`;
 
-
 const TripDetail = `{
   tripNumber,
   tripCategory,

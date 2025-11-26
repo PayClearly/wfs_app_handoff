@@ -115,8 +115,6 @@ class components_overviews_paymentBatch extends Component {
     }
   }
 
-
-
   _generateActionButton = (data, rowId, rowData) => {
     let showSendButton = true;
 
@@ -358,7 +356,6 @@ class components_overviews_paymentBatch extends Component {
     const dateString = _createReturnFileDate(at, 'returnFile');
     const accountName = (this.props.accounts[this.props.accountId].name || '').replace(/\s/g, '');
     const filename = `${accountName}.${dateString}.APRETURN.DAT`;
-
 
     this.setState((prev) => ({ downloadClicked: true, batchIds: { ...prev.batchIds, [batchId]: filename } }));
 

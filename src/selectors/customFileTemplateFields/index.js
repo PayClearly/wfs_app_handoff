@@ -1,7 +1,5 @@
 import createSelector from 'selector';
 
-
-
 const selectors_customFileTemplateFields = createSelector(
   'selectors_customFileTemplateFields',
 
@@ -71,7 +69,6 @@ const selectors_customFileTemplateFields = createSelector(
       return acc;
     }, {});
 
-
     return {
       options,
       templateMap,
@@ -81,5 +78,4 @@ const selectors_customFileTemplateFields = createSelector(
 );
 
 export default selectors_customFileTemplateFields;
-
 

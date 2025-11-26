@@ -25,10 +25,6 @@ class components_widgets_spendSummary extends Component {
     popoverOpen: false,
   };
 
-
-
-
-
   togglePopover = () => {
     this.setState((prevState) => ({ popoverOpen: !prevState.popoverOpen }));
   };
@@ -71,17 +67,11 @@ class components_widgets_spendSummary extends Component {
                 </div>
               </PopoverHeader>
               <PopoverBody>
-                {/* {accountItem.suspended ?
-                    <div className="alert alert-danger" role="alert" style={{ maxWidth: '26rem' }}>
-                      {'This account is currently suspended. Please contact your account administrator to get this resolved.'}
-                    </div>
-                    : null
-                  } */}
+                {}
                 <div className="d-flex justify-content-between align-items-center" style={{ borderBottom: 'solid 1px rgb(220, 220, 220)' }}>
                   <h3 className="text-muted mb-0">Credit Limit</h3>
                   {this.formatNoflow(this.props.integrationAccount.creditLimit || 0)}
                 </div>
-
 
                 <div className="d-flex justify-content-between align-items-center">
                   <h3 className="text-muted mb-0">Total Available:&nbsp;&nbsp;</h3>
@@ -97,5 +87,4 @@ class components_widgets_spendSummary extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_widgets_spendSummary);
-
 

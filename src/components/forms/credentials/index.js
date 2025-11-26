@@ -3,7 +3,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     form: _try(() => state.forms['Components.forms.credentials'][Utils.getFormKey(props)], {}),

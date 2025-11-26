@@ -38,4 +38,3 @@ const selectors_tableData_paymentIssues = createSelector(
 
 export default selectors_tableData_paymentIssues;
 
-

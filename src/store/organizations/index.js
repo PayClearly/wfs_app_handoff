@@ -7,7 +7,6 @@ import OrganizationsAPI from 'api/organizations';
 
 import * as organization from 'store/organization';
 
-
 const namespace = 'ORGAINZATIONS';
 export const actionTypes = createActionTypes(namespace);
 

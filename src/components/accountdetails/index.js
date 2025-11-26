@@ -88,4 +88,3 @@ class components_accountdetails extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_accountdetails);
 
-

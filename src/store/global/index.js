@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 import { reducerCreator, createActionTypes } from 'store/_utilities/statusReducerFactory';
 import AttachmentsAPI from 'api/attachments';
 
-
 import * as vendors from 'store/global/vendors';
 import * as schemas from 'store/global/schemas';
 import * as credentialSchemas from 'store/global/credentialSchemas';
@@ -207,12 +206,6 @@ export function acceptTermsAndConditions(token) {
 export function fetchLatestTermsAndConditions(token) {
   return (dispatch) => vendorTermsAndConditions.fetch(token)(dispatch);
 }
-
-//   };
-// }
-
-//   };
-// }
 
 const _updateGlobalVendorsInGroup = (groupId, data, dispatch, getState) => {
   const globalVendorIds = (data.globalVendorIds || []);

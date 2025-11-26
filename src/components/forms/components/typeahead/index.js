@@ -75,7 +75,6 @@ class components_forms_components_typeahead extends Component {
     }
   };
 
-  // TODO renderMenu should probably be passed as a prop from parent component than trying to overload it here....
   renderMenu = (results, menuProps) => {
     if (!results.length) {
       return (

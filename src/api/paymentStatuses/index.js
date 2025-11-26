@@ -10,6 +10,5 @@ const scope = {
   fetchFilteredKeys,
 };
 
-
 export default scope;
 

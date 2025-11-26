@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 const selectors_userRoles = createSelector('selectors_userRoles',
 
   state => state.users.data.items,
@@ -28,5 +27,4 @@ function _toRole(userRoles = {}) {
 }
 
 export default selectors_userRoles;
-
 

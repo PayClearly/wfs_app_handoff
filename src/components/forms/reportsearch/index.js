@@ -6,8 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
-
 const mapStateToProps = (state, props) => ({
   forms: state.forms,
   status: state.account.reportTemplates.status,
@@ -146,5 +144,4 @@ class components_forms_reportsearch extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_reportsearch);
-
 

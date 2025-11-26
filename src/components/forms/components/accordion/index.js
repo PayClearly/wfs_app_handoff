@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import { Collapse, UnmountClosed } from 'react-collapse';
 import classnames from 'classnames';
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -23,7 +22,6 @@ class components_forms_components_accordion extends Component {
   componentDidMount() {
     if (this.props.initialOpen) this.setState({ isOpen: true });
   }
-
 
   handleAccordionClick = () => {
     this.setState({
@@ -65,5 +63,4 @@ class components_forms_components_accordion extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_accordion);
-
 

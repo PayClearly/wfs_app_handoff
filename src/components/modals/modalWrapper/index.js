@@ -1,6 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-
 // Third Party Imports ...
 import classNames from 'classnames';
 
@@ -87,7 +86,6 @@ class components_modals_modalWrapper extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_modalWrapper);
-
 
 // Internal Helper Functions ... 
 function _getDotNotatedPath(path) { return `Components.modals.${path.slice(2, -9).replace('/', '.')}`; }

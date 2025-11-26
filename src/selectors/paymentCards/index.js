@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const selectors_paymentCards = createSelector('selectors_paymentCards',
@@ -73,5 +72,4 @@ const selectors_paymentCards = createSelector('selectors_paymentCards',
 );
 
 export default selectors_paymentCards;
-
 

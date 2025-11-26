@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_convertToAmount(value) {
   return typeof value === 'string' ?
     Number(parseFloat(value.replace(/,/g, '')).toFixed(2)) :
@@ -8,5 +7,4 @@ function utils_convertToAmount(value) {
 }
 
 export default utils_convertToAmount;
-
 

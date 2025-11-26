@@ -16,7 +16,6 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = { ...Store.forms };
 
-
 class components_forms_components_customreportfield extends Component {
   state = {
     name: 'Components.forms.customreportfields',
@@ -146,5 +145,4 @@ class components_forms_components_customreportfield extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_customreportfield);
-
 

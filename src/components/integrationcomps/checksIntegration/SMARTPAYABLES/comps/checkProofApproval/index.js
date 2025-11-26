@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     checksIntegration: _try(() => Selectors.integrations(state).checksIntegration, {}),
@@ -148,5 +147,4 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_comps_checkPro
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_integrationcomps_checksIntegration_SMARTPAYABLES_comps_checkProofApproval);
-
 

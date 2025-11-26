@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -36,9 +35,6 @@ class components_entities_accountvendorcredentials extends Component {
     formName: 'Components.forms.credentials',
     editBtnText: 'Edit',
   }
-
-
-
 
   onSubmit = () => {
     const schemaId = this.props.id;
@@ -98,5 +94,4 @@ class components_entities_accountvendorcredentials extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_accountvendorcredentials);
-
 

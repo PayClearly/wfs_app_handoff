@@ -21,15 +21,6 @@ class components_forms_components_daypicker extends Component {
     isFocused: false,
   };
 
-
-
-
-
-  /**
-   * `date` comes from {@link DayPickerInput} as the client's timezone
-   * at 12:00 PM. This can cause bugs downstream if you don't manage the
-   * dates correctly.
-   */
   handleDayChange = (date) => {
     this.props.action('change', this.props.field, date);
   };
@@ -44,11 +35,6 @@ class components_forms_components_daypicker extends Component {
 
     const currentYear = new Date().getFullYear();
 
-    /*
-    dateRange is an optional prop that limits the range of selectable dates
-    { min: <Date>, max: <Date }
-    selectable dates will default as (<Current Date> - 20 years) to (<Current Date> + 20 years)
-    */
     const maxYear = (dateRange && dateRange.max) ? dateRange.max.getFullYear() : currentYear + 20;
     const minYear = (dateRange && dateRange.min) ? dateRange.min.getFullYear() : currentYear - 20;
 
@@ -160,5 +146,4 @@ class components_forms_components_daypicker extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_daypicker);
-
 

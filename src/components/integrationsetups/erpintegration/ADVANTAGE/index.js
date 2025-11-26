@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     erpIntegration: Selectors.integrations(state).erpIntegration || {},
@@ -32,9 +31,6 @@ class components_integrationsetups_erpintegration_ADVANTAGE extends Component {
     showCreatedNotification: false,
   };
 
-
-
-
   onSubmit() {
     this.props.createIntegration({ ...this.props.form._values });
   }
@@ -44,7 +40,6 @@ class components_integrationsetups_erpintegration_ADVANTAGE extends Component {
       showCreatedNotification: true,
     });
   }
-
 
   render() {
     const status = this.props.erpIntegration.status;
@@ -93,5 +88,4 @@ class components_integrationsetups_erpintegration_ADVANTAGE extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_integrationsetups_erpintegration_ADVANTAGE);
-
 

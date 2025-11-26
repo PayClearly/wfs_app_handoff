@@ -6,7 +6,6 @@ import numeral from 'numeral';
 import Store from 'store';
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     paymentStatuses: state.account.paymentStatuses,
@@ -37,7 +36,6 @@ class components_modals_paymentsend_components_checkview extends Component {
       return this.props.verifyMailingAddress(accountVendor.checkPaymentAddress);
     }
   }
-
 
   render() {
     const paymentStatus = this.props.paymentStatuses.data.items[this.props.id];
@@ -106,5 +104,4 @@ class components_modals_paymentsend_components_checkview extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_paymentsend_components_checkview);
-
 

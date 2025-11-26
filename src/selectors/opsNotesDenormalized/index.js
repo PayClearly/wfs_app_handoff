@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_opsNotesDenormalized = createSelector('selectors_opsNotesDenormalized',
 

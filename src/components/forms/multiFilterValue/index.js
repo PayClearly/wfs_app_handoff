@@ -3,7 +3,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -36,7 +35,6 @@ class components_forms_multiFilterValue extends Component {
     } = this.props;
     const key = Object.keys(this.props).includes('formKey') ? this.props.formKey : 'default';
     this.setState({ key });
-
 
     const initialFormState = {
       filterValue: initialData !== null ? initialData.filterValue : (param || ''),
@@ -202,5 +200,4 @@ class components_forms_multiFilterValue extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_multiFilterValue);
-
 

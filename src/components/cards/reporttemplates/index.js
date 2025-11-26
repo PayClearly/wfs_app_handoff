@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -14,9 +13,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_cards_reporttemplates extends Component {
-
-
-
 
   render() {
     return (
@@ -28,5 +24,4 @@ class components_cards_reporttemplates extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_cards_reporttemplates);
-
 

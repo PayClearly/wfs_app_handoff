@@ -4,7 +4,6 @@ import { connect, Component } from 'component';
 import Helmet from 'react-helmet';
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state) => ({
   head: Selectors.head(state),
 });
@@ -35,5 +34,4 @@ class components_head extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_head);
-
 

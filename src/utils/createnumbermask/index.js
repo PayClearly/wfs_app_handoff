@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_createnumbermask({
   prefix = dollarSign,
   suffix = emptyString,

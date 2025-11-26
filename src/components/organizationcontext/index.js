@@ -41,7 +41,6 @@ class components_organizationcontext extends Component {
     });
   }
 
-
   organizationClicked(id) {
     this.props.changeOrganization(id);
   }
@@ -107,5 +106,4 @@ class components_organizationcontext extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_organizationcontext);
-
 

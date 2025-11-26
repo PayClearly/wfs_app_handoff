@@ -11,7 +11,6 @@ const selectors_paymentDownloadTemplate = createSelector(
   (state) => Selectors.opsNotesDenormalized(state),
   (state) => Selectors.context(state),
 
-
   (erpProvider = {}, downloadTemplate, accountVendors = {}, opsNotesDenorm, context) => {
     if (downloadTemplate) {
       return (payment, canRead = false) => {
@@ -82,5 +81,4 @@ const selectors_paymentDownloadTemplate = createSelector(
 );
 
 export default selectors_paymentDownloadTemplate;
-
 

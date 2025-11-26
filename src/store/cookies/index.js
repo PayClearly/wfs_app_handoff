@@ -49,13 +49,6 @@ function getCookieValue(key) {
 }
 
 // Action Creators //////////////////////////////////////////////////////////////////
-/**
- * @function Cookies/set
- * @memberOf State
- * @param {State.Cookies}
- * @returns {State.Thunk}
- * @instance
-*/
 export function set(data) {
   return (dispatch) => {
     const cookieValues = {};
@@ -75,13 +68,6 @@ export function updateCookie(key) {
 }
 
 // Action Creators //////////////////////////////////////////////////////////////////
-/**
- * @function Cookies/expire
- * @memberOf State
- * @param {string[]} cookie names to expire
- * @returns {State.Thunk}
- * @instance
-*/
 export function expire(data) {
   return (dispatch) => {
     data.forEach(() => {
@@ -91,13 +77,6 @@ export function expire(data) {
   };
 }
 
-/**
- * @function Cookies/init
- * @description initilizes the cookies duck
- * @memberOf State
- * @returns {State.Thunk}
- * @instance
-*/
 export function init() {
   return (dispatch, getState) => {
     const newCookieValues = {};

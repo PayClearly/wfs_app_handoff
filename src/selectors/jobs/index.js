@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const JobsSelector = createSelector(
   (state) => state.organization.data.id,
@@ -73,6 +71,4 @@ const JobsSelector = createSelector(
 );
 
 export default JobsSelector;
-
-
 

@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_setDeep(toSet, ...rest) {
   if (rest.length <= 2) {
     toSet[rest[0]] = rest[1];
@@ -11,5 +10,4 @@ function utils_setDeep(toSet, ...rest) {
 }
 
 export default utils_setDeep;
-
 

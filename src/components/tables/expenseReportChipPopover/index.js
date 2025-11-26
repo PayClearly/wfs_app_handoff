@@ -8,7 +8,6 @@ import Components from 'components';
 
 import { PopoverHeader, PopoverBody } from 'reactstrap';
 
-
 const mapStateToProps = (state) => ({
   expenseReports: Selectors.tableData.expenseReports(state).items,
 });

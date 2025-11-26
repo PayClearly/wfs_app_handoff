@@ -6,7 +6,6 @@ import numeral from 'numeral';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     paymentStatus: state.account.paymentStatuses.data.items[props.id],
@@ -76,5 +75,4 @@ class components_modals_paymentstatusvirtualcards extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_paymentstatusvirtualcards);
-
 

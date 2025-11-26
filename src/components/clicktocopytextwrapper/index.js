@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import classNames from 'classnames';
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -19,9 +18,6 @@ class components_clicktocopytextwrapper extends Component {
   state = {
     copied: false,
   }
-
-
-
 
   copyToClipboard = (str) => {
     if (window.getSelection && document.createRange) {
@@ -94,5 +90,4 @@ class components_clicktocopytextwrapper extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_clicktocopytextwrapper);
-
 

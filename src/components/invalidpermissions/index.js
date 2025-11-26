@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     fetched: Selectors.privileges(state).fetched,
@@ -17,9 +16,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_invalidpermissions extends Component {
-
-
-
 
   render() {
     if (!this.props.fetched) return null;
@@ -37,5 +33,4 @@ class components_invalidpermissions extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_invalidpermissions);
-
 

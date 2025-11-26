@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     twoFactorAuthVerified: state.user.privateMetadata.data.item.twoFactorAuthVerified,
@@ -35,7 +34,6 @@ class components_twoFactorAuthWatcher extends Component {
     opened: false,
   };
 
-
   componentWillReceiveProps(nextProps) {
     const projectDbContext = window.GLOBALCERT;
     const isProd = !projectDbContext.storageBucket.includes('staging') && !projectDbContext.storageBucket.includes('test');
@@ -57,7 +55,6 @@ class components_twoFactorAuthWatcher extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="components_twoFactorAuthWatcher" />
@@ -66,5 +63,4 @@ class components_twoFactorAuthWatcher extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_twoFactorAuthWatcher);
-
 

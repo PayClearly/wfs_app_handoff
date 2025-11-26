@@ -9,7 +9,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   accountId: state.account.data.id,
   forms: state.forms,
@@ -95,11 +94,6 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
     providerPurchaseCardBin: 'CHANGE_ME_PROVIDER Default Bin for Purchase Cards',
   };
 
-
-
-
-
-
   onSubmit() {
     const form = this.props.forms['Components.forms.paymentpipelinepreferences'].accountsettings;
 
@@ -107,7 +101,6 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
     const updatedFields = getUpdatedFields(form);
     this.props.setPreferences({ ...updatedFields });
   }
-
 
   // allows for dynamic type definitions
   generateTypes = () => ({
@@ -147,7 +140,6 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
       defaultValidThroughPeriod: true,
     },
   });
-
 
   toVal(key) {
     const val = this.props.paymentPipelinePreferencesItem[key];
@@ -250,11 +242,6 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
 // Internal Helper Functions ...
 
 //         acc[key] = parseFloat(form._values[key]);
-//       } else {
 //         acc[key] = form._values[key];
-//       }
-//     }
-//   }, {});
-// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(componentsEntitiesPaymentPipelinePreferences);

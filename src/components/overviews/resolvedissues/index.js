@@ -5,7 +5,6 @@ import numeral from 'numeral';
 
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     paymentIssues: state.account.paymentIssues.data.items,
@@ -18,9 +17,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_overviews_resolvedissues extends Component {
-
-
-
 
   render() {
     return (
@@ -78,5 +74,4 @@ class components_overviews_resolvedissues extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_resolvedissues);
-
 

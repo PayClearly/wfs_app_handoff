@@ -12,7 +12,6 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     transactions: state.transactionDetails.data.items,
@@ -93,7 +92,6 @@ class components_reports_spendByCard extends Component {
     const { status, accountId, organizationId, forms } = nextProps;
     const { selectedColumns } = this.state;
 
-
     if (!status.fetching && !this.state.fetched && accountId) {
       const { startDate, endDate } = this.state;
       this.props.fetchTransactions(startDate, endDate, selectedColumns);
@@ -125,8 +123,6 @@ class components_reports_spendByCard extends Component {
       });
     }
   }
-
-
 
   getCsvData = (transactions, renderedColumns, orderBy) => {
     return Object.values(this.adaptTransactions(transactions))

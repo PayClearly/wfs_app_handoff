@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 
 const selectors_checkNumbers = createSelector('selectors_checkNumbers',
@@ -31,5 +30,4 @@ const selectors_checkNumbers = createSelector('selectors_checkNumbers',
 );
 
 export default selectors_checkNumbers;
-
 

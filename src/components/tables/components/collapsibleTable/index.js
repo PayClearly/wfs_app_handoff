@@ -635,4 +635,3 @@ class components_tables_components_collapsibleTable extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_tables_components_collapsibleTable);
 
-

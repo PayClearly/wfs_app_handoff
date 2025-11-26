@@ -123,51 +123,18 @@ function reducer(state, action) {
 export default reducer;
 
 // Action Creators //////////////////////////////////////////////////////////////////////////////////
-/**
- * @function Router/init
- * @description initilizes the router duck
- * @memberOf State
- * @returns {State.Thunk}
- * @instance
-*/
 export function init(url) {
   return (dispatch) => dispatch({ type: START, url });
 }
 
-/**
- * @function Router/navigateTo
- * @description navigates to the specified route
- * @memberOf State
- * @param {string} routeName
- * @param {object} routeParams
- * @param {object} routeOptions
- * @returns {State.Thunk}
- * @instance
-*/
 export function navigateTo(routeName, routeParams = {}, routeOptions = {}) {
   return (dispatch) => dispatch(router5actions.navigateTo(routeName, routeParams, routeOptions));
 }
 
-/**
- * @function Router/exitTo
- * @description route to a path on the same tab, leaving the application
- * @memberOf State
- * @param {string} full location where you wish to go!
- * @returns {State.Thunk}
- * @instance
-*/
 export function exitTo(to) {
   return () => window.location.href = to;
 }
 
-/**
- * @function Router/removeQueryParams
- * @description removes the specified query params
- * @memberOf State
- * @param {string[]} paramsToRemove
- * @returns {State.Thunk}
- * @instance
-*/
 export function removeQueryParams(paramsToRemove = []) {
   return (dispatch, getState) => {
 
@@ -197,15 +164,6 @@ export function setSearchQueryParams(newParams = {}) {
   };
 }
 
-/**
- * @function Router/openToast
- * @description pop open a toast
- * @memberOf State
- * @param {string} path
- * @param {object} data
- * @returns {State.Thunk}
- * @instance
-*/
 export function openToast(path, data = {}) {
   return (dispatch, getState) => {
     const isOpen = getState().router.toast.show;
@@ -225,13 +183,6 @@ export function openToast(path, data = {}) {
   };
 }
 
-/**
- * @function Router/closeToast
- * @description close a toast
- * @memberOf State
- * @returns {State.Thunk}
- * @instance
-*/
 export function closeToast() {
   return (dispatch, getState) => {
     dispatch({ type: END_TOAST_LIFECYCLE });
@@ -241,15 +192,6 @@ export function closeToast() {
   };
 }
 
-/**
- * @function Router/openModal
- * @description route to a path on the same tab, leaving the application
- * @memberOf State
- * @param {string} path
- * @param {object} data
- * @returns {State.Thunk}
- * @instance
-*/
 export function openModal(path, data = {}) {
   return (dispatch, getState) => {
     dispatch({ type: OPEN_MODAL, name: path, data });
@@ -262,13 +204,6 @@ export function toggleCardEnlarged(data) {
   };
 }
 
-/**
- * @function Router/openNotAuthed
- * @description route to a path on the same tab, leaving the application
- * @memberOf State
- * @returns {State.Thunk}
- * @instance
-*/
 export function openNotAuthed() {
   return (dispatch, getState) => {
     const state = getState();
@@ -276,41 +211,18 @@ export function openNotAuthed() {
     dispatch({ type: OPEN_NO_AUTH });
   };
 }
-/**
- * @function Router/openNotAuthed
- * @description route to a path on the same tab, leaving the application
- * @memberOf State
- * @returns {State.Thunk}
- * @instance
-*/
 export function closeNotAuthed() {
   return (dispatch, getState) => {
     dispatch({ type: CLOSE_NO_AUTH });
   };
 }
 
-
-/**
- * @function Router/closeModal
- * @description route to a path on the same tab, leaving the application
- * @memberOf State
- * @returns {State.Thunk}
- * @instance
-*/
 export function closeModal(name = '') {
   return (dispatch, getState) => {
     dispatch({ type: CLOSE_MODAL, name });
   };
 }
 
-/**
- * @function Router/setModalTab
- * @description route to a path on the same tab, leaving the application
- * @memberOf State
- * @param {string} tab
- * @returns {State.Thunk}
- * @instance
-*/
 export function setModalTab(tab = '') {
   return { type: SET_MODAL_TAB, tab };
 }

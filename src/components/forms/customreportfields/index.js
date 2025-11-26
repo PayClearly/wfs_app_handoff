@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     accountId: state.account.data.id,
@@ -34,7 +33,6 @@ class components_forms_customreportfields extends Component {
       formKey,
     });
   }
-
 
   handleAddCustomField = () => {
     const customFields = JSON.parse(JSON.stringify(this.state.customFields));
@@ -89,5 +87,4 @@ class components_forms_customreportfields extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_customreportfields);
-
 

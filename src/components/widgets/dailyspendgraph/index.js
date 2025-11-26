@@ -133,4 +133,3 @@ class components_widgets_dailyspendgraph extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_widgets_dailyspendgraph);
 
-

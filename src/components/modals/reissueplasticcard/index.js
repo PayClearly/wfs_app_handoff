@@ -5,7 +5,6 @@ import numeral from 'numeral';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     pCard: _resolve(state, `account.cardsIntegration.data.resources.pCards.${props.id}`),

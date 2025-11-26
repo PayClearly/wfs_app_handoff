@@ -22,7 +22,6 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = { ...Store.forms };
 
-
 class components_forms_plasticcard extends Component {
 
   state = {
@@ -66,7 +65,6 @@ class components_forms_plasticcard extends Component {
     if (!this.props.blurAll && nextProps.blurAll === true) {
       this.props.blur(this.state.name, this.state.key, this.props.forms[this.state.name][this.state.key]._values);
     }
-    // }
     this.setState({
       form: nextProps.forms[this.state.name] && nextProps.forms[this.state.name][nextProps.formKey || 'default'],
       key: nextProps.formKey || 'default',
@@ -85,57 +83,24 @@ class components_forms_plasticcard extends Component {
     }
   }
 
-
   //     paymentOptions,
   //     tagOptions,
   //     selectedVendor,
   //     PSOP,
   //     // fee,
-  //   } = derived;
 
   //     initial,
   //     value,
   //     touched,
-  //   } = field;
-
-
-
-
-  //     }
-
-  //   }
-
-
-
-
-  //     }
-
-  //   }
 
   //       resolved[key] = '';
-  //     }
-  //       resolved[key] = `${(selectedVendor.repEmails || []).join(',')},${initial || ''}`.split(',').filter(item => item).map(item => item.trim()).join(',');
-  //     }
-  //   }
-
-  //   }
 
   //     resolved[key] = false;
-  //   }
 
   //     resolved[key] = '';
-  //   }
-
-  // }
-
 
   //       ...acc,
   //       ...this.resolver(key, derived.form[key], values, derived),
-  //     };
-  //   }, {});
-
-  //   }
-  // }
 
   standardFormAction = (action, field, value) => {
     const fields = {};
@@ -166,8 +131,6 @@ class components_forms_plasticcard extends Component {
   validate = (fields) => {
     const errors = {};
 
-
-
     // Details
     if (!fields.cardHolderName) errors.cardHolderName = 'Card Holder Name is required.';
     if (!fields.cardType) errors.cardType = 'Card Type is required. Default is 100';
@@ -186,7 +149,6 @@ class components_forms_plasticcard extends Component {
     if (!fields.country) errors.country = 'Country is required';
     if (!fields.stateProv) errors.stateProv = 'State / Province is required.';
     if (!fields.postalCode) errors.postalCode = 'Postal Code is required.';
-    // }
     if (!fields.phoneNumber) errors.phoneNumber = 'Phone Number is required.';
     if (fields.phoneNumber) {
       const invalidItem = fields.phoneNumber.split(',').map(item => item.trim()).find(item => !this.checkType('PhoneNumber', item));
@@ -197,7 +159,6 @@ class components_forms_plasticcard extends Component {
 
     return errors;
   };
-
 
   render() {
     const form = this.state.form;
@@ -593,9 +554,6 @@ class components_forms_plasticcard extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_plasticcard);
-
-
-
 
 const CYCLE_REFRESH_DAY_OPTIONS = {
   1: { display: '01' },

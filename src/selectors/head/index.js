@@ -2,7 +2,6 @@
 
 import createSelector from 'selector';
 
-
 const selectors_head = createSelector('selectors_head',
 
   state => state.router,

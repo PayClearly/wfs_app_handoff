@@ -1,6 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -16,9 +15,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_forms_components_radioButtonGroup extends Component {
-
-
-
 
   render() {
     const form = this.props.form;
@@ -58,10 +54,15 @@ class components_forms_components_radioButtonGroup extends Component {
             );
           })}
           {/* <label class="btn-sm btn-secondary">
+
             <input type="radio" name="options" id="option2" autocomplete="off"> Radio </input>
+
           </label>
+
           <label class="btn-sm btn-secondary">
+
             <input type="radio" name="options" id="option3" autocomplete="off"> Radio </input>
+
           </label> */}
         </div>
       </div>
@@ -70,5 +71,4 @@ class components_forms_components_radioButtonGroup extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_components_radioButtonGroup);
-
 

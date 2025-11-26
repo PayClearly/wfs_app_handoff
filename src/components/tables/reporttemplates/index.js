@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     reportTemplates: state.account.reportTemplates.data.items,

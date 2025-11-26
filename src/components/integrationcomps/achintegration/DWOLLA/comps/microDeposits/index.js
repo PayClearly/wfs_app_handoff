@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -36,7 +35,6 @@ class components_integrationcomps_achintegration_DWOLLA_comps_microDeposits exte
     formBlurAll: false,
     error: false,
   };
-
 
   componentWillReceiveProps(nextProps = {}) {
     if (_try(() => nextProps.achIntegration.details.fundingSource.microDepositAttempts, 0) > _try(() => this.props.achIntegration.details.fundingSource.microDepositAttempts, 0)) this.setState({ error: 'Wrong amount(s).' });
@@ -232,5 +230,4 @@ class components_integrationcomps_achintegration_DWOLLA_comps_microDeposits exte
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_comps_microDeposits);
-
 

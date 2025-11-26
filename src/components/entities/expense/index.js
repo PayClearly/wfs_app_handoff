@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     expenses: state.account.expenses.data.items,
@@ -40,9 +39,6 @@ class components_entities_expense extends Component {
       editBtnText: 'Edit Expense',
     };
   }
-
-
-
 
   onSubmit = () => {
     const { id, forms, expenses } = this.props;
@@ -105,5 +101,4 @@ class components_entities_expense extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_entities_expense);
-
 

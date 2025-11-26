@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -33,10 +32,6 @@ class components_entities_fundingpreferences extends Component {
   state = {
     editBtnText: 'Edit Preferences',
   };
-
-
-
-
 
   onSubmit() {
     const form = this.props.forms['Components.forms.fundingPreferences'].default;
@@ -87,5 +82,4 @@ class components_entities_fundingpreferences extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_fundingpreferences);
-
 

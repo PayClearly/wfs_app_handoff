@@ -23,10 +23,6 @@ const mapDispatchToProps = (dispatch, props) => ({});
 
 class components_virtualcard extends Component {
 
-
-
-
-
   logoOptions = {
     wex: logoWex,
     bancorp: bancorpLogo,

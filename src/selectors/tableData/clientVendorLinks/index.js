@@ -49,4 +49,3 @@ const selectors_tableData_clientVendorLinks = createSelector(
 
 export default selectors_tableData_clientVendorLinks;
 
-

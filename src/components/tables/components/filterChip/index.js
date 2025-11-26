@@ -20,9 +20,6 @@ const mapResourcesToProps = (state, props) => {
 
 class components_tables_components_filterChip extends Component {
 
-
-
-
   removeFilter = (e) => {
     e.preventDefault();
     this.props.removeFilter(this.props.tableName, this.props.tableKey, this.props.filterId);
@@ -151,5 +148,4 @@ class components_tables_components_filterChip extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_tables_components_filterChip);
-
 

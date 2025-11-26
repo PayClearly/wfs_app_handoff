@@ -38,4 +38,3 @@ function utils_tables_sort(items = [], dataToFilter = {}, sortState = {}) {
 
 export default utils_tables_sort;
 
-

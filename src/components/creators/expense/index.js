@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     policies: Selectors.entity('expenses_idOrganization_idAccount')(state),
@@ -43,9 +42,6 @@ class components_creators_expense extends Component {
       formId: props.formKey,
     };
   }
-
-
-
 
   onCreate = () => {
     this.props.resetForm(this.state.formName, this.state.formId, Object.keys(this.props.forms[this.state.formName][this.state.formId]._values).reduce((acc, cur) => { acc[cur] = undefined; return acc; }, {}));
@@ -96,5 +92,4 @@ class components_creators_expense extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_creators_expense);
-
 

@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   routeConfig: _try(() => Selectors.routeConfig(state), {}),
   features: _try(() => Selectors.featureFlags(state), {}),
@@ -118,5 +117,4 @@ class components_widgetPanel extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_widgetPanel);
-
 

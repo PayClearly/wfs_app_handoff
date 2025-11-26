@@ -72,7 +72,6 @@ export function sync(context, skipCache = true) {
         acc.icaos.push(curr.tripDetail.destination.icao);
         return acc;
       }, { icaos: [] });
-      // TODO Move sorting logic to the list component, don't need this overhead. Makes more confusing
       collections.recent = Object.values(trips)
         .sort((a, b) => {
           const aStart = a.tripDetail.startDate;

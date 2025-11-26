@@ -3,7 +3,6 @@ import Utils from 'utils';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     expenses: state.account.expenses.data.items,

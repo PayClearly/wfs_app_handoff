@@ -18,16 +18,6 @@ function getBatchReport(organizationId, accountId, batchId) {
   return false;
 }
 
-/**
- * @param {{
- *  organizationId: string,
- *  accountId: string,
- *  startDate: Date,
- *  endDate: Date,
- *  type: 'pctrAch' | 'pctrCheck' | 'pctrCard' | 'checkActivity'
- * }} data
- * @returns
- */
 function fetch({ type, ...data }) {
   // Add code for database or API integrations
 

@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     privateMetadata: state.user.privateMetadata.data.item,
@@ -30,7 +29,6 @@ class components_containers_verifytwofactordevice extends Component {
       this.props.requestSMS();
     }
   }
-
 
   render() {
     const metadata = this.props.privateMetadata;
@@ -57,5 +55,4 @@ class components_containers_verifytwofactordevice extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_containers_verifytwofactordevice);
-
 

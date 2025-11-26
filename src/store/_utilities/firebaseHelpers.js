@@ -95,7 +95,6 @@ function _keysToPaths(item = {}, depth) {
   return paths;
 }
 
-
 export function watchValue(path, callback, callbackInitial) {
   let getValue = false;
   if (callbackInitial) { getValue = true; }
@@ -143,11 +142,6 @@ export function watchValuesWithFinalCallback(path, children, callback, finalCall
 }
 
 //     children.map((child) => {
-//       watchValue(`${path}/${child}`, callback);
-//       // return _ref(`${path}/${child}`).once('value').then(snap => snap.val());
-//     })).then((items) => {
-//   });
-// }
 
 export function getContext(path, callback, options = {}) {
   const { context } = options;

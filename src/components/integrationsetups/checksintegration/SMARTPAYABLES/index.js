@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     checksIntegration: _try(() => Selectors.integrations(state).checksIntegration, {}),
@@ -24,7 +23,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_integrationsetups_checksintegration_SMARTPAYABLES extends Component {
-
 
   componentWillUnmount() {
     this.props.clearStatusErrors();
@@ -182,5 +180,4 @@ class components_integrationsetups_checksintegration_SMARTPAYABLES extends Compo
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationsetups_checksintegration_SMARTPAYABLES);
-
 

@@ -57,7 +57,6 @@ export function _moduleReducers(state = defaultState, action) {
 
 function _denormalizer(state) {
 
-
   return {};
 }
 

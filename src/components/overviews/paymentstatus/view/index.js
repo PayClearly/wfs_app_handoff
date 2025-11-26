@@ -50,8 +50,6 @@ class components_overviews_paymentstatus_view extends Component {
     }
   }
 
-
-
   navigateToInvoice = (id) => {
     this.props.goToInvoiceTable({ invoice: id });
   };
@@ -79,7 +77,6 @@ class components_overviews_paymentstatus_view extends Component {
     } else {
       const stepInProgress = paymentStatus.statusDetails.indexInProgress;
 
-
       if (paymentStatus.status === 'Complete') {
         statusColor = 'success';
         icon = 'check';
@@ -92,7 +89,6 @@ class components_overviews_paymentstatus_view extends Component {
         const selfServePayment = _try(() => paymentStatus.verified.selfServe || paymentStatus.created.selfServe);
         message = _try(() => paymentStatus.created.method === 'check' && !selfServePayment, false)
           ? 'This payment will be marked as tracked when it has entered the mail stream.'
-          // 'Your check has been sent via <insert provider name> and will arrive on <insert current date + avg lead time>. Your tracking number is <insert tracking number> and can be tracked at <insert provider tracking website>.' :
           : `The payment is in the hands of the vendor. ${this.props.providerTheme.displayName} is awaiting confirmation from the vendor that they successfully processed the payment.`;
       } else if (stepInProgress === 3) {
         // processing step
@@ -248,7 +244,4 @@ class components_overviews_paymentstatus_view extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_paymentstatus_view);
-
-
-
 

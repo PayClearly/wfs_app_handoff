@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const RESERVED_CUSTOM_FIELDS = [
   // basic payment information
   'accountvendor',
@@ -25,7 +24,6 @@ const RESERVED_CUSTOM_FIELDS = [
   'clientname',
   'flightdate',
   'flightdates',
-  // 'invoicenumber',
   'mediatype',
   'ordernumber',
 ];
@@ -58,9 +56,6 @@ class components_entities_paymentcardcustomfields extends Component {
     editBtnText: 'Edit Fields',
     customFields: {},
   };
-
-
-
 
   onSubmit() {
     const customFieldForms = this.props.forms['Components.forms.createcustomfield'];
@@ -229,5 +224,4 @@ class components_entities_paymentcardcustomfields extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_paymentcardcustomfields);
-
 

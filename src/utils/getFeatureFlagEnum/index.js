@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_getFeatureFlagEnum() {
   return {
     OFF: 'OFF',
@@ -10,5 +9,4 @@ function utils_getFeatureFlagEnum() {
 }
 
 export default utils_getFeatureFlagEnum;
-
 

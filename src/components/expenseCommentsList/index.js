@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     expenseReportComments: state.account.expenseReportComments.data.items,
@@ -18,9 +17,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_expenseCommentsList extends Component {
-
-
-
 
   _sortComments = (commentAId, commentBId) => {
     const commentADate = _try(() => this.props.expenseReportComments[commentAId]._createdAt);
@@ -48,5 +44,4 @@ class components_expenseCommentsList extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_expenseCommentsList);
-
 

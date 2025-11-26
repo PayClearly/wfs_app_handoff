@@ -119,4 +119,3 @@ class components_modals_virtualcard extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_virtualcard);
 
-

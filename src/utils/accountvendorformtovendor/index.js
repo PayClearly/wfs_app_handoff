@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_accountvendorformtovendor(formValues, globalVendors) {
 
   const payClearlyVendorId = ((name) => {
@@ -23,5 +22,4 @@ function utils_accountvendorformtovendor(formValues, globalVendors) {
 }
 
 export default utils_accountvendorformtovendor;
-
 

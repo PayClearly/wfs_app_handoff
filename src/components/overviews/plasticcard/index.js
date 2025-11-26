@@ -7,7 +7,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     users: _resolve(state, 'users.data.items'),
@@ -23,9 +22,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_overviews_plasticcard extends Component {
-
-
-
 
   renderCycleLimits = ({ cycleIndicator, cycleRefreshDay, cycleRefreshDate, cycleTransactionAmountLimit, cycleTransactionAmountUsed, cycleTransactionCountLimit, cycleTransactionCountUsed }) => {
     if (cycleIndicator === 'N') {
@@ -253,7 +249,6 @@ const _rushOrderMap = {
   '2': 'Same Day Processing / Overnight Shipping',
   '3': 'Standard Processing / Overnight Shipping',
 };
-
 
 const _formatLastFour = (lastFour) => {
   return `*${numeral(lastFour).format('0000')}`;

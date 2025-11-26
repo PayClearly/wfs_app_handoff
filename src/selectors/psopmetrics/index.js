@@ -2,7 +2,6 @@
 
 import createSelector from 'selector';
 
-
 const PSOPMetricsSelector = createSelector(
 
   state => state.global.vendors.data.items,

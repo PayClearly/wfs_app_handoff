@@ -7,7 +7,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     pCards: state.account.cardsIntegration.data.resources.pCards,
@@ -23,9 +22,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_tables_plasticcardchippopover extends Component {
-
-
-
 
   navigateToDetails = () => {
     const { refId } = this.props;

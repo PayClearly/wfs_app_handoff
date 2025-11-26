@@ -40,7 +40,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-
 // eslint-disable-next-line camelcase
 class components_forms_components_resourceSelector extends Component {
   openResourceSelectorModal = () => {

@@ -5,7 +5,6 @@ import logoVisa from 'assets/logos/Visa_Logo.png';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     providerThemePhone: Selectors.providerTheme(state).supportPhone,
@@ -21,9 +20,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_virtualcard_visa extends Component {
-
-
-
 
   render() {
     const { card, blur, logo, overlay } = this.props;
@@ -261,5 +257,4 @@ class components_virtualcard_visa extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_virtualcard_visa);
-
 

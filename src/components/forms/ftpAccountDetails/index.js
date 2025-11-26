@@ -5,7 +5,6 @@ import {
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   forms: state.forms,
   ipWhitelist: state.account.ftpAccountDetails.data.item.ipWhitelist,
@@ -44,8 +43,6 @@ class components_forms_ftpAccountDetails extends Component {
       key: nextProps.formKey || 'default',
     });
   }
-
-
 
   standardFormAction = (action, field, value) => {
     if (action === 'change') {
@@ -100,5 +97,4 @@ class components_forms_ftpAccountDetails extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_ftpAccountDetails);
-
 

@@ -1,12 +1,7 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 import Selectors from 'selectors';
-
-/**
- * @typedef {import('../../../src/components/entities/customFileParser/types').TemplateField[]} TemplateFields
- */
 
 const selectors_paymentUploadTemplate = createSelector(
 
@@ -75,7 +70,9 @@ const defaultTemplateMap = {
 };
 
 /**
+
  * @param {TemplateFields} template
+
  */
 const _formatFields = (template = []) => {
   const fields = template.reduce((acc, { fieldName, pcField }) => {
@@ -86,7 +83,9 @@ const _formatFields = (template = []) => {
 };
 
 /**
+
  * @param {TemplateFields} template
+
  */
 const formatFieldArrays = (template = []) => {
   const fields = template.reduce((acc, { fieldName, pcField }) => {
@@ -102,9 +101,13 @@ const formatFieldArrays = (template = []) => {
 };
 
 /**
+
  *
+
  * @param {TemplateFields} template
+
  * @returns
+
  */
 const _scrubberFactory = (template = []) => (items) => {
   /** @type {Record<TemplateFields[number]['fieldName'], TemplateFields[number]>} */

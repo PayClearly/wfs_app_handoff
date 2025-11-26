@@ -79,7 +79,6 @@ const selectors_paymentform = (key) => Utils.cachedSelector(
 
     // Credentials Validation
     let credentialsAreValid;
-    // TODO NEDIM: make sure we implement fallback to account level creds logic if applicable
     if (selectedClient._id && selectedVendor._id) {
       credentialsAreValid = Utils.isSchemaValid(
         PSOP?.credentialSchema?.fields,

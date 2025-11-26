@@ -32,7 +32,6 @@ const mapDispatchToProps = (dispatch, props) => {
 class components_submitPaymentCardChangeRequestTransferButton extends Component {
   state = {};
 
-
   componentWillUnmount() {
     if (typeof this.props.clearStatusErrors === 'function' && this.props.achTransfersStatus && this.props.achTransfersStatus.creatingError) {
       this.props.clearStatusErrors();
@@ -124,5 +123,4 @@ class components_submitPaymentCardChangeRequestTransferButton extends Component 
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_submitPaymentCardChangeRequestTransferButton);
-
 

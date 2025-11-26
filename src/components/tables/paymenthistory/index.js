@@ -10,12 +10,8 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 // : Selectors.paymentHistoryTableData(state),
 // : filteredAndSortedItemsSelector(state, {
-//     });
-//   };
-// };
 const mapStateToProps = (state, props) => ({
   paymentStatuses: Selectors.paymentHistoryTableData(state),
   filteredAndSortedItems: Selectors.tableItems(
@@ -169,8 +165,6 @@ class components_tables_paymenthistory extends Component {
     this.setState(columns);
   }
 
-
-
   actionButtonRenderer = (data) => {
     const { onActionClick } = this.props;
     let showSendButton;
@@ -209,11 +203,17 @@ class components_tables_paymenthistory extends Component {
   };
 
   /**
+
    *
+
    * @param {string} rowId
+
    * @param {*} rowData
+
    * @param {boolean} expanded
+
    * @returns
+
    */
   rowRenderer = (rowId) => (
     <Components.overviews.paymentstatus.view

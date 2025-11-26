@@ -1,6 +1,5 @@
 import { connect, Component } from 'component';
 
-
 const mapStateToProps = () => ({});
 const mapDispatchToProps = () => ({});
 

@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     achTransfersStatus: state.account.achTransfers.status,
@@ -36,9 +35,6 @@ class components_creators_fundingtransfer extends Component {
     showCreatedNotification: false,
     formKey: 'create',
   };
-
-
-
 
   onCreate = () => {
     this.props.resetForm('Components.forms.fundingtransfer', this.state.formKey, {
@@ -160,5 +156,4 @@ class components_creators_fundingtransfer extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_creators_fundingtransfer);
-
 

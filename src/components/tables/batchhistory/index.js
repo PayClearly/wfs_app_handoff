@@ -21,8 +21,6 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_tables_batchhistory extends Component {
 
-
-
   render() {
     if (this.props.batchPayments.fetching || !this.props.batchPayments.fetched) return <Components.spinner />;
 
@@ -41,5 +39,4 @@ class components_tables_batchhistory extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_batchhistory);
-
 

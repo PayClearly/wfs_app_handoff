@@ -50,7 +50,7 @@ export function sync(organizationId, accountId) {
     return Promise.all([
       watchSlice('state/opsNotes', { parameter: 'context', start: `achTransfers/${organizationId}/${accountId}/`, end: `achTransfers/${organizationId}/${accountId}/\uf8ff` }, (items, paths) => {
       dispatch({ type: actionTypes.fetchSuccess, items, paths });
-      }), 
+      }),
       watchSlice('state/opsNotes', { parameter: 'context', start: `paymentStatuses/${organizationId}/${accountId}/`, end: `paymentStatuses/${organizationId}/${accountId}/\uf8ff` }, (items, paths) => {
       dispatch({ type: actionTypes.updateSuccess, items, paths }); // used actionType.updateSuccess to distinguish status between payments and achTransfers
       }),
@@ -102,15 +102,3 @@ export function create(context, data) {
       });
   };
 }
-
-//     dispatch({ type: actionTypes.updateStart });
-//     .then(() => {
-//     })
-//     .then(() => {
-//       dispatch({ type: actionTypes.updateSuccess });
-//     })
-//     .catch((error) => {
-//       dispatch({ type: actionTypes.updateError, error: error.response.data.error });
-//     });
-//   };
-// }

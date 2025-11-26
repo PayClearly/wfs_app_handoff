@@ -2,8 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -13,9 +11,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_routes_error404 extends Component {
-
-
-
 
   render() {
     const currentYear = (new Date()).getFullYear();
@@ -35,5 +30,4 @@ class components_routes_error404 extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_routes_error404);
-
 

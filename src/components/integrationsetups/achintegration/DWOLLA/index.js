@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     achIntegration: _try(() => Selectors.integrations(state).achIntegration, {}),
@@ -28,7 +27,6 @@ const mapDispatchToProps = (dispatch, props) => {
 class components_integrationsetups_achintegration_DWOLLA extends Component {
 
   state = {};
-
 
   componentWillUnmount() {
     this.props.clearStatusErrors();
@@ -58,7 +56,6 @@ class components_integrationsetups_achintegration_DWOLLA extends Component {
         </div>
       );
     }
-
 
     const isExemptNonProfit = achIntegrationDetails.isExemptNonProfit;
     let step = isExemptNonProfit === undefined ? 0 : 1;
@@ -465,5 +462,4 @@ class components_integrationsetups_achintegration_DWOLLA extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationsetups_achintegration_DWOLLA);
-
 

@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
 
 import Utils from 'utils';
@@ -41,5 +40,4 @@ const selectors_eventDefinitions = createSelector(
 );
 
 export default selectors_eventDefinitions;
-
 

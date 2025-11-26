@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
 import numeral from 'numeral';
 
@@ -16,7 +15,6 @@ const selectors_paymentHistoryTableData = createSelector(
   (state) => Selectors.paymentIssues(state),
   (state) => state.account.cardsIntegration.data.resources.vCards,
   (state) => state.account.clients,
-
 
   (paymentStatuses = {}, vendors = {}, users = {}, paymentIssuesDenorm, vCards = {}, clients = {}) => {
     const clientsData = _resolve(clients, 'data.items', {});

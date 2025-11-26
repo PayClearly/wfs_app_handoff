@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -30,9 +29,6 @@ class components_integrationcomps_achintegration_DWOLLA_creators_declareExemptio
   state = {
     formKey: 'create',
   };
-
-
-
 
   submit = () => {
     const form = (this.props.forms['Components.integrationcomps.achintegration.DWOLLA.forms.declareExemption'] && this.props.forms['Components.integrationcomps.achintegration.DWOLLA.forms.declareExemption'][this.state.formKey] || {});
@@ -94,5 +90,4 @@ class components_integrationcomps_achintegration_DWOLLA_creators_declareExemptio
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_creators_declareExemption);
-
 

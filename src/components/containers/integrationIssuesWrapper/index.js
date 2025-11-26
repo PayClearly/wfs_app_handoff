@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     issues: _try(() => state.account[props.integration].data.currentIssues, {}),
@@ -35,7 +34,6 @@ class components_containers_integrationIssuesWrapper extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="components_containers_integrationIssuesWrapper">
@@ -46,5 +44,4 @@ class components_containers_integrationIssuesWrapper extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_containers_integrationIssuesWrapper);
-
 

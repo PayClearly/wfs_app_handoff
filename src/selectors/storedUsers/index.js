@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 const StoredUsers = createSelector(
 
   state => state.admin.roles.data.item,

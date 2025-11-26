@@ -23,9 +23,6 @@ const mapResourcesToProps = (state, props) => {
 
 class components_avatar extends Component {
 
-
-
-
   render() {
     const { userProfile } = this.props;
 
@@ -46,5 +43,4 @@ class components_avatar extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_avatar);
-
 

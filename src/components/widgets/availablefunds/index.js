@@ -35,7 +35,6 @@ class components_widgets_availablefunds extends Component {
     this.props.navigateToPayments();
   };
 
-
   formatPopperLineItemInflow = (value) => (
     <h2 className="font-light mb-0 text-end">
       <i className={`mdi mdi-${value >= 0 ? 'plus' : 'minus'} text-${value >= 0 ? 'success' : 'danger'}`} />
@@ -178,16 +177,7 @@ class components_widgets_availablefunds extends Component {
                     </div>
                   </div>
                 )}
-              {/* { Boolean(availableFunds.virtualCardsBalance) &&
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <h3 className="text-muted mb-0">Partial Virtual Card Balance:&nbsp;&nbsp;</h3>
-                </div>
-                <div>
-                  {this.formatPopperLineItemInflow(availableFunds.virtualCardsBalance)}
-                </div>
-              </div>
-            } */}
+              {}
               {Boolean(availableFunds.totalSent)
                 && (
                   <div className="d-flex justify-content-between align-items-center">

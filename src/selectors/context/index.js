@@ -4,7 +4,6 @@ import md5 from 'md5';
 
 // Third Party Imports ...
 
-
 const selectors_context = createSelector('selectors_context',
 
   state => _resolve(state, 'organization.data.id'),
@@ -25,5 +24,4 @@ const selectors_context = createSelector('selectors_context',
 );
 
 export default selectors_context;
-
 

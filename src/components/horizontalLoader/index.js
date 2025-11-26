@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
 import threeDots from 'assets/loaders/three-dots.svg';
 
 import './index.scss';
@@ -16,9 +15,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_horizontalLoader extends Component {
-
-
-
 
   render() {
     return (
@@ -99,5 +95,4 @@ class components_horizontalLoader extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_horizontalLoader);
-
 

@@ -45,12 +45,6 @@ export function sync(organizationId, accountId) {
   return (dispatch) => {
     dispatch({ type: actionTypes.fetchStart });
     //       acc[organizationId][accountId][curr] = _items[curr];
-    //     }, {});
-    //     dispatch({ type: actionTypes.fetchSuccess, items: data, _paths });
-    //   });
-    // }).catch((error) => {
-    //   dispatch({ type: actionTypes.fetchError, error: error.response.data.error });
-    // });
     return watchValue(`state/jobs/statements/${organizationId}/${accountId}`, (items, paths) => {
       dispatch({ type: actionTypes.fetchSuccess, items: { [organizationId]: { [accountId]: items } }, paths });
     }).catch((error) => {

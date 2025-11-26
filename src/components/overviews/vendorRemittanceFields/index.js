@@ -2,8 +2,6 @@ import {
   connect, Component, bindActionCreators, Fragment,
 } from 'component';
 
-
-
 const mapStateToProps = (state, props) => ({});
 
 const mapDispatchToProps = (dispatch, props) => ({});
@@ -11,10 +9,6 @@ const mapDispatchToProps = (dispatch, props) => ({});
 const mapResourcesToProps = (state, props) => ({});
 
 class components_overviews_vendorRemittanceFields extends Component {
-
-
-
-
 
   render() {
     if (!this.props) { return <div />; }
@@ -41,5 +35,4 @@ class components_overviews_vendorRemittanceFields extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_overviews_vendorRemittanceFields);
-
 

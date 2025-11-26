@@ -4,7 +4,6 @@ import { connect, Component } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   forms: state.forms,
   status: state.transactionDetails.status,
@@ -131,5 +130,4 @@ class componentsFormsCreatereport extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(componentsFormsCreatereport);
-
 

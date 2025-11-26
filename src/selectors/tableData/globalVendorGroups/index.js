@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const selectors_tableData_globalVendorGroups = createSelector(
@@ -53,5 +52,4 @@ const selectors_tableData_globalVendorGroups = createSelector(
 );
 
 export default selectors_tableData_globalVendorGroups;
-
 

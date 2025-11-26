@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_paymentCardChangeRequests = createSelector(
 
@@ -33,5 +31,4 @@ const selectors_paymentCardChangeRequests = createSelector(
 );
 
 export default selectors_paymentCardChangeRequests;
-
 

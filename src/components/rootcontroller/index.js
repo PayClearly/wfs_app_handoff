@@ -180,4 +180,3 @@ class components_rootcontroller extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_rootcontroller);
 
-

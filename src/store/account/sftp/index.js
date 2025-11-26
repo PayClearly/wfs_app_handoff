@@ -46,13 +46,6 @@ export const reducer = combineReducers({
 
 export default reducer;
 
-/**
- * @param {object} sftpUser
- * @param {import('../../../api/sftp').CreateSftpUser['username']} sftpUser.username
- * @param {import('../../../api/sftp').CreateSftpUser['password']} sftpUser.password
- * @param {import('../../../api/sftp').CreateSftpUser['whitelist']} [sftpUser.ipWhitelist]
- * @returns 
- */
 export function createSftpUser(sftpUser) {
   return (dispatch, getState) => {
     const { ipWhitelist, ...rest } = sftpUser;
@@ -76,15 +69,6 @@ export function createSftpUser(sftpUser) {
       });
   };
 }
-/**
- * @param {object} sftpUser
- * @param {import('../../../api/sftp').UpdateSftpUser['password']} [sftpUser.password]
- * @param {import('../../../api/sftp').UpdateSftpUser['whitelist']} [sftpUser.ipWhitelist]
- * @param {import('../../../api/sftp').UpdateSftpUser['id']} sftpUser.id
- * @param {import('../../../api/sftp').UpdateSftpUser['username']} sftpUser.username
- * @param {import('../../../api/sftp').UpdateSftpUser['active']} sftpUser.active
- * @returns 
- */
 export function updateSftpUser(sftpUser) {
   return (dispatch, getState) => {
     const {

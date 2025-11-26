@@ -1,12 +1,10 @@
 import { connect, Component } from 'component';
 
-
 import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
-
 
 import './index.scss';
 
@@ -86,8 +84,6 @@ class components_widgets_paymentMethodsStatus extends Component {
     fetched: false,
   };
 
-
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.integrations.cardsIntegration.status.fetched
       && nextProps.integrations.checksIntegration.status.fetched
@@ -95,8 +91,6 @@ class components_widgets_paymentMethodsStatus extends Component {
       this.setState({ fetched: true });
     }
   }
-
-
 
   _onClickToggleDetails = () => {
     if (!this.state.fetched) { return; }

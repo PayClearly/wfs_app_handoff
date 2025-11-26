@@ -18,14 +18,23 @@ function fetchAttachment(attachmentMetadata) {
 }
 
 /**
+
  * @param {object} attachmentMetadata
+
  * @param {string} attachmentMetadata.storagePath
+
  * @param {string} attachmentMetadata.originalname
+
  * @param {string} [attachmentMetadata.contentType]
+
  * @param {string} [attachmentMetadata.directory]
+
  * @param {string} [attachmentMetadata.resourcePath]
+
  * @param {string} [attachmentMetadata.forFTP]
+
  * @param {string} [attachmentMetadata.forSFTP]
+
  */
 function downloadAttachment(attachmentMetadata) {
   // Add code for database or API integrations

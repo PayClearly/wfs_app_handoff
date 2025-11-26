@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     accountResources: state.account,
@@ -33,7 +32,6 @@ class components_modals_areyousure extends Component {
     }
     // set up the inital props
   }
-
 
   render() {
     return (
@@ -125,5 +123,4 @@ class components_modals_areyousure extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_areyousure);
-
 

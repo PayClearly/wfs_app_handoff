@@ -5,7 +5,6 @@ import Components from 'components';
 
 import numeral from 'numeral';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     expenses: _try(() => state.account.expenses.data.items, {}),
@@ -25,9 +24,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_overviews_expense extends Component {
-
-
-
 
   render() {
     const { id, expenses } = this.props;
@@ -152,5 +148,4 @@ class components_overviews_expense extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_overviews_expense);
-
 

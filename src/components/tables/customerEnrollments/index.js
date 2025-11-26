@@ -8,7 +8,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   status: _try(() => state.account.kyc.status, {}),
   customers: _try(() => state.account.kyc.data.items.customers, {}),

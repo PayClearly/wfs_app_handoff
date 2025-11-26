@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -14,9 +13,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_badges_method extends Component {
-
-
-
 
   render() {
     const { data } = this.props;
@@ -67,5 +63,4 @@ class components_badges_method extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_badges_method);
-
 

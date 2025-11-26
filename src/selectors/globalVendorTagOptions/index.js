@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-
 const selectors_globalVendorTagOptions = createSelector(
   state => state.global.tags.data.items,
   (tags) => {
@@ -15,5 +14,4 @@ const selectors_globalVendorTagOptions = createSelector(
 );
 
 export default selectors_globalVendorTagOptions;
-
 

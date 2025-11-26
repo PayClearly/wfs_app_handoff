@@ -1,6 +1,5 @@
 import { connect, Component, Fragment } from 'component';
 
-
 // Third Party Imports ...
 import { CSSTransition } from 'react-transition-group';
 
@@ -189,5 +188,4 @@ class components_routes_routeWrapper extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_routes_routeWrapper);
-
 

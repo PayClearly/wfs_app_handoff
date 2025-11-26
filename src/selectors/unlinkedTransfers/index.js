@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-
 const selectors_unlinkedTransfers = createSelector(
 
   state => state.account.achTransfers.data.items,
@@ -15,7 +14,6 @@ const selectors_unlinkedTransfers = createSelector(
 
     Object.keys(transfers).forEach((transferId) => {
       const transfer = transfers[transferId];
-      // }
       if (transfer._waitingToLinkToPCardChangeRequests && transfer.status !== 'cancelled') {
         pCardChangeRequestsPendingLinkToTransfer = { ...pCardChangeRequestsPendingLinkToTransfer, ...transfer._forPCardChangeRequests };
       }
@@ -29,5 +27,4 @@ const selectors_unlinkedTransfers = createSelector(
 );
 
 export default selectors_unlinkedTransfers;
-
 

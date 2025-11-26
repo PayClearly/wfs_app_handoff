@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -29,11 +28,9 @@ const mapResourcesToProps = (state, props) => {
 
 class components_modals_rejectExpenseReport extends Component {
 
-
   componentWillReceiveProps(nextProps = {}) {
     if (_try(() => this.props.expenseReports.status.updating) && (!_try(() => nextProps.expenseReports.status.updating) && !_try(() => nextProps.expenseReports.status.updatingError))) this.props.close();
   }
-
 
   rejectExpenseReport = () => {
     const { forms, expenseReportId } = this.props;
@@ -89,5 +86,4 @@ class components_modals_rejectExpenseReport extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_modals_rejectExpenseReport);
-
 

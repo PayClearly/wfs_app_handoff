@@ -9,7 +9,6 @@ import Utils from 'utils';
 import Components from 'components';
 import TransactionAmountsBreakdown from '../../components/TransactionAmountsBreakdown';
 
-
 const mapStateToProps = (state) => ({
   paymentPipelinePreferences: state.account.paymentPipelinePreferences.data.item,
   users: state.users.data.items,
@@ -19,10 +18,6 @@ const mapDispatchToProps = () => ({});
 
 // eslint-disable-next-line camelcase
 class components_overviews_paymentstatus_modules_details extends Component {
-
-
-
-
 
   render() {
     const { paymentStatus } = this.props;
@@ -141,5 +136,4 @@ class components_overviews_paymentstatus_modules_details extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_paymentstatus_modules_details);
-
 

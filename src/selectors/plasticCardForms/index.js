@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 import Selectors from 'selectors';
 
@@ -28,5 +27,4 @@ const selectors_plasticCardForms = () => {
 };
 
 export default selectors_plasticCardForms;
-
 

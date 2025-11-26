@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_hasPolicy(policies, policyTemplate, orgId = null, accountId = null) {
   return policies[policyTemplate.replace('idOrganization', '*').replace('idAccount', '*')] ||
     policies[policyTemplate.replace('idOrganization', orgId).replace('idAccount', '*')] ||
@@ -8,5 +7,4 @@ function utils_hasPolicy(policies, policyTemplate, orgId = null, accountId = nul
 }
 
 export default utils_hasPolicy;
-
 

@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     paymentCards: state.account.paymentCards.data.items,
@@ -15,9 +14,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_modals_transactionhistory extends Component {
-
-
-
 
   render() {
     let title = 'Transaction History';
@@ -64,5 +60,4 @@ class components_modals_transactionhistory extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_transactionhistory);
-
 

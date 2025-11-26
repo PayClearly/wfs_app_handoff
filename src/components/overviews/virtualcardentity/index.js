@@ -8,7 +8,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     vCards: _try(() => state.account.cardsIntegration.data.resources.vCards),
@@ -33,9 +32,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_overviews_virtualcardentity extends Component {
-
-
-
 
   cancelCard = (id) => {
     if (this.props.forPayment) return;
@@ -126,5 +122,4 @@ class components_overviews_virtualcardentity extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_virtualcardentity);
-
 

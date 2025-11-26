@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     integrations: Selectors.integrations(state),
@@ -27,15 +26,11 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_modals_achSetup extends Component {
 
-
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.integrations.achFundingSource.linked) {
       this.props.close();
     }
   }
-
-
 
   onClose() {
     this.props.close();
@@ -95,5 +90,4 @@ class components_modals_achSetup extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_achSetup);
-
 

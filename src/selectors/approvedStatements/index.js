@@ -1,7 +1,5 @@
 import createSelector from 'selector';
 
-
-
 const selectors_approvedStatements = createSelector('selectors_approvedStatements',
 
   state => state.organization.data.id,
@@ -18,5 +16,4 @@ const selectors_approvedStatements = createSelector('selectors_approvedStatement
 );
 
 export default selectors_approvedStatements;
-
 

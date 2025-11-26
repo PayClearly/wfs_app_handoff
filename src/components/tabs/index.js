@@ -41,8 +41,6 @@ class components_tabs extends Component {
     }
   }
 
-
-
   _handleTabClick = (e) => {
     e.preventDefault();
     const hash = e.target.hash || e.target.parentNode.hash;
@@ -97,5 +95,4 @@ class components_tabs extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tabs);
-
 

@@ -1,8 +1,6 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 import firebase from 'firebase';
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -26,7 +24,6 @@ class components_permissionedImage extends Component {
     });
   }
 
-
   render() {
     let imageToDisplay = this.props.default;
     if (this.props.path) {
@@ -42,5 +39,4 @@ class components_permissionedImage extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_permissionedImage);
-
 

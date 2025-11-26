@@ -6,7 +6,6 @@ import { Collapse } from 'react-collapse';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -152,5 +151,4 @@ class components_forms_fundingPreferences extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_fundingPreferences);
-
 

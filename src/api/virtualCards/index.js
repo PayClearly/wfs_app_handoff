@@ -26,7 +26,6 @@ const scope = {
 
 export default scope;
 
-
 // _helpers
 function _adaptToAPI(data) {
   // Add code for database or API integrations

@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     expenseReportsStatus: state.account.expenseReports.status,
@@ -31,9 +30,6 @@ class components_modals_createExpenseReport extends Component {
     blurAll: false,
     submitReport: false,
   };
-
-
-
 
   onSubmit = () => {
     const form = _try(() => this.props.forms['Components.forms.expenseReport'][this.state.formKey], {});
@@ -114,5 +110,4 @@ class components_modals_createExpenseReport extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_modals_createExpenseReport);
-
 

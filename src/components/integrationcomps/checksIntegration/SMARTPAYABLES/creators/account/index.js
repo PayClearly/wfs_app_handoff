@@ -5,7 +5,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -38,8 +37,6 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_creators_accou
     formName: 'Components.integrationcomps.checksIntegration.SMARTPAYABLES.forms.account',
     formKey: 'create',
   }
-
-
 
   onCreate = () => {
     this.setState(() => {
@@ -99,5 +96,4 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_creators_accou
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_integrationcomps_checksIntegration_SMARTPAYABLES_creators_account);
-
 

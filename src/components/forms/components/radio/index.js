@@ -1,7 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -16,14 +14,10 @@ const mapResourcesToProps = (state, props) => {
 
 class components_forms_components_radio extends Component {
 
-
-
-
   render() {
     const form = this.props.form;
     const fieldName = this.props.field;
     const field = form[this.props.field];
-
 
     const id = `${form._name}-${form._key}-input-${fieldName}`;
 
@@ -48,5 +42,4 @@ class components_forms_components_radio extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_components_radio);
-
 

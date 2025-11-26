@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   expenseReports: state.account.expenseReports.data.items,
   status: state.account.expenseReports.status,
@@ -17,7 +16,6 @@ const mapDispatchToProps = (dispatch) => ({
   updateExpenseReport: (id, data) => dispatch(Store.account.updateExpenseReport(id, data)),
   clearStatusErrors: () => dispatch(Store.account.clearErrorsExpenseReports()),
 });
-
 
 // eslint-disable-next-line camelcase
 class components_entities_expenseReport extends Component {

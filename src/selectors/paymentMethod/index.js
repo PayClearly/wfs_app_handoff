@@ -1,7 +1,6 @@
 import createSelector from 'selector';
 import Constants from '../../constants';
 
-
 const selectors_paymentMethod = createSelector('selectors_paymentMethod',
 
   state => state.account.paymentStatuses.data.items,

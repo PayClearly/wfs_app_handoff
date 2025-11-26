@@ -80,7 +80,6 @@ export function sync(context, skipCache = true) {
       return dispatch({ type: actionTypes.initializeSuccess, data, collections });
     } catch (err) {
       if (getState().wfs.preferences.data.errorTracing) {
-        // device.showToast({ message: `Cards: ${err.message} ${err.stack}`, color: 'danger', duration: 5000 })(dispatch);
       } else {
         // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
       }

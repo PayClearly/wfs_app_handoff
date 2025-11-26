@@ -2,26 +2,10 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
-
-// };
-
-// };
-
-
-//   componentDidMount() {}
-//   componentWillUnmount() {}
-
-//   render() {
 //       <div className="components_loading">
 //         <p>components_loading</p>
 //       </div>
 //     );
-//   }
-// }
-
-
-
 
 export default () => {
   return (

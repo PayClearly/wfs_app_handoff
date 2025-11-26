@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -14,9 +13,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_forms_components_dynamicfield extends Component {
-
-
-
 
   render() {
     const { field, fieldKey, form, formAction, disabled, disablePrefix, className, fieldPlaceholder, enforce } = this.props;
@@ -115,5 +111,4 @@ class components_forms_components_dynamicfield extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_dynamicfield);
-
 

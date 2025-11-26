@@ -185,10 +185,4 @@ const FILTER_CONDITIONS_BY_TYPE = {
     default: 'is',
   },
 };
-//   },
-//   },
-//   },
-//   },
-//   },
-// };
 

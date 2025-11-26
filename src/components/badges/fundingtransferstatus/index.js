@@ -2,8 +2,6 @@ import { connect, Component } from 'component';
 
 // Third Party Imports ...
 
-
-
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = () => ({});
@@ -20,9 +18,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(components_badges_fu
 // Internal Helper Functions ...
 function _badgeType(status) {
 
-
-
-  // }
   if (status === 'complete') {
     return 'success';
   }

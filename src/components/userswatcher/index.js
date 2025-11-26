@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     storedUsers: Selectors.storedUsers(state),
@@ -22,11 +21,9 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_userswatcher extends Component {
 
-
   componentWillReceiveProps(nextProps) {
     this.props.syncUsers(nextProps.storedUsers);
   }
-
 
   render() {
     return (
@@ -36,5 +33,4 @@ class components_userswatcher extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_userswatcher);
-
 

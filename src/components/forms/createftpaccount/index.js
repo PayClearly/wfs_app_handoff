@@ -8,7 +8,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   forms: state.forms,
   types: state.validations.data.item,
@@ -65,7 +64,6 @@ class components_forms_createftpaccount extends Component {
     if (!values.username.match(/^[a-z0-9_-]+$/)) {
       errors.username = 'Username must match /^[a-z0-9_-]+$';
     }
-
 
     if (!values.password || typeof values.password !== 'string') {
       errors.password = Utils.typesvalidator.validationErrorMsgs.string;
@@ -147,5 +145,4 @@ class components_forms_createftpaccount extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_createftpaccount);
-
 

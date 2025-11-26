@@ -10,4 +10,3 @@ function utils_calculateCommission(baseAmount = 0, rate = 0, commissionOffsetPer
 
 export default utils_calculateCommission;
 
-

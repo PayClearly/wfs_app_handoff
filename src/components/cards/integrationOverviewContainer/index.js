@@ -16,9 +16,6 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_cards_integrationOverviewContainer extends Component {
 
-
-
-
   render() {
     const integrations = Object.keys(this.props.account || {}).filter(key => key.toLowerCase().includes('integration'));
     integrations.sort((a, b) => Object.keys(this.props.account[b].data.details).length - Object.keys(this.props.account[a].data.details).length);
@@ -34,5 +31,4 @@ class components_cards_integrationOverviewContainer extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_cards_integrationOverviewContainer);
-
 

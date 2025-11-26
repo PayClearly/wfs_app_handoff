@@ -10,7 +10,6 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({});
 
-
 class componentsOverviewsPaymentstatusModulesVendorPaymentNotes extends Component {
   render() {
     const showVendorPaymentNotes = this.props.paymentPipelinePreferences.paymentHistoryVendorPaymentNotes;

@@ -86,8 +86,6 @@ class components_tables_users extends Component {
     }
   }
 
-
-
   rowRenderer = (rowId, rowData, expanded) => (
     <div className="card" style={{ border: 'none' }}>
       <div className="card-body">

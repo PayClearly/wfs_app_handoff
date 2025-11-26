@@ -71,7 +71,6 @@ class components_forms_schedulereport extends Component {
       quarterly: { display: 'Quarterly' },
       annually: { display: 'Annually' },
     },
-    // },
     exportsOptions: {
       pdf: { display: 'PDF' },
       tab: { display: 'TAB' },

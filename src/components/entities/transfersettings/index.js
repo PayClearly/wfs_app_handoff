@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -42,7 +41,6 @@ const mapDispatchToProps = (dispatch, props) => {
 
 class components_entities_transfersettings extends Component {
 
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.params.modal) {
       this.props.removeQueryParams(['modal']);
@@ -51,7 +49,6 @@ class components_entities_transfersettings extends Component {
       }, 500);
     }
   }
-
 
   onSubmit() {
     const form = _try(() => this.props.forms['Components.forms.achAccountCredentials'].setup);
@@ -221,5 +218,4 @@ class components_entities_transfersettings extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_transfersettings);
-
 

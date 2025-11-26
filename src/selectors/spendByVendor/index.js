@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 import Selectors from 'selectors';
 
@@ -13,7 +12,6 @@ const selectors_spendByVendor = createSelector('selectors_spendByVendor',
   state => state.account.accountVendors.data.items,
 
   (paymentsData = {}, paymentStatuses, paymentStatusesStatus, context, vendors = {}) => {
-
 
     let formattedSpendByVendorData = null;
     if ((context.organizationId === 'org-for-testing-policies' || context.organizationId === '57245f0a-7f86-4b55-9350-4a27a385f189' || _try(() => window.GLOBALCERT.projectId.includes('STAGING-ENV_CHANGE-ME'))) && _try(() => context.account._options._useSampleDashboard)) {
@@ -32,7 +30,6 @@ const selectors_spendByVendor = createSelector('selectors_spendByVendor',
 export default selectors_spendByVendor;
 
 // Internal Helper Functions ...
-// }
 
 function _formatSpendByVendorData(paymentStatuses, vendors, fundedPayments) {
   const date = new Date();
@@ -123,7 +120,9 @@ function _generateLastThreeMonthsMetadata(thisMonth, thisYear) {
 }
 
 /*
+
   ---- Test Data -----
+
 */
 // Vendor Spend
 const paymentTestStatuses = {

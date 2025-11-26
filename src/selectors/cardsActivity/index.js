@@ -154,5 +154,4 @@ const selectors_cardsActivity = createSelector(
   }
 );
 
-
 export default selectors_cardsActivity;

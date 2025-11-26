@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const selectors_tableData_accountvendorcredentials = createSelector(
@@ -25,5 +24,4 @@ const selectors_tableData_accountvendorcredentials = createSelector(
 );
 
 export default selectors_tableData_accountvendorcredentials;
-
 

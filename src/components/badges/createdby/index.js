@@ -5,7 +5,6 @@ import {
 
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   users: state.users.data.items,
 });
@@ -34,7 +33,6 @@ class components_badges_createdby extends Component {
       description = user.email;
     }
 
-
     return (
       <div className="d-flex flex-row">
         <Components.tooltip>
@@ -52,5 +50,4 @@ class components_badges_createdby extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_badges_createdby);
-
 

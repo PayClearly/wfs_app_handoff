@@ -50,4 +50,3 @@ const _adaptToCreatable = (values, customFieldsForm) => {
   };
 };
 
-

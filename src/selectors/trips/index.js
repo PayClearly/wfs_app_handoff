@@ -1,9 +1,7 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 
-// TODO: Make expenses have collections on tripNumbers?
 const selectors_trips = createSelector(
   state => state.wfs.trips.data,
   state => state.account.expenses.data.items,

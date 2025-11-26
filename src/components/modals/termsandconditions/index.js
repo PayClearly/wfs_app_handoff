@@ -39,13 +39,11 @@ class components_modals_termsandconditions extends Component {
     agreed: false,
   }
 
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.hasAccepted && !nextProps.static) {
       this.props.close();
     }
   }
-
 
   onAccept = () => {
     if (!this.props.termsHTML || this.state.accepting) return;
@@ -129,5 +127,4 @@ class components_modals_termsandconditions extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_modals_termsandconditions);
-
 

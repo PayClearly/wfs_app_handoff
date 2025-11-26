@@ -6,7 +6,6 @@ import numeral from 'numeral';
 import Store from 'store';
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     providerTheme: Selectors.providerTheme(state),
@@ -26,9 +25,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_modals_paymentsend_components_achview extends Component {
-
-
-
 
   render() {
     const paymentStatus = this.props.paymentStatuses.data.items[this.props.id];
@@ -97,5 +93,4 @@ class components_modals_paymentsend_components_achview extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_paymentsend_components_achview);
-
 

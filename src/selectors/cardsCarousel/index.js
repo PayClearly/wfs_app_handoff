@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const cardHierarchy = {
@@ -61,5 +60,4 @@ const selectors_cardsCarousel = createSelector(
 );
 
 export default selectors_cardsCarousel;
-
 

@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     expensesStatus: state.account.expenses.status,
@@ -30,9 +29,6 @@ class components_modals_createExpense extends Component {
     formKey: 'create',
     blurAll: false,
   };
-
-
-
 
   onSubmit = () => {
     const form = _try(() => this.props.forms['Components.forms.expense'][this.state.formKey], {});
@@ -91,5 +87,4 @@ class components_modals_createExpense extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_modals_createExpense);
-
 

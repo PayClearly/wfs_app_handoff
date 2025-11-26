@@ -8,7 +8,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   forms: state.forms,
   types: state.validations.data.item,

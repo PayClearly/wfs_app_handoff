@@ -8,7 +8,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
     user: state.user,
     forms: state.forms,
@@ -57,7 +56,6 @@ class components_entities_virtualcard extends Component {
       && this.props.user.privileges.data.item.rootLevel.administrateGlobalVendors;
     const paymentsTableUpdateCards = featureFlags.paymentsTableUpdateCards === 'ON';
 
-
     const card = this.props.vCards[cardId];
     const error = this.props.status.updatingError;
     const { updating } = this.props.status;
@@ -65,7 +63,6 @@ class components_entities_virtualcard extends Component {
     const updateDisabled = updating || !form._allValid || form._allInitial;
 
     const wrapperClasses = this.props.wrapperClasses || 'p-4';
-
 
     let updateAllowed = canUpdate;
     if (_try(() => card.status) === 'cancelled') { 

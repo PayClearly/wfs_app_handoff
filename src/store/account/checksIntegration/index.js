@@ -12,7 +12,7 @@ export const defaultState = {
   resources: {
     checks: {},
   },
-  statuses: { // TODO add specific statuses for resouces
+  statuses: {
     checks: {},
   },
   details: {},

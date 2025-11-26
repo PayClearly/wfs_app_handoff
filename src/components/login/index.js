@@ -152,4 +152,3 @@ class components_login extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_login);
 
-

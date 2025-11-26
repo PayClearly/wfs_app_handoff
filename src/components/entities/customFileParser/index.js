@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   paymentPipelinePreferences: _try(() => state.account.paymentPipelinePreferences.data.item, {}),
 });
@@ -13,7 +12,6 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(Store.router.openModal('Components.modals.customFileTemplate', data));
   },
 });
-
 
 // eslint-disable-next-line camelcase
 class components_entities_customFileParser extends Component {

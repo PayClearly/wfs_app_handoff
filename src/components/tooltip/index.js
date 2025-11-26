@@ -4,8 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import md5 from 'md5';
 import * as Reactstrap from 'reactstrap';
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -25,8 +23,6 @@ class components_tooltip extends Component {
       id: `tooltip_${md5(Math.random())}`,
     });
   }
-
-
 
   toggle() {
     this.setState({
@@ -52,5 +48,4 @@ class components_tooltip extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tooltip);
-
 

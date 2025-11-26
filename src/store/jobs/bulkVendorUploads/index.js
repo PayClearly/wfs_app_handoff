@@ -73,7 +73,9 @@ export function clear() {
 export function fetch() {
   return (_dispatch, _getState) => {
     /**
+
      * This is exported because fetch is expected to exist in the outer reducers.
+
      */
   };
 }

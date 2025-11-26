@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     accountVendorCredentials: Selectors.tableData.accountvendorcredentials(state),
@@ -40,9 +39,6 @@ class components_tables_accountvendorcredentials extends Component {
     ],
   };
 
-
-
-
   render() {
     const { accountVendorCredentials, filteredAndSortedItems } = this.props;
     // Right now we only care about vender schemas associated with vCards
@@ -73,5 +69,4 @@ class components_tables_accountvendorcredentials extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_accountvendorcredentials);
-
 

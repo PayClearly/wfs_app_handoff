@@ -96,4 +96,3 @@ class components_mainlayout extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_mainlayout);
 
-

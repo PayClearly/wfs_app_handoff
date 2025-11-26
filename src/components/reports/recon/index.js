@@ -14,7 +14,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     transactions: Selectors.transactions(state),
@@ -89,8 +88,6 @@ class components_reports_recon extends Component {
       });
     }
   }
-
-
 
   getCsvData = (transactions, selectedColumns, orderBy) => {
     return Object.values(transactions)
@@ -190,7 +187,6 @@ class components_reports_recon extends Component {
     });
   };
 
-
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;
     this.props.openReportScheduleModal(selectedColumns, renderedColumns, orderBy);
@@ -286,13 +282,11 @@ const _getStartDate = () => {
   return new Date(new Date(new Date().setMonth(new Date().getMonth() - 1)).setHours(0, 0, 0, 0)).toISOString();
 };
 
-
 const sortCaret = (order) => {
   if (order === 'asc') return (<Fragment>&nbsp;<i className={'mdi mdi-chevron-down'} /></Fragment>);
   if (order === 'desc') return (<Fragment>&nbsp;<i className={'mdi mdi-chevron-up'} /></Fragment>);
   return (<Fragment>&nbsp;<i className={'mdi mdi-chevron-up'} /><i className={'mdi mdi-chevron-down'} /></Fragment>);
 };
-
 
 const sortNumbers = (a, b, order, dataField, rowA, rowB) => {
   if (order === 'asc') return parseFloat(a) - parseFloat(b); // desc

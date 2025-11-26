@@ -60,7 +60,6 @@ class components_forms_sftpAccountDetails extends Component {
     return errors;
   };
 
-
   standardFormAction = (action, field, value) => {
     if (action === 'change') {
       this.props[action](this.state.name, this.props.id || 'default', field, value);
@@ -113,5 +112,4 @@ class components_forms_sftpAccountDetails extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_forms_sftpAccountDetails);
-
 

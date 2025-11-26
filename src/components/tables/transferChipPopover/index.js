@@ -7,7 +7,6 @@ import Components from 'components';
 import numeral from 'numeral';
 import { PopoverHeader, PopoverBody } from 'reactstrap';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     transfers: Selectors.tableData.csrtransfers(state),
@@ -30,9 +29,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_tables_transferChipPopover extends Component {
-
-
-
 
   navigateToDetails = () => {
     const transferId = this.props.refId || null;
@@ -78,5 +74,4 @@ class components_tables_transferChipPopover extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_tables_transferChipPopover);
-
 

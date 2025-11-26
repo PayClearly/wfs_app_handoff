@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     cardPolicies: Selectors.entity('cardsIntegration_idOrganization_idAccount')(state),
@@ -44,9 +43,6 @@ class components_creators_plastic extends Component {
     formName: 'Components.forms.plasticcard',
     formKey: 'default',
   };
-
-
-
 
   onCreate = () => {
     if (this.props.forCreate) {
@@ -131,5 +127,4 @@ class components_creators_plastic extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_creators_plastic);
-
 

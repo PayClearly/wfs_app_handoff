@@ -2,7 +2,6 @@
 
 import createSelector from 'selector';
 
-
 const PostageOptions = createSelector(
   () => {
     return {

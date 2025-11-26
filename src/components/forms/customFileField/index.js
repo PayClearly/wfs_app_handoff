@@ -7,7 +7,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
   forms: state.forms,
   templateFields: Selectors.customFileTemplateFields(state),
@@ -60,7 +59,6 @@ class components_forms_customFileField extends Component {
     this.props.change(this.state.name, this.props.formKey, 'pcField', data);
     this.props.validate(this.state.name, this.props.formKey, this.validate);
   };
-
 
   standardFormAction = (action, field, value) => {
     const { name } = this.state;
@@ -157,11 +155,6 @@ const _fuzzyFieldMatch = (query, set) => {
   return match ? [setByDisplay[match[0][1]]] : null;
 };
 
-/**
- *
- * @param {import('../../../../src/components/entities/customFileParser/types').TemplateField} param
- * @returns
- */
 const _formatPcField = ({ pcField, lineItemField, alias }) => {
   if (!pcField && !lineItemField) {
     return null;
@@ -183,10 +176,5 @@ const _formatPcField = ({ pcField, lineItemField, alias }) => {
   return fields;
 };
 
-/**
- *
- * @param {import('../../../../src/components/entities/customFileParser/types').TemplateField} param
- * @returns
- */
 const _formatFieldName = ({ fieldName = '', format }) => ((fieldName && format) ? `${fieldName}?format=${format}` : fieldName);
 

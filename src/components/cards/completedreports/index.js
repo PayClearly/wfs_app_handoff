@@ -5,7 +5,6 @@ import { connect, Component } from 'component';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   policies: Selectors.entity('reports_idOrganization_idAccount')(state),
 });

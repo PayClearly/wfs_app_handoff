@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 import Selectors from 'selectors';
 
@@ -48,7 +47,6 @@ const selectors_routeConfig = createSelector(
       });
 
     const loaded = userPrivileges.fetched || false;
-    // });
 
     return {
       ...routeData,
@@ -61,5 +59,4 @@ const selectors_routeConfig = createSelector(
 );
 
 export default selectors_routeConfig;
-
 

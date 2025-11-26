@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -14,9 +13,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_overviews_receipts extends Component {
-
-
-
 
   renderCards = () => {
     return this.props.attachments.map((attachment, index) => {
@@ -69,5 +65,4 @@ class components_overviews_receipts extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_receipts);
-
 

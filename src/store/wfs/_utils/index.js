@@ -1,12 +1,5 @@
 import GraphQL from '../../../api/graphQL';
 
-/**
- * @param {string} unit (example: 'd' or 'w' or 'm' or 'y')
- * @returns {int} The number of milliseconds in the unit
- * @example
- * _convertUnitToMs('d') returns 86400000
- *
-*/
 const _convertUnitToMs = (unit) => {
   switch (unit) {
     case 'd': // 24 hours
@@ -22,15 +15,7 @@ const _convertUnitToMs = (unit) => {
   }
 };
 
-/**
- * @param {string} timespan (example: '1d' or '30d' or '2w' or '3m' or '1y')
- * - Currently supports 'today' as '0d'
- * @returns {int} The number of milliseconds in the timespan
- * @example
- * _convertTimespanToMs('4d') returns 345600000
-*/
 const _convertTimespanToMs = (timespan) => {
-  // TODO Make '0d' be passed from the call, rather than today
   // temporary fix for the 'today' timespan, until corrected in logic
   if (timespan === 'today') {
     timespan = '0d';
@@ -42,20 +27,24 @@ const _convertTimespanToMs = (timespan) => {
   return ms * value;
 };
 
-/**
- * @param {int} year
- * @returns {boolean} true if the year is a leap year, false otherwise
- */
 const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 
 /**
+
  * @param {string} [timespan=] (example: '0d', or '1d' or '30d' or '2w' or '3m' or '1y'). Defaults to '0d' to get the current date.
+
  * - Currently supports 'today' as '0d'
+
  * @param {'future' | 'past'} [direction='future'] (example: 'future' or 'past'). Defaults to 'future' to get the current date plus the timespan.
+
  * @example
+
  * timespanToDate('0d') returns '2021-08-02'
+
  * timespanToDate('1d') returns '2021-08-03'
+
  * timespanToDate('1d', 'past') returns '2021-08-01'
+
 */
 export const timespanToDate = (timespan = '0d', direction = 'future') => {
   const ms = _convertTimespanToMs(timespan);

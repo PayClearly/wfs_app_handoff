@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_fileTypeOptions = createSelector('selectors_fileTypeOptions',
   () => {
@@ -15,5 +13,4 @@ const selectors_fileTypeOptions = createSelector('selectors_fileTypeOptions',
 );
 
 export default selectors_fileTypeOptions;
-
 

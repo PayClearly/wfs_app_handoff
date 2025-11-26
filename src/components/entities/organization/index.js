@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -33,9 +32,6 @@ class components_entities_organization extends Component {
     formName: 'Components.forms.editorganization',
     editBtnText: 'Edit Organization',
   };
-
-
-
 
   onCancel = () => this.setState({ blurAll: false });
 
@@ -87,5 +83,4 @@ class components_entities_organization extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_organization);
-
 

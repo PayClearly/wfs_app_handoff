@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_store_collectionHelper(currentState, newState) {
   const state = Object.keys(currentState).reduce((collections, collectionDomain) => {
     const updatedCollection = Object.keys(newState[collectionDomain]).reduce((acc, curr) => {
@@ -18,5 +17,4 @@ function utils_store_collectionHelper(currentState, newState) {
 }
 
 export default utils_store_collectionHelper;
-
 

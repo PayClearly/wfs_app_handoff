@@ -82,8 +82,6 @@ class components_tables_components_paginateWrapper extends Component {
     // reset pagination based on certain props changes
   }
 
-
-
   _handlePageClick = (data) => {
     const { selected } = data;
 
@@ -108,7 +106,6 @@ class components_tables_components_paginateWrapper extends Component {
       this.props.setQueryParams({ ...params, rowsPerPage: e.target.value });
     }
   };
-
 
   render() {
     const { table, itemOrder, hideRowsPerPageSelector } = this.props;
@@ -166,5 +163,4 @@ class components_tables_components_paginateWrapper extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_tables_components_paginateWrapper);
-
 

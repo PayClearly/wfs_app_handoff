@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const selectors_paymentCardsTableData = createSelector('selectors_paymentCardsTableData',
@@ -9,7 +8,6 @@ const selectors_paymentCardsTableData = createSelector('selectors_paymentCardsTa
   state => state.account.cardsIntegration.data.resources.vCards,
   state => Selectors.cardsActivity(state),
   state => Selectors.paymentCards(state).paymentCardsVCardMetadata,
-
 
   (paymentCards = {}, vCards = {}, cardsActivity = {}, paymentCardsVCardMetadata = {}) => {
     const paymentCardsTableData = {};
@@ -41,5 +39,4 @@ const selectors_paymentCardsTableData = createSelector('selectors_paymentCardsTa
 );
 
 export default selectors_paymentCardsTableData;
-
 

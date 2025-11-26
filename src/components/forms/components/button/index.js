@@ -4,7 +4,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -14,9 +13,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_forms_components_button extends Component {
-
-
-
 
   render() {
     const {
@@ -83,5 +79,4 @@ class components_forms_components_button extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_button);
-
 

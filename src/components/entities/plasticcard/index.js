@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -29,9 +28,6 @@ class components_entities_plasticcard extends Component {
     formName: 'Components.forms.plasticcard',
     editBtnText: 'Edit Card',
   }
-
-
-
 
   on = {
     submit: () => {
@@ -120,5 +116,4 @@ class components_entities_plasticcard extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_plasticcard);
-
 

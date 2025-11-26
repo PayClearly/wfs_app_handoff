@@ -54,7 +54,6 @@ export function clear() {
   };
 }
 
-
 export function clearErrors() {
   return (dispatch) => {
     dispatch({ type: actionTypes.clearErrors, data: {} });

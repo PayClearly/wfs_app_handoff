@@ -177,7 +177,6 @@ class componentsReportsCheckActivity extends Component {
       return acc;
     }, [(selectedColumns || []).map((column) => column.text)]);
 
-
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;
     this.props.openReportScheduleModal(selectedColumns, renderedColumns, orderBy);
@@ -237,7 +236,6 @@ class componentsReportsCheckActivity extends Component {
     text: field,
     type: 'Char',
   }));
-
 
   render() {
     const { status, transactions } = this.props;

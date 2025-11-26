@@ -2,7 +2,6 @@ import { connect, Component, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   access: state.user.access,
   baseStyles: _try(() => state.appConfig.data.styles.light, {}),
@@ -43,5 +42,4 @@ class components_rootControllerRenderers_main extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_rootControllerRenderers_main);
-
 

@@ -15,7 +15,7 @@ export const defaultState = {
     categories: {},
     records: {},
   },
-  statuses: { // TODO add specific statuses for resouces
+  statuses: {
     accounts: {},
     classes: {},
     categories: {},

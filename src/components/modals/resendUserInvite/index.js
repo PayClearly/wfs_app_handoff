@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     inviteStatus: state.users.status,
@@ -31,13 +30,11 @@ class components_modals_resendUserInvite extends Component {
     showPastInvites: false,
   }
 
-
   componentWillReceiveProps(nextProps) {
     if (this.props.inviteStatus.updating && !nextProps.inviteStatus.updating) {
       this.inviteSent();
     }
   }
-
 
   onYes() {
     this.props.resendUserInvite(this.props.user.email);
@@ -133,5 +130,4 @@ class components_modals_resendUserInvite extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_resendUserInvite);
-
 

@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     achPolicies: Selectors.entity('achTransfers_idOrganization_idAccount')(state),
@@ -29,9 +28,6 @@ class components_transferPoolMenuItem extends Component {
     popoverOpen: false,
   }
 
-
-
-
   render() {
     return (
       <Fragment>
@@ -52,5 +48,4 @@ class components_transferPoolMenuItem extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_transferPoolMenuItem);
-
 

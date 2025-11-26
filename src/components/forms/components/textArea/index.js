@@ -3,7 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import classNames from 'classnames';
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -15,9 +14,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_forms_components_textArea extends Component {
-
-
-
 
   render() {
     const form = this.props.form;
@@ -63,5 +59,4 @@ class components_forms_components_textArea extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_components_textArea);
-
 

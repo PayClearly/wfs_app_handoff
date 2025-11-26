@@ -2,7 +2,6 @@ import createSelector from 'selector';
 
 // Third Party Imports ...
 
-
 const selectors_achFundingSource = createSelector('selectors_achFundingSource',
 
   state => state.account.achAccountDetails.status.fetched,
@@ -22,6 +21,5 @@ const selectors_achFundingSource = createSelector('selectors_achFundingSource',
 );
 
 export default selectors_achFundingSource;
-
 
 // private helpers

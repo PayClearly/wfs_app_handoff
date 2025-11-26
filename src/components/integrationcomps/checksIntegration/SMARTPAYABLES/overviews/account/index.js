@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     checksIntegration: _try(() => Selectors.integrations(state).checksIntegration, {}),
@@ -18,9 +17,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_integrationcomps_checksIntegration_SMARTPAYABLES_overviews_account extends Component {
-
-
-
 
   render() {
     const { details } = _try(() => this.props.checksIntegration, {});
@@ -46,5 +42,4 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_overviews_acco
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_integrationcomps_checksIntegration_SMARTPAYABLES_overviews_account);
-
 

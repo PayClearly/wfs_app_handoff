@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     setup: _try(() => Selectors.integrations(state).checksIntegration.details),
@@ -29,7 +28,6 @@ class components_integrationsetups_checksintegration_STUB extends Component {
   componentDidMount() {
     this.setState({ requiresSetup: !!this.props.setup.requiresSetup });
   }
-
 
   render() {
     return (
@@ -59,5 +57,4 @@ class components_integrationsetups_checksintegration_STUB extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationsetups_checksintegration_STUB);
-
 

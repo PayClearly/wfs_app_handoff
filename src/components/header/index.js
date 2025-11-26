@@ -45,7 +45,6 @@ class components_header extends Component {
     });
   }
 
-
   render() {
     const { darkMode } = this.props;
     const user = (this.props.users && this.props.users[this.props.uid]) || this.props.profile;
@@ -124,5 +123,4 @@ class components_header extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_header);
-
 

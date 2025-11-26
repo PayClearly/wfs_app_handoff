@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     policies: Selectors.entity('ftpAccountDetails_idOrganization_idAccount')(state),
@@ -35,9 +34,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_entities_ftpaccountsettings extends Component {
-
-
-
 
   onSubmit = () => {
     this.props.updateFtpAccount({

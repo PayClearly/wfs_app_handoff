@@ -14,11 +14,6 @@ export default reducer;
 
 // action creators
 
-//     removeListeners(getState().account.usps.data.paths);
-//     dispatch({ type: actionTypes.clear });
-//   };
-// }
-
 export function clearErrors() {
   return (dispatch) => {
     dispatch({ type: actionTypes.clearErrors, data: {} });

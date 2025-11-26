@@ -7,7 +7,6 @@ import {
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
   integration: _try(() => Selectors.integrations(state)[props.type]),
   kycError: state.account.kyc.status.creatingError,
@@ -17,7 +16,6 @@ const mapStateToProps = (state, props) => ({
 const mapDispatchToProps = () => ({});
 
 class components_modals_integrationlink extends Component {
-
 
   possibleSetups = {
     erpIntegration: (provider) => {
@@ -146,8 +144,6 @@ class components_modals_integrationlink extends Component {
     },
   };
 
-
-
   componentWillReceiveProps(nextProps) {
     if (
       _try(() => !this.props.integration.linked
@@ -157,8 +153,6 @@ class components_modals_integrationlink extends Component {
       this.props.close();
     }
   }
-
-
 
   render() {
     const { integration, type, provider } = this.props;
@@ -190,5 +184,4 @@ class components_modals_integrationlink extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_integrationlink);
-
 

@@ -5,7 +5,6 @@ import {
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
   paymentStatuses: state.account.paymentStatuses,
   form: _try(() => state.forms['Components.forms.vendorRemittanceFields'][props.id], {}),
@@ -35,10 +34,6 @@ class components_entities_vendorRemittanceFields extends Component {
       },
     },
   };
-
-
-
-
 
   onSubmit = () => {
     const { _values } = this.props.form;
@@ -91,5 +86,4 @@ class components_entities_vendorRemittanceFields extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_entities_vendorRemittanceFields);
-
 

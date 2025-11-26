@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     expenseReportStatus: state.account.expenseReports.status,
@@ -26,9 +25,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_containers_expenseReports extends Component {
-
-
-
 
   render() {
     const { expenseReportStatus, expenseReportPolicies, defaultId } = this.props;
@@ -56,5 +52,4 @@ class components_containers_expenseReports extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_containers_expenseReports);
-
 

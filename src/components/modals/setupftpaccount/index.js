@@ -120,4 +120,3 @@ class components_modals_setupftpaccount extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_setupftpaccount);
 
-

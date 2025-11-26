@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -14,9 +13,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_badges_reversal extends Component {
-
-
-
 
   render() {
     const { data } = this.props;
@@ -33,5 +29,4 @@ class components_badges_reversal extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_badges_reversal);
-
 

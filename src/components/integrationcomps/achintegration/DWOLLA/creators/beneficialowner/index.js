@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -38,10 +37,6 @@ class components_integrationcomps_achintegration_DWOLLA_creators_beneficialowner
     formKey: 'create',
   };
 
-
-
-
-  // TODO implement on create handler for ACH account
   onCreate = () => {
     this.setState(() => {
       return {
@@ -51,7 +46,6 @@ class components_integrationcomps_achintegration_DWOLLA_creators_beneficialowner
 
   }
 
-  // TODO implement create ACH account action
   submit = () => {
     const form = (this.props.forms['Components.integrationcomps.achintegration.DWOLLA.forms.beneficialowner'] && this.props.forms['Components.integrationcomps.achintegration.DWOLLA.forms.beneficialowner'][this.state.formKey]) || {};
 
@@ -64,7 +58,6 @@ class components_integrationcomps_achintegration_DWOLLA_creators_beneficialowner
 
     this.setState({ showACHAccountCreatedNotification: false });
   }
-
 
   adaptFormData(data) {
     return {
@@ -131,5 +124,4 @@ class components_integrationcomps_achintegration_DWOLLA_creators_beneficialowner
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_integrationcomps_achintegration_DWOLLA_creators_beneficialowner);
-
 

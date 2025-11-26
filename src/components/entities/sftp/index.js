@@ -164,4 +164,3 @@ class components_entities_sftpUser extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_sftpUser);
 
-

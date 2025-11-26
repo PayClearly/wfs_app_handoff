@@ -12,7 +12,6 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => {
   return ({
     transactions: state.transactionDetails.data.items,
@@ -105,7 +104,6 @@ class components_reports_spendbyvendor extends Component {
   componentWillReceiveProps(nextProps) {
     const { status, accountId, organizationId, forms } = nextProps;
     const { selectedColumns } = this.state;
-
 
     if (!status.fetching && !this.state.fetched && accountId) {
       const { startDate, endDate } = this.state;
@@ -234,7 +232,6 @@ class components_reports_spendbyvendor extends Component {
     });
   }
 
-
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;
     this.props.openReportScheduleModal(selectedColumns, renderedColumns, orderBy);
@@ -339,5 +336,4 @@ const _formatCurrency = (amount) => {
     console.log(e);
   }
 }
-
 

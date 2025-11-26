@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_getPaymentCardFieldOptions() {
   return {
     DAY_OF_WEEK_OPTIONS: {
@@ -62,5 +61,4 @@ function utils_getPaymentCardFieldOptions() {
 }
 
 export default utils_getPaymentCardFieldOptions;
-
 

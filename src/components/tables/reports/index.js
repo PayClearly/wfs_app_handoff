@@ -6,7 +6,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => {
   return ({
     reports: state.account.reports.data.items,
@@ -53,7 +52,6 @@ class components_tables_reports extends Component {
     rowsToDisplay: 25,
   };
 
-
   componentDidUpdate(prevProps) {
     const { reports, accountId, organizationId, syncJobs } = this.props;
 
@@ -61,7 +59,6 @@ class components_tables_reports extends Component {
       syncJobs(organizationId, accountId, Object.keys(reports));
     }
   }
-
 
   getRowData = ({ attachments = [], _createdAt, startDate, endDate, _id, _reportTemplateId, filename, description, schedule }) => {
     const { organizationId, accountId, downloadAttachment, reportJobs, reportTemplates } = this.props;
@@ -114,7 +111,6 @@ class components_tables_reports extends Component {
   };
 
   handleRowsToDisplayChange = e => this.setState({ rowsToDisplay: e.target.value });
-
 
   deleteReportHandler(organizationId, accountId, reportTemplateId, reportId, status) {
     return () => {
@@ -183,5 +179,4 @@ class components_tables_reports extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_tables_reports);
-
 

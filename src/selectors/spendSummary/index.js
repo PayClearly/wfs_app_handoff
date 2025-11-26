@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Selectors from 'selectors';
 
 const selectors_spendSummary = createSelector(
@@ -8,7 +7,6 @@ const selectors_spendSummary = createSelector(
   state => state.account.accountBalances.data.item,
   state => state.account.accountBalances.status,
   state => Selectors.dailyCardsActivity(state),
-
 
   (accountBalances = {}, accountBalancesStatus = {}, dailyCardsActivity = {}) => {
     if (!accountBalancesStatus.fetched || !dailyCardsActivity) return null;
@@ -18,5 +16,4 @@ const selectors_spendSummary = createSelector(
 );
 
 export default selectors_spendSummary;
-
 

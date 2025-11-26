@@ -4,7 +4,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     passwordsIntegration: Selectors.integrations(state).passwordsIntegration || {},
@@ -32,9 +31,6 @@ class components_integrationsetups_passwordsIntegration_1PASSWORD extends Compon
     showCreatedNotification: false,
   };
 
-
-
-
   onSubmit() {
     this.props.createIntegration({ ...this.props.form._values });
   }
@@ -44,7 +40,6 @@ class components_integrationsetups_passwordsIntegration_1PASSWORD extends Compon
       showCreatedNotification: true,
     });
   }
-
 
   render() {
     const status = this.props.passwordsIntegration.status;

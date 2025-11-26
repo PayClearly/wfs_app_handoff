@@ -1,6 +1,5 @@
 import { connect, Component, bindActionCreators, Fragment } from 'component';
 
-
 import './index.scss';
 
 const mapStateToProps = (state, props) => {
@@ -16,9 +15,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_icon extends Component {
-
-
-
 
   render() {
     return (
@@ -37,5 +33,4 @@ class components_icon extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_icon);
-
 

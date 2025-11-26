@@ -9,4 +9,3 @@ function utils_snakeCaseToCapitalCase(str) {
 
 export default utils_snakeCaseToCapitalCase;
 
-

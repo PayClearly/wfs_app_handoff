@@ -2,7 +2,6 @@
 
 import createSelector from 'selector';
 
-
 const selectors_credentialsByGroup = createSelector('selectors_credentialsByGroup',
   state => state.global.groups.data.items,
   (groups = {}) => {

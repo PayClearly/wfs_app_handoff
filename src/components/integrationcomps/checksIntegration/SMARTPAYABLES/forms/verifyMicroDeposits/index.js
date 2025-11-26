@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -17,9 +16,6 @@ const mapResourcesToProps = (state, props) => {
 
 class components_integrationcomps_checksIntegration_SMARTPAYABLES_forms_verifyMicroDeposits extends Component {
 
-
-
-
   render() {
     return (
       <div className="components_integrationcomps_checksIntegration_SMARTPAYABLES_forms_verifyMicroDeposits">
@@ -30,5 +26,4 @@ class components_integrationcomps_checksIntegration_SMARTPAYABLES_forms_verifyMi
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_integrationcomps_checksIntegration_SMARTPAYABLES_forms_verifyMicroDeposits);
-
 

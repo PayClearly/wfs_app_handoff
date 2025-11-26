@@ -52,19 +52,11 @@ export function _moduleReducers(state = defaultState, action) {
 
 // denormalizer
 
-
-
 //   paymentStatusIds.forEach((id) => {
 //       paymentsByBatch[batchId].push(id);
-//     } else {
 //       paymentsByBatch[batchId] = [id];
-//     }
-//   });
-
 
 //     paymentsByBatch,
-//   };
-// }
 
 export const reducer = combineReducers({
   status: createStatusReducer(namespace),
@@ -82,7 +74,6 @@ export function sync(organizationId, accountId) {
     });
   };
 }
-
 
 export function clear() {
   return (dispatch, getState) => {

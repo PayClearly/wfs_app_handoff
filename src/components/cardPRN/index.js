@@ -76,4 +76,3 @@ class componentsCardPRN extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(componentsCardPRN);
 
-

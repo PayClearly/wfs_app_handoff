@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 import Utils from 'utils';
 
 const selectors_batchHistoryTableData = createSelector('selectors_batchHistoryTableData',
@@ -100,5 +99,4 @@ const selectors_batchHistoryTableData = createSelector('selectors_batchHistoryTa
 );
 
 export default selectors_batchHistoryTableData;
-
 

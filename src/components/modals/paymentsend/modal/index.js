@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     paymentStatuses: state.account.paymentStatuses,
@@ -86,5 +85,4 @@ class components_modals_paymentsend_modal extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_paymentsend_modal);
-
 

@@ -6,7 +6,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -41,9 +40,6 @@ class components_creators_user extends Component {
     showUserCreatedNotification: false,
     createFormActive: true,
   };
-
-
-
 
   onCreate = () => {
     this.props.resetForm('Components.forms.useremail', this.state.formKey);
@@ -106,5 +102,4 @@ class components_creators_user extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_creators_user);
-
 

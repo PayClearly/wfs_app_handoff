@@ -3,7 +3,6 @@ import { connect, Component } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({

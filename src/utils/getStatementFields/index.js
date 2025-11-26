@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_getStatementFields() {
   const options = [
     'Account ID',
@@ -101,5 +100,4 @@ function utils_getStatementFields() {
 }
 
 export default utils_getStatementFields;
-
 

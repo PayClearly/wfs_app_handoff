@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 // Third Party Imports ...
 
-
 import ovalLoader from 'assets/loaders/oval.svg';
 import ovalLoaderWhite from 'assets/loaders/oval-white.svg';
 
@@ -17,9 +16,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_spinner extends Component {
-
-
-
 
   render() {
     return (
@@ -48,5 +44,4 @@ class components_spinner extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_spinner);
-
 

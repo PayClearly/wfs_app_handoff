@@ -60,7 +60,6 @@ class components_toasts_toastWrapper extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_toasts_toastWrapper);
 
-
 function _getDotNotatedPath(path) { return `Components.toasts.${path.slice(2, -9).replace('/', '.')}`; }
 
 function _importNestedDirectory(directory) {

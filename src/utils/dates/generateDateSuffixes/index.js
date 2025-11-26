@@ -1,6 +1,5 @@
 // Third Party Imports ...
 
-
 function utils_dates_generateDateSuffixes(date) {
   const j = date % 10;
   const k = date % 100;
@@ -16,5 +15,4 @@ function utils_dates_generateDateSuffixes(date) {
 }
 
 export default utils_dates_generateDateSuffixes;
-
 

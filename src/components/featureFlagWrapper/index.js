@@ -2,7 +2,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 
 import Selectors from 'selectors';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     featureFlag: Selectors.featureFlags(state)[props.featureKey],
@@ -19,9 +18,6 @@ const mapResourcesToProps = (state, props) => {
 
 class components_featureFlagWrapper extends Component {
 
-
-
-
   render() {
     return (
       <Fragment>
@@ -32,5 +28,4 @@ class components_featureFlagWrapper extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_featureFlagWrapper);
-
 

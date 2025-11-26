@@ -45,8 +45,6 @@ class components_accountcontext extends Component {
     this.props.changeAccount(id);
   }
 
-
-
   render() {
     const loading = !this.props.account.id || !this.state.accounts;
     if (loading) {
@@ -111,5 +109,4 @@ class components_accountcontext extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_accountcontext);
-
 

@@ -110,7 +110,6 @@ const routerConfig = {
         component: 'Components.creators.plastic',
         icon: 'mdi-email-plus-outline',
         policies: ['cards_idOrganization_idAccount_create'],
-        // },
       },
     ],
   }, {

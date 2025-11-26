@@ -74,4 +74,3 @@ class components_button extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_button);
 
-

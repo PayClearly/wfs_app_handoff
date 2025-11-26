@@ -12,7 +12,6 @@ const defaultErrorStates = {
   // ...defaultErrorStates,
 
   // // is set to true when a FETCH_SUCCESS occurs
-// };
 
 export function createStatusReducer(n) {
 
@@ -272,5 +271,4 @@ export function reducerCreator(defaultState, actionName) {
     },
   };
 }
-
 

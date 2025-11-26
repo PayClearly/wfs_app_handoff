@@ -3,8 +3,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 // Third Party Imports ...
 import numeral from 'numeral';
 
-
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -14,9 +12,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 class components_overviews_cardtransactions extends Component {
-
-
-
 
   render() {
     const { data } = this.props;
@@ -77,5 +72,4 @@ class components_overviews_cardtransactions extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_cardtransactions);
-
 

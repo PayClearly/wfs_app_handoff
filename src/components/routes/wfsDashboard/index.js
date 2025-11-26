@@ -2,7 +2,6 @@ import { connect, Component } from 'component';
 
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({});
 };
@@ -16,9 +15,6 @@ const mapResourcesToProps = (state, props) => {
 };
 
 class components_routes_wfsDashboard extends Component {
-
-
-
 
   render() {
     return (
@@ -42,5 +38,4 @@ class components_routes_wfsDashboard extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, mapResourcesToProps)(components_routes_wfsDashboard);
-
 

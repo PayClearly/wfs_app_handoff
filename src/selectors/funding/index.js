@@ -1,6 +1,5 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
 
 import Utils from 'utils';
@@ -44,7 +43,6 @@ const selectors_funding = createSelector(
     const automaticFundingType = fundingPreferences.automaticFundingType;
     const earmarkEnforced = fundingPreferences.fundingStrategy === 'earmark';
 
-
     let availableFunds = {};
     let unfundedPayments = {};
     let unfundedPaymentCardChangeRequests = {};
@@ -70,8 +68,11 @@ const selectors_funding = createSelector(
 
       // payments
       /**
+
        * Used later to add payment ids to the funding transfer's
+
        * `_forPayments` node.
+
        */
       const paymentsInNeedOfFunding = Object.keys(paymentStatuses).filter((paymentId) => {
         const paymentStatus = paymentStatuses[paymentId];
@@ -87,9 +88,13 @@ const selectors_funding = createSelector(
         }
 
         /**
+
          * CHANGE_ME_PROVIDER ACH & Check payments are funded from the Master Funding Account,
+
          * so they are not outside of our internal funding flow like ACH & Check with
+
          * other providers. So, they need to be counted as "in need of funding".
+
          */
         const isGalileo = (method === 'check' && checksIntegration.provider === 'CHANGE_ME_PROVIDER')
           || (method === 'ACH' && achIntegration.provider === 'CHANGE_ME_PROVIDER');
@@ -231,8 +236,5 @@ const selectors_funding = createSelector(
   }
 );
 
-// };
-
 export default selectors_funding;
-
 

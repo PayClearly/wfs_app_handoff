@@ -37,9 +37,6 @@ class components_notificationbar extends Component {
     isDismissed: false,
   };
 
-
-
-
   handleDismiss = () => {
     this.setState({
       isDismissed: true,
@@ -78,5 +75,4 @@ class components_notificationbar extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_notificationbar);
-
 

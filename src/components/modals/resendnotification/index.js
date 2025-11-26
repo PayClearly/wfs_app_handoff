@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     forms: state.forms,
@@ -27,7 +26,6 @@ class components_modals_resendnotification extends Component {
     blurAll: false,
     emailsSent: false,
   };
-
 
   componentWillReceiveProps(nextProps) {
     if (this.state.clickedSend && !this.state.emailsSent && this.props.paymentStatusesStatus.updating && !nextProps.paymentStatusesStatus.updating && !nextProps.paymentStatusesStatus.updatingError) {
@@ -159,5 +157,4 @@ class components_modals_resendnotification extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_modals_resendnotification);
-
 

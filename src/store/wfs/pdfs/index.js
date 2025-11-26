@@ -43,7 +43,6 @@ export function getDocument(resourceId) {
       return dispatch({ type: actionTypes.fetchSuccess, data: { [resourceId]: pdf } });
     } catch (err) {
       if (getState().wfs.preferences.data.errorTracing) {
-        // device.showToast({ message: `pdfs: ${err.message} ${err.stack}`, color: 'danger', duration: 5000 })(dispatch);
       } else {
         // device.showToast({ message: 'Oops! We just encountered an error, Support has been notified', color: 'danger', duration: 5000 })(dispatch);
       }

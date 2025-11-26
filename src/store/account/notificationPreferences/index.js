@@ -12,7 +12,6 @@ export const defaultState = {
   item: {},
 };
 
-
 export function _moduleReducers(state = defaultState, action) {
   switch (action.type) {
 

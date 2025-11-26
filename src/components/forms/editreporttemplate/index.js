@@ -310,4 +310,3 @@ class components_forms_editreporttemplate extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_forms_editreporttemplate);
 
-

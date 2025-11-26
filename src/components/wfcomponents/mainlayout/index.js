@@ -96,4 +96,3 @@ class componentsWfcomponentsMainlayout extends Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(componentsWfcomponentsMainlayout);
 
-

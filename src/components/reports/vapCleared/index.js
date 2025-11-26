@@ -8,7 +8,6 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     status: state.account.cardsIntegration.status,
@@ -177,14 +176,6 @@ class components_reports_vapCleared extends Component {
     ],
     actions: ['Schedule'],
   };
-
-
-
-
-
-
-
-
 
   handleScheduleReport = () => {
     const { selectedColumns, renderedColumns, orderBy } = this.state;

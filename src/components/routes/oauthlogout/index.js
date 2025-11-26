@@ -5,7 +5,6 @@ import { connect, Component, bindActionCreators, Fragment } from 'component';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => {
   return ({
     organizationId: state.organization.data.id,
@@ -36,8 +35,6 @@ class components_routes_oauthlogout extends Component {
   componentWillReceiveProps(nextProps) {
   }
 
-
-
   render() {
     const currentYear = (new Date()).getFullYear();
     return (
@@ -54,5 +51,4 @@ class components_routes_oauthlogout extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_routes_oauthlogout);
-
 

@@ -1,8 +1,6 @@
 import createSelector from 'selector';
 
-
 // Third Party Imports ...
-
 
 const selectors_paymentIssues = createSelector('selectors_paymentIssues',
 
@@ -29,5 +27,4 @@ const selectors_paymentIssues = createSelector('selectors_paymentIssues',
 );
 
 export default selectors_paymentIssues;
-
 

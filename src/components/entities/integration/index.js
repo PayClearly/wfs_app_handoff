@@ -10,7 +10,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state, props) => ({
   integration: _try(() => Selectors.integrations(state)[props.type]),
   permissions: Selectors.entity(`${props.type}_idOrganization_idAccount`)(state),
@@ -33,10 +32,6 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 class components_entities_integration extends Component {
-
-
-
-
 
   unlink = () => {
     this.props.openUnlinkModal({
@@ -61,9 +56,7 @@ class components_entities_integration extends Component {
       return acc;
     }, { mock: [], prod: [] });
 
-
     const providers = this.props.organization !== 'org-for-testing-policies' ? providerKeys.prod : [...providerKeys.prod, ...providerKeys.mock];
-
 
     return (
       <div className="components_entities_integration mb-5">
@@ -199,5 +192,4 @@ class components_entities_integration extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_entities_integration);
-
 

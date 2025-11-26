@@ -8,7 +8,6 @@ import Store from 'store';
 import Selectors from 'selectors';
 import Components from 'components';
 
-
 const mapStateToProps = (state) => ({
   vCards: _try(() => state.account.cardsIntegration.data.resources.vCards),
   vCardsDenorm: _try(() => Selectors.cardsActivity(state)),
@@ -95,7 +94,6 @@ class components_overviews_paymentstatus_modules_remittance extends Component {
       color = 'danger';
       message = 'Issue';
     }
-
 
     return message ? <span className={`badge rounded-pill ms-3 bg-${color}`}>{message}</span> : null;
   };
@@ -222,7 +220,6 @@ class components_overviews_paymentstatus_modules_remittance extends Component {
         const { provider } = cardsIntegrationDetails;
         const showPRN = provider === 'CHANGE_ME_PROVIDER_STUB' || provider === 'CHANGE_ME_PROVIDER';
         if (!paymentStatus.funded?.vCards) {
-          // TODO add button to attempt a correction - PAY-420
           return (
             <div>
               <div className="alert alert-danger" role="alert">
@@ -476,5 +473,4 @@ class components_overviews_paymentstatus_modules_remittance extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(components_overviews_paymentstatus_modules_remittance);
-
 

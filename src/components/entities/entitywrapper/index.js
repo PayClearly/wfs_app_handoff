@@ -7,7 +7,6 @@ import Utils from 'utils';
 import Store from 'store';
 import Components from 'components';
 
-
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({

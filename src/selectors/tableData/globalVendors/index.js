@@ -1,7 +1,5 @@
 import createSelector from 'selector';
 
-
-
 const selectors_tableData_globalVendors = createSelector(
 
   state => state.global.vendors.data.items,
@@ -51,5 +49,4 @@ const selectors_tableData_globalVendors = createSelector(
 );
 
 export default selectors_tableData_globalVendors;
-
 
