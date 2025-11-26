@@ -30,14 +30,6 @@ class components_modals_integrationlink extends Component {
               close={this.props.close}
             />
           );
-        case 'GALILEOSTUB':
-          return (
-            <Components.integrationsetups.erpintegration.STUB
-              type="erpIntegration"
-              provider="GALILEOSTUB"
-              close={this.props.close}
-            />
-          );
         case 'ADVANTAGE':
           return (
             <Components.integrationsetups.erpintegration.ADVANTAGE
@@ -60,27 +52,11 @@ class components_modals_integrationlink extends Component {
               close={this.props.close}
             />
           );
-        case 'GALILEOSTUB':
-          return (
-            <Components.integrationsetups.cardsintegration.GALILEOSTUB
-              type="cardsIntegration"
-              provider="GALILEOSTUB"
-              close={this.props.close}
-            />
-          );
         case 'EFS':
           return (
             <Components.integrationsetups.cardsintegration.EFS
               type="cardsIntegration"
               provider="STUB"
-              close={this.props.close}
-            />
-          );
-        case 'GALILEO':
-          return (
-            <Components.integrationsetups.cardsintegration.GALILEO
-              type="cardsIntegration"
-              provider="GALILEO"
               close={this.props.close}
             />
           );
@@ -120,14 +96,6 @@ class components_modals_integrationlink extends Component {
               close={this.props.close}
             />
           );
-        case 'GALILEO':
-          return (
-            <Components.integrationsetups.checksintegration.GALILEO
-              type="checksIntegration"
-              provider="GALILEO"
-              close={this.props.close}
-            />
-          );
         default:
           return (<p>checksIntegration does not have a provider of type {provider}</p>);
       }
@@ -147,14 +115,6 @@ class components_modals_integrationlink extends Component {
             <Components.integrationsetups.achintegration.DWOLLA
               type="achIntegration"
               provider="DWOLLA"
-              close={this.props.close}
-            />
-          );
-        case 'GALILEO':
-          return (
-            <Components.integrationsetups.achintegration.GALILEO
-              type="achIntegration"
-              provider="GALILEO"
               close={this.props.close}
             />
           );

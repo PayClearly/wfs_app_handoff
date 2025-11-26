@@ -38,7 +38,7 @@ function getUpdatedFields(form) {
     'defaultCommissionRate',
     'commissionOffsetPercentage',
     'defaultValidThroughPeriod',
-    'galileoVCardDefaultMaxUses',
+    'providerVCardDefaultMaxUses',
     'vCardDefaultMaxUses',
   ];
   const fields = Object.keys(form._values);
@@ -90,9 +90,9 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
     autoAcceptsFees: 'Auto Accepts Fees',
     showInterchangeDataOnTransactionsReport: 'Show Interchange Data on Transaction Report',
     vCardDefaultMaxUses: 'Default Virtual Card Max Uses', // WEX only
-    galileoVCardDefaultMaxUses: 'Galileo Virtual Card Default Max Uses',
-    galileoPaymentCardBin: 'Galileo Default Bin for Payment Cards',
-    galileoPurchaseCardBin: 'Galileo Default Bin for Purchase Cards',
+    providerVCardDefaultMaxUses: 'CHANGE_ME_PROVIDER Virtual Card Default Max Uses',
+    providerPaymentCardBin: 'CHANGE_ME_PROVIDER Default Bin for Payment Cards',
+    providerPurchaseCardBin: 'CHANGE_ME_PROVIDER Default Bin for Purchase Cards',
   };
 
 
@@ -135,9 +135,9 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
       autoAcceptsFees: true,
       showInterchangeDataOnTransactionsReport: true,
       vCardDefaultMaxUses: this.props.provider === 'EFS' || this.props.provider === 'STUB', // WEX only
-      galileoVCardDefaultMaxUses: this.props.provider === 'GALILEO' || this.props.provider === 'GALILEOSTUB',
-      galileoPaymentCardBin: this.props.provider === 'GALILEO' || this.props.provider === 'GALILEOSTUB',
-      galileoPurchaseCardBin: this.props.provider === 'GALILEO' || this.props.provider === 'GALILEOSTUB',
+      providerVCardDefaultMaxUses: this.props.provider === 'CHANGE_ME_PROVIDER' || this.props.provider === 'CHANGE_ME_PROVIDER_STUB',
+      providerPaymentCardBin: this.props.provider === 'CHANGE_ME_PROVIDER' || this.props.provider === 'CHANGE_ME_PROVIDER_STUB',
+      providerPurchaseCardBin: this.props.provider === 'CHANGE_ME_PROVIDER' || this.props.provider === 'CHANGE_ME_PROVIDER_STUB',
     },
     check: { postageCode: true },
     card: {
@@ -177,14 +177,14 @@ class componentsEntitiesPaymentPipelinePreferences extends Component {
         return this.props.fileTypeOptions[val || 'csv'].display;
       case 'passwordManager':
         return val || 'none';
-      case 'galileoVCardDefaultMaxUses':
-        return this.props.paymentPipelinePreferencesItem.galileoVCardDefaultMaxUses || 5;
+      case 'providerVCardDefaultMaxUses':
+        return this.props.paymentPipelinePreferencesItem.providerVCardDefaultMaxUses || 5;
       case 'vCardDefaultMaxUses':
         return this.props.paymentPipelinePreferencesItem.vCardDefaultMaxUses || 1; // WEX only
-      case 'galileoPaymentCardBin':
-        return this.props.paymentPipelinePreferencesItem.galileoPaymentCardBin || 'not selected';
-      case 'galileoPurchaseCardBin':
-        return this.props.paymentPipelinePreferencesItem.galileoPurchaseCardBin || 'not selected';
+      case 'providerPaymentCardBin':
+        return this.props.paymentPipelinePreferencesItem.providerPaymentCardBin || 'not selected';
+      case 'providerPurchaseCardBin':
+        return this.props.paymentPipelinePreferencesItem.providerPurchaseCardBin || 'not selected';
       default:
         return (!val && 'No') || 'Yes';
 

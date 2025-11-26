@@ -732,8 +732,8 @@ export function createPayments(data, instantTransfer, acceptedFile) {
         const paymentMethod = paymentStatus.created.method;
 
         const usesVirtualCardAccount = paymentMethod === 'vCard'
-          || (paymentMethod === 'ACH' && achProvider === 'GALILEO')
-          || (paymentMethod === 'check' && checkProvider === 'GALILEO');
+          || (paymentMethod === 'ACH' && achProvider === 'CHANGE_ME_PROVIDER')
+          || (paymentMethod === 'check' && checkProvider === 'CHANGE_ME_PROVIDER');
 
         const vCardAmount = (usesVirtualCardAccount && paymentStatus.created.amount) || 0;
         if (!vCardAmount) { return acc; }

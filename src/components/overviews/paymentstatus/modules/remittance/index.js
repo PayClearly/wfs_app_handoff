@@ -220,7 +220,7 @@ class components_overviews_paymentstatus_modules_remittance extends Component {
         const { email = '' } = user.profile?.data?.item || {};
         const isSupportTeamUser = email.includes('@CHANGE_ME.com');
         const { provider } = cardsIntegrationDetails;
-        const showPRN = provider === 'GALILEOSTUB' || provider === 'GALILEO';
+        const showPRN = provider === 'CHANGE_ME_PROVIDER_STUB' || provider === 'CHANGE_ME_PROVIDER';
         if (!paymentStatus.funded?.vCards) {
           // TODO add button to attempt a correction - PAY-420
           return (

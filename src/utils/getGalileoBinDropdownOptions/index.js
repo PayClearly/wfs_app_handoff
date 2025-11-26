@@ -1,8 +1,8 @@
 import Constants from '../../constants';
 
-function getGalileoBinDropdownOptions() {
-  const galileoBinOptions = Constants.GALILEO_BIN_OPTIONS;
-  const binOptionsForDropdowns = galileoBinOptions.reduce((acc, bin) => {
+function getProviderBinDropdownOptions() {
+  const providerBinOptions = Constants.ProviderBIN_OPTIONS;
+  const binOptionsForDropdowns = providerBinOptions.reduce((acc, bin) => {
     acc[`${bin}`] = {
       display: `${bin[0].toUpperCase()}${bin.slice(1)}`,
     };
@@ -11,4 +11,4 @@ function getGalileoBinDropdownOptions() {
   return binOptionsForDropdowns;
 }
 
-export default getGalileoBinDropdownOptions;
+export default getProviderBinDropdownOptions;

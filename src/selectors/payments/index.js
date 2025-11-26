@@ -3,7 +3,7 @@ import createSelector from 'selector';
 const CARD_METHOD = 'vCard';
 const ACH_METHOD = 'ACH';
 const CHECK_METHOD = 'check';
-const GALILEO = 'GALILEO';
+const CHANGE_ME_PROVIDER = 'CHANGE_ME_PROVIDER';
 
 function pendingCount(paymentStatusesDenorm, providers) {
   return Object.keys(paymentStatusesDenorm).reduce((total, step) => {
@@ -13,11 +13,11 @@ function pendingCount(paymentStatusesDenorm, providers) {
 
     let toAdd = parseInt(paymentStatusesDenorm[step].vCardCount, 10);
 
-    if (providers[ACH_METHOD] === GALILEO) {
+    if (providers[ACH_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseInt(paymentStatusesDenorm[step].ACHCount, 10);
     }
 
-    if (providers[CHECK_METHOD] === GALILEO) {
+    if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseInt(paymentStatusesDenorm[step].checkCount, 10);
     }
 
@@ -33,11 +33,11 @@ function pendingAmount(paymentStatusesDenorm, providers) {
 
     let toAdd = parseFloat(paymentStatusesDenorm[step].vCardTotal);
 
-    if (providers[ACH_METHOD] === GALILEO) {
+    if (providers[ACH_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseFloat(paymentStatusesDenorm[step].ACHTotal, 10);
     }
 
-    if (providers[CHECK_METHOD] === GALILEO) {
+    if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseFloat(paymentStatusesDenorm[step].checkTotal, 10);
     }
 
@@ -47,8 +47,8 @@ function pendingAmount(paymentStatusesDenorm, providers) {
 
 function pendingAmountForBalanceWidget(paymentStatusesDenorm, providers) {
   /**
-   * After Galileo ACH and check payments pass the funding step, funds will have
-   * moved out of the MFA into the ACH or Check activity accounts, so at this point 
+   * After CHANGE_ME_PROVIDER ACH and check payments pass the funding step, funds will have
+   * moved out of the MFA into the ACH or Check activity accounts, so at this point
    * funds for these payments should no longer be subtracted from 'total available'
    */
   const pastFundingStep = (step) => step === 'sending' || step === 'tracking';
@@ -60,11 +60,11 @@ function pendingAmountForBalanceWidget(paymentStatusesDenorm, providers) {
 
     let toAdd = parseFloat(paymentStatusesDenorm[step].vCardTotal);
 
-    if (providers[ACH_METHOD] === GALILEO && !pastFundingStep(step)) {
+    if (providers[ACH_METHOD] === CHANGE_ME_PROVIDER && !pastFundingStep(step)) {
       toAdd += parseFloat(paymentStatusesDenorm[step].ACHTotal, 10);
     }
 
-    if (providers[CHECK_METHOD] === GALILEO && !pastFundingStep(step)) {
+    if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER && !pastFundingStep(step)) {
       toAdd += parseFloat(paymentStatusesDenorm[step].checkTotal, 10);
     }
 
@@ -75,11 +75,11 @@ function pendingAmountForBalanceWidget(paymentStatusesDenorm, providers) {
 function sentCount(paymentStatusesDenorm, providers) {
   let count = paymentStatusesDenorm.tracking.vCardCount;
 
-  if (providers[ACH_METHOD] === GALILEO) {
+  if (providers[ACH_METHOD] === CHANGE_ME_PROVIDER) {
     count += parseInt(paymentStatusesDenorm.tracking.ACHCount, 10);
   }
 
-  if (providers[CHECK_METHOD] === GALILEO) {
+  if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER) {
     count += parseInt(paymentStatusesDenorm.tracking.checkCount, 10);
   }
 
@@ -89,11 +89,11 @@ function sentCount(paymentStatusesDenorm, providers) {
 function sentAmount(paymentStatusesDenorm, providers) {
   let count = paymentStatusesDenorm.tracking.vCardTotal;
 
-  if (providers[ACH_METHOD] === GALILEO) {
+  if (providers[ACH_METHOD] === CHANGE_ME_PROVIDER) {
     count += parseFloat(paymentStatusesDenorm.tracking.ACHTotal, 10);
   }
 
-  if (providers[CHECK_METHOD] === GALILEO) {
+  if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER) {
     count += parseFloat(paymentStatusesDenorm.tracking.checkTotal, 10);
   }
 
@@ -108,11 +108,11 @@ function scheduledCount(paymentStatusesDenorm, providers) {
 
     let toAdd = parseInt(paymentStatusesDenorm[step].vCardCount, 10);
 
-    if (providers[ACH_METHOD] === GALILEO) {
+    if (providers[ACH_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseInt(paymentStatusesDenorm[step].ACHCount, 10);
     }
 
-    if (providers[CHECK_METHOD] === GALILEO) {
+    if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseInt(paymentStatusesDenorm[step].checkCount, 10);
     }
 
@@ -128,11 +128,11 @@ function scheduledAmount(paymentStatusesDenorm, providers) {
 
     let toAdd = parseFloat(paymentStatusesDenorm[step].vCardTotal);
 
-    if (providers[ACH_METHOD] === GALILEO) {
+    if (providers[ACH_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseFloat(paymentStatusesDenorm[step].ACHTotal, 10);
     }
 
-    if (providers[CHECK_METHOD] === GALILEO) {
+    if (providers[CHECK_METHOD] === CHANGE_ME_PROVIDER) {
       toAdd += parseFloat(paymentStatusesDenorm[step].checkTotal, 10);
     }
 

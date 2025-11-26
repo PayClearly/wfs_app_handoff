@@ -15,28 +15,19 @@ const {
 } = PAYMENT_STATUSES;
 
 const checkCancellationPolicies = /** @type {const} */ {
-  GALILEO: {
+  CHANGE_ME_PROVIDER: {
     [CREATING]: true,
     [VERIFYING]: true,
     [FUNDING]: true,
     [SENDING]: true,
     [TRACKING]: true,
     [TRACKED]: true,
-    [CANCELLED]: false,
-  },
-  SMARTPAYABLES: {
-    [CREATING]: true,
-    [VERIFYING]: true,
-    [FUNDING]: true,
-    [SENDING]: true,
-    [TRACKING]: false,
-    [TRACKED]: false,
     [CANCELLED]: false,
   },
 };
 
 const PushAchCancellationPolicies = /** @type {const} */ {
-  GALILEO: {
+  CHANGE_ME_PROVIDER: {
     [CREATING]: true,
     [VERIFYING]: true,
     [FUNDING]: true,
@@ -45,22 +36,13 @@ const PushAchCancellationPolicies = /** @type {const} */ {
     [TRACKED]: true,
     [CANCELLED]: false,
   },
-  GALILEOSTUB: {
+  CHANGE_ME_PROVIDER_STUB: {
     [CREATING]: true,
     [VERIFYING]: true,
     [FUNDING]: true,
     [SENDING]: true,
     [TRACKING]: true,
     [TRACKED]: true,
-    [CANCELLED]: false,
-  },
-  DWOLLA: {
-    [CREATING]: true,
-    [VERIFYING]: true,
-    [FUNDING]: true,
-    [SENDING]: true,
-    [TRACKING]: false,
-    [TRACKED]: false,
     [CANCELLED]: false,
   },
   STUB: {
@@ -75,7 +57,7 @@ const PushAchCancellationPolicies = /** @type {const} */ {
 };
 
 const PullAchCancellationPolicies = /** @type {const} */ {
-  GALILEO: {
+  CHANGE_ME_PROVIDER: {
     [CREATING]: true,
     [VERIFYING]: true,
     [FUNDING]: true,
@@ -84,7 +66,7 @@ const PullAchCancellationPolicies = /** @type {const} */ {
     [TRACKED]: false,
     [CANCELLED]: false,
   },
-  GALILEOSTUB: {
+  CHANGE_ME_PROVIDER_STUB: {
     [CREATING]: true,
     [VERIFYING]: true,
     [FUNDING]: true,

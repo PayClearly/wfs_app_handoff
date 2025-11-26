@@ -69,7 +69,7 @@ const selectors_accountVendors = createSelector(
         vCardFee: vendor.vCardFee || null,
         vCardPaymentLimit: vendor.vCardPaymentLimit || null,
         vCardDefaultMaxUses: vendor.vCardDefaultMaxUses || null, // WEX only
-        galileoVCardDefaultMaxUses: vendor.galileoVCardDefaultMaxUses || null,
+        providerVCardDefaultMaxUses: vendor.providerVCardDefaultMaxUses || null,
         checkAddressLine1: vendor.checkAddressLine1,
         checkAddressLine2: vendor.checkAddressLine2,
         checkAddressLine3: vendor.checkAddressLine3,

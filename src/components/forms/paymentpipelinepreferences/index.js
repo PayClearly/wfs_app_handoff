@@ -63,9 +63,9 @@ class componentsFormsPaymentpipelinepreferences extends Component {
       autoAcceptsFees: initialFormData.autoAcceptsFees || false,
       showInterchangeDataOnTransactionsReport: initialFormData.showInterchangeDataOnTransactionsReport || false,
       vCardDefaultMaxUses: (provider === 'EFS' || provider === 'STUB') ? (initialFormData.vCardDefaultMaxUses || 1) : null,
-      galileoVCardDefaultMaxUses: (provider === 'GALILEO' || provider === 'GALILEOSTUB') ? (initialFormData.galileoVCardDefaultMaxUses || 5) : null,
-      galileoPaymentCardBin: initialFormData.galileoPaymentCardBin || '',
-      galileoPurchaseCardBin: initialFormData.galileoPurchaseCardBin || '',
+      providerVCardDefaultMaxUses: (provider === 'CHANGE_ME_PROVIDER' || provider === 'CHANGE_ME_PROVIDER_STUB') ? (initialFormData.providerVCardDefaultMaxUses || 5) : null,
+      providerPaymentCardBin: initialFormData.providerPaymentCardBin || '',
+      providerPurchaseCardBin: initialFormData.providerPurchaseCardBin || '',
 
     });
     validate(this.state.name, id, this.validate);
@@ -97,12 +97,12 @@ class componentsFormsPaymentpipelinepreferences extends Component {
         errors.defaultValidThroughPeriod = 'Must be an integer (no decimals)';
       }
     }
-    if (values.galileoVCardDefaultMaxUses) {
-      if (Number.isNaN(parseInt(values.galileoVCardDefaultMaxUses, 10))) {
-        errors.galileoVCardDefaultMaxUses = 'Default max card uses must be a number between 1 and 5';
+    if (values.providerVCardDefaultMaxUses) {
+      if (Number.isNaN(parseInt(values.providerVCardDefaultMaxUses, 10))) {
+        errors.providerVCardDefaultMaxUses = 'Default max card uses must be a number between 1 and 5';
       }
-      if (parseInt(values.galileoVCardDefaultMaxUses, 10) < 1 || parseInt(values.galileoVCardDefaultMaxUses, 10) > 5) {
-        errors.galileoVCardDefaultMaxUses = 'Default max card uses must be a number between 1 and 5';
+      if (parseInt(values.providerVCardDefaultMaxUses, 10) < 1 || parseInt(values.providerVCardDefaultMaxUses, 10) > 5) {
+        errors.providerVCardDefaultMaxUses = 'Default max card uses must be a number between 1 and 5';
       }
     }
 
@@ -585,16 +585,16 @@ class componentsFormsPaymentpipelinepreferences extends Component {
           )
         }
         {
-          this.props.show.galileoVCardDefaultMaxUses
+          this.props.show.providerVCardDefaultMaxUses
           && (
             <div className="row">
               <div className="col-sm">
                 <Components.forms.components.textinput
                   form={form}
                   type="number"
-                  field="galileoVCardDefaultMaxUses"
+                  field="providerVCardDefaultMaxUses"
                   action={this.standardFormAction}
-                  label="Galileo Virtual Card Default Max Uses"
+                  label="CHANGE_ME_PROVIDER Virtual Card Default Max Uses"
                   disabled={this.props.disabled}
                 />
               </div>
@@ -619,17 +619,17 @@ class componentsFormsPaymentpipelinepreferences extends Component {
           )
         }
         {
-          this.props.show.galileoPaymentCardBin
+          this.props.show.providerPaymentCardBin
           && (
-            <Components.featureFlagWrapper featureKey="galileoPaymentCardBinToggle">
+            <Components.featureFlagWrapper featureKey="providerPaymentCardBinToggle">
               <div className="col-12">
                 <Components.forms.components.selectinput
                   form={form}
-                  field="galileoPaymentCardBin"
+                  field="providerPaymentCardBin"
                   action={this.standardFormAction}
-                  label="Galileo Default Bin for Payment Cards"
+                  label="CHANGE_ME_PROVIDER Default Bin for Payment Cards"
                   options={binOptions}
-                  placeholder={binOptions[form?.galileoPaymentCardBin?.value]?.display || 'Select Default Payment Card Bin'}
+                  placeholder={binOptions[form?.providerPaymentCardBin?.value]?.display || 'Select Default Payment Card Bin'}
                   includeResetOption
                 />
               </div>
@@ -637,17 +637,17 @@ class componentsFormsPaymentpipelinepreferences extends Component {
           )
         }
         {
-          this.props.show.galileoPurchaseCardBin
+          this.props.show.providerPurchaseCardBin
           && (
-            <Components.featureFlagWrapper featureKey="galileoPurchaseCardBinToggle">
+            <Components.featureFlagWrapper featureKey="providerPurchaseCardBinToggle">
               <div className="col-12">
                 <Components.forms.components.selectinput
                   form={form}
-                  field="galileoPurchaseCardBin"
+                  field="providerPurchaseCardBin"
                   action={this.standardFormAction}
-                  label="Galileo Default Bin for Purchase Cards"
+                  label="CHANGE_ME_PROVIDER Default Bin for Purchase Cards"
                   options={binOptions}
-                  placeholder={binOptions[form?.galileoPurchaseCardBin?.value]?.display || 'Select Default Purchase Card Bin'}
+                  placeholder={binOptions[form?.providerPurchaseCardBin?.value]?.display || 'Select Default Purchase Card Bin'}
                   includeResetOption
                 />
               </div>
@@ -663,4 +663,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(componentsFormsPayme
 
 // Internal Helper Functions ...
 
-const binOptions = Utils.getGalileoBinDropdownOptions();
+const binOptions = Utils.getCHANGE_ME_PROVIDER_BinDropdownOptions();

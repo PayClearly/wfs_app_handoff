@@ -30,8 +30,8 @@ const selectors_featureFlags = createSelector(
       approvals: OFF,
       ACH: ON,
       Checks: ON,
-      galileoACH: OFF,
-      galileoCheck: OFF,
+      providerACH: OFF,
+      providerCheck: OFF,
       // integrations
       erpIntegration: ON,
       cardsIntegration: ON,

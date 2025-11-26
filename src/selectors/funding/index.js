@@ -87,12 +87,12 @@ const selectors_funding = createSelector(
         }
 
         /**
-         * Galileo ACH & Check payments are funded from the Master Funding Account,
+         * CHANGE_ME_PROVIDER ACH & Check payments are funded from the Master Funding Account,
          * so they are not outside of our internal funding flow like ACH & Check with
          * other providers. So, they need to be counted as "in need of funding".
          */
-        const isGalileo = (method === 'check' && checksIntegration.provider === 'GALILEO')
-          || (method === 'ACH' && achIntegration.provider === 'GALILEO');
+        const isGalileo = (method === 'check' && checksIntegration.provider === 'CHANGE_ME_PROVIDER')
+          || (method === 'ACH' && achIntegration.provider === 'CHANGE_ME_PROVIDER');
 
         const inNeedOfFunding = notPastFundedStep
           && !isCancelled

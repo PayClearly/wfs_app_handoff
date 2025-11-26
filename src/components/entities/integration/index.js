@@ -140,9 +140,9 @@ class components_entities_integration extends Component {
                   providers
                     .map((key) => {
                       const provider = this.props.integration.possibleProviders[key];
-                      if (this.props.integration.name === 'achIntegration' && key === 'GALILEO') {
+                      if (this.props.integration.name === 'achIntegration' && key === 'CHANGE_ME_PROVIDER') {
                         return (
-                          <Components.featureFlagWrapper featureKey="galileoACH">
+                          <Components.featureFlagWrapper featureKey="providerACH">
                             <a
                               tabIndex="-1"
                               role="button"
@@ -156,9 +156,9 @@ class components_entities_integration extends Component {
                           </Components.featureFlagWrapper>
                         );
                       }
-                      if (this.props.integration.name === 'checksIntegration' && key === 'GALILEO') {
+                      if (this.props.integration.name === 'checksIntegration' && key === 'CHANGE_ME_PROVIDER') {
                         return (
-                          <Components.featureFlagWrapper featureKey="galileoCheck">
+                          <Components.featureFlagWrapper featureKey="providerCheck">
                             <a
                               tabIndex="-1"
                               role="button"

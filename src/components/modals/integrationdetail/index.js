@@ -250,14 +250,12 @@ const INTEGRATION_RESOURCE_AlIASES = {
 
 const PROVIDER_ENTITIES = {
   achIntegration: {
-    DWOLLA: () => Components.integrationcomps.achintegration.DWOLLA.entities.main,
-    GALILEO: () => Components.integrationcomps.achintegration.GALILEO.overviews.main,
-    STUB: () => Components.integrationcomps.achintegration.GALILEO.overviews.main,
+    CHANGE_ME_PROVIDER: () => null,
+    STUB: () => null,
   },
   checksIntegration: {
-    SMARTPAYABLES: () => Components.integrationcomps.checksIntegration.SMARTPAYABLES.overviews.main,
-    GALILEO: () => Components.integrationcomps.checksIntegration.GALILEO.overviews.main,
-    STUB: () => Components.integrationcomps.checksIntegration.GALILEO.overviews.main,
+    CHANGE_ME_PROVIDER: () => null,
+    STUB: () => null,
   },
 };
 

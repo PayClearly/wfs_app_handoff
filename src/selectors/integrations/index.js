@@ -60,7 +60,7 @@ function selectIntegration(integration, name, definitions = {}, context, showMoc
   const possibleProviders = Object.keys(_try(() => definition.providers, {}))
     .reduce((acc, curr) => {
       const provider = definition.providers[curr];
-      if (showMocker && (curr === 'STUB' || curr === 'GALILEOSTUB')) {
+      if (showMocker && (curr === 'STUB' || curr === 'CHANGE_ME_PROVIDER_STUB')) {
         acc[curr] = { ...provider, prod: true };
       } else {
         acc[curr] = provider;
