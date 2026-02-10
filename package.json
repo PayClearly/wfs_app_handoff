@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "version": "1.76.1",
+  "name": "wfsapp",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "engines": {

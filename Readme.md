@@ -101,13 +101,13 @@ Steps to setup the APP development environment.
     `$: firebase use [PROJECT_NAME]`
 
 __Developing Locally__
-- Use ` $: CERT=[CERT] npm run dev --app=[APP]` to start the local minion server.
+- Use ` $: CERT=[CERT] npm run dev --app=wfsapp` to start the local minion server.
 - The `CERT` env variable must be used to set the correct development environment.
    - `prod` will reference the product backend with no need to run local API.
    - Other CERTs will require the API to be running locally, reference the api Readme.md.
 - The `--app=` flag must be set to the correct application to run on local host.
 
-__Example__ `$: CERT=prod npm run dev  --app=app`
+__Example__ `$: CERT=prod npm run dev  --app=wfsapp`
 
 __Styles__
 
@@ -115,21 +115,3 @@ All apps created in WFS App will utilize the same general styles and color palet
 
 - For variables: set new variables in `src/apps/APPNAME/variables.scss` above the default variable import line
 - For general styling: define new styles in `src/apps/APPNAME/index.scss`. Use of the *!important* flag is sometimes required to override existing style rules
-
-## Testing
-
-WIP
-
-## Deployment
-
-UPDATE_ME
-
-## Internal Documentation
-
-Internal Documentation can be found in [CHANGE_ME](CHANGE_ME)
-
-## Feedback & Suggestions
-
-[CHANGE_ME](CHANGE_ME) is used for project managament.
-
-## Changelog
